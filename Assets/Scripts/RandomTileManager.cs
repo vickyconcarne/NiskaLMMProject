@@ -20,7 +20,14 @@ public class RandomTileManager : MonoBehaviour
         Random.InitState(seed);
         for(int i = 0; i < numberOfTilesToSpawnPerIteration; i++)
         {
-            SpawnTile(Random.Range(0, tilePrefabs.Count));
+            if(i == 0)
+            {
+                SpawnTile(0);
+            }
+            else
+            {
+                SpawnTile(Random.Range(0, tilePrefabs.Count));
+            }
         }
     }
 

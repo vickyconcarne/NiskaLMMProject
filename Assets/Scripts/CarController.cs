@@ -7,7 +7,12 @@ namespace LMM_Movement
     public class CarController : MonoBehaviour
     {
         private CharacterController m_CharacterController;
-        [SerializeField] private Transform appearanceChild;
+        public bool canMove = true;
+
+        [SerializeField] private Transform carChild;
+
+        [Header("Animation")]
+        public Animator generalCarAnimator;
 
         [Header("Movement options")]
         [SerializeField] private float m_forwardMomentum;
@@ -32,7 +37,7 @@ namespace LMM_Movement
             chosenLane = lane.middle;
             
 
-            middleLaneLocalPos = appearanceChild.transform.localPosition.x * Vector3.right + Vector3.forward * appearanceChild.transform.localPosition.x;
+            middleLaneLocalPos = carChild.transform.localPosition.x * Vector3.right + Vector3.forward * carChild.transform.localPosition.x;
             leftLaneLocalPos = middleLaneLocalPos - transform.right * lanePositionalDifferential;
             rightLaneLocalPos = middleLaneLocalPos + transform.right * lanePositionalDifferential;
             newLanePosition = middleLaneLocalPos;
@@ -41,12 +46,12 @@ namespace LMM_Movement
         // Update is called once per frame
         void FixedUpdate()
         {
-            m_CharacterController.Move(k_movementDirection * Time.fixedDeltaTime);
+            if (canMove) m_CharacterController.Move(k_movementDirection * Time.fixedDeltaTime);
         }
 
         private void Update()
         {
-            GetInput();
+            if (canMove) GetInput();
         }
 
         private void GetInput()
@@ -75,14 +80,15 @@ namespace LMM_Movement
                             chosenLane = lane.left;
                             finishedLateralAction = false;
                             newLanePosition = leftLaneLocalPos;
-                            Debug.Log("Went to left");
+                            generalCarAnimator.SetTrigger("SwerveLeft");
                             StartCoroutine(SwitchLanes());
+
                             break;
                         case lane.right:
                             chosenLane = lane.middle;
                             finishedLateralAction = false;
                             newLanePosition = middleLaneLocalPos;
-                            Debug.Log("Went to middle");
+                            generalCarAnimator.SetTrigger("SwerveLeft");
                             StartCoroutine(SwitchLanes());
                             break;
                         default:
@@ -97,14 +103,14 @@ namespace LMM_Movement
                             chosenLane = lane.middle;
                             finishedLateralAction = false;
                             newLanePosition = middleLaneLocalPos;
-                            Debug.Log("Went to middle");
+                            generalCarAnimator.SetTrigger("SwerveRight");
                             StartCoroutine(SwitchLanes());
                             break;
                         case lane.middle:
                             chosenLane = lane.right;
                             finishedLateralAction = false;
                             newLanePosition = rightLaneLocalPos;
-                            Debug.Log("Went to right");
+                            generalCarAnimator.SetTrigger("SwerveRight");
                             StartCoroutine(SwitchLanes());
                             break;
                         case lane.right:
@@ -121,14 +127,14 @@ namespace LMM_Movement
         private IEnumerator SwitchLanes()
         {
             float elapsedTime = 0f;
-            var startingPos = appearanceChild.localPosition;
+            var startingPos = carChild.localPosition;
             while (elapsedTime < timeToChangeLane)
             {
-                appearanceChild.localPosition = Vector3.Slerp(startingPos, newLanePosition, (elapsedTime / timeToChangeLane));
+                carChild.localPosition = Vector3.Slerp(startingPos, newLanePosition, (elapsedTime / timeToChangeLane));
                 elapsedTime += Time.deltaTime;
                 yield return null;
             }
-            appearanceChild.localPosition = newLanePosition; //Snap to new position
+            carChild.localPosition = newLanePosition; //Snap to new position
             finishedLateralAction = true;
         }
     }
