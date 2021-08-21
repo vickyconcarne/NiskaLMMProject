@@ -30,17 +30,32 @@ public class CarCollisionManager : MonoBehaviour
         switch (currentTag)
         {
             case "Obstacle":
-                playerController.canMove = false;
-                currentCollider.isTrigger = false;
-                ragDollRB.isKinematic = false;
-                Vector3 randomizedNormal = transform.position - other.transform.position + Random.Range(0,1f)*Vector3.up + Random.Range(-1f, 1f) * Vector3.right;
-                ragDollRB.AddForce(randomizedNormal * explosionForce, ForceMode.Impulse);
+                StopPlayer(other);
                 break;
             case "OtherCar":
+                if(currentState == PlayerState.AggressiveSwerving)
+                {
+                    NPCCarController otherCar = GetComponent<NPCCarController>();
+                    if (otherCar) otherCar.Kill(playerController.chosenLane);
+                }
+                else
+                {
+                    StopPlayer(other);
+                }
                 break;
             default:
                 break;
         }
+    }
+
+
+    private void StopPlayer(Collider other)
+    {
+        playerController.canMove = false;
+        currentCollider.isTrigger = false;
+        ragDollRB.isKinematic = false;
+        Vector3 randomizedNormal = Vector3.Normalize(transform.position - other.transform.position) + Random.Range(0, 1f) * Vector3.up + Random.Range(-1f, 1f) * Vector3.right;
+        ragDollRB.AddForce(randomizedNormal * explosionForce, ForceMode.Impulse);
     }
 
 }

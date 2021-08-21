@@ -7,6 +7,7 @@ namespace LMM_Movement
     public class CarController : MonoBehaviour
     {
         private CharacterController m_CharacterController;
+        [SerializeField] private CarCollisionManager m_collisionManager;
         public bool canMove = true;
 
         [SerializeField] private Transform carChild;
@@ -128,6 +129,7 @@ namespace LMM_Movement
         {
             float elapsedTime = 0f;
             var startingPos = carChild.localPosition;
+            m_collisionManager.currentState = PlayerState.AggressiveSwerving;
             while (elapsedTime < timeToChangeLane)
             {
                 carChild.localPosition = Vector3.Slerp(startingPos, newLanePosition, (elapsedTime / timeToChangeLane));
@@ -135,6 +137,7 @@ namespace LMM_Movement
                 yield return null;
             }
             carChild.localPosition = newLanePosition; //Snap to new position
+            m_collisionManager.currentState = PlayerState.Idle;
             finishedLateralAction = true;
         }
     }
