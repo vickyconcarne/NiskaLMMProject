@@ -1,0 +1,253 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2209881903558631034
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2209881903558631038}
+  - component: {fileID: 2209881903558631037}
+  - component: {fileID: 2209881903558631036}
+  - component: {fileID: 2209881903558631035}
+  m_Layer: 0
+  m_Name: BombThrower
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 65
+  m_IsActive: 1
+--- !u!4 &2209881903558631038
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2209881903558631034}
+  m_LocalRotation: {x: -0, y: -0, z: 0.13052598, w: 0.99144495}
+  m_LocalPosition: {x: -8, y: 0.34, z: 0}
+  m_LocalScale: {x: 0.5403613, y: 0.5403608, z: 0.5403608}
+  m_Children:
+  - {fileID: 2208330045832490164}
+  - {fileID: 2209881905421079322}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 15.000001}
+--- !u!33 &2209881903558631037
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2209881903558631034}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &2209881903558631036
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2209881903558631034}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 81605b290639b7947869f807c33f01b2, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2209881903558631035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2209881903558631034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d93bf13dfe8b50b4ba29974c5f4b75c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnLocator: {fileID: 2209881905421079322}
+  bombList:
+  - name: Small Original Fire Explosion #1
+    bombPrefab: {fileID: 54940543535826582, guid: 0d612c22abf5d9743a874269740fa697,
+      type: 3}
+  - name: Medium Original Fire Explosion #2
+    bombPrefab: {fileID: 54940543535826582, guid: 2c0e63458a7e4124f8181aec001c446b,
+      type: 3}
+  - name: Large Original Fire Explosion #3
+    bombPrefab: {fileID: 54940543535826582, guid: 385a9ba3f1a1d2142bb133f668a07fef,
+      type: 3}
+  - name: Small Green WildFire Explosion #4
+    bombPrefab: {fileID: 54940543535826582, guid: 65c983716aaf2b346b01480869397e49,
+      type: 3}
+  - name: Medium Green WildFire Explosion #5
+    bombPrefab: {fileID: 54940543535826582, guid: 65c983716aaf2b346b01480869397e49,
+      type: 3}
+  - name: Large Green WildFire Explosion #6
+    bombPrefab: {fileID: 54940543535826582, guid: 5e72d6ea498da894d86d6229d7300ac5,
+      type: 3}
+  - name: Small Purple DarkFire Explosion #7
+    bombPrefab: {fileID: 54940543535826582, guid: a2a6ae3798c304c46878ad8c243a7124,
+      type: 3}
+  - name: Medium Purple DarkFire Explosion #8
+    bombPrefab: {fileID: 54940543535826582, guid: 85a30b8a195075a4891a49ebe3b5a359,
+      type: 3}
+  - name: Large Purple DarkFire Explosion #9
+    bombPrefab: {fileID: 54940543535826582, guid: 3e2c30ed174c8944e9684c0e787b2c28,
+      type: 3}
+  - name: Small Joker Fire Explosion #10
+    bombPrefab: {fileID: 54940543535826582, guid: 4e0ba58f7d1a33e468128a47cb433fd6,
+      type: 3}
+  - name: Medium Joker Fire Explosion #11
+    bombPrefab: {fileID: 54940543535826582, guid: f869948cd6cf72b4c91f14b4f714e333,
+      type: 3}
+  - name: Large Joker Fire Explosion #12
+    bombPrefab: {fileID: 54940543535826582, guid: 92866cf51aed94d428ddbe426b95d661,
+      type: 3}
+  - name: Small Blue Demon Explosion #13
+    bombPrefab: {fileID: 54940543535826582, guid: f5410d374804a934da413d38db143931,
+      type: 3}
+  - name: Medium Blue Demon Explosion #14
+    bombPrefab: {fileID: 54940543535826582, guid: 05a35841cab253a479d8898d6ff8de71,
+      type: 3}
+  - name: Large Blue Demon Explosion #15
+    bombPrefab: {fileID: 54940543535826582, guid: f7da53ed894108f4d93fc8e224a859c3,
+      type: 3}
+  - name: Small FireNoSmoke Explosion #16
+    bombPrefab: {fileID: 54940543535826582, guid: ac74095d46fe8454abfc5f3f5a336ccc,
+      type: 3}
+  - name: Medium FireNoSmoke Explosion #17
+    bombPrefab: {fileID: 54940543535826582, guid: 227f6b2c3613a1b4db8f2643f7925c78,
+      type: 3}
+  - name: Large FireNoSmoke Explosion #18
+    bombPrefab: {fileID: 54940543535826582, guid: 76de7ca5046bee54caf138bd0bdaa485,
+      type: 3}
+  UiText: {fileID: 0}
+  bombType: 0
+  muzzleflare: {fileID: 2047210755636362090}
+  min: 2500
+  max: 3200
+  swarmMissileLauncher: 0
+  Torque: 0
+  Tor_min: 800
+  Tor_max: 900
+  MinorRotate: 1
+  MajorRotate: 0
+--- !u!1 &2209881905421079321
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2209881905421079322}
+  m_Layer: 0
+  m_Name: location
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2209881905421079322
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2209881905421079321}
+  m_LocalRotation: {x: -0.27059764, y: 0.6532815, z: 0.27059802, w: 0.6532816}
+  m_LocalPosition: {x: 2.07, y: 1.26, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2209881903558631038}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: -45.000004, y: 90.00001, z: 0}
+--- !u!1001 &2209881905084327618
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2209881903558631038}
+    m_Modifications:
+    - target: {fileID: 4085354180610678, guid: ace1113a61445654d8a9913ca6c7565a, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4085354180610678, guid: ace1113a61445654d8a9913ca6c7565a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.78
+      objectReference: {fileID: 0}
+    - target: {fileID: 4085354180610678, guid: ace1113a61445654d8a9913ca6c7565a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 4085354180610678, guid: ace1113a61445654d8a9913ca6c7565a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4085354180610678, guid: ace1113a61445654d8a9913ca6c7565a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.58802015
+      objectReference: {fileID: 0}
+    - target: {fileID: 4085354180610678, guid: ace1113a61445654d8a9913ca6c7565a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.4957217
+      objectReference: {fileID: 0}
+    - target: {fileID: 4085354180610678, guid: ace1113a61445654d8a9913ca6c7565a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.40342635
+      objectReference: {fileID: 0}
+    - target: {fileID: 4085354180610678, guid: ace1113a61445654d8a9913ca6c7565a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.49572128
+      objectReference: {fileID: 0}
+    - target: {fileID: 199349124752003660, guid: ace1113a61445654d8a9913ca6c7565a,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300002, guid: 7f7e5bb977a445140ba0e08cdef4ac0b, type: 3}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ace1113a61445654d8a9913ca6c7565a, type: 3}
+--- !u!4 &2208330045832490164 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4085354180610678, guid: ace1113a61445654d8a9913ca6c7565a,
+    type: 3}
+  m_PrefabInstance: {fileID: 2209881905084327618}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &2047210755636362090 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 198779297128586664, guid: ace1113a61445654d8a9913ca6c7565a,
+    type: 3}
+  m_PrefabInstance: {fileID: 2209881905084327618}
+  m_PrefabAsset: {fileID: 0}
