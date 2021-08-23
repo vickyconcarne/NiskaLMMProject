@@ -6,7 +6,8 @@ namespace LMM_Movement
 {
     public class NPCCarController : MonoBehaviour
     {
-        private CharacterController m_CharacterController;
+        public CharacterController m_CharacterController;
+        private Collider currentCollider;
         public bool canMove = true;
 
         [SerializeField] private Transform carChild;
@@ -34,13 +35,13 @@ namespace LMM_Movement
         // Start is called before the first frame update
         void Start()
         {
-            m_CharacterController = GetComponent<CharacterController>();
             k_movementDirection.z = m_forwardMomentum;
 
             middleLaneLocalPos = carChild.transform.localPosition.x * Vector3.right + Vector3.forward * carChild.transform.localPosition.x;
             leftLaneLocalPos = middleLaneLocalPos - transform.right * lanePositionalDifferential;
             rightLaneLocalPos = middleLaneLocalPos + transform.right * lanePositionalDifferential;
             newLanePosition = middleLaneLocalPos;
+            currentCollider = GetComponent<Collider>();
         }
 
         // Update is called once per frame
@@ -51,6 +52,7 @@ namespace LMM_Movement
 
         public void Kill(lane attackingLane)
         {
+            currentCollider.enabled = false;
             canMove = false;
             if(carAnimator) carAnimator.SetTrigger("Explode");
             Invoke("DeinstantiateAfterTime", 2f);
@@ -58,7 +60,7 @@ namespace LMM_Movement
 
         public void DeinstantiateAfterTime()
         {
-            Destroy(this.gameObject);
+            Destroy(m_CharacterController.gameObject);
         }
 
         private void OnCollisionEnter(Collision col)
