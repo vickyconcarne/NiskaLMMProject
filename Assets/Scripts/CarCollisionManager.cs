@@ -2,15 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using LMM_Movement;
+using Cinemachine;
 
 public class CarCollisionManager : MonoBehaviour
 {
-    public PlayerState currentState;
+    public actorState currentState;
     public CarController playerController;
     public Rigidbody ragDollRB;
     private Collider currentCollider;
     public float explosionForce;
     public float explosionRadius;
+
+    [Header("Anims")]
+    public CinemachineVirtualCamera cinemachineCam;
+    public CinemachineBrain cinemachineBrain;
+    public GameObject explosionEffect;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,11 +36,15 @@ public class CarCollisionManager : MonoBehaviour
         switch (currentTag)
         {
             case "Obstacle":
+                /*cinemachineCam.DestroyCinemachineComponent<CinemachineTrackedDolly>();
+                cinemachineCam.LookAt = null;
+                cinemachineCam.Follow = null;*/
                 StopPlayer(other);
                 break;
             case "OtherCar":
-                if(currentState == PlayerState.AggressiveSwerving)
+                if(currentState == actorState.AggressiveSwerving)
                 {
+
                     NPCCarController otherCar = GetComponent<NPCCarController>();
                     if (otherCar) otherCar.Kill(playerController.chosenLane);
                 }
@@ -51,6 +61,14 @@ public class CarCollisionManager : MonoBehaviour
 
     private void StopPlayer(Collider other)
     {
+        //Cam
+        cinemachineCam.enabled = false;
+        Destroy(cinemachineCam);
+        cinemachineBrain.enabled = false;
+        //Boom
+        explosionEffect.transform.position = this.transform.position;
+        explosionEffect.SetActive(true);
+        explosionEffect.SetActive(true);
         playerController.canMove = false;
         currentCollider.isTrigger = false;
         ragDollRB.isKinematic = false;
@@ -60,4 +78,4 @@ public class CarCollisionManager : MonoBehaviour
 
 }
 
-public enum PlayerState { AggressiveSwerving, Idle};
+public enum actorState { AggressiveSwerving, Idle, Immovable};

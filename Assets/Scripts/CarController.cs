@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 namespace LMM_Movement
 {
     public class CarController : MonoBehaviour
@@ -14,6 +15,7 @@ namespace LMM_Movement
 
         [Header("Animation")]
         public Animator generalCarAnimator;
+        
 
         [Header("Movement options")]
         [SerializeField] private float m_forwardMomentum;
@@ -129,7 +131,7 @@ namespace LMM_Movement
         {
             float elapsedTime = 0f;
             var startingPos = carChild.localPosition;
-            m_collisionManager.currentState = PlayerState.AggressiveSwerving;
+            m_collisionManager.currentState = actorState.AggressiveSwerving;
             while (elapsedTime < timeToChangeLane)
             {
                 carChild.localPosition = Vector3.Slerp(startingPos, newLanePosition, (elapsedTime / timeToChangeLane));
@@ -137,7 +139,7 @@ namespace LMM_Movement
                 yield return null;
             }
             carChild.localPosition = newLanePosition; //Snap to new position
-            m_collisionManager.currentState = PlayerState.Idle;
+            m_collisionManager.currentState = actorState.Idle;
             finishedLateralAction = true;
         }
     }

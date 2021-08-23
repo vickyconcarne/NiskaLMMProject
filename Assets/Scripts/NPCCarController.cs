@@ -15,6 +15,7 @@ namespace LMM_Movement
         public Animator carAnimator;
 
         [Header("Movement options")]
+        [SerializeField] private actorState movementState;
         [SerializeField] private float m_forwardMomentum;
         [SerializeField] private float lanePositionalDifferential;
         [SerializeField] private float timeToChangeLane;
@@ -28,6 +29,7 @@ namespace LMM_Movement
         public Vector3 leftLaneLocalPos;
         public Vector3 middleLaneLocalPos;
         public Vector3 rightLaneLocalPos;
+
 
         // Start is called before the first frame update
         void Start()
@@ -50,13 +52,31 @@ namespace LMM_Movement
         public void Kill(lane attackingLane)
         {
             canMove = false;
-            carAnimator.SetTrigger("Explode");
+            if(carAnimator) carAnimator.SetTrigger("Explode");
             Invoke("DeinstantiateAfterTime", 2f);
         }
 
         public void DeinstantiateAfterTime()
         {
             Destroy(this.gameObject);
+        }
+
+        private void OnCollisionEnter(Collision col)
+        {
+            string currentTag = col.gameObject.tag;
+            Debug.Log("npc car has found " + currentTag);
+            switch (currentTag)
+            {
+                case "Obstacle":
+                    Kill(lane.middle);
+                    break;
+                case "OtherCar":
+                    lane otherCarLane = col.collider.GetComponent<NPCCarController>().chosenLane;
+                    Kill(chosenLane);
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }
