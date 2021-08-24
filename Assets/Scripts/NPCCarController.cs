@@ -52,6 +52,7 @@ namespace LMM_Movement
 
         public void Kill(lane attackingLane)
         {
+            Debug.Log("Killing my truck");
             currentCollider.enabled = false;
             canMove = false;
             if(carAnimator) carAnimator.SetTrigger("Explode");
@@ -71,10 +72,6 @@ namespace LMM_Movement
             {
                 case "Obstacle":
                     Kill(lane.middle);
-                    break;
-                case "OtherCar":
-                    lane otherCarLane = col.GetComponent<NPCCarController>().chosenLane;
-                    Kill(chosenLane);
                     break;
                 default:
                     break;
