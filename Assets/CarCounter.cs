@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CarCounter : MonoBehaviour
 {
+
+    public RandomTileManager tileManager;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +16,14 @@ public class CarCounter : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnTriggerExit(Collider col)
+    {
+        if(col.gameObject.tag == "OtherCar")
+        {
+            tileManager.currentCountedCars += 1;
+            tileManager.CheckCars();
+        }
     }
 }

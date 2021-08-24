@@ -65,8 +65,10 @@ namespace LMM_Movement
                         carAnimator.SetTrigger(generalExplodeTrigger);
                         break;
                     default:
-                        int differential = (int)chosenLane - (int)attackingLane;
-                        if(differential < 0)
+                        
+                        int differential = (int)chosenLane + (int)attackingLane;
+                        Debug.Log("differential is: " + differential.ToString() + "  for the lane " + chosenLane);
+                        if (differential < 0)
                         {
                             carAnimator.SetTrigger(explodeLeftTrigger);
                         }
@@ -90,14 +92,18 @@ namespace LMM_Movement
         {
             string currentTag = col.gameObject.tag;
             //Debug.Log("npc car has found " + currentTag + " for " + col.gameObject.name);
-            switch (currentTag)
+            if(movementState != actorState.Immovable)
             {
-                case "Obstacle":
-                    Kill(lane.nolane);
-                    break;
-                default:
-                    break;
+                switch (currentTag)
+                {
+                    case "Obstacle":
+                        Kill(lane.nolane);
+                        break;
+                    default:
+                        break;
+                }
             }
+            
         }
     }
 }

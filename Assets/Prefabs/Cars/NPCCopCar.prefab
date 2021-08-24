@@ -45,8 +45,8 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 1
-  m_Radius: 1
+  m_Height: 1.5
+  m_Radius: 1.5
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
@@ -72,7 +72,7 @@ MonoBehaviour:
   explodeRightTrigger: ExplodeRight
   generalExplodeTrigger: Explode
   movementState: 1
-  m_forwardMomentum: 25
+  m_forwardMomentum: 30
   lanePositionalDifferential: 5
   timeToChangeLane: 1
   chosenLane: 1

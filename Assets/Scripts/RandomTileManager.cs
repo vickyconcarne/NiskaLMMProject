@@ -1,18 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using LMM_Movement;
 
 public class RandomTileManager : MonoBehaviour
 {
     public Transform playerTransform;
     [Header("Different tile prefabs")]
     public List<GameObject> tilePrefabs = new List<GameObject>();
+    public List<GameObject> emptyTilePrefabs = new List<GameObject>();
+    public List<Wave> possibleWaves;
     private List<GameObject> activeTiles = new List<GameObject>();
     [Header("Placement options")]
     public int seed = 43;
     public float zSpawn = 0;
     public float tileLength = 10;
     public int numberOfTilesToSpawnPerIteration = 4;
+
+    [Header("NPC Placement")]
+    public float laneDifferential = 5f;
+
+
+    public int currentCountedCars;
+    public int maxCountedCars;
 
     // Start is called before the first frame update
     void Start()
@@ -54,4 +64,24 @@ public class RandomTileManager : MonoBehaviour
         Destroy(activeTiles[0]);
         activeTiles.RemoveAt(0);
     }
+
+    public void CheckCars()
+    {
+
+    }
+}
+
+[System.Serializable]
+public class Wave
+{
+    public List<SpawnInstance> waveList = new List<SpawnInstance>();
+}
+
+[System.Serializable]
+public class SpawnInstance
+{
+    public string ressourceID;
+    public float distance;
+    public bool fromTop; //Spawn from top of screen or bottom
+    public lane laneToPlace;
 }

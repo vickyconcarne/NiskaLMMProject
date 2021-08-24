@@ -15,7 +15,6 @@ public class projectileActorExplosion1 : MonoBehaviour {
     public projectile[] bombList;
 
     string FauxName;
-    public Text UiText;
 
     public int bombType = 0;
 
@@ -77,7 +76,7 @@ public class projectileActorExplosion1 : MonoBehaviour {
             bombType = 0;
         }
 
-        UiText.text = bombList[bombType].name.ToString();
+        //UiText.text = bombList[bombType].name.ToString();
 
     }
 

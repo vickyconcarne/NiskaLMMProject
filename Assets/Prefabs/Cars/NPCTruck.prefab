@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7448361522934453545}
   - component: {fileID: 7448361522934453544}
   - component: {fileID: 7448361522934453547}
+  - component: {fileID: 260251414335118405}
   m_Layer: 7
   m_Name: NPCTruck
   m_TagString: Untagged
@@ -45,7 +46,7 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 2
+  m_Height: 1.5
   m_Radius: 1.5
   m_SlopeLimit: 45
   m_StepOffset: 0.3
@@ -72,7 +73,7 @@ MonoBehaviour:
   explodeRightTrigger: ExplodeRight
   generalExplodeTrigger: Explode
   movementState: 2
-  m_forwardMomentum: 16
+  m_forwardMomentum: 10
   lanePositionalDifferential: 5
   timeToChangeLane: 1
   chosenLane: 1
@@ -87,11 +88,27 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7448361522934453549}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1.8399577, y: 2.7134252, z: 6.826281}
   m_Center: {x: -0.03418231, y: 0.26225895, z: -0.14676452}
+--- !u!54 &260251414335118405
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7448361522934453549}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 118
+  m_CollisionDetection: 0
 --- !u!1 &7448361524830082920
 GameObject:
   m_ObjectHideFlags: 0

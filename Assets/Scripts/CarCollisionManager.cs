@@ -17,6 +17,7 @@ public class CarCollisionManager : MonoBehaviour
     public CinemachineVirtualCamera cinemachineCam;
     public CinemachineBrain cinemachineBrain;
     public GameObject explosionEffect;
+    public GameObject cashFlow;
     // Start is called before the first frame update
     void Start()
     {
@@ -66,6 +67,7 @@ public class CarCollisionManager : MonoBehaviour
         //Destroy(cinemachineCam);
         cinemachineBrain.enabled = false;
         //Boom
+        cashFlow.SetActive(false);
         explosionEffect.transform.position = this.transform.position;
         explosionEffect.SetActive(true);
         explosionEffect.SetActive(true);
