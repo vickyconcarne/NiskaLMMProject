@@ -14,7 +14,9 @@ namespace LMM_Movement
 
         [Header("Animation")]
         public Animator carAnimator;
-
+        public string explodeLeftTrigger;
+        public string explodeRightTrigger;
+        public string generalExplodeTrigger = "Explode";
         [Header("Movement options")]
         [SerializeField] private actorState movementState;
         [SerializeField] private float m_forwardMomentum;
@@ -55,7 +57,27 @@ namespace LMM_Movement
             Debug.Log("Killing my truck");
             currentCollider.enabled = false;
             canMove = false;
-            if(carAnimator) carAnimator.SetTrigger("Explode");
+            if (carAnimator)
+            {
+                switch (attackingLane)
+                {
+                    case lane.nolane:
+                        carAnimator.SetTrigger(generalExplodeTrigger);
+                        break;
+                    default:
+                        int differential = (int)chosenLane - (int)attackingLane;
+                        if(differential < 0)
+                        {
+                            carAnimator.SetTrigger(explodeLeftTrigger);
+                        }
+                        else
+                        {
+                            carAnimator.SetTrigger(explodeRightTrigger);
+                        }
+                        break;
+                }
+                
+            }
             Invoke("DeinstantiateAfterTime", 4f);
         }
 
@@ -71,7 +93,7 @@ namespace LMM_Movement
             switch (currentTag)
             {
                 case "Obstacle":
-                    Kill(lane.middle);
+                    Kill(lane.nolane);
                     break;
                 default:
                     break;

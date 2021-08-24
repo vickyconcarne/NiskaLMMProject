@@ -68,6 +68,9 @@ MonoBehaviour:
   canMove: 1
   carChild: {fileID: 7448361524830082921}
   carAnimator: {fileID: 7448361524830082934}
+  explodeLeftTrigger: ExplodeLeft
+  explodeRightTrigger: ExplodeRight
+  generalExplodeTrigger: Explode
   movementState: 2
   m_forwardMomentum: 16
   lanePositionalDifferential: 5

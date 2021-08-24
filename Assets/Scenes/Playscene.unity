@@ -514,7 +514,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 615188759}
-  m_LocalRotation: {x: 0.62699294, y: -0.041101754, z: 0.03315673, w: 0.77723306}
+  m_LocalRotation: {x: 0.62699294, y: -0.04110177, z: 0.03315674, w: 0.77723306}
   m_LocalPosition: {x: 0.9100002, y: 35.86, z: -8.579999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -731,7 +731,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 778703452}
-  m_LocalRotation: {x: 0.62699294, y: -0.041101754, z: 0.03315673, w: 0.77723306}
+  m_LocalRotation: {x: 0.62699294, y: -0.04110177, z: 0.03315674, w: 0.77723306}
   m_LocalPosition: {x: 0.9100002, y: 35.86, z: -8.579999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -31118,6 +31118,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: NPCCopCar
+      objectReference: {fileID: 0}
+    - target: {fileID: 6039523837792194788, guid: c2beefb6ecc1fba48905f0699d5322c0,
+        type: 3}
+      propertyPath: generalExplodeTrigger
+      value: Explode
       objectReference: {fileID: 0}
     - target: {fileID: 6039523837792194790, guid: c2beefb6ecc1fba48905f0699d5322c0,
         type: 3}
