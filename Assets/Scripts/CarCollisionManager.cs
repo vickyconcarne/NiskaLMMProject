@@ -32,7 +32,7 @@ public class CarCollisionManager : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         string currentTag = other.gameObject.tag;
-        Debug.Log("Collided with tag " + currentTag);
+        //Debug.Log("Collided with tag " + currentTag);
         switch (currentTag)
         {
             case "Obstacle":
@@ -63,7 +63,7 @@ public class CarCollisionManager : MonoBehaviour
     {
         //Cam
         cinemachineCam.enabled = false;
-        Destroy(cinemachineCam);
+        //Destroy(cinemachineCam);
         cinemachineBrain.enabled = false;
         //Boom
         explosionEffect.transform.position = this.transform.position;
@@ -72,7 +72,7 @@ public class CarCollisionManager : MonoBehaviour
         playerController.canMove = false;
         currentCollider.isTrigger = false;
         ragDollRB.isKinematic = false;
-        Vector3 randomizedNormal = Vector3.Normalize(transform.position - other.transform.position) + Random.Range(0, 1f) * Vector3.up + Random.Range(-1f, 1f) * Vector3.right;
+        Vector3 randomizedNormal = Vector3.Normalize(transform.position - other.transform.position) + Random.Range(0.5f, 1f) * Vector3.up;
         ragDollRB.AddForce(randomizedNormal * explosionForce, ForceMode.Impulse);
     }
 

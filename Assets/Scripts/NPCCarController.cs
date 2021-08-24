@@ -55,7 +55,7 @@ namespace LMM_Movement
             currentCollider.enabled = false;
             canMove = false;
             if(carAnimator) carAnimator.SetTrigger("Explode");
-            Invoke("DeinstantiateAfterTime", 2f);
+            Invoke("DeinstantiateAfterTime", 4f);
         }
 
         public void DeinstantiateAfterTime()
@@ -63,17 +63,17 @@ namespace LMM_Movement
             Destroy(m_CharacterController.gameObject);
         }
 
-        private void OnCollisionEnter(Collision col)
+        private void OnTriggerEnter(Collider col)
         {
             string currentTag = col.gameObject.tag;
-            Debug.Log("npc car has found " + currentTag);
+            Debug.Log("npc car has found " + currentTag + " for " + col.gameObject.name);
             switch (currentTag)
             {
                 case "Obstacle":
                     Kill(lane.middle);
                     break;
                 case "OtherCar":
-                    lane otherCarLane = col.collider.GetComponent<NPCCarController>().chosenLane;
+                    lane otherCarLane = col.GetComponent<NPCCarController>().chosenLane;
                     Kill(chosenLane);
                     break;
                 default:
