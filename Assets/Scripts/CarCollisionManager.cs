@@ -32,7 +32,7 @@ public class CarCollisionManager : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         string currentTag = other.gameObject.tag;
-        //Debug.Log("Collided with tag " + currentTag);
+        Debug.Log("Collided with tag " + currentTag + " " + other.gameObject.name);
         switch (currentTag)
         {
             case "Obstacle":
@@ -45,8 +45,8 @@ public class CarCollisionManager : MonoBehaviour
                 if(currentState == actorState.AggressiveSwerving)
                 {
 
-                    NPCCarController otherCar = GetComponent<NPCCarController>();
-                    if (otherCar) otherCar.Kill(playerController.chosenLane);
+                    NPCCarController otherCar = other.GetComponent<NPCCarController>();
+                    if(otherCar) otherCar.Kill(playerController.chosenLane);
                 }
                 else
                 {

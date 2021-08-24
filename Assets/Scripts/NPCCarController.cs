@@ -67,7 +67,7 @@ namespace LMM_Movement
         private void OnTriggerEnter(Collider col)
         {
             string currentTag = col.gameObject.tag;
-            Debug.Log("npc car has found " + currentTag + " for " + col.gameObject.name);
+            //Debug.Log("npc car has found " + currentTag + " for " + col.gameObject.name);
             switch (currentTag)
             {
                 case "Obstacle":
