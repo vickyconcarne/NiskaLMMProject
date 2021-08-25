@@ -69,11 +69,21 @@ namespace LMM_Movement
             {
                 currentDirection = 1;
             }
-            if (!finishedLateralAction) { return; } //Stop processing input
+            
 
-            if(Mathf.Abs(currentDirection) > k_acceptableInputRange)
+            if(currentDirection != 0)
             {
-                if(currentDirection == -1f)
+                ProcessInput(currentDirection);
+            }
+            
+        }
+
+        public void ProcessInput(float currentLateralDirection)
+        {
+            if (!finishedLateralAction || !canMove) { return; } //Stop processing input
+            if (Mathf.Abs(currentLateralDirection) > k_acceptableInputRange)
+            {
+                if (currentLateralDirection == -1f)
                 {
                     switch (chosenLane)
                     {
@@ -98,7 +108,7 @@ namespace LMM_Movement
                             break;
                     }
                 }
-                else if(currentDirection == 1f)
+                else if (currentLateralDirection == 1f)
                 {
                     switch (chosenLane)
                     {
@@ -121,7 +131,7 @@ namespace LMM_Movement
                         default:
                             break;
                     }
-                   
+
                 }
             }
         }
