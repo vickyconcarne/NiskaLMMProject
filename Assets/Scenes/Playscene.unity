@@ -584,7 +584,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 615188759}
-  m_LocalRotation: {x: 0.62699294, y: -0.04110155, z: 0.033156563, w: 0.77723306}
+  m_LocalRotation: {x: 0.62699294, y: -0.041101754, z: 0.03315673, w: 0.77723306}
   m_LocalPosition: {x: 0.9100002, y: 35.86, z: -8.579999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -802,7 +802,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 778703452}
-  m_LocalRotation: {x: 0.62699294, y: -0.04110155, z: 0.033156563, w: 0.77723306}
+  m_LocalRotation: {x: 0.62699294, y: -0.041101754, z: 0.03315673, w: 0.77723306}
   m_LocalPosition: {x: 0.9100002, y: 35.86, z: -8.579999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -6733,11 +6733,17 @@ MonoBehaviour:
   - {fileID: 6743519024202991439, guid: d0e77e5b2d0b09641b0e86d44679500f, type: 3}
   emptyTilePrefabs: []
   possibleWaves: []
+  activeTiles: []
+  currentTypeStandingOn: 0
   seed: 53
   zSpawn: 0
   tileLength: 100
   numberOfTilesToSpawnPerIteration: 4
+  currentChallenge: 0
   laneDifferential: 5
+  frontDifferential: 100
+  backDifferential: -20
+  currentCountedObstacles: 0
   currentCountedCars: 0
   maxCountedCars: 0
 --- !u!1 &1932472284
