@@ -23,7 +23,7 @@ public class CarCounter : MonoBehaviour
         if(col.gameObject.tag == "OtherCar")
         {
             tileManager.currentCountedCars += 1;
-            tileManager.CheckCars();
+            tileManager.CheckState();
         }
     }
 }

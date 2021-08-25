@@ -91,13 +91,20 @@ namespace LMM_Movement
         private void OnTriggerEnter(Collider col)
         {
             string currentTag = col.gameObject.tag;
+            if (gameObject.Equals(col.gameObject)){
+                return; //Dont detect urself
+            }
             //Debug.Log("npc car has found " + currentTag + " for " + col.gameObject.name);
-            if(movementState != actorState.Immovable)
+            if(movementState != actorState.Immovable || movementState != actorState.AggressiveSwerving)
             {
                 switch (currentTag)
                 {
                     case "Obstacle":
                         Kill(lane.nolane);
+                        break;
+                    case "OtherCar":
+                        var carComp = col.GetComponent<NPCCarController>();
+                        if (carComp) Kill(carComp.chosenLane);
                         break;
                     default:
                         break;

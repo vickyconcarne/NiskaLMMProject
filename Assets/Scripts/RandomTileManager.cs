@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using LMM_Movement;
+using System;
 
 public class RandomTileManager : MonoBehaviour
 {
@@ -9,34 +10,38 @@ public class RandomTileManager : MonoBehaviour
     [Header("Different tile prefabs")]
     public List<GameObject> tilePrefabs = new List<GameObject>();
     public List<GameObject> emptyTilePrefabs = new List<GameObject>();
-    public List<Wave> possibleWaves;
-    private List<GameObject> activeTiles = new List<GameObject>();
+    public List<Wave> possibleWaves = new List<Wave>();
+    public List<GameObject> activeTiles = new List<GameObject>();
+    public ChallengeType currentTypeStandingOn;
     [Header("Placement options")]
     public int seed = 43;
     public float zSpawn = 0;
     public float tileLength = 10;
     public int numberOfTilesToSpawnPerIteration = 4;
-
+    public ChallengeType currentChallenge;
     [Header("NPC Placement")]
     public float laneDifferential = 5f;
+    public float frontDifferential = 100f;
+    public float backDifferential = -20f;
 
-
+    public int currentCountedObstacles;
     public int currentCountedCars;
     public int maxCountedCars;
 
     // Start is called before the first frame update
     void Start()
     {
-        Random.InitState(seed);
+        currentChallenge = ChallengeType.obstacles;
+        UnityEngine.Random.InitState(seed);
         for(int i = 0; i < numberOfTilesToSpawnPerIteration; i++)
         {
             if(i == 0)
             {
-                SpawnTile(0);
+                SpawnObstacleTile(0);
             }
             else
             {
-                SpawnTile(Random.Range(0, tilePrefabs.Count));
+                SpawnObstacleTile(UnityEngine.Random.Range(0, tilePrefabs.Count));
             }
         }
     }
@@ -44,18 +49,45 @@ public class RandomTileManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(playerTransform.position.z - tileLength*2 > zSpawn - (numberOfTilesToSpawnPerIteration * tileLength)) //Substract initially by tile length *2 so we dont delete the first tile on start
+        WhatTypeStandingOn();
+        if (playerTransform.position.z - tileLength * 2 > zSpawn - (numberOfTilesToSpawnPerIteration * tileLength)) //Substract initially by tile length *2 so we dont delete the first tile on start
         {
-            SpawnTile(Random.Range(0, tilePrefabs.Count));
+            SpawnObstacleTile(UnityEngine.Random.Range(0, tilePrefabs.Count));
             DeleteTile();
         }
+        /*if(playerTransform.position.z - tileLength*2 > zSpawn - (numberOfTilesToSpawnPerIteration * tileLength)) //Substract initially by tile length *2 so we dont delete the first tile on start
+        {
+            switch (currentChallenge)
+            {
+                case ChallengeType.obstacles:
+                    SpawnObstacleTile(Random.Range(0, tilePrefabs.Count));
+                    break;
+                case ChallengeType.cars:
+                    SpawnSimpleTile(Random.Range(0, tilePrefabs.Count));
+                    break;
+            }
+            
+            DeleteTile();
+        }*/
     }
 
-    public void SpawnTile(int index)
+    public void SpawnObstacleTile(int index)
     {
         GameObject go = Instantiate(tilePrefabs[index], transform.forward * zSpawn, transform.rotation);
         activeTiles.Add(go);
 
+        zSpawn += tileLength;
+    }
+
+    public void SpawnSimpleTile(int index)
+    {
+        GameObject go = Instantiate(emptyTilePrefabs[index], transform.forward * zSpawn, transform.rotation);
+        activeTiles.Add(go);
+        if(currentCountedObstacles > 0)
+        {
+            currentCountedObstacles -= 1;
+            CheckState();
+        }
         zSpawn += tileLength;
     }
 
@@ -65,8 +97,47 @@ public class RandomTileManager : MonoBehaviour
         activeTiles.RemoveAt(0);
     }
 
-    public void CheckCars()
+    public void WhatTypeStandingOn()
     {
+        if (zSpawn < numberOfTilesToSpawnPerIteration * tileLength) {
+            
+            return;
+        }
+        float currentZ = playerTransform.position.z;
+        float quotient = Mathf.Round((zSpawn - currentZ)/tileLength);
+        quotient = ((zSpawn - currentZ)/tileLength) - quotient != 0 ? quotient + 1 : quotient; //Rounds to the nearest integer up
+        int index = activeTiles.Count - ((int)quotient - 1);
+        //Debug.Log("quotient value " + quotient + " difference zSpawn-currentZ was " + (zSpawn - currentZ) + " remainder index was thus " + index);
+        currentTypeStandingOn = activeTiles[index].GetComponent<TileType>().type;
+    }
+
+    public void CheckState()
+    {
+        switch (currentChallenge)
+        {
+            case ChallengeType.obstacles:
+                if (currentCountedObstacles == 0)
+                {
+                    currentChallenge = ChallengeType.cars;
+                }
+                break;
+            case ChallengeType.cars:
+                if(currentCountedCars == maxCountedCars)
+                {
+                    currentChallenge = ChallengeType.obstacles;
+                }
+                break;
+        }
+    }
+
+    public void SpawnWave(int index)
+    {
+        
+        Wave randWave = possibleWaves[UnityEngine.Random.Range(0, possibleWaves.Count)];
+        maxCountedCars = randWave.waveList.Count;
+        currentCountedCars = 0;
+        //GameObject go = Instantiate(tilePrefabs[index], transform.forward * zSpawn, transform.rotation);
+        //activeTiles.Add(go);
 
     }
 }
@@ -85,3 +156,6 @@ public class SpawnInstance
     public bool fromTop; //Spawn from top of screen or bottom
     public lane laneToPlace;
 }
+
+
+public enum ChallengeType { obstacles = 0, cars = 1 };
