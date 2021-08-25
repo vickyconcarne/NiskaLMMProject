@@ -71,8 +71,8 @@ MonoBehaviour:
   explodeLeftTrigger: ExplodeLeft
   explodeRightTrigger: ExplodeRight
   generalExplodeTrigger: Explode
-  movementState: 1
-  m_forwardMomentum: 25
+  movementState: 2
+  m_forwardMomentum: 22
   lanePositionalDifferential: 5
   timeToChangeLane: 1
   chosenLane: -1

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6039523837792194788}
   - component: {fileID: 6039523837792194791}
   m_Layer: 8
-  m_Name: NPCTruck2
+  m_Name: NPCTruck
   m_TagString: OtherCar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -68,11 +68,11 @@ MonoBehaviour:
   canMove: 1
   carChild: {fileID: 6039523839720198821}
   carAnimator: {fileID: 6039523839720198842}
-  explodeLeftTrigger: ExplodeLeft
-  explodeRightTrigger: ExplodeRight
+  explodeLeftTrigger: Explode
+  explodeRightTrigger: Explode
   generalExplodeTrigger: Explode
   movementState: 2
-  m_forwardMomentum: 16
+  m_forwardMomentum: 10
   lanePositionalDifferential: 5
   timeToChangeLane: 1
   chosenLane: 1
@@ -135,7 +135,7 @@ Animator:
   m_GameObject: {fileID: 6039523839720198820}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 86a32d54bdba107449ccb860d2e57d0d, type: 2}
+  m_Controller: {fileID: 9100000, guid: 27e568ef39d831b48a9c69da28eafaa0, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

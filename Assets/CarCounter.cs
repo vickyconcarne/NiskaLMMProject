@@ -5,7 +5,6 @@ using UnityEngine;
 public class CarCounter : MonoBehaviour
 {
 
-    public RandomTileManager tileManager;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,8 +21,8 @@ public class CarCounter : MonoBehaviour
     {
         if(col.gameObject.tag == "OtherCar")
         {
-            tileManager.currentCountedCars += 1;
-            tileManager.CheckState();
+            RandomTileManager.instance.currentCountedCars += 1;
+            RandomTileManager.instance.CheckState();
         }
     }
 }

@@ -54,7 +54,8 @@ namespace LMM_Movement
 
         public void Kill(lane attackingLane)
         {
-            Debug.Log("Killing my truck");
+            RandomTileManager.instance.currentCountedCars += 1;
+            RandomTileManager.instance.CheckState();
             currentCollider.enabled = false;
             canMove = false;
             if (carAnimator)

@@ -1,9 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using LMM_Movement;
 using Cinemachine;
-
 public class CarCollisionManager : MonoBehaviour
 {
     public actorState currentState;
@@ -76,6 +76,12 @@ public class CarCollisionManager : MonoBehaviour
         ragDollRB.isKinematic = false;
         Vector3 randomizedNormal = Vector3.Normalize(transform.position - other.transform.position) + Random.Range(0.5f, 1f) * Vector3.up;
         ragDollRB.AddForce(randomizedNormal * explosionForce, ForceMode.Impulse);
+    }
+
+    public IEnumerator ReloadAfterAWait()
+    {
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().ToString());
     }
 
 }
