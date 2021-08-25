@@ -47,21 +47,6 @@ public class projectileActorExplosion1 : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            Switch(-1);
-        }
-
-
-        if (Input.GetButtonDown("Fire2") || Input.GetKeyDown(KeyCode.D))
-        {
-            Switch(1);
-        }
-
-	    if(Input.GetButtonDown("Fire1"))
-        {
-            Fire();
-        }
 	}
 
     public void Switch(int value)

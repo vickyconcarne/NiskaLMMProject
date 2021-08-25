@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using LMM_Movement;
 
 public class CarCounter : MonoBehaviour
 {
@@ -23,6 +24,14 @@ public class CarCounter : MonoBehaviour
         {
             RandomTileManager.instance.currentCountedCars += 1;
             RandomTileManager.instance.CheckState();
+            NPCCarController carNPC = col.GetComponent<NPCCarController>();
+            if (carNPC)
+            {
+                if (carNPC.canMove)
+                {
+                    carNPC.Kill(lane.nolane);
+                }
+            }
         }
     }
 }

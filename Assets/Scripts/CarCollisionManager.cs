@@ -76,12 +76,14 @@ public class CarCollisionManager : MonoBehaviour
         ragDollRB.isKinematic = false;
         Vector3 randomizedNormal = Vector3.Normalize(transform.position - other.transform.position) + Random.Range(0.5f, 1f) * Vector3.up;
         ragDollRB.AddForce(randomizedNormal * explosionForce, ForceMode.Impulse);
+        //Retry
+        StartCoroutine(ReloadAfterAWait(2f));
     }
 
-    public IEnumerator ReloadAfterAWait()
+    public IEnumerator ReloadAfterAWait(float val)
     {
-        yield return new WaitForSeconds(2f);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().ToString());
+        yield return new WaitForSeconds(val);
+        SceneManager.LoadScene("PlayScene");
     }
 
 }

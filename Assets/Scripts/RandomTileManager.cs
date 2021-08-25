@@ -48,7 +48,8 @@ public class RandomTileManager : MonoBehaviour
                 SpawnObstacleTile(UnityEngine.Random.Range(0, tilePrefabs.Count));
             }
         }
-        currentCountedObstacles = numberOfTilesToSpawnPerIteration;
+        //currentCountedObstacles = numberOfTilesToSpawnPerIteration;
+        currentCountedObstacles = 2;
     }
 
     // Update is called once per frame

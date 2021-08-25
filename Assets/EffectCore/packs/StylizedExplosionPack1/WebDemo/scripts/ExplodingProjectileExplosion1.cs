@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using LMM_Movement;
 /* THIS CODE IS JUST FOR PREVIEW AND TESTING */
 public class ExplodingProjectileExplosion1 : MonoBehaviour
 {
@@ -69,13 +69,18 @@ public class ExplodingProjectileExplosion1 : MonoBehaviour
 
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.tag != "FX")
+        if (collision.gameObject.tag == "OtherCar")
         {
-            ContactPoint contact = collision.contacts[0];
-            Quaternion rot = Quaternion.FromToRotation(Vector3.up, contact.normal);
-            Vector3 pos = contact.point;
+            NPCCarController otherCar = collision.gameObject.GetComponent<NPCCarController>();
+            if (otherCar)
+            {
+                if (otherCar.canMove) otherCar.Kill(lane.nolane);
+            }
+
+            Quaternion rot = Quaternion.LookRotation(Vector3.up);
+            Vector3 pos = collision.transform.position;
             Instantiate(impactPrefab, pos, rot);
             if (!explodeOnTimer && Missile == false)
             {

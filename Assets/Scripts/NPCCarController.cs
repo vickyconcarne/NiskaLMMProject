@@ -32,7 +32,7 @@ namespace LMM_Movement
         public Vector3 leftLaneLocalPos;
         public Vector3 middleLaneLocalPos;
         public Vector3 rightLaneLocalPos;
-
+        
 
         // Start is called before the first frame update
         void Start()
