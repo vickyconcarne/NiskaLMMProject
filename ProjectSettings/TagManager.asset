@@ -17,7 +17,7 @@ TagManager:
   - PlayerCar
   - Obstacle
   - OtherCar
-  - 
+  - DestructibleObstacle
   - 
   - 
   - 
