@@ -7,9 +7,9 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Desert_1
-  m_Shader: {fileID: 4800000, guid: 86b870659b96d40e9a8169f26a591851, type: 3}
-  m_ShaderKeywords: _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
+  m_Name: Multiply_Light
+  m_Shader: {fileID: 10720, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -39,12 +39,8 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _LayoutTexture:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: d007078199da04a83baf545a3ed4bd4d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -60,54 +56,23 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _AmbientPower: 1.17
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _FogAnimationFreq: 0.1
-    - _FogAnimationHeight: 0.1
-    - _FogDensity: 0.6
-    - _FogEnd: 5.6
-    - _FogHeight: 139.1
-    - _FogStart: 0
-    - _FogYStartPos: -15.81
-    - _FrontLight: 0.03
-    - _GlossMapScale: 0.208
-    - _Glossiness: 0.35
+    - _GlossMapScale: 1
+    - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _LayoutTexturePower: 1
-    - _LightmapPower: 1
-    - _Metallic: 0.582
+    - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _RightLight: 0.35
-    - _RimPower: 0.72
-    - _ShadowPower: 0
-    - _SmoothnessTextureChannel: 1
+    - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _TopLight: 0.77
     - _UVSec: 0
-    - _UseDirLight: 0
-    - _UseFogDistance: 0
-    - _UseLightMap: 0
     - _ZWrite: 1
     m_Colors:
-    - _AmbientColor: {r: 0.46226418, g: 0.05015131, b: 0.12987748, a: 0}
-    - _Color: {r: 0.9433962, g: 0.70414764, b: 0.5562478, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _FogColor: {r: 0.18039216, g: 0.07450981, b: 0.11751987, a: 1}
-    - _FrontColor: {r: 0.6792453, g: 0.1954432, b: 0.1954432, a: 0}
-    - _LightDirF: {r: 0, g: 0, b: -1, a: 1}
-    - _LightDirR: {r: 1, g: 0, b: 0, a: 1}
-    - _LightDirT: {r: 0, g: 1, b: 0, a: 1}
-    - _LightTint: {r: 1, g: 0.8443396, b: 0.9541139, a: 0}
-    - _LightmapColor: {r: 1, g: 1, b: 1, a: 0}
-    - _MainColor: {r: 0.764151, g: 0.6207016, b: 0.29196337, a: 0}
-    - _RightColor: {r: 0.4433962, g: 0.28625497, b: 0.13176396, a: 0}
-    - _RimColor: {r: 0.81960785, g: 0.40784314, b: 0.6495325, a: 0}
-    - _RimPower: {r: 0, g: 0, b: 0, a: 0}
-    - _TopColor: {r: 0.9811321, g: 0.83366066, b: 0.47668213, a: 1}
   m_BuildTextureStacks: []
