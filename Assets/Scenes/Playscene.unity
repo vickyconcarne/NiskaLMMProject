@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.1838248, g: 0.22850996, b: 0.30045247, a: 1}
+  m_IndirectSpecularColor: {r: 0.18382427, g: 0.22850908, b: 0.30045107, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -648,7 +648,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 615188759}
-  m_LocalRotation: {x: 0.60817945, y: -0.033614915, z: 0.025791252, w: 0.7926681}
+  m_LocalRotation: {x: 0.60817945, y: -0.033614963, z: 0.025791291, w: 0.79266804}
   m_LocalPosition: {x: 0.9100003, y: 36.1, z: -10.709999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -881,7 +881,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 778703452}
-  m_LocalRotation: {x: 0.60817945, y: -0.033614915, z: 0.025791252, w: 0.7926681}
+  m_LocalRotation: {x: 0.60817945, y: -0.033614963, z: 0.025791291, w: 0.79266804}
   m_LocalPosition: {x: 0.9100003, y: 36.1, z: -10.709999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -1176,6 +1176,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1120077139}
+  - component: {fileID: 1120180596}
   m_Layer: 0
   m_Name: Offroad_3
   m_TagString: Untagged
@@ -1183,6 +1184,32 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1120180596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1120180595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d396949f6aee42969dbc7d665c6123b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  framerate: 60
+  positionFrequency: 0.5
+  positionAxisFrequency: {x: 1, y: 1, z: 1}
+  positionAmplitude: 8
+  positionAxisAmplitude: {x: 0.3, y: 0, z: 1}
+  rotationFrequency: 0
+  rotationAxisFrequency: {x: 1, y: 1, z: 1}
+  rotationAmplitude: 1
+  rotationAxisAmplitude: {x: 1, y: 1, z: 1}
+  positionAmplitudeMinMaxMultiplier: {x: 1, y: 1}
+  positionFrequencyMinMaxMultiplier: {x: 1, y: 1}
+  rotationAmplitudeMinMaxMultiplier: {x: 1, y: 1}
+  rotationFrequencyMinMaxMultiplier: {x: 1, y: 1}
+  randomizeOverTime: 1
 --- !u!1 &1120180597
 GameObject:
   m_ObjectHideFlags: 0
