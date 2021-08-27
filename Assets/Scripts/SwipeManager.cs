@@ -33,13 +33,13 @@ public class SwipeManager : MonoBehaviour
             if(Input.touches[0].position.x >= (startPos.x + pixelDistToDetect))
             {
                 fingerDown = false;
-                Debug.Log("Swipe right");
+                //Debug.Log("Swipe right");
                 playerController.ProcessInput(1f);
             }
             else if (Input.touches[0].position.x <= (startPos.x - pixelDistToDetect))
             {
                 fingerDown = false;
-                Debug.Log("Swipe left");
+                //Debug.Log("Swipe left");
                 playerController.ProcessInput(-1f);
             }
 
@@ -48,10 +48,10 @@ public class SwipeManager : MonoBehaviour
         
 
         //TESTING FOR PC
-
+        /*
         if (!fingerDown && Input.GetMouseButtonDown(0))
         {
-            startPos = Input.touches[0].position;
+            startPos = Input.mousePosition;
             fingerDown = true;
         }
 
@@ -72,6 +72,6 @@ public class SwipeManager : MonoBehaviour
             {
                 fingerDown = false;
             }
-        }
+        }*/
     }
 }
