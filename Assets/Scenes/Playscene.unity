@@ -7024,6 +7024,8 @@ MonoBehaviour:
   - {fileID: 6743519024202991439, guid: bf465ebb4db7fc841acb0aeb70293c2d, type: 3}
   - {fileID: 6743519024202991439, guid: 9b799f11ccab6434db21e28567a18d9d, type: 3}
   - {fileID: 6743519024202991439, guid: d0e77e5b2d0b09641b0e86d44679500f, type: 3}
+  - {fileID: 6743519024202991439, guid: cb3009c216c9b4b44a4bf0b1c7624c97, type: 3}
+  - {fileID: 6743519024202991439, guid: de963d5c65ff16f44abd3fef9a3ba6f6, type: 3}
   emptyTilePrefabs:
   - {fileID: 6743519024202991439, guid: 81dc067b936a6df43938f184e44c9578, type: 3}
   - {fileID: 6743519024202991439, guid: ba3139185ac274a0db0f734588841472, type: 3}
@@ -7031,29 +7033,101 @@ MonoBehaviour:
   - {fileID: 6743519024202991439, guid: a865ab0e535884ae195dc7135e987ca1, type: 3}
   possibleWaves:
   - waveList:
+    - distance: 3
+      instance: {fileID: 11400000, guid: 9bbbd2d27a1d73442a23658c665a4a9f, type: 2}
+    - distance: 5
+      instance: {fileID: 11400000, guid: a9794e8586d9c944995c32e6fccd359f, type: 2}
+    - distance: 3
+      instance: {fileID: 11400000, guid: 643b6ebcec2031f4fa60e21ab2f80038, type: 2}
+  - waveList:
+    - distance: 6
+      instance: {fileID: 11400000, guid: 9bbbd2d27a1d73442a23658c665a4a9f, type: 2}
+    - distance: 2
+      instance: {fileID: 11400000, guid: a9794e8586d9c944995c32e6fccd359f, type: 2}
+    - distance: 6
+      instance: {fileID: 11400000, guid: 643b6ebcec2031f4fa60e21ab2f80038, type: 2}
+  - waveList:
+    - distance: 6
+      instance: {fileID: 11400000, guid: 9bbbd2d27a1d73442a23658c665a4a9f, type: 2}
+    - distance: 2
+      instance: {fileID: 11400000, guid: a9794e8586d9c944995c32e6fccd359f, type: 2}
+    - distance: 6
+      instance: {fileID: 11400000, guid: 643b6ebcec2031f4fa60e21ab2f80038, type: 2}
+    - distance: 9
+      instance: {fileID: 11400000, guid: 9bbbd2d27a1d73442a23658c665a4a9f, type: 2}
+    - distance: 5
+      instance: {fileID: 11400000, guid: a9794e8586d9c944995c32e6fccd359f, type: 2}
+    - distance: 9
+      instance: {fileID: 11400000, guid: 643b6ebcec2031f4fa60e21ab2f80038, type: 2}
+  - waveList:
+    - distance: 1
+      instance: {fileID: 11400000, guid: 9bbbd2d27a1d73442a23658c665a4a9f, type: 2}
+    - distance: 3
+      instance: {fileID: 11400000, guid: a9794e8586d9c944995c32e6fccd359f, type: 2}
+    - distance: 5
+      instance: {fileID: 11400000, guid: 643b6ebcec2031f4fa60e21ab2f80038, type: 2}
+  - waveList:
     - distance: 5
       instance: {fileID: 11400000, guid: 9bbbd2d27a1d73442a23658c665a4a9f, type: 2}
     - distance: 3
       instance: {fileID: 11400000, guid: a9794e8586d9c944995c32e6fccd359f, type: 2}
-    - distance: 2
-      instance: {fileID: 11400000, guid: 1eb156ecdede7e741bd0158eb6125b39, type: 2}
-    - distance: 7
-      instance: {fileID: 11400000, guid: c6047aff527771943a8a2662bea6930e, type: 2}
-  - waveList:
-    - distance: 8
-      instance: {fileID: 11400000, guid: 9bbbd2d27a1d73442a23658c665a4a9f, type: 2}
-    - distance: 0
-      instance: {fileID: 11400000, guid: a9794e8586d9c944995c32e6fccd359f, type: 2}
-    - distance: 5
+    - distance: 1
       instance: {fileID: 11400000, guid: 643b6ebcec2031f4fa60e21ab2f80038, type: 2}
-    - distance: 15
-      instance: {fileID: 11400000, guid: c6047aff527771943a8a2662bea6930e, type: 2}
   - waveList:
-    - distance: 0
+    - distance: 3
       instance: {fileID: 11400000, guid: c6047aff527771943a8a2662bea6930e, type: 2}
-    - distance: 10
+    - distance: 6
       instance: {fileID: 11400000, guid: 43a26113a5439b94c9d455036247f113, type: 2}
-    - distance: 15
+    - distance: 3
+      instance: {fileID: 11400000, guid: 1eb156ecdede7e741bd0158eb6125b39, type: 2}
+  - waveList:
+    - distance: 1
+      instance: {fileID: 11400000, guid: c6047aff527771943a8a2662bea6930e, type: 2}
+    - distance: 4
+      instance: {fileID: 11400000, guid: 43a26113a5439b94c9d455036247f113, type: 2}
+    - distance: 6
+      instance: {fileID: 11400000, guid: 1eb156ecdede7e741bd0158eb6125b39, type: 2}
+  - waveList:
+    - distance: 5
+      instance: {fileID: 11400000, guid: c6047aff527771943a8a2662bea6930e, type: 2}
+    - distance: 2
+      instance: {fileID: 11400000, guid: 43a26113a5439b94c9d455036247f113, type: 2}
+    - distance: 5
+      instance: {fileID: 11400000, guid: 1eb156ecdede7e741bd0158eb6125b39, type: 2}
+  - waveList:
+    - distance: 5
+      instance: {fileID: 11400000, guid: c6047aff527771943a8a2662bea6930e, type: 2}
+    - distance: 2
+      instance: {fileID: 11400000, guid: 43a26113a5439b94c9d455036247f113, type: 2}
+    - distance: 5
+      instance: {fileID: 11400000, guid: 1eb156ecdede7e741bd0158eb6125b39, type: 2}
+    - distance: 3
+      instance: {fileID: 11400000, guid: a9794e8586d9c944995c32e6fccd359f, type: 2}
+    - distance: 1
+      instance: {fileID: 11400000, guid: 9bbbd2d27a1d73442a23658c665a4a9f, type: 2}
+  - waveList:
+    - distance: 5
+      instance: {fileID: 11400000, guid: c6047aff527771943a8a2662bea6930e, type: 2}
+    - distance: 5
+      instance: {fileID: 11400000, guid: 1eb156ecdede7e741bd0158eb6125b39, type: 2}
+    - distance: 2
+      instance: {fileID: 11400000, guid: a9794e8586d9c944995c32e6fccd359f, type: 2}
+    - distance: 1
+      instance: {fileID: 11400000, guid: 9bbbd2d27a1d73442a23658c665a4a9f, type: 2}
+    - distance: 5
+      instance: {fileID: 11400000, guid: a9794e8586d9c944995c32e6fccd359f, type: 2}
+  - waveList:
+    - distance: 6
+      instance: {fileID: 11400000, guid: 9bbbd2d27a1d73442a23658c665a4a9f, type: 2}
+    - distance: 2
+      instance: {fileID: 11400000, guid: a9794e8586d9c944995c32e6fccd359f, type: 2}
+    - distance: 6
+      instance: {fileID: 11400000, guid: 643b6ebcec2031f4fa60e21ab2f80038, type: 2}
+    - distance: 9
+      instance: {fileID: 11400000, guid: 9bbbd2d27a1d73442a23658c665a4a9f, type: 2}
+    - distance: 2
+      instance: {fileID: 11400000, guid: c6047aff527771943a8a2662bea6930e, type: 2}
+    - distance: 4
       instance: {fileID: 11400000, guid: 1eb156ecdede7e741bd0158eb6125b39, type: 2}
   activeTiles: []
   seed: 53

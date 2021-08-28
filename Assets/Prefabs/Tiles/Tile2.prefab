@@ -17,7 +17,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6743519024144138795
 Transform:
@@ -126,6 +126,10 @@ Transform:
   m_Children:
   - {fileID: 6743519024144138795}
   - {fileID: 6743519024539021037}
+  - {fileID: 3158519454231208645}
+  - {fileID: 561460226882861467}
+  - {fileID: 2464098386177513789}
+  - {fileID: 1248607379953149280}
   - {fileID: 5164618254526309284}
   - {fileID: 3351115082991818055}
   - {fileID: 1465870686169614087}
@@ -198,7 +202,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6743519024539021037
 Transform:
@@ -287,7 +291,7 @@ PrefabInstance:
     - target: {fileID: 4711893669482836482, guid: 0dc9c523926311e45a744414ee61c58e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4711893669482836482, guid: 0dc9c523926311e45a744414ee61c58e,
         type: 3}
@@ -362,7 +366,7 @@ PrefabInstance:
     - target: {fileID: 4711893669482836482, guid: 0dc9c523926311e45a744414ee61c58e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4711893669482836482, guid: 0dc9c523926311e45a744414ee61c58e,
         type: 3}
@@ -438,9 +442,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: scp_md_desert_grass_02 (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967294
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_RootOrder
-      value: 24
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_LocalScale.x
@@ -499,6 +507,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: def5527623b8f4fbf8224fd3ae8ad270, type: 2}
@@ -521,9 +533,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: scp_md_desert_grass_02 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967294
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_LocalScale.x
@@ -582,6 +598,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: def5527623b8f4fbf8224fd3ae8ad270, type: 2}
@@ -592,6 +612,81 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 221a23479feacea4b9c0174e21450c2e,
     type: 3}
   m_PrefabInstance: {fileID: 1128535629962910034}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1309121865309763864
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6743519024202991436}
+    m_Modifications:
+    - target: {fileID: 250264984678161528, guid: e9a4b0ff16a132941b94f4e31344d9bf,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 250264984678161528, guid: e9a4b0ff16a132941b94f4e31344d9bf,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 250264984678161528, guid: e9a4b0ff16a132941b94f4e31344d9bf,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 250264984678161528, guid: e9a4b0ff16a132941b94f4e31344d9bf,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -9.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 250264984678161528, guid: e9a4b0ff16a132941b94f4e31344d9bf,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 250264984678161528, guid: e9a4b0ff16a132941b94f4e31344d9bf,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 250264984678161528, guid: e9a4b0ff16a132941b94f4e31344d9bf,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 250264984678161528, guid: e9a4b0ff16a132941b94f4e31344d9bf,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 250264984678161528, guid: e9a4b0ff16a132941b94f4e31344d9bf,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 250264984678161528, guid: e9a4b0ff16a132941b94f4e31344d9bf,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 250264984678161528, guid: e9a4b0ff16a132941b94f4e31344d9bf,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4236276876675454599, guid: e9a4b0ff16a132941b94f4e31344d9bf,
+        type: 3}
+      propertyPath: m_Name
+      value: Obstacle (4)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e9a4b0ff16a132941b94f4e31344d9bf, type: 3}
+--- !u!4 &1248607379953149280 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 250264984678161528, guid: e9a4b0ff16a132941b94f4e31344d9bf,
+    type: 3}
+  m_PrefabInstance: {fileID: 1309121865309763864}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1734800543568507007
 PrefabInstance:
@@ -604,9 +699,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: scp_md_desert_grass_02 (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967294
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_RootOrder
-      value: 30
+      value: 34
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_LocalScale.x
@@ -665,6 +764,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: def5527623b8f4fbf8224fd3ae8ad270, type: 2}
@@ -687,9 +790,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: scp_md_desert_grass_02 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967294
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_RootOrder
-      value: 21
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_LocalScale.x
@@ -748,6 +855,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: def5527623b8f4fbf8224fd3ae8ad270, type: 2}
@@ -770,9 +881,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: scp_md_desert_grass_02 (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967294
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_RootOrder
-      value: 31
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_LocalScale.x
@@ -831,6 +946,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: def5527623b8f4fbf8224fd3ae8ad270, type: 2}
@@ -853,9 +972,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: scp_md_desert_grass_02 (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967294
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_RootOrder
-      value: 25
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_LocalScale.x
@@ -914,6 +1037,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: def5527623b8f4fbf8224fd3ae8ad270, type: 2}
@@ -936,9 +1063,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: scp_md_desert_grass_02 (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967294
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_RootOrder
-      value: 29
+      value: 33
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_LocalScale.x
@@ -997,6 +1128,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: def5527623b8f4fbf8224fd3ae8ad270, type: 2}
@@ -1019,9 +1154,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: scp_md_oil_co_tank_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3fec0b434796ef944bcc8d0ca4a74a6b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967294
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3fec0b434796ef944bcc8d0ca4a74a6b, type: 3}
       propertyPath: m_RootOrder
-      value: 39
+      value: 43
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3fec0b434796ef944bcc8d0ca4a74a6b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1068,6 +1207,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 3fec0b434796ef944bcc8d0ca4a74a6b, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 3fec0b434796ef944bcc8d0ca4a74a6b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: def5527623b8f4fbf8224fd3ae8ad270, type: 2}
@@ -1090,9 +1233,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: scp_md_desert_grass_02 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967294
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_RootOrder
-      value: 19
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_LocalScale.x
@@ -1151,6 +1298,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: def5527623b8f4fbf8224fd3ae8ad270, type: 2}
@@ -1169,13 +1320,45 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6743519024202991436}
     m_Modifications:
+    - target: {fileID: 100000, guid: 85a68c154db08ab4cb939368d48a5e81, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 85a68c154db08ab4cb939368d48a5e81, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 85a68c154db08ab4cb939368d48a5e81, type: 3}
       propertyPath: m_Name
       value: scp_md_rv_01
       objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 85a68c154db08ab4cb939368d48a5e81, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 85a68c154db08ab4cb939368d48a5e81, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: 85a68c154db08ab4cb939368d48a5e81, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 85a68c154db08ab4cb939368d48a5e81, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100012, guid: 85a68c154db08ab4cb939368d48a5e81, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100014, guid: 85a68c154db08ab4cb939368d48a5e81, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 85a68c154db08ab4cb939368d48a5e81, type: 3}
       propertyPath: m_RootOrder
-      value: 40
+      value: 44
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 85a68c154db08ab4cb939368d48a5e81, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1292,9 +1475,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: scp_md_desert_grass_02 (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967294
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_RootOrder
-      value: 26
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_LocalScale.x
@@ -1353,6 +1540,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: def5527623b8f4fbf8224fd3ae8ad270, type: 2}
@@ -1375,9 +1566,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: scp_md_utility_pole (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7e0e5a92e0c1808458ef43be66e891c9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967294
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7e0e5a92e0c1808458ef43be66e891c9, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7e0e5a92e0c1808458ef43be66e891c9, type: 3}
       propertyPath: m_LocalScale.x
@@ -1436,6 +1631,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 7e0e5a92e0c1808458ef43be66e891c9, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 7e0e5a92e0c1808458ef43be66e891c9, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: def5527623b8f4fbf8224fd3ae8ad270, type: 2}
@@ -1458,9 +1657,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: scp_md_desert_grass_02 (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967294
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_RootOrder
-      value: 32
+      value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_LocalScale.x
@@ -1519,6 +1722,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: def5527623b8f4fbf8224fd3ae8ad270, type: 2}
@@ -1541,9 +1748,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: scp_md_desert_grass_02 (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967294
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_RootOrder
-      value: 27
+      value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_LocalScale.x
@@ -1602,6 +1813,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: def5527623b8f4fbf8224fd3ae8ad270, type: 2}
@@ -1624,9 +1839,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: scp_md_utility_pole (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7e0e5a92e0c1808458ef43be66e891c9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967294
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7e0e5a92e0c1808458ef43be66e891c9, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7e0e5a92e0c1808458ef43be66e891c9, type: 3}
       propertyPath: m_LocalScale.x
@@ -1685,6 +1904,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 7e0e5a92e0c1808458ef43be66e891c9, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 7e0e5a92e0c1808458ef43be66e891c9, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: def5527623b8f4fbf8224fd3ae8ad270, type: 2}
@@ -1707,9 +1930,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: scp_md_desert_grass_02 (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967294
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_RootOrder
-      value: 34
+      value: 38
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_LocalScale.x
@@ -1768,6 +1995,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: def5527623b8f4fbf8224fd3ae8ad270, type: 2}
@@ -1790,9 +2021,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: scp_md_desert_grass_02 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967294
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_RootOrder
-      value: 22
+      value: 26
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_LocalScale.x
@@ -1851,6 +2086,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: def5527623b8f4fbf8224fd3ae8ad270, type: 2}
@@ -1873,9 +2112,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: scp_md_oil_co_gas_flare
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7be7e5debd22a7c44a4e19183bd5dca1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967294
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7be7e5debd22a7c44a4e19183bd5dca1, type: 3}
       propertyPath: m_RootOrder
-      value: 37
+      value: 41
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7be7e5debd22a7c44a4e19183bd5dca1, type: 3}
       propertyPath: m_LocalScale.x
@@ -1934,6 +2177,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 7be7e5debd22a7c44a4e19183bd5dca1, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 7be7e5debd22a7c44a4e19183bd5dca1, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: def5527623b8f4fbf8224fd3ae8ad270, type: 2}
@@ -1956,9 +2203,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: scp_md_desert_grass_02 (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967294
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_RootOrder
-      value: 23
+      value: 27
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_LocalScale.x
@@ -2017,6 +2268,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: def5527623b8f4fbf8224fd3ae8ad270, type: 2}
@@ -2039,9 +2294,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: scp_md_desert_grass_02 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967294
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_LocalScale.x
@@ -2100,6 +2359,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: def5527623b8f4fbf8224fd3ae8ad270, type: 2}
@@ -2122,9 +2385,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: scp_md_desert_grass_02 (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967294
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_RootOrder
-      value: 33
+      value: 37
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_LocalScale.x
@@ -2183,6 +2450,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: def5527623b8f4fbf8224fd3ae8ad270, type: 2}
@@ -2204,7 +2475,7 @@ PrefabInstance:
     - target: {fileID: 4711893669482836482, guid: 0dc9c523926311e45a744414ee61c58e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4711893669482836482, guid: 0dc9c523926311e45a744414ee61c58e,
         type: 3}
@@ -2269,6 +2540,81 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 6139483593302603013}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6779085370982584381
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6743519024202991436}
+    m_Modifications:
+    - target: {fileID: 8945866670930364672, guid: dfde6d0541adf744e8a03ffa50e03283,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8945866670930364672, guid: dfde6d0541adf744e8a03ffa50e03283,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8945866670930364672, guid: dfde6d0541adf744e8a03ffa50e03283,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8945866670930364672, guid: dfde6d0541adf744e8a03ffa50e03283,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 37.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8945866670930364672, guid: dfde6d0541adf744e8a03ffa50e03283,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8945866670930364672, guid: dfde6d0541adf744e8a03ffa50e03283,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8945866670930364672, guid: dfde6d0541adf744e8a03ffa50e03283,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8945866670930364672, guid: dfde6d0541adf744e8a03ffa50e03283,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8945866670930364672, guid: dfde6d0541adf744e8a03ffa50e03283,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8945866670930364672, guid: dfde6d0541adf744e8a03ffa50e03283,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8945866670930364672, guid: dfde6d0541adf744e8a03ffa50e03283,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8945866670930364673, guid: dfde6d0541adf744e8a03ffa50e03283,
+        type: 3}
+      propertyPath: m_Name
+      value: RightMiddleInTheBqckAndLeftInTheFront
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dfde6d0541adf744e8a03ffa50e03283, type: 3}
+--- !u!4 &2464098386177513789 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8945866670930364672, guid: dfde6d0541adf744e8a03ffa50e03283,
+    type: 3}
+  m_PrefabInstance: {fileID: 6779085370982584381}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6798908923284412214
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2280,9 +2626,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: scp_md_desert_grass_02 (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967294
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_RootOrder
-      value: 36
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_LocalScale.x
@@ -2341,6 +2691,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: def5527623b8f4fbf8224fd3ae8ad270, type: 2}
@@ -2363,9 +2717,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: scp_md_desert_grass_02 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967294
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_LocalScale.x
@@ -2424,6 +2782,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: def5527623b8f4fbf8224fd3ae8ad270, type: 2}
@@ -2446,9 +2808,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: scp_md_oil_co_building_01
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: a14979e685128684ea2f8a2f6f782712, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967294
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a14979e685128684ea2f8a2f6f782712, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a14979e685128684ea2f8a2f6f782712, type: 3}
       propertyPath: m_LocalScale.x
@@ -2507,6 +2873,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: a14979e685128684ea2f8a2f6f782712, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: a14979e685128684ea2f8a2f6f782712, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: def5527623b8f4fbf8224fd3ae8ad270, type: 2}
@@ -2529,9 +2899,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: scp_md_desert_grass_02 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967294
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_RootOrder
-      value: 20
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_LocalScale.x
@@ -2590,6 +2964,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: def5527623b8f4fbf8224fd3ae8ad270, type: 2}
@@ -2612,9 +2990,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: scp_md_desert_grass_02 (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967294
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_RootOrder
-      value: 35
+      value: 39
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_LocalScale.x
@@ -2673,6 +3055,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: def5527623b8f4fbf8224fd3ae8ad270, type: 2}
@@ -2695,9 +3081,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: scp_md_utility_pole
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7e0e5a92e0c1808458ef43be66e891c9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967294
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7e0e5a92e0c1808458ef43be66e891c9, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7e0e5a92e0c1808458ef43be66e891c9, type: 3}
       propertyPath: m_LocalScale.x
@@ -2756,6 +3146,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 7e0e5a92e0c1808458ef43be66e891c9, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 7e0e5a92e0c1808458ef43be66e891c9, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: def5527623b8f4fbf8224fd3ae8ad270, type: 2}
@@ -2778,9 +3172,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: scp_md_oil_co_tank_01
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3fec0b434796ef944bcc8d0ca4a74a6b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967294
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3fec0b434796ef944bcc8d0ca4a74a6b, type: 3}
       propertyPath: m_RootOrder
-      value: 38
+      value: 42
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3fec0b434796ef944bcc8d0ca4a74a6b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2827,6 +3225,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 3fec0b434796ef944bcc8d0ca4a74a6b, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 3fec0b434796ef944bcc8d0ca4a74a6b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: def5527623b8f4fbf8224fd3ae8ad270, type: 2}
@@ -2849,9 +3251,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: scp_md_utility_pole (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7e0e5a92e0c1808458ef43be66e891c9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967294
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7e0e5a92e0c1808458ef43be66e891c9, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7e0e5a92e0c1808458ef43be66e891c9, type: 3}
       propertyPath: m_LocalScale.x
@@ -2910,6 +3316,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 7e0e5a92e0c1808458ef43be66e891c9, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 7e0e5a92e0c1808458ef43be66e891c9, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: def5527623b8f4fbf8224fd3ae8ad270, type: 2}
@@ -2931,7 +3341,7 @@ PrefabInstance:
     - target: {fileID: 4711893669482836482, guid: 0dc9c523926311e45a744414ee61c58e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4711893669482836482, guid: 0dc9c523926311e45a744414ee61c58e,
         type: 3}
@@ -3007,9 +3417,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: scp_md_desert_grass_02 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967294
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_LocalScale.x
@@ -3068,6 +3482,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: def5527623b8f4fbf8224fd3ae8ad270, type: 2}
@@ -3090,9 +3508,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: scp_md_desert_grass_02 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967294
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_LocalScale.x
@@ -3151,6 +3573,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: def5527623b8f4fbf8224fd3ae8ad270, type: 2}
@@ -3161,6 +3587,81 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 221a23479feacea4b9c0174e21450c2e,
     type: 3}
   m_PrefabInstance: {fileID: 8259061218347162006}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8301939241903322271
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6743519024202991436}
+    m_Modifications:
+    - target: {fileID: 6405026268669630042, guid: 26a426ef157501e479313b3ffdc131a8,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6405026268669630042, guid: 26a426ef157501e479313b3ffdc131a8,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6405026268669630042, guid: 26a426ef157501e479313b3ffdc131a8,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6405026268669630042, guid: 26a426ef157501e479313b3ffdc131a8,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 18.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6405026268669630042, guid: 26a426ef157501e479313b3ffdc131a8,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6405026268669630042, guid: 26a426ef157501e479313b3ffdc131a8,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6405026268669630042, guid: 26a426ef157501e479313b3ffdc131a8,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6405026268669630042, guid: 26a426ef157501e479313b3ffdc131a8,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6405026268669630042, guid: 26a426ef157501e479313b3ffdc131a8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6405026268669630042, guid: 26a426ef157501e479313b3ffdc131a8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6405026268669630042, guid: 26a426ef157501e479313b3ffdc131a8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6405026268669630044, guid: 26a426ef157501e479313b3ffdc131a8,
+        type: 3}
+      propertyPath: m_Name
+      value: DestructibleCarBlockade
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 26a426ef157501e479313b3ffdc131a8, type: 3}
+--- !u!4 &3158519454231208645 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6405026268669630042, guid: 26a426ef157501e479313b3ffdc131a8,
+    type: 3}
+  m_PrefabInstance: {fileID: 8301939241903322271}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8441928845428696497
 PrefabInstance:
@@ -3173,9 +3674,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: scp_md_utility_pole (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7e0e5a92e0c1808458ef43be66e891c9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967294
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7e0e5a92e0c1808458ef43be66e891c9, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7e0e5a92e0c1808458ef43be66e891c9, type: 3}
       propertyPath: m_LocalScale.x
@@ -3234,6 +3739,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 7e0e5a92e0c1808458ef43be66e891c9, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 7e0e5a92e0c1808458ef43be66e891c9, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: def5527623b8f4fbf8224fd3ae8ad270, type: 2}
@@ -3256,9 +3765,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: scp_md_desert_grass_02
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967294
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_LocalScale.x
@@ -3317,6 +3830,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: def5527623b8f4fbf8224fd3ae8ad270, type: 2}
@@ -3339,9 +3856,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: scp_md_desert_grass_02 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967294
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_LocalScale.x
@@ -3400,6 +3921,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: def5527623b8f4fbf8224fd3ae8ad270, type: 2}
@@ -3410,6 +3935,81 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 221a23479feacea4b9c0174e21450c2e,
     type: 3}
   m_PrefabInstance: {fileID: 8863320966274476723}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8929704906585239707
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6743519024202991436}
+    m_Modifications:
+    - target: {fileID: 8945866670930364672, guid: cf8e5d8aa1328f04188861993419f195,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8945866670930364672, guid: cf8e5d8aa1328f04188861993419f195,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8945866670930364672, guid: cf8e5d8aa1328f04188861993419f195,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8945866670930364672, guid: cf8e5d8aa1328f04188861993419f195,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -36.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8945866670930364672, guid: cf8e5d8aa1328f04188861993419f195,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8945866670930364672, guid: cf8e5d8aa1328f04188861993419f195,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8945866670930364672, guid: cf8e5d8aa1328f04188861993419f195,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8945866670930364672, guid: cf8e5d8aa1328f04188861993419f195,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8945866670930364672, guid: cf8e5d8aa1328f04188861993419f195,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8945866670930364672, guid: cf8e5d8aa1328f04188861993419f195,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8945866670930364672, guid: cf8e5d8aa1328f04188861993419f195,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8945866670930364673, guid: cf8e5d8aa1328f04188861993419f195,
+        type: 3}
+      propertyPath: m_Name
+      value: 1BlockadeTwoObstacles
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cf8e5d8aa1328f04188861993419f195, type: 3}
+--- !u!4 &561460226882861467 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8945866670930364672, guid: cf8e5d8aa1328f04188861993419f195,
+    type: 3}
+  m_PrefabInstance: {fileID: 8929704906585239707}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &9164615611123632980
 PrefabInstance:
@@ -3422,9 +4022,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: scp_md_desert_grass_02 (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967294
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_RootOrder
-      value: 28
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_LocalScale.x
@@ -3480,6 +4084,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
       propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
+      propertyPath: m_ReceiveShadows
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 221a23479feacea4b9c0174e21450c2e, type: 3}
