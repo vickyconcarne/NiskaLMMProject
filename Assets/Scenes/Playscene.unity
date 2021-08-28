@@ -7033,45 +7033,45 @@ MonoBehaviour:
   - {fileID: 6743519024202991439, guid: a865ab0e535884ae195dc7135e987ca1, type: 3}
   possibleWaves:
   - waveList:
-    - distance: 3
+    - distance: 10
       instance: {fileID: 11400000, guid: 9bbbd2d27a1d73442a23658c665a4a9f, type: 2}
-    - distance: 5
+    - distance: 15
       instance: {fileID: 11400000, guid: a9794e8586d9c944995c32e6fccd359f, type: 2}
-    - distance: 3
+    - distance: 10
       instance: {fileID: 11400000, guid: 643b6ebcec2031f4fa60e21ab2f80038, type: 2}
   - waveList:
-    - distance: 6
+    - distance: 10
       instance: {fileID: 11400000, guid: 9bbbd2d27a1d73442a23658c665a4a9f, type: 2}
-    - distance: 2
+    - distance: 15
       instance: {fileID: 11400000, guid: a9794e8586d9c944995c32e6fccd359f, type: 2}
-    - distance: 6
+    - distance: 10
       instance: {fileID: 11400000, guid: 643b6ebcec2031f4fa60e21ab2f80038, type: 2}
   - waveList:
-    - distance: 6
+    - distance: 13
       instance: {fileID: 11400000, guid: 9bbbd2d27a1d73442a23658c665a4a9f, type: 2}
-    - distance: 2
+    - distance: 10
       instance: {fileID: 11400000, guid: a9794e8586d9c944995c32e6fccd359f, type: 2}
-    - distance: 6
+    - distance: 13
       instance: {fileID: 11400000, guid: 643b6ebcec2031f4fa60e21ab2f80038, type: 2}
-    - distance: 9
+    - distance: 18
       instance: {fileID: 11400000, guid: 9bbbd2d27a1d73442a23658c665a4a9f, type: 2}
-    - distance: 5
+    - distance: 15
       instance: {fileID: 11400000, guid: a9794e8586d9c944995c32e6fccd359f, type: 2}
-    - distance: 9
-      instance: {fileID: 11400000, guid: 643b6ebcec2031f4fa60e21ab2f80038, type: 2}
-  - waveList:
-    - distance: 1
-      instance: {fileID: 11400000, guid: 9bbbd2d27a1d73442a23658c665a4a9f, type: 2}
-    - distance: 3
-      instance: {fileID: 11400000, guid: a9794e8586d9c944995c32e6fccd359f, type: 2}
-    - distance: 5
+    - distance: 18
       instance: {fileID: 11400000, guid: 643b6ebcec2031f4fa60e21ab2f80038, type: 2}
   - waveList:
-    - distance: 5
+    - distance: 10
       instance: {fileID: 11400000, guid: 9bbbd2d27a1d73442a23658c665a4a9f, type: 2}
-    - distance: 3
+    - distance: 13
       instance: {fileID: 11400000, guid: a9794e8586d9c944995c32e6fccd359f, type: 2}
-    - distance: 1
+    - distance: 15
+      instance: {fileID: 11400000, guid: 643b6ebcec2031f4fa60e21ab2f80038, type: 2}
+  - waveList:
+    - distance: 15
+      instance: {fileID: 11400000, guid: 9bbbd2d27a1d73442a23658c665a4a9f, type: 2}
+    - distance: 13
+      instance: {fileID: 11400000, guid: a9794e8586d9c944995c32e6fccd359f, type: 2}
+    - distance: 10
       instance: {fileID: 11400000, guid: 643b6ebcec2031f4fa60e21ab2f80038, type: 2}
   - waveList:
     - distance: 3
@@ -7129,15 +7129,42 @@ MonoBehaviour:
       instance: {fileID: 11400000, guid: c6047aff527771943a8a2662bea6930e, type: 2}
     - distance: 4
       instance: {fileID: 11400000, guid: 1eb156ecdede7e741bd0158eb6125b39, type: 2}
+  - waveList:
+    - distance: 13
+      instance: {fileID: 11400000, guid: 9bbbd2d27a1d73442a23658c665a4a9f, type: 2}
+    - distance: 10
+      instance: {fileID: 11400000, guid: a9794e8586d9c944995c32e6fccd359f, type: 2}
+    - distance: 13
+      instance: {fileID: 11400000, guid: 643b6ebcec2031f4fa60e21ab2f80038, type: 2}
+    - distance: 18
+      instance: {fileID: 11400000, guid: 9bbbd2d27a1d73442a23658c665a4a9f, type: 2}
+    - distance: 15
+      instance: {fileID: 11400000, guid: a9794e8586d9c944995c32e6fccd359f, type: 2}
+    - distance: 18
+      instance: {fileID: 11400000, guid: 643b6ebcec2031f4fa60e21ab2f80038, type: 2}
+  - waveList:
+    - distance: 13
+      instance: {fileID: 11400000, guid: 9bbbd2d27a1d73442a23658c665a4a9f, type: 2}
+    - distance: 10
+      instance: {fileID: 11400000, guid: a9794e8586d9c944995c32e6fccd359f, type: 2}
+    - distance: 13
+      instance: {fileID: 11400000, guid: 643b6ebcec2031f4fa60e21ab2f80038, type: 2}
+    - distance: 18
+      instance: {fileID: 11400000, guid: 9bbbd2d27a1d73442a23658c665a4a9f, type: 2}
+    - distance: 15
+      instance: {fileID: 11400000, guid: a9794e8586d9c944995c32e6fccd359f, type: 2}
+    - distance: 18
+      instance: {fileID: 11400000, guid: 643b6ebcec2031f4fa60e21ab2f80038, type: 2}
   activeTiles: []
   seed: 53
   zSpawn: 0
   tileLength: 100
   numberOfTilesToSpawnPerIteration: 4
   currentChallenge: 0
+  maxTimeBeforeSpawn: 2.5
   laneDifferential: 5
-  frontDifferential: 70
-  backDifferential: 20
+  frontDifferential: 90
+  backDifferential: 40
   currentCountedObstacles: 0
   currentCountedCars: 0
   maxCountedCars: 0

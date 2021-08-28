@@ -20,10 +20,12 @@ public class RandomTileManager : MonoBehaviour
     public int numberOfTilesToSpawnPerIteration = 4;
     public ChallengeType currentChallenge;
     [Header("NPC Placement")]
+    public float maxTimeBeforeSpawn;
     public float laneDifferential = 5f;
     public float frontDifferential = 100f;
     public float backDifferential = -20f;
 
+    private float timeBeforeSpawn;
     public int currentCountedObstacles;
     public int currentCountedCars;
     public int maxCountedCars;
@@ -79,8 +81,16 @@ public class RandomTileManager : MonoBehaviour
 
         if((currentChallenge == ChallengeType.cars) && !spawnedCars && (WhatTypeStandingOn() == ChallengeType.cars))
         {
-            SpawnWave(UnityEngine.Random.Range(0, possibleWaves.Count));
-            spawnedCars = true;
+            if(timeBeforeSpawn > maxTimeBeforeSpawn)
+            {
+                timeBeforeSpawn = 0f; 
+                SpawnWave(UnityEngine.Random.Range(0, possibleWaves.Count));
+                spawnedCars = true;
+            }
+            else
+            {
+                timeBeforeSpawn += Time.deltaTime;
+            }
         }
     }
 
