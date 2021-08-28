@@ -8,7 +8,7 @@ public class ExplodingProjectileExplosion1 : MonoBehaviour
     public GameObject impactPrefab;
     public GameObject explosionPrefab;
     public float thrust;
-
+    public float lifeDuration = 2f;
     public Rigidbody thisRigidbody;
 
     public GameObject particleKillGroup;
@@ -40,15 +40,8 @@ public class ExplodingProjectileExplosion1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-   /*     if(Input.GetButtonUp("Fire2"))
-        {
-            Explode();
-        }*/
-        timer += Time.deltaTime;
-        if(timer >= explosionTimer && explodeOnTimer == true)
-        {
-            Explode();
-        }
+
+        
         if (LookRotation)
         { 
             transform.rotation = Quaternion.LookRotation(thisRigidbody.velocity);
@@ -66,7 +59,11 @@ public class ExplodingProjectileExplosion1 : MonoBehaviour
 
             thisRigidbody.AddForce(transform.forward * projectileSpeed);
         }
-
+        timer += Time.fixedDeltaTime;
+        if (timer >= explosionTimer && explodeOnTimer == true)
+        {
+            Explode();
+        }
     }
 
     void OnTriggerEnter(Collider collision)
