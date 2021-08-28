@@ -33,7 +33,10 @@ public class CarCollisionManager : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         string currentTag = other.gameObject.tag;
-        Debug.Log("Collided with tag " + currentTag + " " + other.gameObject.name);
+        #if UNITY_EDITOR
+            Debug.Log("Collided with tag " + currentTag + " " + other.gameObject.name);
+        #endif
+
         switch (currentTag)
         {
             case "Obstacle":

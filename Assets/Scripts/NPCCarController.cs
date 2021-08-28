@@ -68,7 +68,9 @@ namespace LMM_Movement
                     default:
                         
                         int differential = (int)chosenLane + (int)attackingLane;
-                        Debug.Log("differential is: " + differential.ToString() + "  for the lane " + chosenLane);
+                        #if UNITY_EDITOR
+                            Debug.Log("differential is: " + differential.ToString() + "  for the lane " + chosenLane);
+                        #endif
                         if (differential < 0)
                         {
                             carAnimator.SetTrigger(explodeLeftTrigger);
