@@ -43,7 +43,7 @@ namespace LMM_Movement
             leftLaneLocalPos = middleLaneLocalPos - transform.right * lanePositionalDifferential;
             rightLaneLocalPos = middleLaneLocalPos + transform.right * lanePositionalDifferential;
             newLanePosition = middleLaneLocalPos;
-            currentCollider = GetComponent<Collider>();
+            currentCollider = GetComponent<BoxCollider>();
         }
 
         // Update is called once per frame
@@ -57,6 +57,7 @@ namespace LMM_Movement
             RandomTileManager.instance.currentCountedCars += 1;
             RandomTileManager.instance.CheckState();
             currentCollider.enabled = false;
+            m_CharacterController.enabled = false;
             canMove = false;
             if (carAnimator)
             {

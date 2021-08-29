@@ -8,6 +8,7 @@ public class RandomTileManager : MonoBehaviour
 {
     public Transform playerTransform;
     [Header("Different tile prefabs")]
+    public GameObject tileIntro;
     public List<GameObject> tilePrefabs = new List<GameObject>();
     public List<GameObject> emptyTilePrefabs = new List<GameObject>();
     public List<Wave> possibleWaves = new List<Wave>();
@@ -29,7 +30,7 @@ public class RandomTileManager : MonoBehaviour
     public int currentCountedObstacles;
     public int currentCountedCars;
     public int maxCountedCars;
-    private bool spawnedCars = false;
+    [SerializeField] private bool spawnedCars = true; //Since we spawn cop cars at the start
 
     public static RandomTileManager instance;
 
@@ -37,21 +38,30 @@ public class RandomTileManager : MonoBehaviour
     void Start()
     {
         if (!instance) instance = this;
-        currentChallenge = ChallengeType.obstacles;
+        currentChallenge = ChallengeType.cars;
         UnityEngine.Random.InitState(seed);
         for(int i = 0; i < numberOfTilesToSpawnPerIteration; i++)
         {
             if(i == 0)
             {
-                SpawnSimpleTile(0);
+                //Spawn intro tile
+                GameObject go = Instantiate(tileIntro, transform.forward * zSpawn, transform.rotation);
+                activeTiles.Add(go);
+                if (currentCountedObstacles > 0)
+                {
+                    currentCountedObstacles -= 1;
+                    CheckState();
+                }
+                zSpawn += tileLength;
             }
             else
             {
-                SpawnObstacleTile(UnityEngine.Random.Range(0, tilePrefabs.Count));
+                SpawnSimpleTile(UnityEngine.Random.Range(0, emptyTilePrefabs.Count));
             }
         }
+        SpawnWave(0);
         //currentCountedObstacles = numberOfTilesToSpawnPerIteration;
-        currentCountedObstacles = 2;
+        //currentCountedObstacles = 2;
     }
 
     // Update is called once per frame
@@ -161,6 +171,7 @@ public class RandomTileManager : MonoBehaviour
         Wave randWave = possibleWaves[index];
         maxCountedCars = randWave.waveList.Count;
         currentCountedCars = 0;
+        Debug.Log("Spawned cars");
         foreach(SpawnPosition sp in randWave.waveList)
         {
             SpawnInstance toSpawn = sp.instance;

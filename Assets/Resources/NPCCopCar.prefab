@@ -66,6 +66,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_CharacterController: {fileID: 6039523837792194789}
+  currentCollider: {fileID: 6039523837792194789}
   canMove: 1
   carChild: {fileID: 6039523839720198821}
   carAnimator: {fileID: 6039523839720198842}
