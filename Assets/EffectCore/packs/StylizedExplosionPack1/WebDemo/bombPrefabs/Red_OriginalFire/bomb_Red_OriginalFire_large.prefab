@@ -117,7 +117,7 @@ MonoBehaviour:
   explosionPrefab: {fileID: 1000012903210382, guid: a6a622dcb6224014f923dc6743bf35d3,
     type: 3}
   thrust: 0
-  lifeDuration: 2
+  lifeDuration: 1.5
   thisRigidbody: {fileID: 0}
   particleKillGroup: {fileID: 0}
   LookRotation: 0
@@ -126,7 +126,7 @@ MonoBehaviour:
   projectileSpeed: 0
   projectileSpeedMultiplier: 0
   explodeOnTimer: 1
-  explosionTimer: 1
+  explosionTimer: 1.5
 --- !u!95 &8839119395220584675
 Animator:
   serializedVersion: 3
