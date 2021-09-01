@@ -13,6 +13,10 @@ public class CarCollisionManager : MonoBehaviour
     public float explosionForce;
     public float explosionRadius;
 
+    [Header("Pickups")]
+    public projectileActorExplosion1 bombThrower;
+
+
     [Header("Anims")]
     public CinemachineVirtualCamera cinemachineCam;
     public CinemachineBrain cinemachineBrain;
@@ -56,6 +60,10 @@ public class CarCollisionManager : MonoBehaviour
                 {
                     StopPlayer(other);
                 }
+                break;
+            case "BombPickup":
+                bombThrower.AddBomb();
+                Destroy(other.gameObject);
                 break;
             default:
                 break;

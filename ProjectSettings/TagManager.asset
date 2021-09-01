@@ -7,6 +7,7 @@ TagManager:
   - Obstacle
   - FX
   - OtherCar
+  - BombPickup
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - OtherCar
   - DestructibleObstacle
   - Bomb
-  - 
+  - Pickup
   - 
   - 
   - 
