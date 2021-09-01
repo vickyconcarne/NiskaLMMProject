@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 114163216175917968}
   - component: {fileID: 8839119395220584675}
   - component: {fileID: 98477924373468763}
-  - component: {fileID: 1450932313533635803}
-  m_Layer: 7
+  - component: {fileID: 8056940447010753307}
+  m_Layer: 10
   m_Name: bomb_Red_OriginalFire_large
   m_TagString: FX
   m_Icon: {fileID: 0}
@@ -113,7 +113,7 @@ MonoBehaviour:
   projectileSpeed: 0
   projectileSpeedMultiplier: 0
   explodeOnTimer: 1
-  explosionTimer: 1.5
+  explosionTimer: 1.25
 --- !u!95 &8839119395220584675
 Animator:
   serializedVersion: 3
@@ -149,8 +149,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!65 &1450932313533635803
-BoxCollider:
+--- !u!135 &8056940447010753307
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -160,8 +160,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.4064834, y: 1, z: 6.1598563}
-  m_Center: {x: -0.024249628, y: 0, z: -1.5282673}
+  m_Radius: 1.7
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &672583589390147386
 GameObject:
   m_ObjectHideFlags: 0
@@ -172,7 +172,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8564598184299482890}
   - component: {fileID: 4696744889114760455}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TNT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -254,7 +254,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1709109285986240052}
   - component: {fileID: 5452920686169944305}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: glow
   m_TagString: Untagged
   m_Icon: {fileID: 0}

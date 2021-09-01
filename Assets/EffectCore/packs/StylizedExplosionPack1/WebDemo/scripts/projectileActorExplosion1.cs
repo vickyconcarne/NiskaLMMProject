@@ -1,10 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
-
+using TMPro;
 public class projectileActorExplosion1 : MonoBehaviour {
 
     public Transform spawnLocator;
+    public float coolDown = 1f;
+    private float timer;
+    private bool canDropMine;
+    public int maxBombs = 2;
+    public int currentBombs;
+
+    [Header("Debug")]
+    public TextMeshProUGUI bombText;
+    public bool debug;
 
     [System.Serializable]
     public class projectile
@@ -42,12 +51,47 @@ public class projectileActorExplosion1 : MonoBehaviour {
         {
             projectileSimFire = 5;
         }
-	}
+        if (debug)
+        {
+            bombText.text = currentBombs + "/" + maxBombs + " bombs ";
+        }
+    }
+
+    public void AddBomb()
+    {
+        currentBombs += 1;
+        if(currentBombs >= maxBombs) {
+            currentBombs = maxBombs;
+        }
+        if (debug)
+        {
+            bombText.text = currentBombs + "/" + maxBombs + " bombs ";
+        }
+    }
+
+    public void RemoveBomb()
+    {
+        currentBombs -= 1;
+        canDropMine = false;
+        if (debug)
+        {
+            bombText.text = currentBombs + "/" + maxBombs + " bombs ";
+        }
+    }
 	
 	// Update is called once per frame
-	void Update ()
+	void FixedUpdate ()
     {
-	}
+        
+        if (timer >= coolDown && !canDropMine)
+        {
+            canDropMine = true;
+        }
+        else
+        {
+            timer += Time.fixedDeltaTime;
+        }
+    }
 
     public void Switch(int value)
     {
@@ -67,12 +111,22 @@ public class projectileActorExplosion1 : MonoBehaviour {
 
     public void Fire()
     {
+        if (currentBombs <= 0 || !canDropMine) 
+        {
+            return;
+        }
+        else
+        {
+            RemoveBomb();
+        }
         muzzleflare.Play();
 
         Rigidbody rocketInstance;
         rocketInstance = Instantiate(bombList[bombType].bombPrefab, spawnLocator.position, Quaternion.identity) as Rigidbody;
         rocketInstance.AddForce(spawnLocator.forward * Random.Range(min, max));
-
+        //Reset cooldown
+        canDropMine = false;
+        timer = 0f;
 
         if (Torque)
         {

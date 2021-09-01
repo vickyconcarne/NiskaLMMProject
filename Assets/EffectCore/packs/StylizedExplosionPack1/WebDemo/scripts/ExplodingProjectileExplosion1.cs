@@ -74,11 +74,12 @@ public class ExplodingProjectileExplosion1 : MonoBehaviour
             if (otherCar)
             {
                 if (otherCar.canMove) otherCar.Kill(lane.nolane);
+                Explode();
             }
 
             Quaternion rot = Quaternion.LookRotation(Vector3.up);
             Vector3 pos = collision.transform.position;
-            Instantiate(impactPrefab, pos, rot);
+            //Instantiate(impactPrefab, pos, rot);
             if (!explodeOnTimer && Missile == false)
             {
                 Destroy(gameObject);
