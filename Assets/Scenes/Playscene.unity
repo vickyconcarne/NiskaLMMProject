@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18382427, g: 0.22850908, b: 0.30045107, a: 1}
+  m_IndirectSpecularColor: {r: 0.1838248, g: 0.22850996, b: 0.30045247, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1048,7 +1048,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 615188759}
-  m_LocalRotation: {x: 0.66732806, y: -0.03153243, z: 0.028299714, w: 0.7435578}
+  m_LocalRotation: {x: 0.667328, y: -0.03153176, z: 0.028299104, w: 0.7435579}
   m_LocalPosition: {x: 0.9100003, y: 36.1, z: -10.709999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1298,7 +1298,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 778703452}
-  m_LocalRotation: {x: 0.66732806, y: -0.03153243, z: 0.028299714, w: 0.7435578}
+  m_LocalRotation: {x: 0.667328, y: -0.03153176, z: 0.028299104, w: 0.7435579}
   m_LocalPosition: {x: 0.9100003, y: 36.1, z: -10.709999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -7223,7 +7223,7 @@ GameObject:
   - component: {fileID: 1644507632}
   - component: {fileID: 1644507633}
   m_Layer: 0
-  m_Name: TileManager
+  m_Name: TileLevelManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7271,140 +7271,23 @@ MonoBehaviour:
   - {fileID: 6743519024202991439, guid: ba3139185ac274a0db0f734588841472, type: 3}
   - {fileID: 6743519024202991439, guid: d1a3d25be3faa41fabe91d1ab8433626, type: 3}
   - {fileID: 6743519024202991439, guid: a865ab0e535884ae195dc7135e987ca1, type: 3}
-  possibleWaves:
-  - waveList:
-    - distance: 12
-      instance: {fileID: 11400000, guid: 9bbbd2d27a1d73442a23658c665a4a9f, type: 2}
-    - distance: 8
-      instance: {fileID: 11400000, guid: a9794e8586d9c944995c32e6fccd359f, type: 2}
-    - distance: 12
-      instance: {fileID: 11400000, guid: 643b6ebcec2031f4fa60e21ab2f80038, type: 2}
-    - distance: 20
-      instance: {fileID: 11400000, guid: 9bbbd2d27a1d73442a23658c665a4a9f, type: 2}
-    - distance: 16
-      instance: {fileID: 11400000, guid: a9794e8586d9c944995c32e6fccd359f, type: 2}
-    - distance: 20
-      instance: {fileID: 11400000, guid: 643b6ebcec2031f4fa60e21ab2f80038, type: 2}
-  - waveList:
-    - distance: 10
-      instance: {fileID: 11400000, guid: 9bbbd2d27a1d73442a23658c665a4a9f, type: 2}
-    - distance: 15
-      instance: {fileID: 11400000, guid: a9794e8586d9c944995c32e6fccd359f, type: 2}
-    - distance: 10
-      instance: {fileID: 11400000, guid: 643b6ebcec2031f4fa60e21ab2f80038, type: 2}
-  - waveList:
-    - distance: 10
-      instance: {fileID: 11400000, guid: 9bbbd2d27a1d73442a23658c665a4a9f, type: 2}
-    - distance: 15
-      instance: {fileID: 11400000, guid: a9794e8586d9c944995c32e6fccd359f, type: 2}
-    - distance: 10
-      instance: {fileID: 11400000, guid: 643b6ebcec2031f4fa60e21ab2f80038, type: 2}
-  - waveList:
-    - distance: 10
-      instance: {fileID: 11400000, guid: 9bbbd2d27a1d73442a23658c665a4a9f, type: 2}
-    - distance: 13
-      instance: {fileID: 11400000, guid: a9794e8586d9c944995c32e6fccd359f, type: 2}
-    - distance: 15
-      instance: {fileID: 11400000, guid: 643b6ebcec2031f4fa60e21ab2f80038, type: 2}
-  - waveList:
-    - distance: 15
-      instance: {fileID: 11400000, guid: 9bbbd2d27a1d73442a23658c665a4a9f, type: 2}
-    - distance: 13
-      instance: {fileID: 11400000, guid: a9794e8586d9c944995c32e6fccd359f, type: 2}
-    - distance: 10
-      instance: {fileID: 11400000, guid: 643b6ebcec2031f4fa60e21ab2f80038, type: 2}
-  - waveList:
-    - distance: 3
-      instance: {fileID: 11400000, guid: c6047aff527771943a8a2662bea6930e, type: 2}
-    - distance: 6
-      instance: {fileID: 11400000, guid: 43a26113a5439b94c9d455036247f113, type: 2}
-    - distance: 3
-      instance: {fileID: 11400000, guid: 1eb156ecdede7e741bd0158eb6125b39, type: 2}
-  - waveList:
-    - distance: 1
-      instance: {fileID: 11400000, guid: c6047aff527771943a8a2662bea6930e, type: 2}
-    - distance: 4
-      instance: {fileID: 11400000, guid: 43a26113a5439b94c9d455036247f113, type: 2}
-    - distance: 6
-      instance: {fileID: 11400000, guid: 1eb156ecdede7e741bd0158eb6125b39, type: 2}
-  - waveList:
-    - distance: 5
-      instance: {fileID: 11400000, guid: c6047aff527771943a8a2662bea6930e, type: 2}
-    - distance: 2
-      instance: {fileID: 11400000, guid: 43a26113a5439b94c9d455036247f113, type: 2}
-    - distance: 5
-      instance: {fileID: 11400000, guid: 1eb156ecdede7e741bd0158eb6125b39, type: 2}
-  - waveList:
-    - distance: 5
-      instance: {fileID: 11400000, guid: c6047aff527771943a8a2662bea6930e, type: 2}
-    - distance: 2
-      instance: {fileID: 11400000, guid: 43a26113a5439b94c9d455036247f113, type: 2}
-    - distance: 5
-      instance: {fileID: 11400000, guid: 1eb156ecdede7e741bd0158eb6125b39, type: 2}
-    - distance: 3
-      instance: {fileID: 11400000, guid: a9794e8586d9c944995c32e6fccd359f, type: 2}
-    - distance: 1
-      instance: {fileID: 11400000, guid: 9bbbd2d27a1d73442a23658c665a4a9f, type: 2}
-  - waveList:
-    - distance: 5
-      instance: {fileID: 11400000, guid: c6047aff527771943a8a2662bea6930e, type: 2}
-    - distance: 5
-      instance: {fileID: 11400000, guid: 1eb156ecdede7e741bd0158eb6125b39, type: 2}
-    - distance: 2
-      instance: {fileID: 11400000, guid: a9794e8586d9c944995c32e6fccd359f, type: 2}
-    - distance: 1
-      instance: {fileID: 11400000, guid: 9bbbd2d27a1d73442a23658c665a4a9f, type: 2}
-    - distance: 5
-      instance: {fileID: 11400000, guid: a9794e8586d9c944995c32e6fccd359f, type: 2}
-  - waveList:
-    - distance: 6
-      instance: {fileID: 11400000, guid: 9bbbd2d27a1d73442a23658c665a4a9f, type: 2}
-    - distance: 2
-      instance: {fileID: 11400000, guid: a9794e8586d9c944995c32e6fccd359f, type: 2}
-    - distance: 6
-      instance: {fileID: 11400000, guid: 643b6ebcec2031f4fa60e21ab2f80038, type: 2}
-    - distance: 9
-      instance: {fileID: 11400000, guid: 9bbbd2d27a1d73442a23658c665a4a9f, type: 2}
-    - distance: 2
-      instance: {fileID: 11400000, guid: c6047aff527771943a8a2662bea6930e, type: 2}
-    - distance: 4
-      instance: {fileID: 11400000, guid: 1eb156ecdede7e741bd0158eb6125b39, type: 2}
-  - waveList:
-    - distance: 12
-      instance: {fileID: 11400000, guid: 9bbbd2d27a1d73442a23658c665a4a9f, type: 2}
-    - distance: 8
-      instance: {fileID: 11400000, guid: a9794e8586d9c944995c32e6fccd359f, type: 2}
-    - distance: 12
-      instance: {fileID: 11400000, guid: 643b6ebcec2031f4fa60e21ab2f80038, type: 2}
-    - distance: 27
-      instance: {fileID: 11400000, guid: 9bbbd2d27a1d73442a23658c665a4a9f, type: 2}
-    - distance: 23
-      instance: {fileID: 11400000, guid: a9794e8586d9c944995c32e6fccd359f, type: 2}
-    - distance: 27
-      instance: {fileID: 11400000, guid: 643b6ebcec2031f4fa60e21ab2f80038, type: 2}
-  - waveList:
-    - distance: 13
-      instance: {fileID: 11400000, guid: 9bbbd2d27a1d73442a23658c665a4a9f, type: 2}
-    - distance: 10
-      instance: {fileID: 11400000, guid: a9794e8586d9c944995c32e6fccd359f, type: 2}
-    - distance: 13
-      instance: {fileID: 11400000, guid: 643b6ebcec2031f4fa60e21ab2f80038, type: 2}
-    - distance: 28
-      instance: {fileID: 11400000, guid: 9bbbd2d27a1d73442a23658c665a4a9f, type: 2}
-    - distance: 18
-      instance: {fileID: 11400000, guid: a9794e8586d9c944995c32e6fccd359f, type: 2}
-    - distance: 28
-      instance: {fileID: 11400000, guid: 643b6ebcec2031f4fa60e21ab2f80038, type: 2}
   activeTiles: []
+  possibleWavePrefabs:
+  - numberOfCars: 6
+    prefab: {fileID: 1201072589188917958, guid: eb293d7522a5b9649ae70ed80f969ba4,
+      type: 3}
+  - numberOfCars: 3
+    prefab: {fileID: 1201072589188917958, guid: d9a8aaafa41517e48b53d8a9fb5cbe3a,
+      type: 3}
+  - numberOfCars: 3
+    prefab: {fileID: 1201072589188917958, guid: 90a7e12fbf9534f4f83a4de22a8ceea6,
+      type: 3}
   seed: 53
   zSpawn: 0
   tileLength: 100
   numberOfTilesToSpawnPerIteration: 4
   currentChallenge: 1
   maxTimeBeforeSpawn: 2.5
-  laneDifferential: 5
-  frontDifferential: 90
-  backDifferential: 40
   currentCountedObstacles: 0
   currentCountedCars: 0
   maxCountedCars: 0

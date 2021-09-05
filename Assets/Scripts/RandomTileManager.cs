@@ -11,8 +11,13 @@ public class RandomTileManager : MonoBehaviour
     public GameObject tileIntro;
     public List<GameObject> tilePrefabs = new List<GameObject>();
     public List<GameObject> emptyTilePrefabs = new List<GameObject>();
-    public List<Wave> possibleWaves = new List<Wave>();
+    
     public List<GameObject> activeTiles = new List<GameObject>();
+
+    [Header("Wave prefabs")]
+    public List<Wave> possibleWavePrefabs;
+    private List<string> waveRessourceIds = new List<string>();
+
     //public ChallengeType currentTypeStandingOn;
     [Header("Placement options")]
     public int seed = 43;
@@ -22,15 +27,15 @@ public class RandomTileManager : MonoBehaviour
     public ChallengeType currentChallenge;
     [Header("NPC Placement")]
     public float maxTimeBeforeSpawn;
-    public float laneDifferential = 5f;
-    public float frontDifferential = 100f;
-    public float backDifferential = -20f;
-
+    
     private float timeBeforeSpawn;
     public int currentCountedObstacles;
     public int currentCountedCars;
     public int maxCountedCars;
     [SerializeField] private bool spawnedCars = true; //Since we spawn cop cars at the start
+    private GameObject currentActiveCar;
+
+    //Singleton pattern
 
     public static RandomTileManager instance;
 
@@ -58,6 +63,12 @@ public class RandomTileManager : MonoBehaviour
             {
                 SpawnSimpleTile(UnityEngine.Random.Range(0, emptyTilePrefabs.Count));
             }
+        }
+
+        //Index the wave ressource ids so we can instantiate from prefabs
+        foreach(Wave go in possibleWavePrefabs)
+        {
+            waveRessourceIds.Add(go.prefab.name);
         }
         SpawnWave(0);
         //currentCountedObstacles = numberOfTilesToSpawnPerIteration;
@@ -94,7 +105,7 @@ public class RandomTileManager : MonoBehaviour
             if(timeBeforeSpawn > maxTimeBeforeSpawn)
             {
                 timeBeforeSpawn = 0f; 
-                SpawnWave(UnityEngine.Random.Range(0, possibleWaves.Count));
+                SpawnWave(UnityEngine.Random.Range(0, possibleWavePrefabs.Count));
                 spawnedCars = true;
             }
             else
@@ -160,11 +171,23 @@ public class RandomTileManager : MonoBehaviour
                 {
                     currentChallenge = ChallengeType.obstacles;
                     currentCountedObstacles = numberOfTilesToSpawnPerIteration;
+                    if(currentActiveCar) Destroy(currentActiveCar.gameObject); //Destroy current incarnation of cars
                 }
                 break;
         }
     }
 
+
+    public void SpawnWave(int index)
+    {
+        Wave randWave = possibleWavePrefabs[index];
+        maxCountedCars = randWave.numberOfCars;
+        currentCountedCars = 0;
+        GameObject prefab = Resources.Load(waveRessourceIds[index]) as GameObject;
+        Vector3 spawnPosition = playerTransform.position;
+        currentActiveCar = Instantiate(prefab, spawnPosition, transform.rotation);
+    }
+    /*
     public void SpawnWave(int index)
     {
 
@@ -198,25 +221,17 @@ public class RandomTileManager : MonoBehaviour
             }
             GameObject go = Instantiate(prefab, spawnPosition, transform.rotation);
         }
-        //GameObject go = Instantiate(tilePrefabs[index], transform.forward * zSpawn, transform.rotation);
-        //activeTiles.Add(go);
 
-    }
+    }*/
 }
 
 [System.Serializable]
 public class Wave
 {
-    public List<SpawnPosition> waveList = new List<SpawnPosition>();
+    public int numberOfCars;
+    public GameObject prefab;
 }
 
 
-[System.Serializable]
-
-public class SpawnPosition
-{
-    public float distance;
-    public SpawnInstance instance;
-}
 
 public enum ChallengeType { obstacles = 0, cars = 1 };
