@@ -22,6 +22,16 @@ public class CarCollisionManager : MonoBehaviour
     public CinemachineBrain cinemachineBrain;
     public GameObject explosionEffect;
     public GameObject cashFlow;
+
+    [Header("Cinemachine ")]
+    public Transform deathTarget;
+    public CinemachineSmoothPath circularPath;
+
+    [Header("End screen")]
+    [SerializeField] private GameObject bombCanvas;
+
+    [SerializeField] private GameObject endScreen;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -73,10 +83,14 @@ public class CarCollisionManager : MonoBehaviour
 
     private void StopPlayer(Collider other)
     {
+        bombCanvas.SetActive(false);
         //Cam
-        cinemachineCam.enabled = false;
+        //cinemachineCam.enabled = false;
         //Destroy(cinemachineCam);
-        cinemachineBrain.enabled = false;
+        //cinemachineBrain.enabled = false;
+        cinemachineCam.LookAt = deathTarget;
+        //cinemachineCam.Follow = deathTarget;
+        cinemachineCam.GetCinemachineComponent<CinemachineTrackedDolly>().m_Path = circularPath;
         //Boom
         cashFlow.SetActive(false);
         explosionEffect.transform.position = this.transform.position;
@@ -88,12 +102,17 @@ public class CarCollisionManager : MonoBehaviour
         Vector3 randomizedNormal = Vector3.Normalize(transform.position - other.transform.position) + Random.Range(0.5f, 1f) * Vector3.up;
         ragDollRB.AddForce(randomizedNormal * explosionForce, ForceMode.Impulse);
         //Retry
-        StartCoroutine(ReloadAfterAWait(2f));
+        StartCoroutine(ReloadScreenAfterWait(2f));
     }
 
-    public IEnumerator ReloadAfterAWait(float val)
+    public IEnumerator ReloadScreenAfterWait(float val)
     {
         yield return new WaitForSeconds(val);
+        endScreen.SetActive(true);
+    }
+
+    public void RestartScene()
+    {
         SceneManager.LoadScene("PlayScene");
     }
 
