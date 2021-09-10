@@ -1,9 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class AOnSideDetection : MonoBehaviour
+using LMM_Movement;
+public abstract class AOnSideDetection : MonoBehaviour
 {
+
+    [SerializeField] private NPCCarController npcController;
+
+    [Header("Detection")]
+    public bool detecting = true;
+    public float distanceToDetect;
+    public LayerMask layerToDetect;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,4 +22,27 @@ public class AOnSideDetection : MonoBehaviour
     {
         
     }
+
+    public void SideDetection()
+    {
+        RaycastHit leftHit;
+        RaycastHit rightHit;
+
+        if (Physics.Raycast(transform.position, -transform.right, out leftHit, distanceToDetect, layerToDetect))
+        {
+            LeftAction(leftHit);
+            detecting = false;
+            return;
+        }
+        else if (Physics.Raycast(transform.position, transform.right, out rightHit, distanceToDetect, layerToDetect))
+        {
+            RightAction(rightHit);
+            detecting = false;
+            return;
+        }
+    }
+
+    public abstract void LeftAction(RaycastHit hitInfo);
+
+    public abstract void RightAction(RaycastHit hitInfo);
 }
