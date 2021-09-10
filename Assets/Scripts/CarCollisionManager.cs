@@ -75,6 +75,10 @@ public class CarCollisionManager : MonoBehaviour
                 bombThrower.AddBomb();
                 Destroy(other.gameObject);
                 break;
+            case "Bullet":
+                StopPlayer(other);
+                Destroy(other.gameObject);
+                break;
             default:
                 break;
         }
@@ -89,7 +93,7 @@ public class CarCollisionManager : MonoBehaviour
         //Destroy(cinemachineCam);
         //cinemachineBrain.enabled = false;
         cinemachineCam.LookAt = deathTarget;
-        //cinemachineCam.Follow = deathTarget;
+        cinemachineCam.Follow = deathTarget;
         cinemachineCam.GetCinemachineComponent<CinemachineTrackedDolly>().m_Path = circularPath;
         //Boom
         cashFlow.SetActive(false);
@@ -102,7 +106,7 @@ public class CarCollisionManager : MonoBehaviour
         Vector3 randomizedNormal = Vector3.Normalize(transform.position - other.transform.position) + Random.Range(0.5f, 1f) * Vector3.up;
         ragDollRB.AddForce(randomizedNormal * explosionForce, ForceMode.Impulse);
         //Retry
-        StartCoroutine(ReloadScreenAfterWait(2f));
+        StartCoroutine(ReloadScreenAfterWait(5f));
     }
 
     public IEnumerator ReloadScreenAfterWait(float val)
