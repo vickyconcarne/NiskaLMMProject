@@ -5,7 +5,7 @@ using LMM_Movement;
 public abstract class AOnSideDetection : MonoBehaviour
 {
 
-    [SerializeField] private NPCCarController npcController;
+    [SerializeField] protected NPCCarController npcController;
 
     [Header("Detection")]
     public bool detecting = true;
@@ -42,6 +42,10 @@ public abstract class AOnSideDetection : MonoBehaviour
         }
     }
 
+    protected void SetSpeed(float speed)
+    {
+        npcController.k_movementDirection.z = speed;
+    }
     public abstract void LeftAction(RaycastHit hitInfo);
 
     public abstract void RightAction(RaycastHit hitInfo);

@@ -27,7 +27,7 @@ namespace LMM_Movement
         private bool finishedLateralAction = true;
         private Vector3 newLanePosition;
         //Constants
-        private Vector3 k_movementDirection;
+        public Vector3 k_movementDirection;
         private float k_acceptableInputRange = 0.1f;
         public Vector3 leftLaneLocalPos;
         public Vector3 middleLaneLocalPos;

@@ -2,8 +2,11 @@ using UnityEngine;
 using LMM_Movement;
 using System.Collections;
 using System.Collections.Generic;
-public class SequenceActionOnDetect : AOnSideDetection
+public class ShootOnDetect : AOnSideDetection
 {
+
+    public GameObject muzzleFX;
+    public float speedToMatchPlayer;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,18 +24,23 @@ public class SequenceActionOnDetect : AOnSideDetection
 
     public override void LeftAction(RaycastHit hitInfo)
     {
-        
+        SetSpeed(speedToMatchPlayer);
     }
 
     public override void RightAction(RaycastHit hitInfo)
     {
-        
+        SetSpeed(speedToMatchPlayer);
     }
 
     void InterpretAction(MovementAction givenAction)
     {
+        switch (npcController.chosenLane)
+        {
 
+        }
     }
+
+    
 
 
 }

@@ -171,7 +171,7 @@ public class RandomTileManager : MonoBehaviour
                 {
                     currentChallenge = ChallengeType.obstacles;
                     currentCountedObstacles = numberOfTilesToSpawnPerIteration;
-                    if(currentActiveCar) Destroy(currentActiveCar.gameObject); //Destroy current incarnation of cars
+                    if(currentActiveCar) Destroy(currentActiveCar.gameObject, 6f); //Destroy current incarnation of cars
                 }
                 break;
         }
