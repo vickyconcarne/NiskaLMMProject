@@ -5,7 +5,8 @@ Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: SimpleRed
   m_Shader: {fileID: 4800000, guid: 31f5ef81e1c5045c08fccaba0451f912, type: 3}
   m_ShaderKeywords: LIGHTMAP USE_LIGHTMAP USE_SHADOW
@@ -118,7 +119,7 @@ Material:
     - _LightPos: {r: 0, g: 0, b: 0, a: 1}
     - _LightTint: {r: 1, g: 1, b: 1, a: 0}
     - _LightmapColor: {r: 0.6764706, g: 0.7054766, b: 1, a: 0}
-    - _MainColor: {r: 0.99264705, g: 0.6714965, b: 0.8243197, a: 0}
+    - _MainColor: {r: 0.7075472, g: 0.0033374948, b: 0.070696294, a: 0}
     - _MainColorBottom: {r: 1, g: 0.73, b: 0.117, a: 0}
     - _RightColor: {r: 0.9, g: 0.9, b: 0.9, a: 0}
     - _RightColorBottom: {r: 0.9, g: 0.9, b: 0.9, a: 0}
@@ -127,3 +128,4 @@ Material:
     - _SpecColorc: {r: 1, g: 1, b: 1, a: 0}
     - _TopColor: {r: 1, g: 1, b: 1, a: 0}
     - _TopColorBottom: {r: 1, g: 1, b: 1, a: 0}
+  m_BuildTextureStacks: []
