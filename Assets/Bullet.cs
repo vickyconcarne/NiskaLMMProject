@@ -4,23 +4,25 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+
+    private CharacterController bulletController;
+
+    [HideInInspector] public Vector3 direction;
+    public float lateralBulletSpeed;
+
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        bulletController = GetComponent<CharacterController>();
     }
-
-    private void OnTriggerEnter(Collider other)
+    void FixedUpdate()
     {
-        if(other.gameObject.tag == "Player")
+        if (bulletController)
         {
-            CarCollisionManager playerCar = other.GetComponent<CarCollisionManager>();
+            bulletController.Move(direction * Time.fixedDeltaTime);
         }
     }
+
+
 }

@@ -8,7 +8,8 @@ public abstract class AOnSideDetection : MonoBehaviour
     [SerializeField] protected NPCCarController npcController;
 
     [Header("Detection")]
-    public bool detecting = true;
+    public Transform detectionTransform;
+    public bool isLookingFor = true;
     public float distanceToDetect;
     public LayerMask layerToDetect;
     // Start is called before the first frame update
@@ -27,19 +28,21 @@ public abstract class AOnSideDetection : MonoBehaviour
     {
         RaycastHit leftHit;
         RaycastHit rightHit;
-
-        if (Physics.Raycast(transform.position, -transform.right, out leftHit, distanceToDetect, layerToDetect))
+        
+        if (Physics.Raycast(detectionTransform.position, -transform.right, out leftHit, distanceToDetect, layerToDetect, QueryTriggerInteraction.Collide))
         {
             LeftAction(leftHit);
-            detecting = false;
+            isLookingFor = false;
             return;
         }
-        else if (Physics.Raycast(transform.position, transform.right, out rightHit, distanceToDetect, layerToDetect))
+        else if (Physics.Raycast(detectionTransform.position, transform.right, out rightHit, distanceToDetect, layerToDetect, QueryTriggerInteraction.Collide))
         {
             RightAction(rightHit);
-            detecting = false;
+            
+            isLookingFor = false;
             return;
         }
+
     }
 
     protected void SetSpeed(float speed)

@@ -52,6 +52,10 @@ namespace LMM_Movement
             if (canMove) m_CharacterController.Move(k_movementDirection * Time.fixedDeltaTime);
         }
 
+        /// <summary>
+        /// Destroy and animate based on attacking lane
+        /// </summary>
+        /// <param name="attackingLane"></param>
         public void Kill(lane attackingLane)
         {
             RandomTileManager.instance.currentCountedCars += 1;
