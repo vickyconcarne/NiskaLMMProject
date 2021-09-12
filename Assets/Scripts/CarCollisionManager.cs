@@ -48,15 +48,12 @@ public class CarCollisionManager : MonoBehaviour
     {
         string currentTag = other.gameObject.tag;
         #if UNITY_EDITOR
-            Debug.Log("Collided with tag " + currentTag + " " + other.gameObject.name);
+            //Debug.Log("Collided with tag " + currentTag + " " + other.gameObject.name);
         #endif
 
         switch (currentTag)
         {
             case "Obstacle":
-                /*cinemachineCam.DestroyCinemachineComponent<CinemachineTrackedDolly>();
-                cinemachineCam.LookAt = null;
-                cinemachineCam.Follow = null;*/
                 StopPlayer(other);
                 break;
             case "OtherCar":
@@ -87,6 +84,7 @@ public class CarCollisionManager : MonoBehaviour
 
     private void StopPlayer(Collider other)
     {
+        EventManager.TriggerEvent("PlayerDeath");
         bombCanvas.SetActive(false);
         //Cam
         //cinemachineCam.enabled = false;

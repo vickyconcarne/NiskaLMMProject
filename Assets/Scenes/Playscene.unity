@@ -472,6 +472,7 @@ GameObject:
   - component: {fileID: 179251527}
   - component: {fileID: 179251526}
   - component: {fileID: 179251525}
+  - component: {fileID: 179251528}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -527,6 +528,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &179251528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179251524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5459479b18a4183468f4426e75ee8b0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &264768075
 GameObject:
   m_ObjectHideFlags: 0
@@ -1229,7 +1242,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 615188759}
-  m_LocalRotation: {x: 0.667328, y: -0.03153176, z: 0.028299104, w: 0.7435579}
+  m_LocalRotation: {x: 0.66732806, y: -0.031532247, z: 0.028299548, w: 0.7435578}
   m_LocalPosition: {x: 0.9100003, y: 36.1, z: -10.709999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1675,7 +1688,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 778703452}
-  m_LocalRotation: {x: 0.667328, y: -0.03153176, z: 0.028299104, w: 0.7435579}
+  m_LocalRotation: {x: 0.66732806, y: -0.031532247, z: 0.028299548, w: 0.7435578}
   m_LocalPosition: {x: 0.9100003, y: 36.1, z: -10.709999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -8139,17 +8152,17 @@ MonoBehaviour:
   - {fileID: 6743519024202991439, guid: a865ab0e535884ae195dc7135e987ca1, type: 3}
   activeTiles: []
   possibleWavePrefabs:
-  - numberOfCars: 2
-    prefab: {fileID: 1201072589188917958, guid: 4e949ad9f20c06b479327ba4077778ee,
-      type: 3}
   - numberOfCars: 6
     prefab: {fileID: 1201072589188917958, guid: eb293d7522a5b9649ae70ed80f969ba4,
       type: 3}
   - numberOfCars: 3
-    prefab: {fileID: 1201072589188917958, guid: d9a8aaafa41517e48b53d8a9fb5cbe3a,
+    prefab: {fileID: 1201072589188917958, guid: 90a7e12fbf9534f4f83a4de22a8ceea6,
       type: 3}
   - numberOfCars: 3
-    prefab: {fileID: 1201072589188917958, guid: 90a7e12fbf9534f4f83a4de22a8ceea6,
+    prefab: {fileID: 1201072589188917958, guid: d9a8aaafa41517e48b53d8a9fb5cbe3a,
+      type: 3}
+  - numberOfCars: 2
+    prefab: {fileID: 1201072589188917958, guid: 4e949ad9f20c06b479327ba4077778ee,
       type: 3}
   seed: 53
   zSpawn: 0

@@ -26,7 +26,7 @@ public class ShootOnDetect : AOnSideDetection
     {
         if (!isLookingFor)
         {
-            if(currentCooldown >= shootCooldown)
+            if(currentCooldown >= shootCooldown && npcController.canMove)
             {
                 Shoot();
             }
@@ -75,7 +75,6 @@ public class ShootOnDetect : AOnSideDetection
         if (muzzleFX) Instantiate(muzzleFX, transform.position + modelDifferential * shootDirection * transform.right, transform.rotation);
         GameObject bulletObj = GameObject.Instantiate(bulletPrefab, transform.position + modelDifferential * shootDirection * transform.right, transform.rotation);
         Vector3 givenVector = new Vector3(shootDirection * bulletObj.GetComponent<Bullet>().lateralBulletSpeed, 0f, speedToMatchPlayer);
-        Debug.Log("shoot vector is " + givenVector.ToString());
         bulletObj.GetComponent<Bullet>().direction = givenVector;
         currentCooldown = 0f;
     }

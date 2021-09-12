@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace LMM_Movement
 {
@@ -17,6 +18,10 @@ namespace LMM_Movement
         public string explodeLeftTrigger;
         public string explodeRightTrigger;
         public string generalExplodeTrigger = "Explode";
+        public GameObject trailRenderers;
+        private float currentBrakeBlend = 0f;
+        [SerializeField] private bool brakesOnPlayerDeath = false;
+        const float maxTimeToBrake = 2f;
         [Header("Movement options")]
         [SerializeField] private actorState movementState;
         [SerializeField] private float m_forwardMomentum;
@@ -32,7 +37,25 @@ namespace LMM_Movement
         public Vector3 leftLaneLocalPos;
         public Vector3 middleLaneLocalPos;
         public Vector3 rightLaneLocalPos;
-        
+
+        //Events
+
+        private UnityAction playerDeathListener;
+
+        void Awake()
+        {
+            playerDeathListener = new UnityAction(StartBrake);
+        }
+
+        void OnEnable()
+        {
+            EventManager.StartListening("PlayerDeath", playerDeathListener);
+        }
+
+        void OnDisable()
+        {
+            EventManager.StopListening("PlayerDeath", playerDeathListener);
+        }
 
         // Start is called before the first frame update
         void Start()
@@ -71,11 +94,9 @@ namespace LMM_Movement
                         carAnimator.SetTrigger(generalExplodeTrigger);
                         break;
                     default:
-                        
+
                         int differential = (int)chosenLane + (int)attackingLane;
-                        #if UNITY_EDITOR
-                            Debug.Log("differential is: " + differential.ToString() + "  for the lane " + chosenLane);
-                        #endif
+
                         if (differential < 0)
                         {
                             carAnimator.SetTrigger(explodeLeftTrigger);
@@ -86,7 +107,7 @@ namespace LMM_Movement
                         }
                         break;
                 }
-                
+
             }
             Invoke("DeinstantiateAfterTime", 4f);
         }
@@ -99,11 +120,11 @@ namespace LMM_Movement
         private void OnTriggerEnter(Collider col)
         {
             string currentTag = col.gameObject.tag;
-            if (gameObject.Equals(col.gameObject)){
+            if (gameObject.Equals(col.gameObject)) {
                 return; //Dont detect urself
             }
             //Debug.Log("npc car has found " + currentTag + " for " + col.gameObject.name);
-            if(movementState != actorState.Immovable || movementState != actorState.AggressiveSwerving)
+            if (movementState != actorState.Immovable || movementState != actorState.AggressiveSwerving)
             {
                 switch (currentTag)
                 {
@@ -118,8 +139,35 @@ namespace LMM_Movement
                         break;
                 }
             }
-            
+
         }
+
+        private void StartBrake()
+        {
+            if(brakesOnPlayerDeath) StartCoroutine(Brake());
+        }
+
+
+
+        private IEnumerator Brake()
+        {
+            currentCollider.enabled = false;
+            trailRenderers.SetActive(true);
+            float timeToBrake = Random.Range(0f, maxTimeToBrake);
+            float chosenBrakeBlend = Random.Range(-1f, 1f);
+            float currentTime = 0f;
+            while (currentTime < timeToBrake)
+            {
+                k_movementDirection.z = m_forwardMomentum - (m_forwardMomentum * (currentTime / timeToBrake));
+                carAnimator.SetFloat("BrakeBlend", chosenBrakeBlend * (currentTime / timeToBrake));
+                currentTime += Time.fixedDeltaTime;
+                yield return null;
+            }
+            m_CharacterController.enabled = false;
+            canMove = false;
+
+        }
+
     }
 }
 
