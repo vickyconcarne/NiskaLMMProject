@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using LMM_Movement;
 using System;
+using TMPro;
 
 public class RandomTileManager : MonoBehaviour
 {
@@ -12,9 +13,11 @@ public class RandomTileManager : MonoBehaviour
     private Level currentLevel;
     private int currentLevelIndex;
     [SerializeField] private List<Level> allLevels = new List<Level>();
-    private int currentAmountOfMoney;
-    private int maxAmountOfMoney;
-
+    private bool finishedInitialiazingLevel = true;
+    [SerializeField] private int currentIteration = 0;
+    private int maxNumberOfIterations;
+    private RavitailleOnDetect currentRavitaillement;
+    private int totalMoney;
     [Header("Different tile prefabs")]
     public GameObject tileIntro;
     public List<GameObject> tilePrefabs = new List<GameObject>();
@@ -43,6 +46,10 @@ public class RandomTileManager : MonoBehaviour
     [SerializeField] private bool spawnedCars = true; //Since we spawn cop cars at the start
     private GameObject currentActiveCar;
 
+    [Header("Track name & animations")]
+    public Animator trackAnimator;
+    public TextMeshProUGUI trackTitle;
+    public AudioSource audiosource;
     //Singleton pattern
 
     public static RandomTileManager instance;
@@ -53,7 +60,8 @@ public class RandomTileManager : MonoBehaviour
         if (!instance) instance = this;
         currentChallenge = ChallengeType.cars;
         UnityEngine.Random.InitState(seed);
-        for(int i = 0; i < numberOfTilesToSpawnPerIteration; i++)
+        StartCoroutine(SwitchLevels(0));
+        for (int i = 0; i < numberOfTilesToSpawnPerIteration; i++)
         {
             if(i == 0)
             {
@@ -78,6 +86,7 @@ public class RandomTileManager : MonoBehaviour
         {
             waveRessourceIds.Add(go.prefab.name);
         }
+        
         Invoke("SpawnInitialWave", 2f);
         //currentCountedObstacles = numberOfTilesToSpawnPerIteration;
         //currentCountedObstacles = 2;
@@ -172,34 +181,76 @@ public class RandomTileManager : MonoBehaviour
                 {
                     currentChallenge = ChallengeType.cars;
                     spawnedCars = false;
+                    AddIteration();
                 }
                 break;
             case ChallengeType.cars:
                 if(currentCountedCars >= maxCountedCars)
                 {
+                    
                     currentChallenge = ChallengeType.obstacles;
                     currentCountedObstacles = numberOfTilesToSpawnPerIteration;
                     if(currentActiveCar) Destroy(currentActiveCar.gameObject, 6f); //Destroy current incarnation of cars
+                    AddIteration();
                 }
                 break;
         }
     }
 
-    public void AddMoneyToLevel(int qtity)
+    public bool AddMoneyToLevel(int qtity)
     {
-        currentAmountOfMoney += qtity;
-        if(currentAmountOfMoney >= maxAmountOfMoney)
+        totalMoney += qtity;
+        if (audiosource) audiosource.PlayOneShot(Resources.Load("Sounds/CashRegisterSound") as AudioClip);
+        return true;
+    }
+
+    public bool AddIteration()
+    {
+        currentIteration += 1;
+        if (currentIteration >= maxNumberOfIterations)
         {
-            SwitchLevels();
+            currentLevelIndex += 1;
+            StartCoroutine(SwitchLevels(currentLevelIndex));
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
 
-    private void SwitchLevels()
+    private IEnumerator SwitchLevels(int index)
     {
-        if(currentLevelIndex + 1 <= allLevels.Count)
+        finishedInitialiazingLevel = false;
+        if (currentLevelIndex <= allLevels.Count)
         {
-            currentLevelIndex += 1;
+            currentIteration = 0;
+            
+            currentLevel = allLevels[currentLevelIndex];
+            maxNumberOfIterations = currentLevel.numberOfIterations;
+            possibleWavePrefabs = currentLevel.possibleWavePrefabs;
+            emptyTilePrefabs = currentLevel.emptyTilePrefabs;
+            tilePrefabs = currentLevel.tilePrefabs;
+            //Index the wave ressource ids so we can instantiate from prefabs
+            foreach (Wave go in possibleWavePrefabs)
+            {
+                waveRessourceIds.Add(go.prefab.name);
+            }
+            
         }
+        trackAnimator.SetTrigger("TrackAppear");
+        trackTitle.text = currentLevel.nomDeLaTrack;
+        if (currentLevel.ravitaillementPrefab)
+        {
+            if (currentRavitaillement)
+            {
+                currentRavitaillement.ExitLevel();
+            }
+            GameObject go = Instantiate(currentLevel.ravitaillementPrefab, playerTransform.position, playerTransform.rotation);
+            currentRavitaillement = go.GetComponentInChildren<RavitailleOnDetect>();
+        }
+        yield return new WaitForSeconds(3f);
+        finishedInitialiazingLevel = true;
     }
 
 
@@ -268,7 +319,8 @@ public class Wave
 public class Level
 {
     public string nomDeLaTrack;
-    public int moneyToTransfer;
+    public GameObject ravitaillementPrefab;
+    public int numberOfIterations;
     public List<GameObject> tilePrefabs = new List<GameObject>();
     public List<GameObject> emptyTilePrefabs = new List<GameObject>();
     public List<Wave> possibleWavePrefabs;
