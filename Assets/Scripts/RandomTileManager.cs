@@ -70,7 +70,7 @@ public class RandomTileManager : MonoBehaviour
         {
             waveRessourceIds.Add(go.prefab.name);
         }
-        SpawnWave(0);
+        Invoke("SpawnInitialWave", 2f);
         //currentCountedObstacles = numberOfTilesToSpawnPerIteration;
         //currentCountedObstacles = 2;
     }
@@ -186,6 +186,13 @@ public class RandomTileManager : MonoBehaviour
         GameObject prefab = Resources.Load(waveRessourceIds[index]) as GameObject;
         Vector3 spawnPosition = playerTransform.position;
         currentActiveCar = Instantiate(prefab, spawnPosition, transform.rotation);
+    }
+
+    void SpawnInitialWave()
+    {
+        currentCountedCars = 0;
+        maxCountedCars = 6;
+        SpawnWave(0);
     }
     /*
     public void SpawnWave(int index)
