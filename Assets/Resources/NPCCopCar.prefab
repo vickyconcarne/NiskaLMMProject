@@ -396,7 +396,7 @@ MonoBehaviour:
   trailRenderers: {fileID: 3300480379276962921}
   brakesOnPlayerDeath: 1
   movementState: 1
-  m_forwardMomentum: 22
+  m_forwardMomentum: 24
   lanePositionalDifferential: 5
   timeToChangeLane: 1
   chosenLane: -1

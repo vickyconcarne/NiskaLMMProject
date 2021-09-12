@@ -7,6 +7,14 @@ using System;
 public class RandomTileManager : MonoBehaviour
 {
     public Transform playerTransform;
+
+    [Header("Levels")]
+    private Level currentLevel;
+    private int currentLevelIndex;
+    [SerializeField] private List<Level> allLevels = new List<Level>();
+    private int currentAmountOfMoney;
+    private int maxAmountOfMoney;
+
     [Header("Different tile prefabs")]
     public GameObject tileIntro;
     public List<GameObject> tilePrefabs = new List<GameObject>();
@@ -177,6 +185,23 @@ public class RandomTileManager : MonoBehaviour
         }
     }
 
+    public void AddMoneyToLevel(int qtity)
+    {
+        currentAmountOfMoney += qtity;
+        if(currentAmountOfMoney >= maxAmountOfMoney)
+        {
+            SwitchLevels();
+        }
+    }
+
+    private void SwitchLevels()
+    {
+        if(currentLevelIndex + 1 <= allLevels.Count)
+        {
+            currentLevelIndex += 1;
+        }
+    }
+
 
     public void SpawnWave(int index)
     {
@@ -237,6 +262,16 @@ public class Wave
 {
     public int numberOfCars;
     public GameObject prefab;
+}
+
+[System.Serializable]
+public class Level
+{
+    public string nomDeLaTrack;
+    public int moneyToTransfer;
+    public List<GameObject> tilePrefabs = new List<GameObject>();
+    public List<GameObject> emptyTilePrefabs = new List<GameObject>();
+    public List<Wave> possibleWavePrefabs;
 }
 
 
