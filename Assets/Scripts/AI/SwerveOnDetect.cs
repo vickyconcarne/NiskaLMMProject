@@ -31,6 +31,7 @@ public class SwerveOnDetect : AOnSideDetection
 
     private IEnumerator SwitchLanes()
     {
+        /*
         float elapsedTime = 0f;
         var startingPos = tran
         m_collisionManager.currentState = actorState.AggressiveSwerving;
@@ -44,6 +45,7 @@ public class SwerveOnDetect : AOnSideDetection
         carChild.localPosition = newLanePosition; //Snap to new position
         .currentState = actorState.Idle;
         finishedLateralAction = true;
+        */
     }
 
     public override void LeftAction(RaycastHit hitInfo)
