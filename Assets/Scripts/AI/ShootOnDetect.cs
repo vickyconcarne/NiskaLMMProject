@@ -84,9 +84,3 @@ public class ShootOnDetect : AOnSideDetection
 
 }
 
-[System.Serializable]
-public class MovementAction{
-    public lane direction;
-    public float speed;
-    public float durationOfAction;
-}
