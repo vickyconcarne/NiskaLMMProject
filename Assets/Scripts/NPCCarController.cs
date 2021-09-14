@@ -14,6 +14,7 @@ namespace LMM_Movement
         [SerializeField] private Transform carChild;
 
         [Header("Animation")]
+        public Wiggler optionalWiggler;
         public Animator carAnimator;
         public string explodeLeftTrigger;
         public string explodeRightTrigger;
@@ -23,10 +24,13 @@ namespace LMM_Movement
         [SerializeField] private bool brakesOnPlayerDeath = false;
         const float maxTimeToBrake = 2f;
         [Header("Movement options")]
-        [SerializeField] private actorState movementState;
+
+        public actorState movementState;
         [SerializeField] private float m_forwardMomentum;
         [SerializeField] private float lanePositionalDifferential;
         [SerializeField] private float timeToChangeLane;
+        [SerializeField]
+        
 
         public lane chosenLane;
         private bool finishedLateralAction = true;
@@ -151,6 +155,7 @@ namespace LMM_Movement
 
         private IEnumerator Brake()
         {
+            if (optionalWiggler) optionalWiggler.enabled = false;
             currentCollider.enabled = false;
             trailRenderers.SetActive(true);
             float timeToBrake = Random.Range(0f, maxTimeToBrake);

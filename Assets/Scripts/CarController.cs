@@ -154,7 +154,7 @@ namespace LMM_Movement
         }
     }
 
-    public enum lane { left = -1, middle = 0, right = 1 , nolane = 2};
+    public enum lane { left = -1, middle = 0, right = 1, nolane = 2 };
 
 }
 

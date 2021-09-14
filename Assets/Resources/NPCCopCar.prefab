@@ -389,6 +389,7 @@ MonoBehaviour:
   m_CharacterController: {fileID: 6039523837792194789}
   canMove: 1
   carChild: {fileID: 6039523839720198821}
+  optionalWiggler: {fileID: 560881269752022016}
   carAnimator: {fileID: 6039523839720198842}
   explodeLeftTrigger: ExplodeLeft
   explodeRightTrigger: ExplodeRight
