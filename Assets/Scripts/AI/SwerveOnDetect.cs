@@ -21,7 +21,7 @@ public class SwerveOnDetect : AOnSideDetection
     [Header("Actions on detect")]
     public List<MovementAction> leftActionsToDo;
     public List<MovementAction> rightActionsToDo;
-    private float movementDirection; //useful for - or + sign on movements x or y
+    [SerializeField] private float movementDirection; //useful for - or + sign on movements x or y
 
     // Start is called before the first frame update
     void Start()
@@ -32,105 +32,118 @@ public class SwerveOnDetect : AOnSideDetection
     // Update is called once per frame
     void FixedUpdate()
     {
-        SideDetection();
-        ActionSequencer();
+        if (npcController.canMove)
+        {
+            if (finishedAllActions) SideDetection();
+            ActionSequencer();
 
-        if (isLookingFor)
-        {
-            Debug.DrawRay(transform.position, -transform.right * distanceToDetect, Color.yellow);
-            Debug.DrawRay(transform.position, transform.right * distanceToDetect, Color.yellow);
+            if (isLookingFor)
+            {
+                Debug.DrawRay(transform.position, -transform.right * distanceToDetect, Color.yellow);
+                Debug.DrawRay(transform.position, transform.right * distanceToDetect, Color.yellow);
+            }
+            else
+            {
+                Debug.DrawRay(transform.position, -transform.right * distanceToDetect, Color.green);
+                Debug.DrawRay(transform.position, transform.right * distanceToDetect, Color.green);
+            }
         }
-        else
-        {
-            Debug.DrawRay(transform.position, -transform.right * distanceToDetect, Color.green);
-            Debug.DrawRay(transform.position, transform.right * distanceToDetect, Color.green);
-        }
+        
     }
 
     void ActionSequencer()
     {
         if (!finishedAllActions)
         {
-            if (currentCooldown >= swerveCooldown && finishedLateralAction)
+            if (finishedLateralAction)
             {
-                switch (swerveDirection)
+                if (currentCooldown >= swerveCooldown)
                 {
-                    //Left
-                    case -1f:
-                        if (currentActionIndex < leftActionsToDo.Count)
-                        {
-                            Interpret(leftActionsToDo[currentActionIndex]);
-                            currentActionIndex += 1;
-                        }
-                        else
-                        {
-                            currentActionIndex = 0;
-                            finishedAllActions = true;
-                            currentCooldown = -2f;
-                        }
-                        break;
-                    //Right
-                    case 1f:
-                        if (currentActionIndex < rightActionsToDo.Count)
-                        {
-                            Interpret(rightActionsToDo[currentActionIndex]);
-                            currentActionIndex += 1;
-                        }
-                        else
-                        {
-                            currentActionIndex = 0;
-                            finishedAllActions = true;
-                            currentCooldown = -2f;
-                        }
-                        break;
-                    default:
-                        break;
+                    switch (swerveDirection)
+                    {
+                        //Left
+                        case -1f:
+                            if (currentActionIndex < leftActionsToDo.Count)
+                            {
+                                finishedLateralAction = false;
+                                Interpret(leftActionsToDo[currentActionIndex]);
+                                currentActionIndex += 1;
+                            }
+                            else
+                            {
+                                currentActionIndex = 0;
+                                finishedAllActions = true;
+                                currentCooldown = 0f;
+                            }
+                            break;
+                        //Right
+                        case 1f:
+                            if (currentActionIndex < rightActionsToDo.Count)
+                            {
+                                finishedLateralAction = false;
+                                Interpret(rightActionsToDo[currentActionIndex]);
+                                currentActionIndex += 1;
+                            }
+                            else
+                            {
+                                currentActionIndex = 0;
+                                finishedAllActions = true;
+                                currentCooldown = 0f;
+                            }
+                            break;
+                        default:
+                            break;
+                    }
                 }
-            }
-            else
-            {
-                currentCooldown += Time.fixedDeltaTime;
-            }
+                else
+                {
+                    currentCooldown += Time.fixedDeltaTime;
+                }
+            }   
         }
     }
 
     void Interpret(MovementAction action)
     {
-        finishedLateralAction = false;
+        StopAllCoroutines();
         switch (action.direction)
         {
             case lane.left:
-                Debug.Log("switching lane");
+                //Debug.Log("switching lane");
                 movementDirection = -1;
-                StartCoroutine(SwitchXLanes(action.durationOfAction));
+                StartCoroutine(SwitchXLanes(action.speed, action.durationOfAction));
                 break;
             case lane.right:
-                Debug.Log("switching lane");
+                //Debug.Log("switching lane");
                 movementDirection = 1;
-                StartCoroutine(SwitchXLanes(action.durationOfAction));
+                StartCoroutine(SwitchXLanes(action.speed, action.durationOfAction));
                 break;
             default:
-                Debug.Log("changing speed");
+                //Debug.Log("changing speed");
                 StartCoroutine(SwitchZLanes(action.speed, action.durationOfAction));
                 break;
         }
     }
 
-    private IEnumerator SwitchXLanes(float duration)
+    private IEnumerator SwitchXLanes(float speed,float duration)
     {
-        Debug.Log("switching lane");
         float elapsedTime = 0f;
         float startingX = transform.position.x;
         float endX = startingX + movementDirection * lanePositionalDifferential;
         npcController.movementState = actorState.AggressiveSwerving;
+        SetSpeed(speed);
+        npcController.k_movementDirection.x = movementDirection * 5f;
         while (elapsedTime < duration)
         {
-            Vector3 currentPosition = transform.position;
+            
+            /*Vector3 currentPosition = transform.position;
             currentPosition.x = Mathf.SmoothStep(startingX, endX, (elapsedTime / duration));
-            transform.position = currentPosition; //Just change the x
+            transform.position = currentPosition;*/
             elapsedTime += Time.deltaTime;
             yield return null;
         }
+        npcController.k_movementDirection.x = 0f;
+        DecideNewLane();
         //Snap to correct x
         Vector3 finalPosition = transform.position;
         finalPosition.x = endX;
@@ -157,6 +170,35 @@ public class SwerveOnDetect : AOnSideDetection
         currentCooldown = 0f;
         finishedLateralAction = true;
         yield return null;
+    }
+
+    void DecideNewLane()
+    {
+        switch (npcController.chosenLane)
+        {
+            case lane.left:
+                if(movementDirection == 1f)
+                {
+                    npcController.chosenLane = lane.middle;
+                }
+                break;
+            case lane.right:
+                if (movementDirection == -1f)
+                {
+                    npcController.chosenLane = lane.middle;
+                }
+                break;
+            case lane.middle:
+                if (movementDirection == 1f)
+                {
+                    npcController.chosenLane = lane.right;
+                }
+                else
+                {
+                    npcController.chosenLane = lane.left;
+                }
+                break;
+        }
     }
 
     public override void LeftAction(RaycastHit hitInfo)

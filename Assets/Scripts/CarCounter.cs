@@ -29,7 +29,7 @@ public class CarCounter : MonoBehaviour
             {
                 if (carNPC.canMove)
                 {
-                    carNPC.Kill(lane.nolane);
+                    carNPC.Kill(lane.nolane, true);
                 }
             }
         }

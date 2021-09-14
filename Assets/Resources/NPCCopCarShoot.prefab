@@ -334,7 +334,7 @@ GameObject:
   - component: {fileID: 6039523837792194791}
   - component: {fileID: 3410793057691162824}
   m_Layer: 8
-  m_Name: NPCCopCar
+  m_Name: NPCCopCarShoot
   m_TagString: OtherCar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77439,6 +77439,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!136 &6685790026987074320
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9108422722590809396}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 3.4283538
+  m_Height: 15.861055
+  m_Direction: 2
+  m_Center: {x: 0, y: 0, z: 0.15037507}
 --- !u!1001 &9108422722590776222
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -77472,7 +77486,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100010, guid: 2bce4e452d1732441a288976cac6660c, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 2bce4e452d1732441a288976cac6660c, type: 3}
+      propertyPath: m_TagString
+      value: OtherCar
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: 2bce4e452d1732441a288976cac6660c, type: 3}
       propertyPath: m_RootOrder
@@ -77540,6 +77558,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2bce4e452d1732441a288976cac6660c, type: 3}
+--- !u!1 &9108422722590809396 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100010, guid: 2bce4e452d1732441a288976cac6660c,
+    type: 3}
+  m_PrefabInstance: {fileID: 9108422722590776222}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &9108422722590376212 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400010, guid: 2bce4e452d1732441a288976cac6660c,

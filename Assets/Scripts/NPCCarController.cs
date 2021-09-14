@@ -83,37 +83,44 @@ namespace LMM_Movement
         /// Destroy and animate based on attacking lane
         /// </summary>
         /// <param name="attackingLane"></param>
-        public void Kill(lane attackingLane)
+        public void Kill(lane attackingLane, bool silent = false)
         {
             RandomTileManager.instance.currentCountedCars += 1;
             RandomTileManager.instance.CheckState();
             currentCollider.enabled = false;
             m_CharacterController.enabled = false;
             canMove = false;
-            if (carAnimator)
+            if (!silent)
             {
-                switch (attackingLane)
+                if (carAnimator)
                 {
-                    case lane.nolane:
-                        carAnimator.SetTrigger(generalExplodeTrigger);
-                        break;
-                    default:
+                    switch (attackingLane)
+                    {
+                        case lane.nolane:
+                            carAnimator.SetTrigger(generalExplodeTrigger);
+                            break;
+                        default:
 
-                        int differential = (int)chosenLane + (int)attackingLane;
+                            int differential = (int)chosenLane + (int)attackingLane;
 
-                        if (differential < 0)
-                        {
-                            carAnimator.SetTrigger(explodeLeftTrigger);
-                        }
-                        else
-                        {
-                            carAnimator.SetTrigger(explodeRightTrigger);
-                        }
-                        break;
+                            if (differential < 0)
+                            {
+                                carAnimator.SetTrigger(explodeLeftTrigger);
+                            }
+                            else
+                            {
+                                carAnimator.SetTrigger(explodeRightTrigger);
+                            }
+                            break;
+                    }
+
                 }
-
+                Invoke("DeinstantiateAfterTime", 4f);
             }
-            Invoke("DeinstantiateAfterTime", 4f);
+            else
+            {
+                Destroy(m_CharacterController.gameObject);
+            }
         }
 
         public void DeinstantiateAfterTime()
@@ -155,7 +162,11 @@ namespace LMM_Movement
 
         private IEnumerator Brake()
         {
-            if (optionalWiggler) optionalWiggler.enabled = false;
+            if (optionalWiggler)
+            {
+                optionalWiggler.framerate = 0f;
+                optionalWiggler.enabled = false;
+            }
             currentCollider.enabled = false;
             trailRenderers.SetActive(true);
             float timeToBrake = Random.Range(0f, maxTimeToBrake);
