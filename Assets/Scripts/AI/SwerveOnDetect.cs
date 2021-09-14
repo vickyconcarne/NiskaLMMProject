@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using LMM_Movement;
 public class SwerveOnDetect : AOnSideDetection
 {
@@ -23,11 +24,34 @@ public class SwerveOnDetect : AOnSideDetection
     public List<MovementAction> rightActionsToDo;
     [SerializeField] private float movementDirection; //useful for - or + sign on movements x or y
 
+    //Events
+
+    private UnityAction playerDeathListener;
+
+    void Awake()
+    {
+        playerDeathListener = new UnityAction(StartBrake);
+    }
+
+    void OnEnable()
+    {
+        EventManager.StartListening("PlayerDeath", playerDeathListener);
+    }
+
+    void OnDisable()
+    {
+        EventManager.StopListening("PlayerDeath", playerDeathListener);
+    }
+
+
+
     // Start is called before the first frame update
     void Start()
     {
         originalSpeed = npcController.k_movementDirection.z;
     }
+
+
 
     // Update is called once per frame
     void FixedUpdate()
@@ -221,6 +245,12 @@ public class SwerveOnDetect : AOnSideDetection
             finishedAllActions = false;
         }
         
+    }
+
+    private void StartBrake()
+    {
+        StopAllCoroutines();
+        this.enabled = false;
     }
 
 }
