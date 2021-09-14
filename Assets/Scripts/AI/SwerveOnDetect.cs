@@ -5,9 +5,11 @@ using UnityEngine.Events;
 using LMM_Movement;
 public class SwerveOnDetect : AOnSideDetection
 {
-
+    [Header("Movement")]
     public float speedToMatchPlayer;
     private float originalSpeed;
+
+    
     public float swerveCooldown;
     private float currentCooldown;
 
@@ -23,6 +25,10 @@ public class SwerveOnDetect : AOnSideDetection
     public List<MovementAction> leftActionsToDo;
     public List<MovementAction> rightActionsToDo;
     [SerializeField] private float movementDirection; //useful for - or + sign on movements x or y
+
+    [Header("Warning")]
+    public bool activateWarningOnDetect;
+    public GameObject warningObject;
 
     //Events
 
@@ -151,6 +157,7 @@ public class SwerveOnDetect : AOnSideDetection
 
     private IEnumerator SwitchXLanes(float speed,float duration)
     {
+        if (activateWarningOnDetect) warningObject.SetActive(false); //Deactivate warning
         float elapsedTime = 0f;
         float startingX = transform.position.x;
         float endX = startingX + movementDirection * lanePositionalDifferential;
@@ -232,6 +239,7 @@ public class SwerveOnDetect : AOnSideDetection
             swerveDirection = -1f;
             SetSpeed(speedToMatchPlayer);
             finishedAllActions = false;
+            if (activateWarningOnDetect) warningObject.SetActive(true);
         }
         
     }
@@ -243,6 +251,7 @@ public class SwerveOnDetect : AOnSideDetection
             swerveDirection = 1f;
             SetSpeed(speedToMatchPlayer);
             finishedAllActions = false;
+            if (activateWarningOnDetect) warningObject.SetActive(true);
         }
         
     }
@@ -250,6 +259,7 @@ public class SwerveOnDetect : AOnSideDetection
     private void StartBrake()
     {
         StopAllCoroutines();
+        if (activateWarningOnDetect) warningObject.SetActive(false); //Deactivate warning
         this.enabled = false;
     }
 

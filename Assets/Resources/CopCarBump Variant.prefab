@@ -8,6 +8,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 802522242, guid: 73bdcc2d292060344bfb25af0dad7d1a, type: 3}
+      propertyPath: swerveCooldown
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 802522242, guid: 73bdcc2d292060344bfb25af0dad7d1a, type: 3}
+      propertyPath: activateWarningOnDetect
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 802522242, guid: 73bdcc2d292060344bfb25af0dad7d1a, type: 3}
       propertyPath: leftActionsToDo.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -49,7 +57,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 802522242, guid: 73bdcc2d292060344bfb25af0dad7d1a, type: 3}
       propertyPath: leftActionsToDo.Array.data[0].durationOfAction
-      value: 1
+      value: 0.95
       objectReference: {fileID: 0}
     - target: {fileID: 802522242, guid: 73bdcc2d292060344bfb25af0dad7d1a, type: 3}
       propertyPath: leftActionsToDo.Array.data[1].durationOfAction
@@ -57,10 +65,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 802522242, guid: 73bdcc2d292060344bfb25af0dad7d1a, type: 3}
       propertyPath: rightActionsToDo.Array.data[0].durationOfAction
-      value: 1
+      value: 0.95
       objectReference: {fileID: 0}
     - target: {fileID: 802522242, guid: 73bdcc2d292060344bfb25af0dad7d1a, type: 3}
       propertyPath: rightActionsToDo.Array.data[1].durationOfAction
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3146794484239539396, guid: 73bdcc2d292060344bfb25af0dad7d1a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3483163580702196164, guid: 73bdcc2d292060344bfb25af0dad7d1a,
+        type: 3}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4094369816097973729, guid: 73bdcc2d292060344bfb25af0dad7d1a,
@@ -121,7 +139,12 @@ PrefabInstance:
     - target: {fileID: 4094369816097973734, guid: 73bdcc2d292060344bfb25af0dad7d1a,
         type: 3}
       propertyPath: m_Name
-      value: CopCarBump
+      value: CopCarBump Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 8606871051101331003, guid: 73bdcc2d292060344bfb25af0dad7d1a,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73bdcc2d292060344bfb25af0dad7d1a, type: 3}
