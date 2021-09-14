@@ -1850,7 +1850,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 615188759}
-  m_LocalRotation: {x: 0.667328, y: -0.03153176, z: 0.028299104, w: 0.7435579}
+  m_LocalRotation: {x: 0.66732806, y: -0.031532247, z: 0.028299548, w: 0.7435578}
   m_LocalPosition: {x: 0.9100003, y: 36.1, z: -10.709999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2330,7 +2330,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 778703452}
-  m_LocalRotation: {x: 0.667328, y: -0.03153176, z: 0.028299104, w: 0.7435579}
+  m_LocalRotation: {x: 0.66732806, y: -0.031532247, z: 0.028299548, w: 0.7435578}
   m_LocalPosition: {x: 0.9100003, y: 36.1, z: -10.709999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -9646,7 +9646,7 @@ MonoBehaviour:
     - {fileID: 6743519024202991439, guid: d1a3d25be3faa41fabe91d1ab8433626, type: 3}
     - {fileID: 6743519024202991439, guid: a865ab0e535884ae195dc7135e987ca1, type: 3}
     possibleWavePrefabs:
-    - numberOfCars: 2
+    - numberOfCars: 3
       prefab: {fileID: 1201072589188917958, guid: 4e949ad9f20c06b479327ba4077778ee,
         type: 3}
     - numberOfCars: 6
