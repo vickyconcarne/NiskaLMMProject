@@ -20,7 +20,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   speedToMatchPlayer: 20
-  swerveCooldown: 1
+  swerveCooldown: 0.5
   swerveDirection: 1
   lanePositionalDifferential: 5
   carAnimator: {fileID: 4094369816851572669}
@@ -60,10 +60,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2050002972359699260, guid: c2beefb6ecc1fba48905f0699d5322c0,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4659261474542447043, guid: c2beefb6ecc1fba48905f0699d5322c0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6039523837792194785, guid: c2beefb6ecc1fba48905f0699d5322c0,
         type: 3}
       propertyPath: m_Name
       value: CopCarQueueDePoisson
+      objectReference: {fileID: 0}
+    - target: {fileID: 6039523837792194788, guid: c2beefb6ecc1fba48905f0699d5322c0,
+        type: 3}
+      propertyPath: scoreToAddOnDeath
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6039523837792194790, guid: c2beefb6ecc1fba48905f0699d5322c0,
         type: 3}
@@ -73,17 +88,17 @@ PrefabInstance:
     - target: {fileID: 6039523837792194790, guid: c2beefb6ecc1fba48905f0699d5322c0,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.645005
+      value: -8.887537
       objectReference: {fileID: 0}
     - target: {fileID: 6039523837792194790, guid: c2beefb6ecc1fba48905f0699d5322c0,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 42.51442
+      value: 58.2504
       objectReference: {fileID: 0}
     - target: {fileID: 6039523837792194790, guid: c2beefb6ecc1fba48905f0699d5322c0,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 440.38028
+      value: 447.60364
       objectReference: {fileID: 0}
     - target: {fileID: 6039523837792194790, guid: c2beefb6ecc1fba48905f0699d5322c0,
         type: 3}
@@ -119,6 +134,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6580888921190134979, guid: c2beefb6ecc1fba48905f0699d5322c0,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3410793057691162824, guid: c2beefb6ecc1fba48905f0699d5322c0, type: 3}

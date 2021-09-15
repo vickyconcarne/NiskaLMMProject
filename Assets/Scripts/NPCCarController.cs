@@ -12,7 +12,8 @@ namespace LMM_Movement
         public bool canMove = true;
 
         [SerializeField] private Transform carChild;
-
+        [Header("Score")]
+        public int scoreToAddOnDeath = 0;
         [Header("Animation")]
         public Wiggler optionalWiggler;
         public Animator carAnimator;
@@ -92,6 +93,7 @@ namespace LMM_Movement
             canMove = false;
             if (!silent)
             {
+                RandomTileManager.instance.AddToScore(scoreToAddOnDeath, transform.position);
                 if (carAnimator)
                 {
                     switch (attackingLane)

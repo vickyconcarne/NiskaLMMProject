@@ -48,7 +48,7 @@ public class RavitailleOnDetect : AOnSideDetection
     {
         if(currentTime >= timeOfTick)
         {
-            RandomTileManager.instance.AddMoneyToLevel(moneyToAddPerTick);
+            RandomTileManager.instance.AddMoneyToLevel(moneyToAddPerTick, transform.position);
             AddMoney();
             currentTime = 0f;
         }
@@ -63,7 +63,7 @@ public class RavitailleOnDetect : AOnSideDetection
     {
         if (currentTime >= timeOfTick)
         {
-            RandomTileManager.instance.AddMoneyToLevel(moneyToAddPerTick);
+            RandomTileManager.instance.AddMoneyToLevel(moneyToAddPerTick, transform.position);
             AddMoney();
             currentTime = 0f;
         }

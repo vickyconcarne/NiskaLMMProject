@@ -17,7 +17,21 @@ public class RandomTileManager : MonoBehaviour
     [SerializeField] private int currentIteration = 0;
     private int maxNumberOfIterations;
     private RavitailleOnDetect currentRavitaillement;
-    private int totalMoney;
+
+    [Header("Camera")]
+    public Camera cam;
+    [Header("Score")]
+
+    public Animator scoreBox;
+    public RectTransform scoreEndPoint;
+    public TextMeshProUGUI highScoreText;
+    public RectTransform scoreElement;
+    const float timeToGoToScore = 0.5f;
+    private Vector3 currentScoreOriginPoint;
+    public Canvas canvasOfScore;
+    private float scaleFactor;
+    private float currentScoreUITime;
+    private int currentHighScore;
     [Header("Different tile prefabs")]
     public GameObject tileIntro;
     public List<GameObject> tilePrefabs = new List<GameObject>();
@@ -88,8 +102,39 @@ public class RandomTileManager : MonoBehaviour
         }
         
         Invoke("SpawnInitialWave", 2f);
-        //currentCountedObstacles = numberOfTilesToSpawnPerIteration;
-        //currentCountedObstacles = 2;
+
+
+        //Get scale factor of score canvas to correctly position
+        scaleFactor = canvasOfScore.scaleFactor;
+
+
+ 
+    }
+
+    private void LateUpdate()
+    {
+        //Animator for score
+        if (currentScoreUITime < timeToGoToScore) {
+            scoreElement.anchoredPosition = Vector2.Lerp(currentScoreOriginPoint, /*scoreBox.GetComponent<RectTransform>().localPosition*/ scoreEndPoint.anchoredPosition, currentScoreUITime / timeToGoToScore);
+            currentScoreUITime += Time.deltaTime;
+            if(currentScoreUITime > timeToGoToScore)
+            {
+                scoreBox.SetTrigger("Pop");
+                highScoreText.text = currentHighScore.ToString();
+                scoreElement.gameObject.SetActive(false);
+            }
+        }
+    }
+
+    public void AddToScore(int scoreAdd, Vector3 position)
+    {
+        Vector2 initialPosition = cam.WorldToScreenPoint(position);
+        currentScoreOriginPoint = new Vector2(initialPosition.x / scaleFactor, initialPosition.y / scaleFactor); 
+        scoreElement.anchoredPosition = initialPosition;
+        scoreElement.GetComponent<TextMeshProUGUI>().text = scoreAdd.ToString();
+        scoreElement.gameObject.SetActive(true);
+        currentHighScore += scoreAdd;
+        currentScoreUITime = 0f;
     }
 
     // Update is called once per frame
@@ -197,9 +242,9 @@ public class RandomTileManager : MonoBehaviour
         }
     }
 
-    public bool AddMoneyToLevel(int qtity)
+    public bool AddMoneyToLevel(int qtity, Vector3 position)
     {
-        totalMoney += qtity;
+        AddToScore(qtity, position);
         if (audiosource) audiosource.PlayOneShot(Resources.Load("Sounds/CashRegisterSound") as AudioClip);
         return true;
     }
@@ -238,6 +283,7 @@ public class RandomTileManager : MonoBehaviour
             }
             
         }
+        yield return new WaitForSeconds(3f);
         trackAnimator.SetTrigger("TrackAppear");
         trackTitle.text = currentLevel.nomDeLaTrack;
         if (currentLevel.ravitaillementPrefab)
@@ -249,7 +295,7 @@ public class RandomTileManager : MonoBehaviour
             GameObject go = Instantiate(currentLevel.ravitaillementPrefab, playerTransform.position, playerTransform.rotation);
             currentRavitaillement = go.GetComponentInChildren<RavitailleOnDetect>();
         }
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1f);
         finishedInitialiazingLevel = true;
     }
 
