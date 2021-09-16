@@ -23,6 +23,9 @@ public class CarCollisionManager : MonoBehaviour
     public GameObject explosionEffect;
     public GameObject cashFlow;
 
+    [Header("Niska model")]
+    public Animator niskaAnimator;
+
     [Header("Cinemachine ")]
     public Transform deathTarget;
     public CinemachineSmoothPath circularPath;
@@ -62,6 +65,7 @@ public class CarCollisionManager : MonoBehaviour
 
                     NPCCarController otherCar = other.GetComponent<NPCCarController>();
                     if(otherCar) otherCar.Kill(playerController.chosenLane);
+                    niskaAnimator.SetTrigger("Cheer");
                 }
                 else
                 {
@@ -86,6 +90,7 @@ public class CarCollisionManager : MonoBehaviour
     {
         EventManager.TriggerEvent("PlayerDeath");
         bombCanvas.SetActive(false);
+        niskaAnimator.gameObject.SetActive(false);
         //Cam
         //cinemachineCam.enabled = false;
         //Destroy(cinemachineCam);

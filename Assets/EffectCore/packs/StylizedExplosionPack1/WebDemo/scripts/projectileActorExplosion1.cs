@@ -11,6 +11,9 @@ public class projectileActorExplosion1 : MonoBehaviour {
     public int maxBombs = 2;
     public int currentBombs;
 
+    [Header("Animations")]
+    public Animator niskaAnimator;
+
     [Header("Debug")]
     public TextMeshProUGUI bombText;
     public bool debug;
@@ -118,6 +121,7 @@ public class projectileActorExplosion1 : MonoBehaviour {
         else
         {
             RemoveBomb();
+            niskaAnimator.SetTrigger("Throw");
         }
         muzzleflare.Play();
 

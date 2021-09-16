@@ -13,6 +13,7 @@ public class RavitailleOnDetect : AOnSideDetection
     public Vector3 moveVector;
     public CharacterController charController;
     public Animator transitionAnimator;
+    private bool canGiveMoney = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,22 +27,26 @@ public class RavitailleOnDetect : AOnSideDetection
         RaycastHit rightHit;
         charController.Move(moveVector * Time.fixedDeltaTime);
 
-        if (Physics.Raycast(detectionTransform.position, -transform.right, out leftHit, distanceToDetect, layerToDetect, QueryTriggerInteraction.Collide))
+        if (canGiveMoney)
         {
-            LeftAction(leftHit);
-            isLookingFor = false;
-            return;
+            if (Physics.Raycast(detectionTransform.position, -transform.right, out leftHit, distanceToDetect, layerToDetect, QueryTriggerInteraction.Collide))
+            {
+                LeftAction(leftHit);
+                isLookingFor = false;
+                return;
+            }
+            else if (Physics.Raycast(detectionTransform.position, transform.right, out rightHit, distanceToDetect, layerToDetect, QueryTriggerInteraction.Collide))
+            {
+                RightAction(rightHit);
+                isLookingFor = false;
+                return;
+            }
+            else
+            {
+                isLookingFor = true;
+            }
         }
-        else if (Physics.Raycast(detectionTransform.position, transform.right, out rightHit, distanceToDetect, layerToDetect, QueryTriggerInteraction.Collide))
-        {
-            RightAction(rightHit);
-            isLookingFor = false;
-            return;
-        }
-        else
-        {
-            isLookingFor = true;
-        }
+        
     }
 
     public override void LeftAction(RaycastHit hitInfo)
@@ -78,6 +83,7 @@ public class RavitailleOnDetect : AOnSideDetection
         
         if(currentMoney >= maxMoney)
         {
+            canGiveMoney = false;
             ExitLevel();
         }
         else
@@ -89,6 +95,6 @@ public class RavitailleOnDetect : AOnSideDetection
     public void ExitLevel()
     {
         transitionAnimator.SetTrigger("Exit");
-        Destroy(gameObject, 2f);
+        Destroy(gameObject, 4f);
     }
 }

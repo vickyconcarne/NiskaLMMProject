@@ -15,7 +15,7 @@ namespace LMM_Movement
 
         [Header("Animation")]
         public Animator generalCarAnimator;
-        
+        public Animator niskaAnimator;
 
         [Header("Movement options")]
         [SerializeField] private float m_forwardMomentum;
@@ -94,6 +94,7 @@ namespace LMM_Movement
                             finishedLateralAction = false;
                             newLanePosition = leftLaneLocalPos;
                             generalCarAnimator.SetTrigger("SwerveLeft");
+                            niskaAnimator.SetTrigger("FlinchLeft");
                             StartCoroutine(SwitchLanes());
 
                             break;
@@ -102,6 +103,7 @@ namespace LMM_Movement
                             finishedLateralAction = false;
                             newLanePosition = middleLaneLocalPos;
                             generalCarAnimator.SetTrigger("SwerveLeft");
+                            niskaAnimator.SetTrigger("FlinchLeft");
                             StartCoroutine(SwitchLanes());
                             break;
                         default:
@@ -117,6 +119,7 @@ namespace LMM_Movement
                             finishedLateralAction = false;
                             newLanePosition = middleLaneLocalPos;
                             generalCarAnimator.SetTrigger("SwerveRight");
+                            niskaAnimator.SetTrigger("FlinchRight");
                             StartCoroutine(SwitchLanes());
                             break;
                         case lane.middle:
@@ -124,6 +127,7 @@ namespace LMM_Movement
                             finishedLateralAction = false;
                             newLanePosition = rightLaneLocalPos;
                             generalCarAnimator.SetTrigger("SwerveRight");
+                            niskaAnimator.SetTrigger("FlinchRight");
                             StartCoroutine(SwitchLanes());
                             break;
                         case lane.right:

@@ -115,7 +115,7 @@ public class RandomTileManager : MonoBehaviour
     {
         //Animator for score
         if (currentScoreUITime < timeToGoToScore) {
-            scoreElement.anchoredPosition = Vector2.Lerp(currentScoreOriginPoint, /*scoreBox.GetComponent<RectTransform>().localPosition*/ scoreEndPoint.anchoredPosition, currentScoreUITime / timeToGoToScore);
+            scoreElement.anchoredPosition = Vector2.Lerp(currentScoreOriginPoint, scoreBox.GetComponent<RectTransform>().pivot /*scoreEndPoint.anchoredPosition*/, currentScoreUITime / timeToGoToScore);
             currentScoreUITime += Time.deltaTime;
             if(currentScoreUITime > timeToGoToScore)
             {
