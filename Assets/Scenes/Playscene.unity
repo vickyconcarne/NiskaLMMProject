@@ -36238,6 +36238,7 @@ MonoBehaviour:
   coolDown: 2
   maxBombs: 10
   currentBombs: 0
+  niskaAnimator: {fileID: 228546994}
   bombText: {fileID: 423525172}
   debug: 1
   bombList:
