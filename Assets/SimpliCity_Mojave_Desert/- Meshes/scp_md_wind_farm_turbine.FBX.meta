@@ -1,49 +1,85 @@
 fileFormatVersion: 2
 guid: 2b3f170e06c186e478dd60d1710ffdab
-timeCreated: 1458589911
-licenseType: Store
 ModelImporter:
-  serializedVersion: 19
-  fileIDToRecycleName:
-    100000: //RootNode
-    100002: scp_md_wind_farm_turbine
-    100004: scp_md_wind_farm_turbine_wings
-    400000: //RootNode
-    400002: scp_md_wind_farm_turbine
-    400004: scp_md_wind_farm_turbine_wings
-    2300000: scp_md_wind_farm_turbine
-    2300002: scp_md_wind_farm_turbine_wings
-    3300000: scp_md_wind_farm_turbine
-    3300002: scp_md_wind_farm_turbine_wings
-    4300000: scp_md_wind_farm_turbine_wings
-    4300002: scp_md_wind_farm_turbine
-    7400000: wind_turbine_anim
-    9500000: //RootNode
-    11100000: //RootNode
+  serializedVersion: 20200
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: //RootNode
+  - first:
+      1: 100002
+    second: scp_md_wind_farm_turbine
+  - first:
+      1: 100004
+    second: scp_md_wind_farm_turbine_wings
+  - first:
+      4: 400000
+    second: //RootNode
+  - first:
+      4: 400002
+    second: scp_md_wind_farm_turbine
+  - first:
+      4: 400004
+    second: scp_md_wind_farm_turbine_wings
+  - first:
+      23: 2300000
+    second: scp_md_wind_farm_turbine
+  - first:
+      23: 2300002
+    second: scp_md_wind_farm_turbine_wings
+  - first:
+      33: 3300000
+    second: scp_md_wind_farm_turbine
+  - first:
+      33: 3300002
+    second: scp_md_wind_farm_turbine_wings
+  - first:
+      43: 4300000
+    second: scp_md_wind_farm_turbine_wings
+  - first:
+      43: 4300002
+    second: scp_md_wind_farm_turbine
+  - first:
+      74: 7400000
+    second: wind_turbine_anim
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      111: 11100000
+    second: //RootNode
+  externalObjects: {}
   materials:
-    importMaterials: 0
+    materialImportMode: 0
     materialName: 0
     materialSearch: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
-    resampleRotations: 1
+    resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 2
     extraExposedTransformPaths: []
+    extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
       name: wind_turbine_anim
       takeName: Take 001
+      internalID: 0
       firstFrame: 0
       lastFrame: 100
       wrapMode: 2
@@ -79,27 +115,47 @@ ModelImporter:
   meshes:
     lODScreenPercentages: []
     globalScale: 1
-    meshCompression: 0
+    meshCompression: 2
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 0
     importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -109,11 +165,17 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 1
   humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
   additionalBone: 0
   userData: 
   assetBundleName: 
