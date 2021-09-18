@@ -23,12 +23,11 @@ public class RandomTileManager : MonoBehaviour
     [Header("Score")]
 
     public Animator scoreBox;
-    public RectTransform scoreEndPoint;
     public TextMeshProUGUI highScoreText;
     public RectTransform scoreElement;
     const float timeToGoToScore = 0.5f;
     private Vector3 currentScoreOriginPoint;
-    public Canvas canvasOfScore;
+    public RectTransform scoreParent;
     private float scaleFactor;
     private float currentScoreUITime;
     private int currentHighScore;
@@ -103,19 +102,13 @@ public class RandomTileManager : MonoBehaviour
         
         Invoke("SpawnInitialWave", 2f);
 
-
-        //Get scale factor of score canvas to correctly position
-        scaleFactor = canvasOfScore.scaleFactor;
-
-
- 
     }
 
     private void LateUpdate()
     {
         //Animator for score
         if (currentScoreUITime < timeToGoToScore) {
-            scoreElement.anchoredPosition = Vector2.Lerp(currentScoreOriginPoint, scoreBox.GetComponent<RectTransform>().pivot /*scoreEndPoint.anchoredPosition*/, currentScoreUITime / timeToGoToScore);
+            scoreElement.transform.position = Vector2.Lerp(currentScoreOriginPoint, scoreBox.transform.position, currentScoreUITime / timeToGoToScore);
             currentScoreUITime += Time.deltaTime;
             if(currentScoreUITime > timeToGoToScore)
             {
@@ -129,12 +122,17 @@ public class RandomTileManager : MonoBehaviour
     public void AddToScore(int scoreAdd, Vector3 position)
     {
         Vector2 initialPosition = cam.WorldToScreenPoint(position);
-        currentScoreOriginPoint = new Vector2(initialPosition.x / scaleFactor, initialPosition.y / scaleFactor); 
-        scoreElement.anchoredPosition = initialPosition;
+        currentScoreOriginPoint = initialPosition;
+        scoreElement.transform.position = initialPosition;
         scoreElement.GetComponent<TextMeshProUGUI>().text = scoreAdd.ToString();
         scoreElement.gameObject.SetActive(true);
         currentHighScore += scoreAdd;
         currentScoreUITime = 0f;
+    }
+
+    public int GetScore()
+    {
+        return currentHighScore;
     }
 
     // Update is called once per frame
