@@ -202,6 +202,7 @@ MonoBehaviour:
   circularPath: {fileID: 1364778312}
   bombCanvas: {fileID: 839267744}
   endScreen: {fileID: 1011829160}
+  submitPanel: {fileID: 806792301}
 --- !u!54 &1131790
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3501,7 +3502,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &806792302
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6044,16 +6045,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1510472939}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 5928831928420283971}
-  m_RootOrder: 1
+  m_Father: {fileID: 5928831928632155963}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.18229, y: 4.0474}
+  m_AnchoredPosition: {x: -4.7783966, y: 4.0474014}
   m_SizeDelta: {x: 364.89, y: 145.8051}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1510472941
@@ -11550,6 +11551,7 @@ MonoBehaviour:
       prefab: {fileID: 1201072589188917958, guid: 4e949ad9f20c06b479327ba4077778ee,
         type: 3}
   currentIteration: 0
+  currentSeed: 0
   cam: {fileID: 778703456}
   scoreBox: {fileID: 515274696}
   highScoreText: {fileID: 2002744039}
@@ -11558,7 +11560,9 @@ MonoBehaviour:
   tileIntro: {fileID: 6743519024202991439, guid: 02d02f9ab3dfdeb43ae6c5b4cc83750e,
     type: 3}
   tilePrefabs: []
+  tilePrefabsIds: []
   emptyTilePrefabs: []
+  emptyTilePrefabsIds: []
   activeTiles: []
   possibleWavePrefabs: []
   seed: 53
@@ -38330,7 +38334,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5928831928632155963}
-  - {fileID: 1510472940}
   m_Father: {fileID: 1105600482}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -38414,6 +38417,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 5928831928420283970}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Pop
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 806792301}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -38436,7 +38451,8 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1510472940}
   m_Father: {fileID: 5928831928420283971}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

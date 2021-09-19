@@ -34,6 +34,7 @@ public class CarCollisionManager : MonoBehaviour
     [SerializeField] private GameObject bombCanvas;
 
     [SerializeField] private GameObject endScreen;
+    [SerializeField] private GameObject submitPanel;
 
     // Start is called before the first frame update
     void Start()
@@ -114,6 +115,10 @@ public class CarCollisionManager : MonoBehaviour
 
     public IEnumerator ReloadScreenAfterWait(float val)
     {
+        if(RandomTileManager.instance.GetCurrentLevelIndex() == (RandomTileManager.instance.GetMaxLevels() - 1))
+        {
+            submitPanel.SetActive(true);
+        }
         yield return new WaitForSeconds(val);
         endScreen.SetActive(true);
     }

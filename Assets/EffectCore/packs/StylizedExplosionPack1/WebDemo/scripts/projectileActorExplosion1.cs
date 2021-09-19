@@ -65,10 +65,7 @@ public class projectileActorExplosion1 : MonoBehaviour {
 
     public void AddBomb()
     {
-        if(currentBombs == 0)
-        {
-            ActivateBombButton();
-        }
+        ActivateBombButton();
         currentBombs += 1;
         if(currentBombs >= maxBombs) {
             currentBombs = maxBombs;
@@ -103,14 +100,11 @@ public class projectileActorExplosion1 : MonoBehaviour {
         if (timer >= coolDown && !canDropMine)
         {
             canDropMine = true;
+            ActivateBombButton();
         }
         else
         {
             timer += Time.fixedDeltaTime;
-        }
-        if(timer == coolDown)
-        {
-            ActivateBombButton();
         }
     }
 

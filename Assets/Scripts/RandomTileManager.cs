@@ -17,7 +17,7 @@ public class RandomTileManager : MonoBehaviour
     [SerializeField] private int currentIteration = 0;
     private int maxNumberOfIterations;
     private RavitailleOnDetect currentRavitaillement;
-
+    [SerializeField] private int currentSeed;
     [Header("Camera")]
     public Camera cam;
     [Header("Score")]
@@ -34,8 +34,9 @@ public class RandomTileManager : MonoBehaviour
     [Header("Different tile prefabs")]
     public GameObject tileIntro;
     public List<GameObject> tilePrefabs = new List<GameObject>();
+    [SerializeField] private List<string> tilePrefabsIds = new List<string>();
     public List<GameObject> emptyTilePrefabs = new List<GameObject>();
-    
+    [SerializeField] private List<string> emptyTilePrefabsIds = new List<string>();
     public List<GameObject> activeTiles = new List<GameObject>();
 
     [Header("Wave prefabs")]
@@ -71,6 +72,8 @@ public class RandomTileManager : MonoBehaviour
     void Start()
     {
         if (!instance) instance = this;
+        currentSeed = (int)System.DateTime.Now.DayOfYear; //Get the day for seed, so we can have a modicum of randomness
+        UnityEngine.Random.InitState(currentSeed);
         currentChallenge = ChallengeType.cars;
         UnityEngine.Random.InitState(seed);
         StartCoroutine(SwitchLevels(0));
@@ -102,6 +105,16 @@ public class RandomTileManager : MonoBehaviour
         
         Invoke("SpawnInitialWave", 2f);
 
+    }
+
+    public int GetMaxLevels()
+    {
+        return allLevels.Count;
+    }
+
+    public int GetCurrentLevelIndex()
+    {
+        return currentLevelIndex;
     }
 
     private void LateUpdate()
@@ -177,7 +190,9 @@ public class RandomTileManager : MonoBehaviour
 
     public void SpawnObstacleTile(int index)
     {
-        GameObject go = Instantiate(tilePrefabs[index], transform.forward * zSpawn, transform.rotation);
+        //GameObject go = Instantiate(tilePrefabs[index], transform.forward * zSpawn, transform.rotation);
+        GameObject prefab = Resources.Load("Tiles/" + tilePrefabsIds[index]) as GameObject;
+        GameObject go = Instantiate(prefab, transform.forward * zSpawn, transform.rotation);
         activeTiles.Add(go);
 
         zSpawn += tileLength;
@@ -185,7 +200,9 @@ public class RandomTileManager : MonoBehaviour
 
     public void SpawnSimpleTile(int index)
     {
-        GameObject go = Instantiate(emptyTilePrefabs[index], transform.forward * zSpawn, transform.rotation);
+        //GameObject go = Instantiate(emptyTilePrefabs[index], transform.forward * zSpawn, transform.rotation);
+        GameObject prefab = Resources.Load("Tiles/" + emptyTilePrefabsIds[index]) as GameObject;
+        GameObject go = Instantiate(prefab, transform.forward * zSpawn, transform.rotation);
         activeTiles.Add(go);
         if(currentCountedObstacles > 0)
         {
@@ -265,35 +282,47 @@ public class RandomTileManager : MonoBehaviour
     private IEnumerator SwitchLevels(int index)
     {
         finishedInitialiazingLevel = false;
-        if (currentLevelIndex <= allLevels.Count)
+        //Only keep going if there are more levels
+        if (currentLevelIndex < allLevels.Count)
         {
             currentIteration = 0;
             
             currentLevel = allLevels[currentLevelIndex];
+            waveRessourceIds =  new List<string>(); //Reinitialize lists
+            tilePrefabsIds = new List<string>();
+            emptyTilePrefabsIds = new List<string>();
             maxNumberOfIterations = currentLevel.numberOfIterations;
             possibleWavePrefabs = currentLevel.possibleWavePrefabs;
             emptyTilePrefabs = currentLevel.emptyTilePrefabs;
             tilePrefabs = currentLevel.tilePrefabs;
-            //Index the wave ressource ids so we can instantiate from prefabs
+            //Index the wave ressource ids so we can instantiate from ressource folder
             foreach (Wave go in possibleWavePrefabs)
             {
                 waveRessourceIds.Add(go.prefab.name);
             }
-            
-        }
-        yield return new WaitForSeconds(3f);
-        trackAnimator.SetTrigger("TrackAppear");
-        trackTitle.text = currentLevel.nomDeLaTrack;
-        if (currentLevel.ravitaillementPrefab)
-        {
-            if (currentRavitaillement)
+            foreach(GameObject prefab in tilePrefabs)
             {
-                currentRavitaillement.ExitLevel();
+                tilePrefabsIds.Add(prefab.name);
             }
-            GameObject go = Instantiate(currentLevel.ravitaillementPrefab, playerTransform.position, playerTransform.rotation);
-            currentRavitaillement = go.GetComponentInChildren<RavitailleOnDetect>();
+            foreach(GameObject emptyprefab in emptyTilePrefabs)
+            {
+                emptyTilePrefabsIds.Add(emptyprefab.name);
+            }
+            yield return new WaitForSeconds(3f);
+            trackAnimator.SetTrigger("TrackAppear");
+            trackTitle.text = currentLevel.nomDeLaTrack;
+            if (currentLevel.ravitaillementPrefab)
+            {
+                if (currentRavitaillement)
+                {
+                    currentRavitaillement.ExitLevel();
+                }
+                GameObject go = Instantiate(currentLevel.ravitaillementPrefab, playerTransform.position, playerTransform.rotation);
+                currentRavitaillement = go.GetComponentInChildren<RavitailleOnDetect>();
+            }
+            yield return new WaitForSeconds(1f);
         }
-        yield return new WaitForSeconds(1f);
+        
         finishedInitialiazingLevel = true;
     }
 
