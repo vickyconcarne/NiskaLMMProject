@@ -13,7 +13,10 @@ public class projectileActorExplosion1 : MonoBehaviour {
 
     [Header("Animations")]
     public Animator niskaAnimator;
-
+    public Animator bombUIAnimator;
+    public Image bombButtonSprite;
+    public Color onColor;
+    public Color offColor;
     [Header("Debug")]
     public TextMeshProUGUI bombText;
     public bool debug;
@@ -62,23 +65,34 @@ public class projectileActorExplosion1 : MonoBehaviour {
 
     public void AddBomb()
     {
+        if(currentBombs == 0)
+        {
+            ActivateBombButton();
+        }
         currentBombs += 1;
         if(currentBombs >= maxBombs) {
             currentBombs = maxBombs;
         }
         if (debug)
         {
-            bombText.text = currentBombs + "/" + maxBombs + " bombs ";
+            bombText.text = currentBombs + "/" + maxBombs;
         }
+    }
+
+    public void ActivateBombButton()
+    {
+        bombUIAnimator.SetTrigger("Pop");
+        bombButtonSprite.color = onColor;
     }
 
     public void RemoveBomb()
     {
         currentBombs -= 1;
         canDropMine = false;
+        bombButtonSprite.color = offColor;
         if (debug)
         {
-            bombText.text = currentBombs + "/" + maxBombs + " bombs ";
+            bombText.text = currentBombs + "/" + maxBombs;
         }
     }
 	
@@ -93,6 +107,10 @@ public class projectileActorExplosion1 : MonoBehaviour {
         else
         {
             timer += Time.fixedDeltaTime;
+        }
+        if(timer == coolDown)
+        {
+            ActivateBombButton();
         }
     }
 
@@ -121,6 +139,7 @@ public class projectileActorExplosion1 : MonoBehaviour {
         else
         {
             RemoveBomb();
+            bombUIAnimator.SetTrigger("Pop");
             niskaAnimator.SetTrigger("Throw");
         }
         muzzleflare.Play();

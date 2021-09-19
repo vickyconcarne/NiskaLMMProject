@@ -40,9 +40,19 @@ public class FormulaInfoSend : MonoBehaviour
         yield return www;
     }
 
-    public void SendInfo()
+    public bool SendInfo()
     {
         player_id = playerIDInput.text;
+        if(player_id.Contains("=") || player_id.Length == 0)
+        {
+            return false;
+        }
         StartCoroutine(Post(player_id, chosenReseau, highscore));
+        return true;
+    }
+
+    public void SetSocialMedia(string socialmedia)
+    {
+        chosenReseau = socialmedia;
     }
 }
