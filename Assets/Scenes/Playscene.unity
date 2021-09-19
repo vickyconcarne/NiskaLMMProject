@@ -2974,6 +2974,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &685304836 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3855664491002486012, guid: fe0ea50cd44331c4ead4be739e604afb,
+    type: 3}
+  m_PrefabInstance: {fileID: 3855664491764830559}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &734138118
 GameObject:
   m_ObjectHideFlags: 0
@@ -12126,7 +12138,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Felicitations! bla bla bla bla
+  m_text: Felicitations! Vous avez fini les 16 niveaux de la tracklist! Envoyez votre
+    @ de reseau et votre score pour une chance de gagner des goodies!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -38047,9 +38060,49 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3855664491002486012, guid: fe0ea50cd44331c4ead4be739e604afb,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3855664491002486012, guid: fe0ea50cd44331c4ead4be739e604afb,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3855664491002486012, guid: fe0ea50cd44331c4ead4be739e604afb,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 806792305}
+    - target: {fileID: 3855664491002486012, guid: fe0ea50cd44331c4ead4be739e604afb,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 685304836}
+    - target: {fileID: 3855664491002486012, guid: fe0ea50cd44331c4ead4be739e604afb,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3855664491002486012, guid: fe0ea50cd44331c4ead4be739e604afb,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: Select
+      objectReference: {fileID: 0}
+    - target: {fileID: 3855664491002486012, guid: fe0ea50cd44331c4ead4be739e604afb,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: UnityEngine.UI.Selectable, UnityEngine.UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 3855664491002486012, guid: fe0ea50cd44331c4ead4be739e604afb,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3855664491002486012, guid: fe0ea50cd44331c4ead4be739e604afb,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3855664491002486014, guid: fe0ea50cd44331c4ead4be739e604afb,
         type: 3}
       propertyPath: m_Name
