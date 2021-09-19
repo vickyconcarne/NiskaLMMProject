@@ -40,15 +40,14 @@ public class FormulaInfoSend : MonoBehaviour
         yield return www;
     }
 
-    public bool SendInfo()
+    public void SendInfo()
     {
         player_id = playerIDInput.text;
         if(player_id.Contains("=") || player_id.Length == 0)
         {
-            return false;
+            //Do something else to show failed
         }
-        StartCoroutine(Post(player_id, chosenReseau, highscore));
-        return true;
+        else StartCoroutine(Post(player_id, chosenReseau, highscore));
     }
 
     public void SetSocialMedia(string socialmedia)

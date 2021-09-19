@@ -100,7 +100,7 @@ public class projectileActorExplosion1 : MonoBehaviour {
         if (timer >= coolDown && !canDropMine)
         {
             canDropMine = true;
-            ActivateBombButton();
+            if(currentBombs >0) ActivateBombButton();
         }
         else
         {

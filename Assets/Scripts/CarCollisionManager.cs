@@ -115,7 +115,7 @@ public class CarCollisionManager : MonoBehaviour
 
     public IEnumerator ReloadScreenAfterWait(float val)
     {
-        if(RandomTileManager.instance.GetCurrentLevelIndex() == (RandomTileManager.instance.GetMaxLevels() - 1))
+        if(RandomTileManager.instance.GetCurrentLevelIndex() >= (RandomTileManager.instance.GetMaxLevels() - 1))
         {
             submitPanel.SetActive(true);
         }
