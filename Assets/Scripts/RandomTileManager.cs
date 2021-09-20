@@ -117,6 +117,10 @@ public class RandomTileManager : MonoBehaviour
         return currentLevelIndex;
     }
 
+    public Level GetLevel(int i)
+    {
+        return allLevels[i];
+    }
     private void LateUpdate()
     {
         //Animator for score
@@ -177,7 +181,7 @@ public class RandomTileManager : MonoBehaviour
         {
             if(timeBeforeSpawn > maxTimeBeforeSpawn)
             {
-                timeBeforeSpawn = 0f; 
+                //timeBeforeSpawn = 0f; 
                 SpawnWave(UnityEngine.Random.Range(0, possibleWavePrefabs.Count));
                 spawnedCars = true;
             }
@@ -241,6 +245,7 @@ public class RandomTileManager : MonoBehaviour
                 {
                     currentChallenge = ChallengeType.cars;
                     spawnedCars = false;
+                    timeBeforeSpawn = 0f;
                     AddIteration();
                 }
                 break;

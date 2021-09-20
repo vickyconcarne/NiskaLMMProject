@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using LMM_Movement;
+using System.Linq;
 using Cinemachine;
+using TMPro;
 public class CarCollisionManager : MonoBehaviour
 {
     public actorState currentState;
@@ -35,6 +37,7 @@ public class CarCollisionManager : MonoBehaviour
 
     [SerializeField] private GameObject endScreen;
     [SerializeField] private GameObject submitPanel;
+    [SerializeField] private GameObject trackGrid;
 
     // Start is called before the first frame update
     void Start()
@@ -115,9 +118,42 @@ public class CarCollisionManager : MonoBehaviour
 
     public IEnumerator ReloadScreenAfterWait(float val)
     {
-        if(RandomTileManager.instance.GetCurrentLevelIndex() >= (RandomTileManager.instance.GetMaxLevels() - 1))
+        int maxLevel = RandomTileManager.instance.GetMaxLevels();
+        int reachedLevel = RandomTileManager.instance.GetCurrentLevelIndex();
+        if (reachedLevel >= (maxLevel - 1))
         {
             submitPanel.SetActive(true);
+        }
+        GameObject trackInstancePrefab = Resources.Load("UI/TrackInstance") as GameObject;
+        
+        for (int i = 0;  i < RandomTileManager.instance.GetMaxLevels(); i++)
+        {
+            Level currentLevel = RandomTileManager.instance.GetLevel(i);
+            string number = i<10 ? "0"+i.ToString() : i.ToString();
+            string result ="";
+            if (i > reachedLevel)
+            {
+                result = number + " - ";
+                char[] trackName = currentLevel.nomDeLaTrack.ToArray();
+                foreach(char c in trackName)
+                {
+                    if(c != ' ')
+                    {
+                        result += "X";
+                    }
+                    else
+                    {
+                        result += c;
+                    }
+                }
+            }
+            else
+            {
+                
+                result = number + " - " + currentLevel.nomDeLaTrack;
+            }
+            var go = Instantiate(trackInstancePrefab, trackGrid.transform);
+            go.GetComponentInChildren<TextMeshProUGUI>().text = result;
         }
         yield return new WaitForSeconds(val);
         endScreen.SetActive(true);

@@ -30,7 +30,7 @@ namespace LMM_Movement
         [SerializeField] private float m_forwardMomentum;
         [SerializeField] private float lanePositionalDifferential;
         [SerializeField] private float timeToChangeLane;
-        [SerializeField]
+        [SerializeField] private SwerveOnDetect possibleDetector;
         
 
         public lane chosenLane;
@@ -91,6 +91,7 @@ namespace LMM_Movement
             currentCollider.enabled = false;
             m_CharacterController.enabled = false;
             canMove = false;
+            if (possibleDetector) possibleDetector.StopAllCoroutines();
             if (!silent)
             {
                 RandomTileManager.instance.AddToScore(scoreToAddOnDeath, transform.position);
