@@ -259,7 +259,11 @@ public class RandomTileManager : MonoBehaviour
                     
                     currentChallenge = ChallengeType.obstacles;
                     currentCountedObstacles = numberOfTilesToSpawnPerIteration;
-                    if(currentActiveCar) Destroy(currentActiveCar.gameObject, 6f); //Destroy current incarnation of cars
+                    if (currentActiveCar)
+                    {
+                        var goToDestroy = currentActiveCar.gameObject; //Check if this goes into address
+                        Destroy(goToDestroy, 6f); //Destroy current incarnation of cars
+                    }
                     AddIteration();
                 }
                 break;
