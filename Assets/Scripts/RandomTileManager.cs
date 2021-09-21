@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using LMM_Movement;
 using System;
 using TMPro;
@@ -64,6 +65,9 @@ public class RandomTileManager : MonoBehaviour
     public Animator trackAnimator;
     public TextMeshProUGUI trackTitle;
     public AudioSource audiosource;
+    //Snapshot
+    public Animator snapShotAnimator;
+    public Image snapshotImage;
     //Singleton pattern
 
     public static RandomTileManager instance;
@@ -326,6 +330,11 @@ public class RandomTileManager : MonoBehaviour
                 currentRavitaillement = go.GetComponentInChildren<RavitailleOnDetect>();
             }
             yield return new WaitForSeconds(1f);
+            if(currentLevel.imageDeFeaturing != null)
+            {
+                snapshotImage.sprite = currentLevel.imageDeFeaturing;
+                snapShotAnimator.SetTrigger("Show");
+            }
         }
         
         finishedInitialiazingLevel = true;
@@ -397,6 +406,7 @@ public class Wave
 public class Level
 {
     public string nomDeLaTrack;
+    public Sprite imageDeFeaturing;
     public GameObject ravitaillementPrefab;
     public int numberOfIterations;
     public List<GameObject> tilePrefabs = new List<GameObject>();
