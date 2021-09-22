@@ -7,18 +7,25 @@ public class RavitailleOnDetect : AOnSideDetection
 
     public int moneyToAddPerTick;
     public int maxMoney;
-    private int currentMoney;
+    private int currentMoney = 0;
     private float currentTime;
     const float timeOfTick = 1f;
     public Vector3 moveVector;
     public CharacterController charController;
     public Animator transitionAnimator;
     private bool canGiveMoney = true;
-    private bool hasPlacedFill = false;
+    private bool canPlaceFill = false;
     // Start is called before the first frame update
-    void Start()
+    IEnumerator Start()
     {
         transitionAnimator.SetTrigger("Enter");
+        yield return new WaitForSeconds(1f);
+        canPlaceFill = true;
+    }
+
+    private void LateUpdate()
+    {
+        if (canPlaceFill && canGiveMoney) RandomTileManager.instance.PlaceMoneyFillOnPosition(transform.position + Vector3.up * 2f + transform.forward * 4f);
     }
 
     // Update is called once per frame
@@ -34,22 +41,13 @@ public class RavitailleOnDetect : AOnSideDetection
             {
                 LeftAction(leftHit);
                 isLookingFor = false;
-                if (!hasPlacedFill)
-                {
-                    RandomTileManager.instance.PlaceMoneyFillOnPosition(transform.position+ Vector3.up * 2f);
-                    hasPlacedFill = true;
-                }
+                
                 return;
             }
             else if (Physics.Raycast(detectionTransform.position, transform.right, out rightHit, distanceToDetect, layerToDetect, QueryTriggerInteraction.Collide))
             {
                 RightAction(rightHit);
                 isLookingFor = false;
-                if (!hasPlacedFill)
-                {
-                    RandomTileManager.instance.PlaceMoneyFillOnPosition(transform.position + Vector3.up * 2f);
-                    hasPlacedFill = true;
-                }
                 return;
             }
             else
@@ -69,7 +67,7 @@ public class RavitailleOnDetect : AOnSideDetection
     {
         if(currentTime >= timeOfTick)
         {
-            RandomTileManager.instance.AddMoneyToLevel(moneyToAddPerTick, transform.position, 1f-currentMoney/maxMoney);
+            RandomTileManager.instance.AddMoneyToLevel(moneyToAddPerTick, transform.position + Vector3.up * 1f, ((float)currentMoney / (float)maxMoney));
             AddMoney();
             currentTime = 0f;
         }
@@ -84,7 +82,7 @@ public class RavitailleOnDetect : AOnSideDetection
     {
         if (currentTime >= timeOfTick)
         {
-            RandomTileManager.instance.AddMoneyToLevel(moneyToAddPerTick, transform.position, 1f - currentMoney / maxMoney);
+            RandomTileManager.instance.AddMoneyToLevel(moneyToAddPerTick, transform.position + Vector3.up * 1f, ((float)currentMoney / (float)maxMoney));
             AddMoney();
             currentTime = 0f;
         }
@@ -96,7 +94,6 @@ public class RavitailleOnDetect : AOnSideDetection
 
     void AddMoney()
     {
-        
         if(currentMoney >= maxMoney)
         {
             canGiveMoney = false;

@@ -232,7 +232,7 @@ PrefabInstance:
     - target: {fileID: 7865401826580980444, guid: c2ec17496d4b0b348948a0c5d488ea8a,
         type: 3}
       propertyPath: m_Name
-      value: ZoneRavitaillement
+      value: Particle System
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2ec17496d4b0b348948a0c5d488ea8a, type: 3}

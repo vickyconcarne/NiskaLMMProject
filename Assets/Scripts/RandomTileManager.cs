@@ -275,18 +275,19 @@ public class RandomTileManager : MonoBehaviour
     {
         Vector2 initialPosition = cam.WorldToScreenPoint(position);
         scoreFillCircle.transform.position = initialPosition;
-        scoreFillCircle.GetComponent<Image>().fillAmount = 1f;
-        scoreFillCircle.gameObject.SetActive(true);
     }
 
     public void HideMoneyFill()
     {
-        scoreFillCircle.gameObject.SetActive(false);
+        scoreFillCircle.GetComponent<Image>().fillAmount = 0f;
+        //scoreFillCircle.gameObject.SetActive(false);
     }
 
     public bool AddMoneyToLevel(int qtity, Vector3 position, float currentFill)
     {
         AddToScore(qtity, position);
+        Vector2 initialPosition = cam.WorldToScreenPoint(position);
+        scoreFillCircle.transform.position = initialPosition;
         scoreFillCircle.SetTrigger("Badump");
         scoreFillCircle.GetComponent<Image>().fillAmount = currentFill;
         if (audiosource) audiosource.PlayOneShot(Resources.Load("Sounds/CashRegisterSound") as AudioClip);

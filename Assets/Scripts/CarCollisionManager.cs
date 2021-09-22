@@ -94,6 +94,7 @@ public class CarCollisionManager : MonoBehaviour
     {
         EventManager.TriggerEvent("PlayerDeath");
         bombCanvas.SetActive(false);
+        RandomTileManager.instance.HideMoneyFill();
         niskaAnimator.gameObject.SetActive(false);
         //Cam
         //cinemachineCam.enabled = false;
