@@ -49,15 +49,22 @@ public abstract class AOnSideDetection : MonoBehaviour
         
         if (Physics.Raycast(detectionTransform.position, -transform.right, out leftHit, distanceToDetect, layerToDetect, QueryTriggerInteraction.Collide))
         {
-            LeftAction(leftHit);
-            isLookingFor = false;
+            if(leftHit.collider.tag == "Player")
+            {
+                LeftAction(leftHit);
+                isLookingFor = false;
+            }
+            
             return;
         }
         else if (Physics.Raycast(detectionTransform.position, transform.right, out rightHit, distanceToDetect, layerToDetect, QueryTriggerInteraction.Collide))
         {
-            RightAction(rightHit);
-            
-            isLookingFor = false;
+            if (rightHit.collider.tag == "Player")
+            {
+                RightAction(rightHit);
+                isLookingFor = false;
+            }
+                
             return;
         }
 

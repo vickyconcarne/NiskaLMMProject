@@ -19,7 +19,7 @@ public class CameraFacingBillboard : MonoBehaviour
  
 	void Awake(){
 		if (autoInit == true){
-			m_Camera = Camera.main;
+			m_Camera = RandomTileManager.instance.cam;
 			amActive = true;
 		}
  

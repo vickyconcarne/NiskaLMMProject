@@ -24,6 +24,7 @@ public class RandomTileManager : MonoBehaviour
     [Header("Score")]
 
     public Animator scoreBox;
+    public Animator scoreFillCircle;
     public TextMeshProUGUI highScoreText;
     public RectTransform scoreElement;
     const float timeToGoToScore = 0.5f;
@@ -270,9 +271,24 @@ public class RandomTileManager : MonoBehaviour
         }
     }
 
-    public bool AddMoneyToLevel(int qtity, Vector3 position)
+    public void PlaceMoneyFillOnPosition(Vector3 position)
+    {
+        Vector2 initialPosition = cam.WorldToScreenPoint(position);
+        scoreFillCircle.transform.position = initialPosition;
+        scoreFillCircle.GetComponent<Image>().fillAmount = 1f;
+        scoreFillCircle.gameObject.SetActive(true);
+    }
+
+    public void HideMoneyFill()
+    {
+        scoreFillCircle.gameObject.SetActive(false);
+    }
+
+    public bool AddMoneyToLevel(int qtity, Vector3 position, float currentFill)
     {
         AddToScore(qtity, position);
+        scoreFillCircle.SetTrigger("Badump");
+        scoreFillCircle.GetComponent<Image>().fillAmount = currentFill;
         if (audiosource) audiosource.PlayOneShot(Resources.Load("Sounds/CashRegisterSound") as AudioClip);
         return true;
     }

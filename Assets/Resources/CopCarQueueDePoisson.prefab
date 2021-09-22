@@ -15,10 +15,10 @@ MonoBehaviour:
   npcController: {fileID: 4094369816097973731}
   detectionTransform: {fileID: 3713703336158407659}
   isLookingFor: 1
-  distanceToDetect: 5
+  distanceToDetect: 10
   layerToDetect:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 320
   speedToMatchPlayer: 20
   swerveCooldown: 0.5
   swerveDirection: 1
