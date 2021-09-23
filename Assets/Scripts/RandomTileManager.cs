@@ -108,7 +108,7 @@ public class RandomTileManager : MonoBehaviour
             waveRessourceIds.Add(go.prefab.name);
         }
         
-        Invoke("SpawnInitialWave", 2f);
+        Invoke("SpawnInitialWave", 7f);
 
     }
 
@@ -338,7 +338,7 @@ public class RandomTileManager : MonoBehaviour
             {
                 emptyTilePrefabsIds.Add(emptyprefab.name);
             }
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(5f);
             trackAnimator.SetTrigger("TrackAppear");
             trackTitle.text = currentLevel.nomDeLaTrack;
             if (currentLevel.ravitaillementPrefab)

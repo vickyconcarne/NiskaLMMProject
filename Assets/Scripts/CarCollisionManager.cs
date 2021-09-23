@@ -25,6 +25,8 @@ public class CarCollisionManager : MonoBehaviour
     public GameObject explosionEffect;
     public GameObject cashFlow;
 
+    public CinemachineVirtualCamera cinematicCam;
+
     [Header("Niska model")]
     public Animator niskaAnimator;
 
@@ -40,9 +42,11 @@ public class CarCollisionManager : MonoBehaviour
     [SerializeField] private GameObject trackGrid;
 
     // Start is called before the first frame update
-    void Start()
+    private IEnumerator Start()
     {
         currentCollider = GetComponent<Collider>();
+        yield return new WaitForSeconds(6f);
+        StartCoroutine("GiveControl");
     }
 
     // Update is called once per frame
@@ -163,6 +167,19 @@ public class CarCollisionManager : MonoBehaviour
     public void RestartScene()
     {
         SceneManager.LoadScene("PlayScene");
+    }
+
+    /// <summary>
+    /// Called after end of cinematic
+    /// </summary>
+    public IEnumerator GiveControl()
+    {
+        
+        cinemachineCam.enabled = true;
+        yield return new WaitForSeconds(2f);
+        playerController.GiveControl();
+        bombCanvas.SetActive(true);
+        cinematicCam.enabled = false;
     }
 
 }

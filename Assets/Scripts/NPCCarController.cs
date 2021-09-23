@@ -9,6 +9,7 @@ namespace LMM_Movement
     {
         public CharacterController m_CharacterController;
         private Collider currentCollider;
+        public Collider secondaryCollider;
         public bool canMove = true;
 
         [SerializeField] private Transform carChild;
@@ -89,6 +90,8 @@ namespace LMM_Movement
             RandomTileManager.instance.currentCountedCars += 1;
             RandomTileManager.instance.CheckState();
             currentCollider.enabled = false;
+            if (secondaryCollider) secondaryCollider.enabled = false;
+            m_CharacterController.detectCollisions = false;
             m_CharacterController.enabled = false;
             canMove = false;
             if (possibleDetector) possibleDetector.StopAllCoroutines();
@@ -133,6 +136,7 @@ namespace LMM_Movement
 
         private void OnTriggerEnter(Collider col)
         {
+            if (!canMove) return; //Already dead, dont call it twice
             string currentTag = col.gameObject.tag;
             if (gameObject.Equals(col.gameObject)) {
                 return; //Dont detect urself
@@ -171,6 +175,7 @@ namespace LMM_Movement
                 optionalWiggler.enabled = false;
             }
             currentCollider.enabled = false;
+            if (secondaryCollider) secondaryCollider.enabled = false;
             trailRenderers.SetActive(true);
             float timeToBrake = Random.Range(0f, maxTimeToBrake);
             float chosenBrakeBlend = Random.Range(-1f, 1f);

@@ -10,7 +10,7 @@ namespace LMM_Movement
         private CharacterController m_CharacterController;
         [SerializeField] private CarCollisionManager m_collisionManager;
         public bool canMove = true;
-
+        private bool canControl = false;
         [SerializeField] private Transform carChild;
 
         [Header("Animation")]
@@ -54,7 +54,12 @@ namespace LMM_Movement
 
         private void Update()
         {
-            if (canMove) GetInput();
+            if (canMove && canControl) GetInput();
+        }
+
+        public void GiveControl()
+        {
+            canControl = true;
         }
 
         private void GetInput()
@@ -80,7 +85,7 @@ namespace LMM_Movement
 
         public void ProcessInput(float currentLateralDirection)
         {
-            if (!finishedLateralAction || !canMove) { return; } //Stop processing input
+            if (!finishedLateralAction || !canMove || !canControl) { return; } //Stop processing input
             if (Mathf.Abs(currentLateralDirection) > k_acceptableInputRange)
             {
                 if (currentLateralDirection == -1f)
@@ -156,7 +161,11 @@ namespace LMM_Movement
             m_collisionManager.currentState = actorState.Idle;
             finishedLateralAction = true;
         }
+
+        
     }
+
+    
 
     public enum lane { left = -1, middle = 0, right = 1, nolane = 2 };
 
