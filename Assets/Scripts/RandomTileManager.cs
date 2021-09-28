@@ -340,7 +340,8 @@ public class RandomTileManager : MonoBehaviour
             }
             yield return new WaitForSeconds(5f);
             trackAnimator.SetTrigger("TrackAppear");
-            trackTitle.text = currentLevel.nomDeLaTrack;
+            string number = currentLevelIndex < 10 ? "0" + currentLevelIndex.ToString() : currentLevelIndex.ToString();
+            trackTitle.text = number + " - " + currentLevel.nomDeLaTrack;
             if (currentLevel.ravitaillementPrefab)
             {
                 if (currentRavitaillement)
