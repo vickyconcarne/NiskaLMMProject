@@ -109,6 +109,6 @@ public class RavitailleOnDetect : AOnSideDetection
     {
         RandomTileManager.instance.HideMoneyFill();
         transitionAnimator.SetTrigger("Exit");
-        Destroy(transform.parent.gameObject, 13f);
+        Destroy(transform.parent.gameObject, 8f);
     }
 }
