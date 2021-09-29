@@ -13,7 +13,7 @@ public class RavitailleOnDetect : AOnSideDetection
     public Vector3 moveVector;
     public CharacterController charController;
     public Animator transitionAnimator;
-    private bool canGiveMoney = true;
+    public bool canGiveMoney = true;
     private bool canPlaceFill = false;
     // Start is called before the first frame update
     IEnumerator Start()

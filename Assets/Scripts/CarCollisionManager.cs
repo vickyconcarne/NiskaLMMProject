@@ -134,7 +134,7 @@ public class CarCollisionManager : MonoBehaviour
         for (int i = 0;  i < RandomTileManager.instance.GetMaxLevels(); i++)
         {
             Level currentLevel = RandomTileManager.instance.GetLevel(i);
-            string number = i<10 ? "0"+i.ToString() : i.ToString();
+            string number = i+1<10 ? "0"+(i+1).ToString() : (i+1).ToString();
             string result ="";
             if (i > reachedLevel)
             {
