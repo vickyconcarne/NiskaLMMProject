@@ -26,6 +26,9 @@ public class CarCollisionManager : MonoBehaviour
     public GameObject cashFlow;
 
     public CinemachineVirtualCamera cinematicCam;
+    //Ending cinematic
+    public GameObject endingCinematicPrefab;
+    public CinemachineVirtualCamera endingCam;
 
     [Header("Niska model")]
     public Animator niskaAnimator;
@@ -121,6 +124,19 @@ public class CarCollisionManager : MonoBehaviour
         StartCoroutine(ReloadScreenAfterWait(5f));
     }
 
+    public void EndlessPlayer()
+    {
+        EventManager.TriggerEvent("PlayerDeath");
+        StartCoroutine("FinishGame");
+        bombCanvas.SetActive(false);
+        RandomTileManager.instance.HideMoneyFill();
+        //Boom
+        cashFlow.SetActive(false);
+        currentCollider.enabled = false;
+        //Retry
+        StartCoroutine(ReloadScreenAfterWait(15f));
+    }
+
     public IEnumerator ReloadScreenAfterWait(float val)
     {
         int maxLevel = RandomTileManager.instance.GetMaxLevels();
@@ -180,6 +196,16 @@ public class CarCollisionManager : MonoBehaviour
         playerController.GiveControl();
         bombCanvas.SetActive(true);
         cinematicCam.enabled = false;
+    }
+
+    public IEnumerator FinishGame()
+    {
+        endingCinematicPrefab.transform.position = transform.position;
+        endingCinematicPrefab.SetActive(true);
+        endingCam.enabled = true;
+        playerController.GiveControl(false);
+        yield return new WaitForSeconds(2f);
+        cinemachineCam.enabled = false;
     }
 
 }

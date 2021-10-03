@@ -4,12 +4,13 @@ using UnityEngine;
 using UnityEngine.UI;
 using LMM_Movement;
 using System;
+using Cinemachine;
 using TMPro;
 
 public class RandomTileManager : MonoBehaviour
 {
     public Transform playerTransform;
-
+    public CarCollisionManager playerCollisionManager;
     [Header("Levels")]
     private Level currentLevel;
     private int currentLevelIndex;
@@ -52,6 +53,7 @@ public class RandomTileManager : MonoBehaviour
     public float tileLength = 10;
     public int numberOfTilesToSpawnPerIteration = 4;
     public ChallengeType currentChallenge;
+    private bool triggeredEnding;
     [Header("NPC Placement")]
     public float maxTimeBeforeSpawn;
     
@@ -69,6 +71,7 @@ public class RandomTileManager : MonoBehaviour
     //Snapshot
     public Animator snapShotAnimator;
     public Image snapshotImage;
+    
     //Singleton pattern
 
     public static RandomTileManager instance;
@@ -223,6 +226,7 @@ public class RandomTileManager : MonoBehaviour
 
     public void DeleteTile()
     {
+        if (triggeredEnding) return;
         Destroy(activeTiles[0]);
         activeTiles.RemoveAt(0);
     }
@@ -243,6 +247,7 @@ public class RandomTileManager : MonoBehaviour
 
     public void CheckState()
     {
+        if (triggeredEnding) return;
         switch (currentChallenge)
         {
             case ChallengeType.obstacles:
@@ -357,6 +362,20 @@ public class RandomTileManager : MonoBehaviour
                 snapshotImage.sprite = currentLevel.imageDeFeaturing;
                 snapShotAnimator.SetTrigger("Show");
             }
+        }
+        else
+        {
+            if (!triggeredEnding)
+            {
+                triggeredEnding = true;
+                if (currentRavitaillement)
+                {
+                    currentRavitaillement.ExitLevel(); //Tell ravitaillement to beat it
+                }
+                currentChallenge = ChallengeType.cars; //so that we only spawn non obstacle tiles
+                playerCollisionManager.EndlessPlayer();
+            }
+            
         }
         
         finishedInitialiazingLevel = true;

@@ -57,9 +57,9 @@ namespace LMM_Movement
             if (canMove && canControl) GetInput();
         }
 
-        public void GiveControl()
+        public void GiveControl(bool value = true)
         {
-            canControl = true;
+            canControl = value;
         }
 
         private void GetInput()

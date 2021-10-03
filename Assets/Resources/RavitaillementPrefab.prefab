@@ -117,6 +117,7 @@ MonoBehaviour:
   moveVector: {x: 0, y: 0, z: 20}
   charController: {fileID: 8933549683255507168}
   transitionAnimator: {fileID: 8933549683255507171}
+  canGiveMoney: 1
 --- !u!1 &8933549683255507199
 GameObject:
   m_ObjectHideFlags: 0
@@ -266,11 +267,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 19885000, guid: d7bf18dd20422304ea868e95c3518f19, type: 3}
       propertyPath: SizeModule.curve.scalar
-      value: 0.25
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 19885000, guid: d7bf18dd20422304ea868e95c3518f19, type: 3}
+      propertyPath: SizeModule.separateAxes
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 19885000, guid: d7bf18dd20422304ea868e95c3518f19, type: 3}
       propertyPath: VelocityModule.x.scalar
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 19885000, guid: d7bf18dd20422304ea868e95c3518f19, type: 3}
       propertyPath: ShapeModule.m_Rotation.y
@@ -294,7 +299,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 19885000, guid: d7bf18dd20422304ea868e95c3518f19, type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
-      value: 50
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 19885000, guid: d7bf18dd20422304ea868e95c3518f19, type: 3}
       propertyPath: RotationBySpeedModule.curve.scalar
@@ -377,11 +382,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 19885000, guid: d7bf18dd20422304ea868e95c3518f19, type: 3}
       propertyPath: SizeModule.curve.scalar
-      value: 0.5
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 19885000, guid: d7bf18dd20422304ea868e95c3518f19, type: 3}
+      propertyPath: SizeModule.separateAxes
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 19885000, guid: d7bf18dd20422304ea868e95c3518f19, type: 3}
       propertyPath: VelocityModule.x.scalar
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 19885000, guid: d7bf18dd20422304ea868e95c3518f19, type: 3}
       propertyPath: ShapeModule.m_Rotation.y
@@ -405,7 +414,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 19885000, guid: d7bf18dd20422304ea868e95c3518f19, type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
-      value: 50
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 19885000, guid: d7bf18dd20422304ea868e95c3518f19, type: 3}
       propertyPath: RotationBySpeedModule.curve.scalar
@@ -488,11 +497,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 19885000, guid: d7bf18dd20422304ea868e95c3518f19, type: 3}
       propertyPath: SizeModule.curve.scalar
-      value: 0.25
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 19885000, guid: d7bf18dd20422304ea868e95c3518f19, type: 3}
+      propertyPath: SizeModule.separateAxes
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 19885000, guid: d7bf18dd20422304ea868e95c3518f19, type: 3}
       propertyPath: VelocityModule.x.scalar
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 19885000, guid: d7bf18dd20422304ea868e95c3518f19, type: 3}
       propertyPath: ShapeModule.m_Rotation.y
@@ -516,7 +529,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 19885000, guid: d7bf18dd20422304ea868e95c3518f19, type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
-      value: 50
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 19885000, guid: d7bf18dd20422304ea868e95c3518f19, type: 3}
       propertyPath: RotationBySpeedModule.curve.scalar
@@ -599,11 +612,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 19885000, guid: d7bf18dd20422304ea868e95c3518f19, type: 3}
       propertyPath: SizeModule.curve.scalar
-      value: 0.5
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 19885000, guid: d7bf18dd20422304ea868e95c3518f19, type: 3}
+      propertyPath: SizeModule.separateAxes
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 19885000, guid: d7bf18dd20422304ea868e95c3518f19, type: 3}
       propertyPath: VelocityModule.x.scalar
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 19885000, guid: d7bf18dd20422304ea868e95c3518f19, type: 3}
       propertyPath: ShapeModule.m_Rotation.y
@@ -627,7 +644,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 19885000, guid: d7bf18dd20422304ea868e95c3518f19, type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
-      value: 50
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 19885000, guid: d7bf18dd20422304ea868e95c3518f19, type: 3}
       propertyPath: RotationBySpeedModule.curve.scalar
