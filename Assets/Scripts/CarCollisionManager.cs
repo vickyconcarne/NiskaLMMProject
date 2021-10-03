@@ -40,7 +40,7 @@ public class CarCollisionManager : MonoBehaviour
     [Header("End screen")]
     [SerializeField] private GameObject bombCanvas;
 
-    [SerializeField] private GameObject endScreen;
+    [SerializeField] private GameObject retryScreen;
     [SerializeField] private GameObject submitPanel;
     [SerializeField] private GameObject trackGrid;
 
@@ -134,10 +134,10 @@ public class CarCollisionManager : MonoBehaviour
         cashFlow.SetActive(false);
         currentCollider.enabled = false;
         //Retry
-        StartCoroutine(ReloadScreenAfterWait(15f));
+        Invoke("ActivateSubmitPanel", 15f);
     }
 
-    public IEnumerator ReloadScreenAfterWait(float val)
+    public void ActivateSubmitPanel()
     {
         int maxLevel = RandomTileManager.instance.GetMaxLevels();
         int reachedLevel = RandomTileManager.instance.GetCurrentLevelIndex();
@@ -145,6 +145,13 @@ public class CarCollisionManager : MonoBehaviour
         {
             submitPanel.SetActive(true);
         }
+    }
+
+    public IEnumerator ReloadScreenAfterWait(float val)
+    {
+        
+        int reachedLevel = RandomTileManager.instance.GetCurrentLevelIndex();
+        
         GameObject trackInstancePrefab = Resources.Load("UI/TrackInstance") as GameObject;
         
         for (int i = 0;  i < RandomTileManager.instance.GetMaxLevels(); i++)
@@ -177,7 +184,7 @@ public class CarCollisionManager : MonoBehaviour
             go.GetComponentInChildren<TextMeshProUGUI>().text = result;
         }
         yield return new WaitForSeconds(val);
-        endScreen.SetActive(true);
+        retryScreen.SetActive(true);
     }
 
     public void RestartScene()
