@@ -32,7 +32,7 @@ public class CarCollisionManager : MonoBehaviour
 
     [Header("Niska model")]
     public Animator niskaAnimator;
-
+    public GameObject smokeTrails;
     [Header("Cinemachine ")]
     public Transform deathTarget;
     public CinemachineSmoothPath circularPath;
@@ -126,6 +126,7 @@ public class CarCollisionManager : MonoBehaviour
 
     public void EndlessPlayer()
     {
+        
         EventManager.TriggerEvent("PlayerDeath");
         StartCoroutine("FinishGame");
         bombCanvas.SetActive(false);
@@ -134,7 +135,7 @@ public class CarCollisionManager : MonoBehaviour
         cashFlow.SetActive(false);
         currentCollider.enabled = false;
         //Retry
-        Invoke("ActivateSubmitPanel", 15f);
+        Invoke("ActivateSubmitPanel", 10f);
     }
 
     public void ActivateSubmitPanel()
@@ -211,7 +212,9 @@ public class CarCollisionManager : MonoBehaviour
         endingCinematicPrefab.SetActive(true);
         endingCam.enabled = true;
         playerController.GiveControl(false);
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(0.5f);
+        smokeTrails.SetActive(true);
+        yield return new WaitForSeconds(1f);
         cinemachineCam.enabled = false;
     }
 
