@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8945866670930364672}
   m_Layer: 0
-  m_Name: LeftMiddleInTheBackAndRightInFront
+  m_Name: EasyBrick
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -132,7 +132,7 @@ PrefabInstance:
     - target: {fileID: 4711893669482836482, guid: 0dc9c523926311e45a744414ee61c58e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 7.1
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4711893669482836482, guid: 0dc9c523926311e45a744414ee61c58e,
         type: 3}

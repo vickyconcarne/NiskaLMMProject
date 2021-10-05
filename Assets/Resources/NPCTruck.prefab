@@ -65,17 +65,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_CharacterController: {fileID: 6039523837792194789}
+  secondaryCollider: {fileID: 0}
   canMove: 1
   carChild: {fileID: 6039523839720198821}
+  scoreToAddOnDeath: 0
+  optionalWiggler: {fileID: 0}
   carAnimator: {fileID: 6039523839720198842}
   explodeLeftTrigger: Explode
   explodeRightTrigger: Explode
   generalExplodeTrigger: Explode
+  trailRenderers: {fileID: 0}
+  brakesOnPlayerDeath: 0
   movementState: 2
   m_forwardMomentum: 10
   lanePositionalDifferential: 5
   timeToChangeLane: 1
+  possibleDetector: {fileID: 0}
   chosenLane: 1
+  k_movementDirection: {x: 0, y: 0, z: 0}
   leftLaneLocalPos: {x: 0, y: 0, z: 0}
   middleLaneLocalPos: {x: 0, y: 0, z: 0}
   rightLaneLocalPos: {x: 0, y: 0, z: 0}
@@ -90,8 +97,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.9643703, y: 2.541442, z: 9.617864}
-  m_Center: {x: 0.0048696995, y: 0.32370603, z: -0.23415136}
+  m_Size: {x: 2.9643703, y: 3.7787728, z: 7.0421944}
+  m_Center: {x: 0.0048696995, y: 0.7403581, z: -0.082639694}
 --- !u!1 &6039523839720198820
 GameObject:
   m_ObjectHideFlags: 0
@@ -5030,6 +5037,7 @@ GameObject:
   - component: {fileID: 5868151936864066178}
   - component: {fileID: 5841819190516722000}
   - component: {fileID: 5928656380525272334}
+  - component: {fileID: 3628182287776400892}
   m_Layer: 0
   m_Name: explosionMobile_stylized_small_originalFire
   m_TagString: Untagged
@@ -9860,6 +9868,102 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathtimer: 5
+--- !u!82 &3628182287776400892
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6040241271651938072}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 270e3907ab66241cdbfec580c462fd86, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.515
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &6040241272071680468
 GameObject:
   m_ObjectHideFlags: 0
@@ -77002,6 +77106,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Offroad_1
       objectReference: {fileID: 0}
+    - target: {fileID: 1446322213906986113, guid: 1d8248885b133284088cb8fbf86bdb85,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 1446322213906986115, guid: 1d8248885b133284088cb8fbf86bdb85,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.0600002
+      objectReference: {fileID: 0}
     - target: {fileID: 1446322213906986121, guid: 1d8248885b133284088cb8fbf86bdb85,
         type: 3}
       propertyPath: m_RootOrder
@@ -77010,27 +77124,27 @@ PrefabInstance:
     - target: {fileID: 1446322213906986121, guid: 1d8248885b133284088cb8fbf86bdb85,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.4
+      value: 1.2643564
       objectReference: {fileID: 0}
     - target: {fileID: 1446322213906986121, guid: 1d8248885b133284088cb8fbf86bdb85,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.4
+      value: 1.2939711
       objectReference: {fileID: 0}
     - target: {fileID: 1446322213906986121, guid: 1d8248885b133284088cb8fbf86bdb85,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.4
+      value: 1.2034168
       objectReference: {fileID: 0}
     - target: {fileID: 1446322213906986121, guid: 1d8248885b133284088cb8fbf86bdb85,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.010129
       objectReference: {fileID: 0}
     - target: {fileID: 1446322213906986121, guid: 1d8248885b133284088cb8fbf86bdb85,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.17
       objectReference: {fileID: 0}
     - target: {fileID: 1446322213906986121, guid: 1d8248885b133284088cb8fbf86bdb85,
         type: 3}
@@ -77071,6 +77185,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1446322213906986125, guid: 1d8248885b133284088cb8fbf86bdb85,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 1446322213906986127, guid: 1d8248885b133284088cb8fbf86bdb85,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.97999984
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d8248885b133284088cb8fbf86bdb85, type: 3}

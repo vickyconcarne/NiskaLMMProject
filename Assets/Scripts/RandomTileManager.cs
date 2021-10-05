@@ -75,8 +75,8 @@ public class RandomTileManager : MonoBehaviour
     public List<GimmickVoix> gimmickList;
     [SerializeField] private TextMeshProUGUI gimmickText;
     [SerializeField] private Animator gimmickAnimator;
-    private float currentMaxTimeBeforeNextGimmick;
-    private float timeBeforeNextGimmick;
+    [SerializeField] private float currentMaxTimeBeforeNextGimmick;
+    [SerializeField] private float timeBeforeNextGimmick;
     //Singleton pattern
 
     public static RandomTileManager instance;
@@ -321,7 +321,7 @@ public class RandomTileManager : MonoBehaviour
         {
             PlayRandomGimmick();
             timeBeforeNextGimmick = 0f;
-            currentMaxTimeBeforeNextGimmick = UnityEngine.Random.Range(6f, 15f);
+            currentMaxTimeBeforeNextGimmick = UnityEngine.Random.Range(6f, 10f);
         }
     }
 
