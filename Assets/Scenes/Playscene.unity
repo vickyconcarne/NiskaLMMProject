@@ -4264,7 +4264,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 778703452}
-  m_Enabled: 0
+  m_Enabled: 1
 --- !u!20 &778703456
 Camera:
   m_ObjectHideFlags: 0
@@ -13854,7 +13854,7 @@ MonoBehaviour:
     - {fileID: 6743519024202991439, guid: c588479150b906547af6e9dc41d7b94f, type: 3}
     emptyTilePrefabs:
     - {fileID: 6743519024202991439, guid: ba3139185ac274a0db0f734588841472, type: 3}
-    - {fileID: 6743519024202991439, guid: d1a3d25be3faa41fabe91d1ab8433626, type: 3}
+    - {fileID: 6743519024202991439, guid: 702c633cc19b9cb4981078194e788e2d, type: 3}
     - {fileID: 6743519024202991439, guid: a865ab0e535884ae195dc7135e987ca1, type: 3}
     - {fileID: 6743519024202991439, guid: c7849156a8645e549ba86ed121e52278, type: 3}
     possibleWavePrefabs:
@@ -13896,7 +13896,7 @@ MonoBehaviour:
     - numberOfCars: 3
       prefab: {fileID: 1201072589188917958, guid: 4e949ad9f20c06b479327ba4077778ee,
         type: 3}
-    - numberOfCars: 2
+    - numberOfCars: 4
       prefab: {fileID: 1201072589188917958, guid: 90a7e12fbf9534f4f83a4de22a8ceea6,
         type: 3}
     - numberOfCars: 3
@@ -13920,7 +13920,7 @@ MonoBehaviour:
     - {fileID: 6743519024202991439, guid: ba3139185ac274a0db0f734588841472, type: 3}
     - {fileID: 6743519024202991439, guid: d1a3d25be3faa41fabe91d1ab8433626, type: 3}
     - {fileID: 6743519024202991439, guid: a865ab0e535884ae195dc7135e987ca1, type: 3}
-    - {fileID: 6743519024202991439, guid: c7849156a8645e549ba86ed121e52278, type: 3}
+    - {fileID: 6743519024202991439, guid: 8321807477e57f64ca39b4c8da53da6f, type: 3}
     possibleWavePrefabs:
     - numberOfCars: 7
       prefab: {fileID: 1201072589188917958, guid: a582faee4f6e8cd49b5b07110782f372,
@@ -13982,7 +13982,7 @@ MonoBehaviour:
     - {fileID: 6743519024202991439, guid: 6b8cdb302ce799e429a4b9d6254d7594, type: 3}
     - {fileID: 6743519024202991439, guid: 3dc75d4713c2bb54dbd70f2b908a0bf3, type: 3}
     emptyTilePrefabs:
-    - {fileID: 6743519024202991439, guid: ba3139185ac274a0db0f734588841472, type: 3}
+    - {fileID: 6743519024202991439, guid: 702c633cc19b9cb4981078194e788e2d, type: 3}
     - {fileID: 6743519024202991439, guid: d1a3d25be3faa41fabe91d1ab8433626, type: 3}
     - {fileID: 6743519024202991439, guid: a865ab0e535884ae195dc7135e987ca1, type: 3}
     - {fileID: 6743519024202991439, guid: c7849156a8645e549ba86ed121e52278, type: 3}
@@ -14090,8 +14090,8 @@ MonoBehaviour:
     - {fileID: 6743519024202991439, guid: 67a4caf41f291fa4da2107167eae6aa2, type: 3}
     - {fileID: 6743519024202991439, guid: de930ca84f4963746827b240d673009b, type: 3}
     emptyTilePrefabs:
-    - {fileID: 6743519024202991439, guid: ba3139185ac274a0db0f734588841472, type: 3}
-    - {fileID: 6743519024202991439, guid: d1a3d25be3faa41fabe91d1ab8433626, type: 3}
+    - {fileID: 6743519024202991439, guid: 702c633cc19b9cb4981078194e788e2d, type: 3}
+    - {fileID: 6743519024202991439, guid: 8321807477e57f64ca39b4c8da53da6f, type: 3}
     - {fileID: 6743519024202991439, guid: a865ab0e535884ae195dc7135e987ca1, type: 3}
     - {fileID: 6743519024202991439, guid: c7849156a8645e549ba86ed121e52278, type: 3}
     possibleWavePrefabs:
@@ -14250,6 +14250,11 @@ MonoBehaviour:
   snapshotImage: {fileID: 1538173909}
   gimmickList:
   - {fileID: 11400000, guid: fd211c8b1c69fbc4e9dc8cb8e7b41a65, type: 2}
+  - {fileID: 11400000, guid: 8af4ebbc485bad04886a634f4f4ab1fc, type: 2}
+  - {fileID: 11400000, guid: 6634d64278b9f4d4eb6c3a4f17b42217, type: 2}
+  - {fileID: 11400000, guid: 9755056bb6cce3b4bb8e8ee4f6d31173, type: 2}
+  - {fileID: 11400000, guid: e650b57a9e6a9674ebb3d01fd87b2a3a, type: 2}
+  - {fileID: 11400000, guid: cae5b094da69f894abaae9380698a6d7, type: 2}
   gimmickText: {fileID: 41446811}
   gimmickAnimator: {fileID: 1230744965}
   currentMaxTimeBeforeNextGimmick: 10

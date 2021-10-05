@@ -112,6 +112,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4094369816097973731, guid: 73bdcc2d292060344bfb25af0dad7d1a,
         type: 3}
+      propertyPath: m_forwardMomentum
+      value: 27
+      objectReference: {fileID: 0}
+    - target: {fileID: 4094369816097973731, guid: 73bdcc2d292060344bfb25af0dad7d1a,
+        type: 3}
       propertyPath: scoreToAddOnDeath
       value: 10
       objectReference: {fileID: 0}
