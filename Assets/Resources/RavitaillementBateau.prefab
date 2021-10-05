@@ -264,7 +264,7 @@ MonoBehaviour:
   moveVector: {x: 0, y: 0, z: 20}
   charController: {fileID: 1958341228}
   transitionAnimator: {fileID: 1958341226}
-  canGiveMoney: 0
+  canGiveMoney: 1
 --- !u!1 &4510382892081865266
 GameObject:
   m_ObjectHideFlags: 0
@@ -870,7 +870,7 @@ PrefabInstance:
     - target: {fileID: 3696183124215268049, guid: c2ec17496d4b0b348948a0c5d488ea8a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.17
+      value: -0.14
       objectReference: {fileID: 0}
     - target: {fileID: 3696183124215268049, guid: c2ec17496d4b0b348948a0c5d488ea8a,
         type: 3}

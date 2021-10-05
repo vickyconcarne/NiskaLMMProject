@@ -59,7 +59,7 @@ public class projectileActorExplosion1 : MonoBehaviour {
         }
         if (debug)
         {
-            bombText.text = currentBombs + "/" + maxBombs + " bombs ";
+            bombText.text = currentBombs.ToString();
         }
     }
 
@@ -72,7 +72,7 @@ public class projectileActorExplosion1 : MonoBehaviour {
         }
         if (debug)
         {
-            bombText.text = currentBombs + "/" + maxBombs;
+            bombText.text = currentBombs.ToString();
         }
     }
 
@@ -89,7 +89,7 @@ public class projectileActorExplosion1 : MonoBehaviour {
         bombButtonSprite.color = offColor;
         if (debug)
         {
-            bombText.text = currentBombs + "/" + maxBombs;
+            bombText.text = currentBombs.ToString();
         }
     }
 	

@@ -151,6 +151,7 @@ public class RandomTileManager : MonoBehaviour
 
     public void AddToScore(int scoreAdd, Vector3 position)
     {
+        CheckForGimmick(scoreAdd);
         Vector2 initialPosition = cam.WorldToScreenPoint(position);
         currentScoreOriginPoint = initialPosition;
         scoreElement.transform.position = initialPosition;
@@ -301,7 +302,7 @@ public class RandomTileManager : MonoBehaviour
     public bool AddMoneyToLevel(int qtity, Vector3 position, float currentFill)
     {
         AddToScore(qtity, position);
-        CheckForGimmick(qtity);
+        
         Vector2 initialPosition = cam.WorldToScreenPoint(position);
         scoreFillCircle.transform.position = initialPosition;
         scoreFillCircle.SetTrigger("Badump");
@@ -319,9 +320,10 @@ public class RandomTileManager : MonoBehaviour
         //Gimmick
         if (qtity > 0 && timeBeforeNextGimmick > currentMaxTimeBeforeNextGimmick)
         {
+            
             PlayRandomGimmick();
             timeBeforeNextGimmick = 0f;
-            currentMaxTimeBeforeNextGimmick = UnityEngine.Random.Range(6f, 10f);
+            currentMaxTimeBeforeNextGimmick = UnityEngine.Random.Range(7f, 15f);
         }
     }
 
@@ -384,14 +386,15 @@ public class RandomTileManager : MonoBehaviour
             }
             yield return new WaitForSeconds(5f);
             trackAnimator.SetTrigger("TrackAppear");
-            string number = currentLevelIndex < 10 ? "0" + currentLevelIndex.ToString() : currentLevelIndex.ToString();
+            string number = currentLevelIndex < 10 ? "0" + (currentLevelIndex+1).ToString() : (currentLevelIndex+1).ToString();
             trackTitle.text = number + " - " + currentLevel.nomDeLaTrack;
+            if (currentRavitaillement)
+            {
+                HideMoneyFill();
+                currentRavitaillement.ExitLevel();
+            }
             if (currentLevel.ravitaillementPrefab)
             {
-                if (currentRavitaillement)
-                {
-                    currentRavitaillement.ExitLevel();
-                }
                 GameObject go = Instantiate(currentLevel.ravitaillementPrefab, playerTransform.position, playerTransform.rotation);
                 currentRavitaillement = go.GetComponentInChildren<RavitailleOnDetect>();
             }

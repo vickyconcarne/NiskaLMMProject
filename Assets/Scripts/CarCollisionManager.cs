@@ -135,7 +135,7 @@ public class CarCollisionManager : MonoBehaviour
         cashFlow.SetActive(false);
         currentCollider.enabled = false;
         //Retry
-        Invoke("ActivateSubmitPanel", 10f);
+        Invoke("ActivateSubmitPanel", 8.5f);
     }
 
     public void ActivateSubmitPanel()

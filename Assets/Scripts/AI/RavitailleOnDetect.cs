@@ -15,6 +15,7 @@ public class RavitailleOnDetect : AOnSideDetection
     public Animator transitionAnimator;
     public bool canGiveMoney = true;
     private bool canPlaceFill = false;
+    private bool exiting = false;
     // Start is called before the first frame update
     IEnumerator Start()
     {
@@ -107,6 +108,8 @@ public class RavitailleOnDetect : AOnSideDetection
 
     public void ExitLevel()
     {
+        if (exiting) return;
+        exiting = true;
         RandomTileManager.instance.HideMoneyFill();
         transitionAnimator.SetTrigger("Exit");
         Destroy(transform.parent.gameObject, 8f);
