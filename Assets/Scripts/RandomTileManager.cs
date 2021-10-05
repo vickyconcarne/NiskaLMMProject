@@ -48,7 +48,6 @@ public class RandomTileManager : MonoBehaviour
 
     //public ChallengeType currentTypeStandingOn;
     [Header("Placement options")]
-    public int seed = 43;
     public float zSpawn = 0;
     public float tileLength = 10;
     public int numberOfTilesToSpawnPerIteration = 4;
@@ -71,7 +70,13 @@ public class RandomTileManager : MonoBehaviour
     //Snapshot
     public Animator snapShotAnimator;
     public Image snapshotImage;
-    
+
+    [Header("Gimmick de voix")]
+    public List<GimmickVoix> gimmickList;
+    [SerializeField] private TextMeshProUGUI gimmickText;
+    [SerializeField] private Animator gimmickAnimator;
+    private float currentMaxTimeBeforeNextGimmick;
+    private float timeBeforeNextGimmick;
     //Singleton pattern
 
     public static RandomTileManager instance;
@@ -83,7 +88,7 @@ public class RandomTileManager : MonoBehaviour
         currentSeed = (int)System.DateTime.Now.DayOfYear; //Get the day for seed, so we can have a modicum of randomness
         UnityEngine.Random.InitState(currentSeed);
         currentChallenge = ChallengeType.cars;
-        UnityEngine.Random.InitState(seed);
+        UnityEngine.Random.InitState(currentSeed);
         StartCoroutine(SwitchLevels(0));
         for (int i = 0; i < numberOfTilesToSpawnPerIteration; i++)
         {
@@ -200,6 +205,11 @@ public class RandomTileManager : MonoBehaviour
         }
     }
 
+    private void FixedUpdate()
+    {
+        CountdownGimmickTime();
+    }
+
     public void SpawnObstacleTile(int index)
     {
         //GameObject go = Instantiate(tilePrefabs[index], transform.forward * zSpawn, transform.rotation);
@@ -291,12 +301,41 @@ public class RandomTileManager : MonoBehaviour
     public bool AddMoneyToLevel(int qtity, Vector3 position, float currentFill)
     {
         AddToScore(qtity, position);
+        CheckForGimmick(qtity);
         Vector2 initialPosition = cam.WorldToScreenPoint(position);
         scoreFillCircle.transform.position = initialPosition;
         scoreFillCircle.SetTrigger("Badump");
         scoreFillCircle.GetComponent<Image>().fillAmount = currentFill;
         if (audiosource) audiosource.PlayOneShot(Resources.Load("Sounds/CashRegisterSound") as AudioClip);
         return true;
+    }
+
+    /// <summary>
+    /// Normally, should check if weve gotten alot of points in a short window of time
+    /// </summary>
+    /// <param name="qtity"></param>
+    void CheckForGimmick(float qtity)
+    {
+        //Gimmick
+        if (qtity > 0 && timeBeforeNextGimmick > currentMaxTimeBeforeNextGimmick)
+        {
+            PlayRandomGimmick();
+            timeBeforeNextGimmick = 0f;
+            currentMaxTimeBeforeNextGimmick = UnityEngine.Random.Range(6f, 15f);
+        }
+    }
+
+    public void PlayRandomGimmick()
+    {
+        var randGimmick = gimmickList[UnityEngine.Random.Range(0, gimmickList.Count)];
+        gimmickText.text = randGimmick.affichage;
+        gimmickAnimator.SetTrigger("Pop");
+        if (audiosource) audiosource.PlayOneShot(randGimmick.clip,randGimmick.volume);
+    }
+
+    private void CountdownGimmickTime()
+    {
+        timeBeforeNextGimmick += Time.fixedDeltaTime;
     }
 
     public bool AddIteration()
@@ -454,7 +493,6 @@ public class Level
     public List<GameObject> emptyTilePrefabs = new List<GameObject>();
     public List<Wave> possibleWavePrefabs;
 }
-
 
 
 public enum ChallengeType { obstacles = 0, cars = 1 };
