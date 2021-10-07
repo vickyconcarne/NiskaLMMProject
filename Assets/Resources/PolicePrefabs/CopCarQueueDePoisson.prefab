@@ -78,7 +78,7 @@ PrefabInstance:
     - target: {fileID: 6039523837792194788, guid: c2beefb6ecc1fba48905f0699d5322c0,
         type: 3}
       propertyPath: m_forwardMomentum
-      value: 27
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 6039523837792194788, guid: c2beefb6ecc1fba48905f0699d5322c0,
         type: 3}

@@ -27,6 +27,7 @@ public class RandomTileManager : MonoBehaviour
     public Animator scoreBox;
     public Animator scoreFillCircle;
     public TextMeshProUGUI highScoreText;
+    public TextMeshProUGUI scoreMultiplierText;
     public RectTransform scoreElement;
     const float timeToGoToScore = 0.5f;
     private Vector3 currentScoreOriginPoint;
@@ -77,6 +78,9 @@ public class RandomTileManager : MonoBehaviour
     [SerializeField] private Animator gimmickAnimator;
     [SerializeField] private float currentMaxTimeBeforeNextGimmick;
     [SerializeField] private float timeBeforeNextGimmick;
+    private int currentScoreMultiplier = 1;
+    private float currentGimmickTimeFrame;
+    const float k_gimmickTimeFrame = 1.5f;
     //Singleton pattern
 
     public static RandomTileManager instance;
@@ -149,15 +153,26 @@ public class RandomTileManager : MonoBehaviour
         }
     }
 
-    public void AddToScore(int scoreAdd, Vector3 position)
+    public void AddToScore(int scoreAdd, Vector3 position, bool withGimmick = true)
     {
-        CheckForGimmick(scoreAdd);
+        if (withGimmick && scoreAdd > 0)
+        {
+            currentGimmickTimeFrame = k_gimmickTimeFrame;
+            if (currentGimmickTimeFrame > 0)
+            {
+                currentScoreMultiplier += 1;
+                scoreMultiplierText.text = "x " + (currentScoreMultiplier);
+                if (currentScoreMultiplier > 1 && timeBeforeNextGimmick > currentMaxTimeBeforeNextGimmick) CheckForGimmick(scoreAdd);
+            }
+        }
         Vector2 initialPosition = cam.WorldToScreenPoint(position);
         currentScoreOriginPoint = initialPosition;
         scoreElement.transform.position = initialPosition;
-        scoreElement.GetComponent<TextMeshProUGUI>().text = scoreAdd.ToString();
+        if(currentGimmickTimeFrame > 0 && currentScoreMultiplier > 1) scoreElement.GetComponent<TextMeshProUGUI>().text = (scoreAdd * currentScoreMultiplier).ToString();
+        else scoreElement.GetComponent<TextMeshProUGUI>().text = (scoreAdd).ToString();
         scoreElement.gameObject.SetActive(true);
-        currentHighScore += scoreAdd;
+        if(currentGimmickTimeFrame > 0 && currentScoreMultiplier > 1) currentHighScore += scoreAdd * currentScoreMultiplier;
+        else currentHighScore += scoreAdd;
         currentScoreUITime = 0f;
     }
 
@@ -301,7 +316,7 @@ public class RandomTileManager : MonoBehaviour
 
     public bool AddMoneyToLevel(int qtity, Vector3 position, float currentFill)
     {
-        AddToScore(qtity, position);
+        AddToScore(qtity, position, false);
         
         Vector2 initialPosition = cam.WorldToScreenPoint(position);
         scoreFillCircle.transform.position = initialPosition;
@@ -318,9 +333,8 @@ public class RandomTileManager : MonoBehaviour
     void CheckForGimmick(float qtity)
     {
         //Gimmick
-        if (qtity > 0 && timeBeforeNextGimmick > currentMaxTimeBeforeNextGimmick)
+        if (qtity > 0)
         {
-            
             PlayRandomGimmick();
             timeBeforeNextGimmick = 0f;
             currentMaxTimeBeforeNextGimmick = UnityEngine.Random.Range(7f, 15f);
@@ -331,6 +345,7 @@ public class RandomTileManager : MonoBehaviour
     {
         var randGimmick = gimmickList[UnityEngine.Random.Range(0, gimmickList.Count)];
         gimmickText.text = randGimmick.affichage;
+        
         gimmickAnimator.SetTrigger("Pop");
         if (audiosource) audiosource.PlayOneShot(randGimmick.clip,randGimmick.volume);
     }
@@ -338,6 +353,15 @@ public class RandomTileManager : MonoBehaviour
     private void CountdownGimmickTime()
     {
         timeBeforeNextGimmick += Time.fixedDeltaTime;
+        if (currentGimmickTimeFrame > 0f)
+        {
+            currentGimmickTimeFrame -= Time.fixedDeltaTime;
+            if (currentGimmickTimeFrame <= 0f)
+            {
+                currentScoreMultiplier = 1;
+            }
+        }
+        
     }
 
     public bool AddIteration()

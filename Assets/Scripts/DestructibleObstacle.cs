@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class DestructibleObstacle : MonoBehaviour
 {
-    private Animator m_obstacleAnimator;
+    [SerializeField] private Animator m_obstacleAnimator;
     public string nameOfAnimationTrigger;
     private Collider m_collider;
     // Start is called before the first frame update
     void Start()
     {
-        m_obstacleAnimator = GetComponent<Animator>();
+        if(!m_obstacleAnimator) m_obstacleAnimator = GetComponent<Animator>();
         m_collider = GetComponent<Collider>();
     }
 

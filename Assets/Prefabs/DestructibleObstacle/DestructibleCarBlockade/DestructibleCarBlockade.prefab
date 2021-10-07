@@ -78,6 +78,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 212a4662585c0514397d1d79c0c1a13d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_obstacleAnimator: {fileID: 6405026268669630043}
   nameOfAnimationTrigger: Explode
 --- !u!1 &6405026269626475153
 GameObject:
