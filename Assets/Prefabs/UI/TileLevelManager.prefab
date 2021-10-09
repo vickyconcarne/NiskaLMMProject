@@ -1,0 +1,569 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3944976956748813537
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3944976956748813566}
+  - component: {fileID: 3944976956748813567}
+  m_Layer: 0
+  m_Name: TileLevelManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3944976956748813566
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3944976956748813537}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.291996, y: -6.495281, z: 12.26461}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3944976956748813567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3944976956748813537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90b4a1f74ed346441b94a5c0a3d4c067, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTransform: {fileID: 0}
+  playerCollisionManager: {fileID: 0}
+  allLevels:
+  - nomDeLaTrack: "Le monde est m\xE9chant"
+    imageDeFeaturing: {fileID: 0}
+    ravitaillementPrefab: {fileID: 0}
+    numberOfIterations: 2
+    tilePrefabs:
+    - {fileID: 6743519024202991439, guid: 7313084d56a2d97439624f61f6aff3ab, type: 3}
+    - {fileID: 6743519024202991439, guid: 6b8cdb302ce799e429a4b9d6254d7594, type: 3}
+    - {fileID: 6743519024202991439, guid: 7ced15ac79c6e1c49b457a77d1f97b8c, type: 3}
+    - {fileID: 6743519024202991439, guid: 4045b787e0184e045ab3e5f36fe099dd, type: 3}
+    - {fileID: 6743519024202991439, guid: 67a4caf41f291fa4da2107167eae6aa2, type: 3}
+    - {fileID: 6743519024202991439, guid: de930ca84f4963746827b240d673009b, type: 3}
+    emptyTilePrefabs:
+    - {fileID: 6743519024202991439, guid: ba3139185ac274a0db0f734588841472, type: 3}
+    - {fileID: 6743519024202991439, guid: d1a3d25be3faa41fabe91d1ab8433626, type: 3}
+    - {fileID: 6743519024202991439, guid: 4eaa908fef218884c91ae58b4c518f11, type: 3}
+    - {fileID: 6743519024202991439, guid: c7849156a8645e549ba86ed121e52278, type: 3}
+    possibleWavePrefabs:
+    - numberOfCars: 6
+      prefab: {fileID: 1201072589188917958, guid: eb293d7522a5b9649ae70ed80f969ba4,
+        type: 3}
+    - numberOfCars: 3
+      prefab: {fileID: 1201072589188917958, guid: 4e949ad9f20c06b479327ba4077778ee,
+        type: 3}
+    - numberOfCars: 4
+      prefab: {fileID: 1201072589188917958, guid: 90a7e12fbf9534f4f83a4de22a8ceea6,
+        type: 3}
+    - numberOfCars: 3
+      prefab: {fileID: 1201072589188917958, guid: d9a8aaafa41517e48b53d8a9fb5cbe3a,
+        type: 3}
+    - numberOfCars: 3
+      prefab: {fileID: 1201072589188917958, guid: d9a8aaafa41517e48b53d8a9fb5cbe3a,
+        type: 3}
+  - nomDeLaTrack: Canelo
+    imageDeFeaturing: {fileID: 21300000, guid: feb1974a1c2668449aa1c2cf7591c641, type: 3}
+    ravitaillementPrefab: {fileID: 4510382892081865266, guid: 822ca63c41993144989cc56961bfec2a,
+      type: 3}
+    numberOfIterations: 2
+    tilePrefabs:
+    - {fileID: 6743519024202991439, guid: 7313084d56a2d97439624f61f6aff3ab, type: 3}
+    - {fileID: 6743519024202991439, guid: 6b8cdb302ce799e429a4b9d6254d7594, type: 3}
+    - {fileID: 6743519024202991439, guid: c588479150b906547af6e9dc41d7b94f, type: 3}
+    - {fileID: 6743519024202991439, guid: e024f3efd94b5ae469b12194749f3038, type: 3}
+    - {fileID: 6743519024202991439, guid: 67a4caf41f291fa4da2107167eae6aa2, type: 3}
+    - {fileID: 6743519024202991439, guid: da5613eec76c8814684db356137c4b0f, type: 3}
+    emptyTilePrefabs:
+    - {fileID: 6743519024202991439, guid: ba3139185ac274a0db0f734588841472, type: 3}
+    - {fileID: 6743519024202991439, guid: d1a3d25be3faa41fabe91d1ab8433626, type: 3}
+    - {fileID: 6743519024202991439, guid: a865ab0e535884ae195dc7135e987ca1, type: 3}
+    - {fileID: 6743519024202991439, guid: c7849156a8645e549ba86ed121e52278, type: 3}
+    possibleWavePrefabs:
+    - numberOfCars: 3
+      prefab: {fileID: 1201072589188917958, guid: 4e949ad9f20c06b479327ba4077778ee,
+        type: 3}
+    - numberOfCars: 3
+      prefab: {fileID: 1201072589188917958, guid: 4e949ad9f20c06b479327ba4077778ee,
+        type: 3}
+    - numberOfCars: 4
+      prefab: {fileID: 1201072589188917958, guid: 90a7e12fbf9534f4f83a4de22a8ceea6,
+        type: 3}
+    - numberOfCars: 3
+      prefab: {fileID: 1201072589188917958, guid: d9a8aaafa41517e48b53d8a9fb5cbe3a,
+        type: 3}
+    - numberOfCars: 3
+      prefab: {fileID: 1201072589188917958, guid: d9a8aaafa41517e48b53d8a9fb5cbe3a,
+        type: 3}
+  - nomDeLaTrack: "Param\xE8tre"
+    imageDeFeaturing: {fileID: 0}
+    ravitaillementPrefab: {fileID: 0}
+    numberOfIterations: 1
+    tilePrefabs:
+    - {fileID: 6743519024202991439, guid: 7313084d56a2d97439624f61f6aff3ab, type: 3}
+    - {fileID: 6743519024202991439, guid: 6b8cdb302ce799e429a4b9d6254d7594, type: 3}
+    - {fileID: 6743519024202991439, guid: 3dc75d4713c2bb54dbd70f2b908a0bf3, type: 3}
+    - {fileID: 6743519024202991439, guid: ac9907f96ee2521499eae0f731d3b1a7, type: 3}
+    - {fileID: 6743519024202991439, guid: 67a4caf41f291fa4da2107167eae6aa2, type: 3}
+    - {fileID: 6743519024202991439, guid: c588479150b906547af6e9dc41d7b94f, type: 3}
+    emptyTilePrefabs:
+    - {fileID: 6743519024202991439, guid: ba3139185ac274a0db0f734588841472, type: 3}
+    - {fileID: 6743519024202991439, guid: d1a3d25be3faa41fabe91d1ab8433626, type: 3}
+    - {fileID: 6743519024202991439, guid: a865ab0e535884ae195dc7135e987ca1, type: 3}
+    - {fileID: 6743519024202991439, guid: c7849156a8645e549ba86ed121e52278, type: 3}
+    possibleWavePrefabs:
+    - numberOfCars: 7
+      prefab: {fileID: 1201072589188917958, guid: a582faee4f6e8cd49b5b07110782f372,
+        type: 3}
+    - numberOfCars: 3
+      prefab: {fileID: 1201072589188917958, guid: 4e949ad9f20c06b479327ba4077778ee,
+        type: 3}
+    - numberOfCars: 4
+      prefab: {fileID: 1201072589188917958, guid: 90a7e12fbf9534f4f83a4de22a8ceea6,
+        type: 3}
+    - numberOfCars: 2
+      prefab: {fileID: 1201072589188917958, guid: 92c3952390a63954b8679fb1c29a88c1,
+        type: 3}
+    - numberOfCars: 5
+      prefab: {fileID: 1201072589188917958, guid: 267e459928fdd6e47840b6ac25227637,
+        type: 3}
+  - nomDeLaTrack: Vida
+    imageDeFeaturing: {fileID: 0}
+    ravitaillementPrefab: {fileID: 0}
+    numberOfIterations: 1
+    tilePrefabs:
+    - {fileID: 6743519024202991439, guid: 7313084d56a2d97439624f61f6aff3ab, type: 3}
+    - {fileID: 6743519024202991439, guid: 3dc75d4713c2bb54dbd70f2b908a0bf3, type: 3}
+    - {fileID: 6743519024202991439, guid: 4eaa908fef218884c91ae58b4c518f11, type: 3}
+    - {fileID: 6743519024202991439, guid: de930ca84f4963746827b240d673009b, type: 3}
+    - {fileID: 6743519024202991439, guid: da5613eec76c8814684db356137c4b0f, type: 3}
+    - {fileID: 6743519024202991439, guid: c588479150b906547af6e9dc41d7b94f, type: 3}
+    emptyTilePrefabs:
+    - {fileID: 6743519024202991439, guid: ba3139185ac274a0db0f734588841472, type: 3}
+    - {fileID: 6743519024202991439, guid: 4eaa908fef218884c91ae58b4c518f11, type: 3}
+    - {fileID: 6743519024202991439, guid: a865ab0e535884ae195dc7135e987ca1, type: 3}
+    - {fileID: 6743519024202991439, guid: c7849156a8645e549ba86ed121e52278, type: 3}
+    possibleWavePrefabs:
+    - numberOfCars: 6
+      prefab: {fileID: 1201072589188917958, guid: eb293d7522a5b9649ae70ed80f969ba4,
+        type: 3}
+    - numberOfCars: 3
+      prefab: {fileID: 1201072589188917958, guid: 4e949ad9f20c06b479327ba4077778ee,
+        type: 3}
+    - numberOfCars: 2
+      prefab: {fileID: 1201072589188917958, guid: 90a7e12fbf9534f4f83a4de22a8ceea6,
+        type: 3}
+    - numberOfCars: 3
+      prefab: {fileID: 1201072589188917958, guid: d9a8aaafa41517e48b53d8a9fb5cbe3a,
+        type: 3}
+    - numberOfCars: 3
+      prefab: {fileID: 1201072589188917958, guid: d9a8aaafa41517e48b53d8a9fb5cbe3a,
+        type: 3}
+  - nomDeLaTrack: Money Danger
+    imageDeFeaturing: {fileID: 0}
+    ravitaillementPrefab: {fileID: 0}
+    numberOfIterations: 1
+    tilePrefabs:
+    - {fileID: 6743519024202991439, guid: 67a4caf41f291fa4da2107167eae6aa2, type: 3}
+    - {fileID: 6743519024202991439, guid: ac9907f96ee2521499eae0f731d3b1a7, type: 3}
+    - {fileID: 6743519024202991439, guid: e024f3efd94b5ae469b12194749f3038, type: 3}
+    - {fileID: 6743519024202991439, guid: 8a8401a37f2ab69489ab66378c63e886, type: 3}
+    - {fileID: 6743519024202991439, guid: c588479150b906547af6e9dc41d7b94f, type: 3}
+    - {fileID: 6743519024202991439, guid: 9b799f11ccab6434db21e28567a18d9d, type: 3}
+    emptyTilePrefabs:
+    - {fileID: 6743519024202991439, guid: ba3139185ac274a0db0f734588841472, type: 3}
+    - {fileID: 6743519024202991439, guid: d1a3d25be3faa41fabe91d1ab8433626, type: 3}
+    - {fileID: 6743519024202991439, guid: a865ab0e535884ae195dc7135e987ca1, type: 3}
+    - {fileID: 6743519024202991439, guid: c7849156a8645e549ba86ed121e52278, type: 3}
+    possibleWavePrefabs:
+    - numberOfCars: 6
+      prefab: {fileID: 1201072589188917958, guid: eb293d7522a5b9649ae70ed80f969ba4,
+        type: 3}
+    - numberOfCars: 3
+      prefab: {fileID: 1201072589188917958, guid: 4e949ad9f20c06b479327ba4077778ee,
+        type: 3}
+    - numberOfCars: 4
+      prefab: {fileID: 1201072589188917958, guid: 90a7e12fbf9534f4f83a4de22a8ceea6,
+        type: 3}
+    - numberOfCars: 3
+      prefab: {fileID: 1201072589188917958, guid: d9a8aaafa41517e48b53d8a9fb5cbe3a,
+        type: 3}
+    - numberOfCars: 3
+      prefab: {fileID: 1201072589188917958, guid: d9a8aaafa41517e48b53d8a9fb5cbe3a,
+        type: 3}
+  - nomDeLaTrack: Maradonna
+    imageDeFeaturing: {fileID: 0}
+    ravitaillementPrefab: {fileID: 0}
+    numberOfIterations: 2
+    tilePrefabs:
+    - {fileID: 6743519024202991439, guid: 9b799f11ccab6434db21e28567a18d9d, type: 3}
+    - {fileID: 6743519024202991439, guid: f18906778b01cbd4a81ae5c7f5ff0bd9, type: 3}
+    - {fileID: 6743519024202991439, guid: d3e0a0b206516144ea68d02d37699d24, type: 3}
+    - {fileID: 6743519024202991439, guid: 8a8401a37f2ab69489ab66378c63e886, type: 3}
+    - {fileID: 6743519024202991439, guid: c588479150b906547af6e9dc41d7b94f, type: 3}
+    - {fileID: 6743519024202991439, guid: 9b799f11ccab6434db21e28567a18d9d, type: 3}
+    emptyTilePrefabs:
+    - {fileID: 6743519024202991439, guid: ba3139185ac274a0db0f734588841472, type: 3}
+    - {fileID: 6743519024202991439, guid: d1a3d25be3faa41fabe91d1ab8433626, type: 3}
+    - {fileID: 6743519024202991439, guid: a865ab0e535884ae195dc7135e987ca1, type: 3}
+    - {fileID: 6743519024202991439, guid: 8321807477e57f64ca39b4c8da53da6f, type: 3}
+    possibleWavePrefabs:
+    - numberOfCars: 7
+      prefab: {fileID: 1201072589188917958, guid: a582faee4f6e8cd49b5b07110782f372,
+        type: 3}
+    - numberOfCars: 3
+      prefab: {fileID: 1201072589188917958, guid: 4e949ad9f20c06b479327ba4077778ee,
+        type: 3}
+    - numberOfCars: 4
+      prefab: {fileID: 1201072589188917958, guid: 90a7e12fbf9534f4f83a4de22a8ceea6,
+        type: 3}
+    - numberOfCars: 3
+      prefab: {fileID: 1201072589188917958, guid: 4e949ad9f20c06b479327ba4077778ee,
+        type: 3}
+    - numberOfCars: 3
+      prefab: {fileID: 1201072589188917958, guid: 85705651e6076fe40bfb99ca0cd61979,
+        type: 3}
+  - nomDeLaTrack: Paris
+    imageDeFeaturing: {fileID: 0}
+    ravitaillementPrefab: {fileID: 0}
+    numberOfIterations: 1
+    tilePrefabs:
+    - {fileID: 6743519024202991439, guid: e024f3efd94b5ae469b12194749f3038, type: 3}
+    - {fileID: 6743519024202991439, guid: 6b8cdb302ce799e429a4b9d6254d7594, type: 3}
+    - {fileID: 6743519024202991439, guid: bf465ebb4db7fc841acb0aeb70293c2d, type: 3}
+    - {fileID: 6743519024202991439, guid: de963d5c65ff16f44abd3fef9a3ba6f6, type: 3}
+    - {fileID: 6743519024202991439, guid: 74222cdd18904ab49bf2454c4601ccb2, type: 3}
+    - {fileID: 6743519024202991439, guid: c588479150b906547af6e9dc41d7b94f, type: 3}
+    emptyTilePrefabs:
+    - {fileID: 6743519024202991439, guid: ba3139185ac274a0db0f734588841472, type: 3}
+    - {fileID: 6743519024202991439, guid: d1a3d25be3faa41fabe91d1ab8433626, type: 3}
+    - {fileID: 6743519024202991439, guid: a865ab0e535884ae195dc7135e987ca1, type: 3}
+    - {fileID: 6743519024202991439, guid: c7849156a8645e549ba86ed121e52278, type: 3}
+    possibleWavePrefabs:
+    - numberOfCars: 6
+      prefab: {fileID: 1201072589188917958, guid: eb293d7522a5b9649ae70ed80f969ba4,
+        type: 3}
+    - numberOfCars: 3
+      prefab: {fileID: 1201072589188917958, guid: 4e949ad9f20c06b479327ba4077778ee,
+        type: 3}
+    - numberOfCars: 2
+      prefab: {fileID: 1201072589188917958, guid: 90a7e12fbf9534f4f83a4de22a8ceea6,
+        type: 3}
+    - numberOfCars: 3
+      prefab: {fileID: 1201072589188917958, guid: d9a8aaafa41517e48b53d8a9fb5cbe3a,
+        type: 3}
+    - numberOfCars: 3
+      prefab: {fileID: 1201072589188917958, guid: d9a8aaafa41517e48b53d8a9fb5cbe3a,
+        type: 3}
+  - nomDeLaTrack: De bon matin ft. Guy
+    imageDeFeaturing: {fileID: 0}
+    ravitaillementPrefab: {fileID: 2714642860689182334, guid: f9148801a9180684a93d2cb00d1b16f2,
+      type: 3}
+    numberOfIterations: 1
+    tilePrefabs:
+    - {fileID: 6743519024202991439, guid: c588479150b906547af6e9dc41d7b94f, type: 3}
+    - {fileID: 6743519024202991439, guid: a1f05876b51efd54eb48caea57ca4a4b, type: 3}
+    - {fileID: 6743519024202991439, guid: bc1efcd2cd46cd043acaef535201e5eb, type: 3}
+    - {fileID: 6743519024202991439, guid: 2ca42537a76107147b9b5a6addcaa977, type: 3}
+    - {fileID: 6743519024202991439, guid: 6b8cdb302ce799e429a4b9d6254d7594, type: 3}
+    - {fileID: 6743519024202991439, guid: 3dc75d4713c2bb54dbd70f2b908a0bf3, type: 3}
+    emptyTilePrefabs:
+    - {fileID: 6743519024202991439, guid: 702c633cc19b9cb4981078194e788e2d, type: 3}
+    - {fileID: 6743519024202991439, guid: d1a3d25be3faa41fabe91d1ab8433626, type: 3}
+    - {fileID: 6743519024202991439, guid: a865ab0e535884ae195dc7135e987ca1, type: 3}
+    - {fileID: 6743519024202991439, guid: c7849156a8645e549ba86ed121e52278, type: 3}
+    possibleWavePrefabs:
+    - numberOfCars: 6
+      prefab: {fileID: 1201072589188917958, guid: eb293d7522a5b9649ae70ed80f969ba4,
+        type: 3}
+    - numberOfCars: 2
+      prefab: {fileID: 1201072589188917958, guid: 92c3952390a63954b8679fb1c29a88c1,
+        type: 3}
+    - numberOfCars: 7
+      prefab: {fileID: 1201072589188917958, guid: a582faee4f6e8cd49b5b07110782f372,
+        type: 3}
+    - numberOfCars: 3
+      prefab: {fileID: 1201072589188917958, guid: 5c096b2fa11528a468bcaf7637f9a086,
+        type: 3}
+  - nomDeLaTrack: --- ft. Ninho
+    imageDeFeaturing: {fileID: 0}
+    ravitaillementPrefab: {fileID: 8933549683255507199, guid: 7473aa04b2c472e4786199afd6f6941c,
+      type: 3}
+    numberOfIterations: 1
+    tilePrefabs:
+    - {fileID: 6743519024202991439, guid: 7313084d56a2d97439624f61f6aff3ab, type: 3}
+    - {fileID: 6743519024202991439, guid: d3e0a0b206516144ea68d02d37699d24, type: 3}
+    - {fileID: 6743519024202991439, guid: 9b799f11ccab6434db21e28567a18d9d, type: 3}
+    - {fileID: 6743519024202991439, guid: 2ca42537a76107147b9b5a6addcaa977, type: 3}
+    - {fileID: 6743519024202991439, guid: bf465ebb4db7fc841acb0aeb70293c2d, type: 3}
+    - {fileID: 6743519024202991439, guid: 4045b787e0184e045ab3e5f36fe099dd, type: 3}
+    emptyTilePrefabs:
+    - {fileID: 6743519024202991439, guid: ba3139185ac274a0db0f734588841472, type: 3}
+    - {fileID: 6743519024202991439, guid: d1a3d25be3faa41fabe91d1ab8433626, type: 3}
+    - {fileID: 6743519024202991439, guid: a865ab0e535884ae195dc7135e987ca1, type: 3}
+    - {fileID: 6743519024202991439, guid: c7849156a8645e549ba86ed121e52278, type: 3}
+    possibleWavePrefabs:
+    - numberOfCars: 7
+      prefab: {fileID: 1201072589188917958, guid: a582faee4f6e8cd49b5b07110782f372,
+        type: 3}
+    - numberOfCars: 7
+      prefab: {fileID: 1201072589188917958, guid: a582faee4f6e8cd49b5b07110782f372,
+        type: 3}
+    - numberOfCars: 3
+      prefab: {fileID: 1201072589188917958, guid: 4e949ad9f20c06b479327ba4077778ee,
+        type: 3}
+  - nomDeLaTrack: Loup Solitaire ft. Liim's
+    imageDeFeaturing: {fileID: 0}
+    ravitaillementPrefab: {fileID: 3209247121411945166, guid: ad20db7295130ba4583dd9e32946d858,
+      type: 3}
+    numberOfIterations: 1
+    tilePrefabs:
+    - {fileID: 6743519024202991439, guid: bc1efcd2cd46cd043acaef535201e5eb, type: 3}
+    - {fileID: 6743519024202991439, guid: f18906778b01cbd4a81ae5c7f5ff0bd9, type: 3}
+    - {fileID: 6743519024202991439, guid: 74222cdd18904ab49bf2454c4601ccb2, type: 3}
+    - {fileID: 6743519024202991439, guid: a1f05876b51efd54eb48caea57ca4a4b, type: 3}
+    - {fileID: 6743519024202991439, guid: 67a4caf41f291fa4da2107167eae6aa2, type: 3}
+    - {fileID: 6743519024202991439, guid: de930ca84f4963746827b240d673009b, type: 3}
+    emptyTilePrefabs:
+    - {fileID: 6743519024202991439, guid: ba3139185ac274a0db0f734588841472, type: 3}
+    - {fileID: 6743519024202991439, guid: d1a3d25be3faa41fabe91d1ab8433626, type: 3}
+    - {fileID: 6743519024202991439, guid: a865ab0e535884ae195dc7135e987ca1, type: 3}
+    - {fileID: 6743519024202991439, guid: c7849156a8645e549ba86ed121e52278, type: 3}
+    possibleWavePrefabs:
+    - numberOfCars: 3
+      prefab: {fileID: 1201072589188917958, guid: 4e949ad9f20c06b479327ba4077778ee,
+        type: 3}
+    - numberOfCars: 3
+      prefab: {fileID: 1201072589188917958, guid: d9a8aaafa41517e48b53d8a9fb5cbe3a,
+        type: 3}
+    - numberOfCars: 5
+      prefab: {fileID: 1201072589188917958, guid: 267e459928fdd6e47840b6ac25227637,
+        type: 3}
+  - nomDeLaTrack: Gang Shit ft. Maes
+    imageDeFeaturing: {fileID: 0}
+    ravitaillementPrefab: {fileID: 8933549683255507199, guid: 7473aa04b2c472e4786199afd6f6941c,
+      type: 3}
+    numberOfIterations: 1
+    tilePrefabs:
+    - {fileID: 6743519024202991439, guid: 7313084d56a2d97439624f61f6aff3ab, type: 3}
+    - {fileID: 6743519024202991439, guid: 6b8cdb302ce799e429a4b9d6254d7594, type: 3}
+    - {fileID: 6743519024202991439, guid: 7ced15ac79c6e1c49b457a77d1f97b8c, type: 3}
+    - {fileID: 6743519024202991439, guid: 4045b787e0184e045ab3e5f36fe099dd, type: 3}
+    - {fileID: 6743519024202991439, guid: 67a4caf41f291fa4da2107167eae6aa2, type: 3}
+    - {fileID: 6743519024202991439, guid: de930ca84f4963746827b240d673009b, type: 3}
+    emptyTilePrefabs:
+    - {fileID: 6743519024202991439, guid: ba3139185ac274a0db0f734588841472, type: 3}
+    - {fileID: 6743519024202991439, guid: d1a3d25be3faa41fabe91d1ab8433626, type: 3}
+    - {fileID: 6743519024202991439, guid: a865ab0e535884ae195dc7135e987ca1, type: 3}
+    - {fileID: 6743519024202991439, guid: c7849156a8645e549ba86ed121e52278, type: 3}
+    possibleWavePrefabs:
+    - numberOfCars: 5
+      prefab: {fileID: 1201072589188917958, guid: 267e459928fdd6e47840b6ac25227637,
+        type: 3}
+    - numberOfCars: 3
+      prefab: {fileID: 1201072589188917958, guid: 4e949ad9f20c06b479327ba4077778ee,
+        type: 3}
+  - nomDeLaTrack: "Journ\xE9e ft. Tiako"
+    imageDeFeaturing: {fileID: 0}
+    ravitaillementPrefab: {fileID: 2714642860689182334, guid: f9148801a9180684a93d2cb00d1b16f2,
+      type: 3}
+    numberOfIterations: 2
+    tilePrefabs:
+    - {fileID: 6743519024202991439, guid: 7313084d56a2d97439624f61f6aff3ab, type: 3}
+    - {fileID: 6743519024202991439, guid: 6b8cdb302ce799e429a4b9d6254d7594, type: 3}
+    - {fileID: 6743519024202991439, guid: 7ced15ac79c6e1c49b457a77d1f97b8c, type: 3}
+    - {fileID: 6743519024202991439, guid: 4045b787e0184e045ab3e5f36fe099dd, type: 3}
+    - {fileID: 6743519024202991439, guid: 67a4caf41f291fa4da2107167eae6aa2, type: 3}
+    - {fileID: 6743519024202991439, guid: de930ca84f4963746827b240d673009b, type: 3}
+    emptyTilePrefabs:
+    - {fileID: 6743519024202991439, guid: 702c633cc19b9cb4981078194e788e2d, type: 3}
+    - {fileID: 6743519024202991439, guid: 8321807477e57f64ca39b4c8da53da6f, type: 3}
+    - {fileID: 6743519024202991439, guid: a865ab0e535884ae195dc7135e987ca1, type: 3}
+    - {fileID: 6743519024202991439, guid: c7849156a8645e549ba86ed121e52278, type: 3}
+    possibleWavePrefabs:
+    - numberOfCars: 6
+      prefab: {fileID: 1201072589188917958, guid: eb293d7522a5b9649ae70ed80f969ba4,
+        type: 3}
+    - numberOfCars: 4
+      prefab: {fileID: 1201072589188917958, guid: 90a7e12fbf9534f4f83a4de22a8ceea6,
+        type: 3}
+    - numberOfCars: 3
+      prefab: {fileID: 1201072589188917958, guid: d9a8aaafa41517e48b53d8a9fb5cbe3a,
+        type: 3}
+  - nomDeLaTrack: --- ft. Mayo
+    imageDeFeaturing: {fileID: 0}
+    ravitaillementPrefab: {fileID: 3209247121411945166, guid: ad20db7295130ba4583dd9e32946d858,
+      type: 3}
+    numberOfIterations: 1
+    tilePrefabs:
+    - {fileID: 6743519024202991439, guid: 7313084d56a2d97439624f61f6aff3ab, type: 3}
+    - {fileID: 6743519024202991439, guid: 6b8cdb302ce799e429a4b9d6254d7594, type: 3}
+    - {fileID: 6743519024202991439, guid: 7ced15ac79c6e1c49b457a77d1f97b8c, type: 3}
+    - {fileID: 6743519024202991439, guid: 4045b787e0184e045ab3e5f36fe099dd, type: 3}
+    - {fileID: 6743519024202991439, guid: 67a4caf41f291fa4da2107167eae6aa2, type: 3}
+    - {fileID: 6743519024202991439, guid: de930ca84f4963746827b240d673009b, type: 3}
+    emptyTilePrefabs:
+    - {fileID: 6743519024202991439, guid: ba3139185ac274a0db0f734588841472, type: 3}
+    - {fileID: 6743519024202991439, guid: d1a3d25be3faa41fabe91d1ab8433626, type: 3}
+    - {fileID: 6743519024202991439, guid: a865ab0e535884ae195dc7135e987ca1, type: 3}
+    - {fileID: 6743519024202991439, guid: c7849156a8645e549ba86ed121e52278, type: 3}
+    possibleWavePrefabs:
+    - numberOfCars: 6
+      prefab: {fileID: 1201072589188917958, guid: eb293d7522a5b9649ae70ed80f969ba4,
+        type: 3}
+    - numberOfCars: 3
+      prefab: {fileID: 1201072589188917958, guid: 5c096b2fa11528a468bcaf7637f9a086,
+        type: 3}
+    - numberOfCars: 5
+      prefab: {fileID: 1201072589188917958, guid: 267e459928fdd6e47840b6ac25227637,
+        type: 3}
+    - numberOfCars: 3
+      prefab: {fileID: 1201072589188917958, guid: d9a8aaafa41517e48b53d8a9fb5cbe3a,
+        type: 3}
+  - nomDeLaTrack: "ft. Implik\xE9 140"
+    imageDeFeaturing: {fileID: 0}
+    ravitaillementPrefab: {fileID: 2714642860689182334, guid: f9148801a9180684a93d2cb00d1b16f2,
+      type: 3}
+    numberOfIterations: 1
+    tilePrefabs:
+    - {fileID: 6743519024202991439, guid: 7313084d56a2d97439624f61f6aff3ab, type: 3}
+    - {fileID: 6743519024202991439, guid: de963d5c65ff16f44abd3fef9a3ba6f6, type: 3}
+    - {fileID: 6743519024202991439, guid: 7ced15ac79c6e1c49b457a77d1f97b8c, type: 3}
+    - {fileID: 6743519024202991439, guid: bc1efcd2cd46cd043acaef535201e5eb, type: 3}
+    - {fileID: 6743519024202991439, guid: da5613eec76c8814684db356137c4b0f, type: 3}
+    - {fileID: 6743519024202991439, guid: bf465ebb4db7fc841acb0aeb70293c2d, type: 3}
+    emptyTilePrefabs:
+    - {fileID: 6743519024202991439, guid: ba3139185ac274a0db0f734588841472, type: 3}
+    - {fileID: 6743519024202991439, guid: d1a3d25be3faa41fabe91d1ab8433626, type: 3}
+    - {fileID: 6743519024202991439, guid: a865ab0e535884ae195dc7135e987ca1, type: 3}
+    - {fileID: 6743519024202991439, guid: c7849156a8645e549ba86ed121e52278, type: 3}
+    possibleWavePrefabs:
+    - numberOfCars: 6
+      prefab: {fileID: 1201072589188917958, guid: eb293d7522a5b9649ae70ed80f969ba4,
+        type: 3}
+    - numberOfCars: 2
+      prefab: {fileID: 1201072589188917958, guid: 92c3952390a63954b8679fb1c29a88c1,
+        type: 3}
+    - numberOfCars: 7
+      prefab: {fileID: 1201072589188917958, guid: a582faee4f6e8cd49b5b07110782f372,
+        type: 3}
+  - nomDeLaTrack: ---
+    imageDeFeaturing: {fileID: 0}
+    ravitaillementPrefab: {fileID: 8933549683255507199, guid: 7473aa04b2c472e4786199afd6f6941c,
+      type: 3}
+    numberOfIterations: 2
+    tilePrefabs:
+    - {fileID: 6743519024202991439, guid: 7313084d56a2d97439624f61f6aff3ab, type: 3}
+    - {fileID: 6743519024202991439, guid: cb3009c216c9b4b44a4bf0b1c7624c97, type: 3}
+    - {fileID: 6743519024202991439, guid: a1f05876b51efd54eb48caea57ca4a4b, type: 3}
+    - {fileID: 6743519024202991439, guid: d3e0a0b206516144ea68d02d37699d24, type: 3}
+    - {fileID: 6743519024202991439, guid: 74222cdd18904ab49bf2454c4601ccb2, type: 3}
+    - {fileID: 6743519024202991439, guid: f18906778b01cbd4a81ae5c7f5ff0bd9, type: 3}
+    emptyTilePrefabs:
+    - {fileID: 6743519024202991439, guid: ba3139185ac274a0db0f734588841472, type: 3}
+    - {fileID: 6743519024202991439, guid: d1a3d25be3faa41fabe91d1ab8433626, type: 3}
+    - {fileID: 6743519024202991439, guid: a865ab0e535884ae195dc7135e987ca1, type: 3}
+    - {fileID: 6743519024202991439, guid: c7849156a8645e549ba86ed121e52278, type: 3}
+    possibleWavePrefabs:
+    - numberOfCars: 5
+      prefab: {fileID: 1201072589188917958, guid: 267e459928fdd6e47840b6ac25227637,
+        type: 3}
+    - numberOfCars: 3
+      prefab: {fileID: 1201072589188917958, guid: 4e949ad9f20c06b479327ba4077778ee,
+        type: 3}
+  - nomDeLaTrack: "Infr\xE9quentable ft. Hamza"
+    imageDeFeaturing: {fileID: 0}
+    ravitaillementPrefab: {fileID: 4510382892081865266, guid: 822ca63c41993144989cc56961bfec2a,
+      type: 3}
+    numberOfIterations: 3
+    tilePrefabs:
+    - {fileID: 6743519024202991439, guid: bf465ebb4db7fc841acb0aeb70293c2d, type: 3}
+    - {fileID: 6743519024202991439, guid: 2ca42537a76107147b9b5a6addcaa977, type: 3}
+    - {fileID: 6743519024202991439, guid: 74222cdd18904ab49bf2454c4601ccb2, type: 3}
+    - {fileID: 6743519024202991439, guid: f18906778b01cbd4a81ae5c7f5ff0bd9, type: 3}
+    - {fileID: 6743519024202991439, guid: bc1efcd2cd46cd043acaef535201e5eb, type: 3}
+    - {fileID: 6743519024202991439, guid: a1f05876b51efd54eb48caea57ca4a4b, type: 3}
+    emptyTilePrefabs:
+    - {fileID: 6743519024202991439, guid: ba3139185ac274a0db0f734588841472, type: 3}
+    - {fileID: 6743519024202991439, guid: d1a3d25be3faa41fabe91d1ab8433626, type: 3}
+    - {fileID: 6743519024202991439, guid: a865ab0e535884ae195dc7135e987ca1, type: 3}
+    - {fileID: 6743519024202991439, guid: c7849156a8645e549ba86ed121e52278, type: 3}
+    possibleWavePrefabs:
+    - numberOfCars: 6
+      prefab: {fileID: 1201072589188917958, guid: eb293d7522a5b9649ae70ed80f969ba4,
+        type: 3}
+    - numberOfCars: 2
+      prefab: {fileID: 1201072589188917958, guid: 90a7e12fbf9534f4f83a4de22a8ceea6,
+        type: 3}
+    - numberOfCars: 3
+      prefab: {fileID: 1201072589188917958, guid: 267e459928fdd6e47840b6ac25227637,
+        type: 3}
+    - numberOfCars: 5
+      prefab: {fileID: 1201072589188917958, guid: a582faee4f6e8cd49b5b07110782f372,
+        type: 3}
+    - numberOfCars: 3
+      prefab: {fileID: 1201072589188917958, guid: 85705651e6076fe40bfb99ca0cd61979,
+        type: 3}
+  currentIteration: 0
+  currentSeed: 0
+  cam: {fileID: 0}
+  scoreBox: {fileID: 0}
+  scoreFillCircle: {fileID: 0}
+  highScoreText: {fileID: 0}
+  scoreMultiplierText: {fileID: 0}
+  scoreElement: {fileID: 0}
+  scoreParent: {fileID: 0}
+  tileIntro: {fileID: 6743519024202991439, guid: 02d02f9ab3dfdeb43ae6c5b4cc83750e,
+    type: 3}
+  tilePrefabs: []
+  tilePrefabsIds: []
+  emptyTilePrefabs: []
+  emptyTilePrefabsIds: []
+  activeTiles: []
+  possibleWavePrefabs: []
+  zSpawn: 0
+  tileLength: 100
+  numberOfTilesToSpawnPerIteration: 4
+  currentChallenge: 1
+  maxTimeBeforeSpawn: 5
+  currentCountedObstacles: 0
+  currentCountedCars: 0
+  maxCountedCars: 0
+  spawnedCars: 1
+  onCarKillSounds:
+  - {fileID: 8300000, guid: 68061c87a80494bab807a28273d92e5a, type: 3}
+  - {fileID: 8300000, guid: 69c3d11a63d0c4afc92f62a2cb8a527e, type: 3}
+  - {fileID: 8300000, guid: b08bd365f411641319854c86dfd84486, type: 3}
+  - {fileID: 8300000, guid: d03b5dd599b441d4dadd4b88ac6d85fb, type: 3}
+  trackAnimator: {fileID: 0}
+  trackTitle: {fileID: 0}
+  audiosource: {fileID: 0}
+  snapShotAnimator: {fileID: 0}
+  snapshotImage: {fileID: 0}
+  gimmickList:
+  - {fileID: 11400000, guid: fd211c8b1c69fbc4e9dc8cb8e7b41a65, type: 2}
+  - {fileID: 11400000, guid: 8af4ebbc485bad04886a634f4f4ab1fc, type: 2}
+  - {fileID: 11400000, guid: 6634d64278b9f4d4eb6c3a4f17b42217, type: 2}
+  - {fileID: 11400000, guid: 9755056bb6cce3b4bb8e8ee4f6d31173, type: 2}
+  - {fileID: 11400000, guid: e650b57a9e6a9674ebb3d01fd87b2a3a, type: 2}
+  - {fileID: 11400000, guid: cae5b094da69f894abaae9380698a6d7, type: 2}
+  gimmickText: {fileID: 0}
+  gimmickAnimator: {fileID: 0}
+  currentMaxTimeBeforeNextGimmick: 10
+  timeBeforeNextGimmick: 0
