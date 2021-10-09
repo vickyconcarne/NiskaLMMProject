@@ -125,5 +125,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: CopCarBump Variant
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8844837222983077902, guid: 73bdcc2d292060344bfb25af0dad7d1a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 73bdcc2d292060344bfb25af0dad7d1a, type: 3}

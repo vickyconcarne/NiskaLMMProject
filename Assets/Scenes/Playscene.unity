@@ -6722,8 +6722,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 364.0198, y: 27}
-  m_SizeDelta: {x: -728.0396, y: -189.75}
+  m_AnchoredPosition: {x: 341, y: -10.534996}
+  m_SizeDelta: {x: -728.0396, y: -152.66}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1362079192
 MonoBehaviour:
@@ -8160,7 +8160,7 @@ PrefabInstance:
     - target: {fileID: 1131628730748993460, guid: 9f5b8c86c93f1834e9e301e42fb534e3,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1131628730748993460, guid: 9f5b8c86c93f1834e9e301e42fb534e3,
         type: 3}
@@ -8170,7 +8170,7 @@ PrefabInstance:
     - target: {fileID: 1131628730748993460, guid: 9f5b8c86c93f1834e9e301e42fb534e3,
         type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1131628730748993460, guid: 9f5b8c86c93f1834e9e301e42fb534e3,
         type: 3}
@@ -8180,12 +8180,12 @@ PrefabInstance:
     - target: {fileID: 1131628730748993460, guid: 9f5b8c86c93f1834e9e301e42fb534e3,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 94
+      value: 1218
       objectReference: {fileID: 0}
     - target: {fileID: 1131628730748993460, guid: 9f5b8c86c93f1834e9e301e42fb534e3,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 1044.1951
+      value: 1384.616
       objectReference: {fileID: 0}
     - target: {fileID: 1131628730748993460, guid: 9f5b8c86c93f1834e9e301e42fb534e3,
         type: 3}
@@ -8205,17 +8205,17 @@ PrefabInstance:
     - target: {fileID: 1131628730748993460, guid: 9f5b8c86c93f1834e9e301e42fb534e3,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.0002
+      value: -0.0001
       objectReference: {fileID: 0}
     - target: {fileID: 1131628730748993460, guid: 9f5b8c86c93f1834e9e301e42fb534e3,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -1222.5999
+      value: -1225
       objectReference: {fileID: 0}
     - target: {fileID: 1131628730748993460, guid: 9f5b8c86c93f1834e9e301e42fb534e3,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 14.9921
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2409994942043314494, guid: 9f5b8c86c93f1834e9e301e42fb534e3,
         type: 3}
@@ -14079,6 +14079,11 @@ MonoBehaviour:
   currentCountedCars: 0
   maxCountedCars: 0
   spawnedCars: 1
+  onCarKillSounds:
+  - {fileID: 8300000, guid: 68061c87a80494bab807a28273d92e5a, type: 3}
+  - {fileID: 8300000, guid: 69c3d11a63d0c4afc92f62a2cb8a527e, type: 3}
+  - {fileID: 8300000, guid: b08bd365f411641319854c86dfd84486, type: 3}
+  - {fileID: 8300000, guid: d03b5dd599b441d4dadd4b88ac6d85fb, type: 3}
   trackAnimator: {fileID: 1815828389}
   trackTitle: {fileID: 1836539826}
   audiosource: {fileID: 1131791}
@@ -14128,8 +14133,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0.11326817}
-  m_AnchoredPosition: {x: 881, y: -0.6357422}
-  m_SizeDelta: {x: 0, y: 0.6356964}
+  m_AnchoredPosition: {x: 882.82086, y: -0.6357422}
+  m_SizeDelta: {x: 3.6417, y: 0.6357}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!1 &1800360084
 GameObject:
@@ -14409,8 +14414,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -8.456242, y: 0.15174103}
-  m_SizeDelta: {x: -42.43949, y: -4.4997}
+  m_AnchoredPosition: {x: -11.740299, y: 0.15174103}
+  m_SizeDelta: {x: -52.9926, y: -4.4997}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1836539826
 MonoBehaviour:
@@ -14432,7 +14437,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Exemple de tracklist
+  m_text: 01 - tracklisttitlehere
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -14459,14 +14464,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 2.15
+  m_fontSize: 1.95
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 1
   m_fontSizeMax: 30
   m_fontStyle: 17
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 8
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0

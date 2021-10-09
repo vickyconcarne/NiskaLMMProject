@@ -22,6 +22,7 @@ public class RavitailleOnDetect : AOnSideDetection
         transitionAnimator.SetTrigger("Enter");
         yield return new WaitForSeconds(1f);
         canPlaceFill = true;
+        RandomTileManager.instance.HideMoneyFill();
     }
 
     private void LateUpdate()

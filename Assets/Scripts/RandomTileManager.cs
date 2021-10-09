@@ -63,7 +63,7 @@ public class RandomTileManager : MonoBehaviour
     public int maxCountedCars;
     [SerializeField] private bool spawnedCars = true; //Since we spawn cop cars at the start
     private GameObject currentActiveCar;
-
+    public List<AudioClip> onCarKillSounds = new List<AudioClip>();
     [Header("Track name & animations")]
     public Animator trackAnimator;
     public TextMeshProUGUI trackTitle;
@@ -320,8 +320,8 @@ public class RandomTileManager : MonoBehaviour
         
         Vector2 initialPosition = cam.WorldToScreenPoint(position);
         scoreFillCircle.transform.position = initialPosition;
-        scoreFillCircle.SetTrigger("Badump");
         scoreFillCircle.GetComponent<Image>().fillAmount = currentFill;
+        scoreFillCircle.SetTrigger("Badump");
         if (audiosource) audiosource.PlayOneShot(Resources.Load("Sounds/CashRegisterSound") as AudioClip);
         return true;
     }
@@ -348,6 +348,12 @@ public class RandomTileManager : MonoBehaviour
         
         gimmickAnimator.SetTrigger("Pop");
         if (audiosource) audiosource.PlayOneShot(randGimmick.clip,randGimmick.volume);
+    }
+
+    public void PlayRandomCarDeathSound()
+    {
+        var randClip = onCarKillSounds[UnityEngine.Random.Range(0, onCarKillSounds.Count)];
+        if (audiosource) audiosource.PlayOneShot(randClip, 0.35f);
     }
 
     private void CountdownGimmickTime()

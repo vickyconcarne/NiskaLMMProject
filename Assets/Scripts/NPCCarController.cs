@@ -88,6 +88,7 @@ namespace LMM_Movement
         public void Kill(lane attackingLane, bool silent = false)
         {
             RandomTileManager.instance.currentCountedCars += 1;
+            RandomTileManager.instance.PlayRandomCarDeathSound();
             RandomTileManager.instance.CheckState();
             currentCollider.enabled = false;
             if (secondaryCollider) secondaryCollider.enabled = false;
@@ -142,7 +143,7 @@ namespace LMM_Movement
                 return; //Dont detect urself
             }
             //Debug.Log("npc car has found " + currentTag + " for " + col.gameObject.name);
-            if (movementState != actorState.Immovable || movementState != actorState.AggressiveSwerving)
+            if (movementState != actorState.Immovable /*|| movementState != actorState.AggressiveSwerving*/)
             {
                 switch (currentTag)
                 {
@@ -150,8 +151,11 @@ namespace LMM_Movement
                         Kill(lane.nolane);
                         break;
                     case "OtherCar":
-                        var carComp = col.GetComponent<NPCCarController>();
-                        if (carComp) Kill(carComp.chosenLane);
+                        if(movementState != actorState.AggressiveSwerving)
+                        {
+                            var carComp = col.GetComponent<NPCCarController>();
+                            if (carComp) Kill(carComp.chosenLane);
+                        }
                         break;
                     default:
                         break;
