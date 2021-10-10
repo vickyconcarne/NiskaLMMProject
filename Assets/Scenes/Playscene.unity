@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18382427, g: 0.22850908, b: 0.30045107, a: 1}
+  m_IndirectSpecularColor: {r: 0.1838248, g: 0.22850996, b: 0.30045247, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -969,35 +969,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1122751029223385684, guid: c7ded406df3b01a4bb4ecc81f6f1aca6,
+    - target: {fileID: 1122751028540585215, guid: c7ded406df3b01a4bb4ecc81f6f1aca6,
         type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -8.47
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1122751029223385684, guid: c7ded406df3b01a4bb4ecc81f6f1aca6,
+    - target: {fileID: 1122751028874009338, guid: c7ded406df3b01a4bb4ecc81f6f1aca6,
         type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0.43
-      objectReference: {fileID: 0}
-    - target: {fileID: 1122751029223385687, guid: c7ded406df3b01a4bb4ecc81f6f1aca6,
-        type: 3}
-      propertyPath: m_fontSize
-      value: 1.45
-      objectReference: {fileID: 0}
-    - target: {fileID: 1122751029223385687, guid: c7ded406df3b01a4bb4ecc81f6f1aca6,
-        type: 3}
-      propertyPath: m_margin.w
-      value: -0.9398982
-      objectReference: {fileID: 0}
-    - target: {fileID: 1122751029223385687, guid: c7ded406df3b01a4bb4ecc81f6f1aca6,
-        type: 3}
-      propertyPath: m_margin.y
-      value: -1.196235
-      objectReference: {fileID: 0}
-    - target: {fileID: 1122751029223385687, guid: c7ded406df3b01a4bb4ecc81f6f1aca6,
-        type: 3}
-      propertyPath: m_margin.z
-      value: -29.847181
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1122751029513074713, guid: c7ded406df3b01a4bb4ecc81f6f1aca6,
         type: 3}
@@ -1109,32 +1089,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: NewsOverlayCanvas
       objectReference: {fileID: 0}
-    - target: {fileID: 1122751029831047218, guid: c7ded406df3b01a4bb4ecc81f6f1aca6,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 44.7893
-      objectReference: {fileID: 0}
-    - target: {fileID: 1122751029831047218, guid: c7ded406df3b01a4bb4ecc81f6f1aca6,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 3.9668
-      objectReference: {fileID: 0}
-    - target: {fileID: 1122751029831047218, guid: c7ded406df3b01a4bb4ecc81f6f1aca6,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 18.6145
-      objectReference: {fileID: 0}
-    - target: {fileID: 1122751029831047218, guid: c7ded406df3b01a4bb4ecc81f6f1aca6,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -58.6503
-      objectReference: {fileID: 0}
-    - target: {fileID: 1122751029831047229, guid: c7ded406df3b01a4bb4ecc81f6f1aca6,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: d124491bec80340168a29132aae7ac71,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7ded406df3b01a4bb4ecc81f6f1aca6, type: 3}
 --- !u!114 &2209881904670219625 stripped
@@ -1959,18 +1913,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5843477764669123576, guid: 8d8b6152639caba418d7b9e2f886e160,
         type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 186.4082
+      propertyPath: m_AnchoredPosition.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5843477764669123576, guid: 8d8b6152639caba418d7b9e2f886e160,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -34.96
-      objectReference: {fileID: 0}
-    - target: {fileID: 5843477766158109743, guid: 8d8b6152639caba418d7b9e2f886e160,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
+      value: -0.00012207031
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d8b6152639caba418d7b9e2f886e160, type: 3}
@@ -1990,6 +1939,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EndPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 7767324888902353731, guid: 6ccbf52a0915dee42b2d4c3d81273d03,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7767324888902353735, guid: 6ccbf52a0915dee42b2d4c3d81273d03,
         type: 3}
@@ -2095,6 +2049,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7767324889111367248, guid: 6ccbf52a0915dee42b2d4c3d81273d03,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 49.999756
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ccbf52a0915dee42b2d4c3d81273d03, type: 3}
