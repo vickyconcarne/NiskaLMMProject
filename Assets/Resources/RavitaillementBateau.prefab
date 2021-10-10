@@ -264,7 +264,7 @@ MonoBehaviour:
   moveVector: {x: 0, y: 0, z: 20}
   charController: {fileID: 1958341228}
   transitionAnimator: {fileID: 1958341226}
-  canGiveMoney: 1
+  canGiveMoney: 0
 --- !u!1 &4510382892081865266
 GameObject:
   m_ObjectHideFlags: 0
