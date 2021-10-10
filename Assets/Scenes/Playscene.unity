@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18382427, g: 0.22850908, b: 0.30045107, a: 1}
+  m_IndirectSpecularColor: {r: 0.1838248, g: 0.22850996, b: 0.30045247, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1429,6 +1429,61 @@ PrefabInstance:
       propertyPath: playerCollisionManager
       value: 
       objectReference: {fileID: 1131789}
+    - target: {fileID: 3944976956748813567, guid: 84b4ebb3d61bff447abdf754933ee0bf,
+        type: 3}
+      propertyPath: onCarKillSounds.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3944976956748813567, guid: 84b4ebb3d61bff447abdf754933ee0bf,
+        type: 3}
+      propertyPath: onCarKillSounds.Array.data[0].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: d03b5dd599b441d4dadd4b88ac6d85fb, type: 3}
+    - target: {fileID: 3944976956748813567, guid: 84b4ebb3d61bff447abdf754933ee0bf,
+        type: 3}
+      propertyPath: onCarKillSounds.Array.data[1].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: b08bd365f411641319854c86dfd84486, type: 3}
+    - target: {fileID: 3944976956748813567, guid: 84b4ebb3d61bff447abdf754933ee0bf,
+        type: 3}
+      propertyPath: onCarKillSounds.Array.data[2].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 68061c87a80494bab807a28273d92e5a, type: 3}
+    - target: {fileID: 3944976956748813567, guid: 84b4ebb3d61bff447abdf754933ee0bf,
+        type: 3}
+      propertyPath: onCarKillSounds.Array.data[3].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: bb4313e2231a14b639f6848a52b28a4d, type: 3}
+    - target: {fileID: 3944976956748813567, guid: 84b4ebb3d61bff447abdf754933ee0bf,
+        type: 3}
+      propertyPath: onCarKillSounds.Array.data[4].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 69c3d11a63d0c4afc92f62a2cb8a527e, type: 3}
+    - target: {fileID: 3944976956748813567, guid: 84b4ebb3d61bff447abdf754933ee0bf,
+        type: 3}
+      propertyPath: onCarKillSounds.Array.data[0].volume
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3944976956748813567, guid: 84b4ebb3d61bff447abdf754933ee0bf,
+        type: 3}
+      propertyPath: onCarKillSounds.Array.data[1].volume
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3944976956748813567, guid: 84b4ebb3d61bff447abdf754933ee0bf,
+        type: 3}
+      propertyPath: onCarKillSounds.Array.data[2].volume
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3944976956748813567, guid: 84b4ebb3d61bff447abdf754933ee0bf,
+        type: 3}
+      propertyPath: onCarKillSounds.Array.data[3].volume
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3944976956748813567, guid: 84b4ebb3d61bff447abdf754933ee0bf,
+        type: 3}
+      propertyPath: onCarKillSounds.Array.data[4].volume
+      value: 0.15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84b4ebb3d61bff447abdf754933ee0bf, type: 3}
 --- !u!1001 &4079619459409683501

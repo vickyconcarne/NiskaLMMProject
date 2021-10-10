@@ -95,7 +95,11 @@ namespace LMM_Movement
             m_CharacterController.detectCollisions = false;
             m_CharacterController.enabled = false;
             canMove = false;
-            if (possibleDetector) possibleDetector.StopAllCoroutines();
+            if (possibleDetector)
+            {
+                possibleDetector.warningObject.SetActive(false);
+                possibleDetector.StopAllCoroutines(); 
+            }
             if (!silent)
             {
                 RandomTileManager.instance.AddToScore(scoreToAddOnDeath, transform.position);

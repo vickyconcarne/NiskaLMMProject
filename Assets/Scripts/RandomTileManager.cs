@@ -63,7 +63,7 @@ public class RandomTileManager : MonoBehaviour
     public int maxCountedCars;
     [SerializeField] private bool spawnedCars = true; //Since we spawn cop cars at the start
     private GameObject currentActiveCar;
-    public List<AudioClip> onCarKillSounds = new List<AudioClip>();
+    public List<ClipWithVol> onCarKillSounds = new List<ClipWithVol>();
     [Header("Track name & animations")]
     public Animator trackAnimator;
     public TextMeshProUGUI trackTitle;
@@ -353,7 +353,7 @@ public class RandomTileManager : MonoBehaviour
     public void PlayRandomCarDeathSound()
     {
         var randClip = onCarKillSounds[UnityEngine.Random.Range(0, onCarKillSounds.Count)];
-        if (audiosource) audiosource.PlayOneShot(randClip, 0.35f);
+        if (audiosource) audiosource.PlayOneShot(randClip.clip, randClip.volume);
     }
 
     private void CountdownGimmickTime()
@@ -527,5 +527,11 @@ public class Level
     public List<Wave> possibleWavePrefabs;
 }
 
+[System.Serializable]
+public class ClipWithVol
+{
+    public AudioClip clip;
+    public float volume;
+}
 
 public enum ChallengeType { obstacles = 0, cars = 1 };
