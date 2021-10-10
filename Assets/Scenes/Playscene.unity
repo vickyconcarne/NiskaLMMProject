@@ -514,6 +514,18 @@ Animator:
     type: 3}
   m_PrefabInstance: {fileID: 5843477764392746572}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &621807677 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4102218707731704632, guid: c7ded406df3b01a4bb4ecc81f6f1aca6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1122751028507653605}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &641876013 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4079619460042908672, guid: 00237bccb9cf9ec478778b082b8343c8,
@@ -580,18 +592,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 3502835535764775862}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1538173909 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6446208589091663527, guid: c7ded406df3b01a4bb4ecc81f6f1aca6,
-    type: 3}
-  m_PrefabInstance: {fileID: 1122751028507653605}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &1538173910 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 6446208588201594337, guid: c7ded406df3b01a4bb4ecc81f6f1aca6,
@@ -1328,7 +1328,7 @@ PrefabInstance:
         type: 3}
       propertyPath: snapshotImage
       value: 
-      objectReference: {fileID: 1538173909}
+      objectReference: {fileID: 621807677}
     - target: {fileID: 3944976956748813567, guid: 84b4ebb3d61bff447abdf754933ee0bf,
         type: 3}
       propertyPath: trackAnimator
@@ -1482,8 +1482,13 @@ PrefabInstance:
         type: 3}
       propertyPath: allLevels.Array.data[1].ravitaillementPrefab
       value: 
-      objectReference: {fileID: 2714642860689182334, guid: f9148801a9180684a93d2cb00d1b16f2,
+      objectReference: {fileID: 4510382892081865266, guid: 822ca63c41993144989cc56961bfec2a,
         type: 3}
+    - target: {fileID: 3944976956748813567, guid: 84b4ebb3d61bff447abdf754933ee0bf,
+        type: 3}
+      propertyPath: allLevels.Array.data[3].possibleWavePrefabs.Array.data[2].numberOfCars
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84b4ebb3d61bff447abdf754933ee0bf, type: 3}
 --- !u!1001 &4079619459409683501

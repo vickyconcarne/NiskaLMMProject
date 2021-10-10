@@ -41,15 +41,23 @@ public class RavitailleOnDetect : AOnSideDetection
         {
             if (Physics.Raycast(detectionTransform.position, -transform.right, out leftHit, distanceToDetect, layerToDetect, QueryTriggerInteraction.Collide))
             {
-                LeftAction(leftHit);
-                isLookingFor = false;
+                if(leftHit.collider.GetComponent<CarCollisionManager>() != null)
+                {
+                    LeftAction(leftHit);
+                    isLookingFor = false;
+                }
+                
                 
                 return;
             }
             else if (Physics.Raycast(detectionTransform.position, transform.right, out rightHit, distanceToDetect, layerToDetect, QueryTriggerInteraction.Collide))
             {
-                RightAction(rightHit);
-                isLookingFor = false;
+                if (rightHit.collider.GetComponent<CarCollisionManager>() != null)
+                {
+                    RightAction(rightHit);
+                    isLookingFor = false;
+                }
+                    
                 return;
             }
             else

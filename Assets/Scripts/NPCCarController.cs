@@ -88,7 +88,7 @@ namespace LMM_Movement
         public void Kill(lane attackingLane, bool silent = false)
         {
             RandomTileManager.instance.currentCountedCars += 1;
-            RandomTileManager.instance.PlayRandomCarDeathSound();
+            if(!silent)RandomTileManager.instance.PlayRandomCarDeathSound();
             RandomTileManager.instance.CheckState();
             currentCollider.enabled = false;
             if (secondaryCollider) secondaryCollider.enabled = false;
