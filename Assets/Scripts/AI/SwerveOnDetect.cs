@@ -25,7 +25,7 @@ public class SwerveOnDetect : AOnSideDetection
     public List<MovementAction> leftActionsToDo;
     public List<MovementAction> rightActionsToDo;
     [SerializeField] private float movementDirection; //useful for - or + sign on movements x or y
-
+    private IEnumerator currentCoroutine;
     [Header("Warning")]
     public bool activateWarningOnDetect;
     public GameObject warningObject;
@@ -141,16 +141,19 @@ public class SwerveOnDetect : AOnSideDetection
             case lane.left:
                 //Debug.Log("switching lane");
                 movementDirection = -1;
-                StartCoroutine(SwitchXLanes(action.speed, action.durationOfAction));
+                currentCoroutine = SwitchXLanes(action.speed, action.durationOfAction);
+                StartCoroutine(currentCoroutine);
                 break;
             case lane.right:
                 //Debug.Log("switching lane");
                 movementDirection = 1;
-                StartCoroutine(SwitchXLanes(action.speed, action.durationOfAction));
+                currentCoroutine = SwitchXLanes(action.speed, action.durationOfAction);
+                StartCoroutine(currentCoroutine);
                 break;
             default:
                 //Debug.Log("changing speed");
-                StartCoroutine(SwitchZLanes(action.speed, action.durationOfAction));
+                currentCoroutine = SwitchZLanes(action.speed, action.durationOfAction);
+                StartCoroutine(currentCoroutine);
                 break;
         }
     }
@@ -201,6 +204,15 @@ public class SwerveOnDetect : AOnSideDetection
         currentCooldown = 0f;
         finishedLateralAction = true;
         yield return null;
+    }
+
+    /// <summary>
+    /// Because stop all coroutines only works on script it is attached to
+    /// </summary>
+    public void CallStopCoroutinesFromOutside()
+    {
+        StopAllCoroutines();
+        /*if (currentCoroutine != null) StopCoroutine(currentCoroutine);*/
     }
 
     void DecideNewLane()

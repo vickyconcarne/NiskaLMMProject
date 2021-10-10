@@ -97,8 +97,9 @@ namespace LMM_Movement
             canMove = false;
             if (possibleDetector)
             {
+                possibleDetector.CallStopCoroutinesFromOutside();
+                possibleDetector.warningObject.GetComponent<Animation>().enabled = false;
                 possibleDetector.warningObject.SetActive(false);
-                possibleDetector.StopAllCoroutines(); 
             }
             if (!silent)
             {
@@ -168,6 +169,8 @@ namespace LMM_Movement
 
         }
 
+        
+
         private void StartBrake()
         {
             if(brakesOnPlayerDeath) StartCoroutine(Brake());
@@ -184,6 +187,7 @@ namespace LMM_Movement
             }
             currentCollider.enabled = false;
             if (secondaryCollider) secondaryCollider.enabled = false;
+            
             trailRenderers.SetActive(true);
             float timeToBrake = Random.Range(0f, maxTimeToBrake);
             float chosenBrakeBlend = Random.Range(-1f, 1f);
@@ -197,7 +201,12 @@ namespace LMM_Movement
             }
             m_CharacterController.enabled = false;
             canMove = false;
-
+            if (possibleDetector)
+            {
+                possibleDetector.CallStopCoroutinesFromOutside();
+                possibleDetector.warningObject.GetComponent<Animation>().enabled = false;
+                possibleDetector.warningObject.SetActive(false);
+            }
         }
 
     }
