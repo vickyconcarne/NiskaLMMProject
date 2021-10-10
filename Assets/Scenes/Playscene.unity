@@ -969,56 +969,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1122751028540585215, guid: c7ded406df3b01a4bb4ecc81f6f1aca6,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1122751028874009338, guid: c7ded406df3b01a4bb4ecc81f6f1aca6,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1122751029219317459, guid: c7ded406df3b01a4bb4ecc81f6f1aca6,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1122751029223385684, guid: c7ded406df3b01a4bb4ecc81f6f1aca6,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: -4.01771
-      objectReference: {fileID: 0}
-    - target: {fileID: 1122751029223385684, guid: c7ded406df3b01a4bb4ecc81f6f1aca6,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -9.24
-      objectReference: {fileID: 0}
-    - target: {fileID: 1122751029223385684, guid: c7ded406df3b01a4bb4ecc81f6f1aca6,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0.17
-      objectReference: {fileID: 0}
-    - target: {fileID: 1122751029223385687, guid: c7ded406df3b01a4bb4ecc81f6f1aca6,
-        type: 3}
-      propertyPath: m_fontSize
-      value: 1.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 1122751029223385687, guid: c7ded406df3b01a4bb4ecc81f6f1aca6,
-        type: 3}
-      propertyPath: m_margin.z
-      value: -7.204211
-      objectReference: {fileID: 0}
-    - target: {fileID: 1122751029223385687, guid: c7ded406df3b01a4bb4ecc81f6f1aca6,
-        type: 3}
-      propertyPath: m_HorizontalAlignment
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1122751029245141574, guid: c7ded406df3b01a4bb4ecc81f6f1aca6,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1122751029513074713, guid: c7ded406df3b01a4bb4ecc81f6f1aca6,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1128,31 +1078,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: NewsOverlayCanvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 1122751029831047218, guid: c7ded406df3b01a4bb4ecc81f6f1aca6,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 62.6824
-      objectReference: {fileID: 0}
-    - target: {fileID: 1122751029831047218, guid: c7ded406df3b01a4bb4ecc81f6f1aca6,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 5.5515
-      objectReference: {fileID: 0}
-    - target: {fileID: 1122751029831047218, guid: c7ded406df3b01a4bb4ecc81f6f1aca6,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 247
-      objectReference: {fileID: 0}
-    - target: {fileID: 1122751029831047218, guid: c7ded406df3b01a4bb4ecc81f6f1aca6,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -42.803276
-      objectReference: {fileID: 0}
-    - target: {fileID: 1122751030066998567, guid: c7ded406df3b01a4bb4ecc81f6f1aca6,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7ded406df3b01a4bb4ecc81f6f1aca6, type: 3}
@@ -1484,6 +1409,12 @@ PrefabInstance:
       propertyPath: onCarKillSounds.Array.data[4].volume
       value: 0.15
       objectReference: {fileID: 0}
+    - target: {fileID: 3944976956748813567, guid: 84b4ebb3d61bff447abdf754933ee0bf,
+        type: 3}
+      propertyPath: allLevels.Array.data[1].ravitaillementPrefab
+      value: 
+      objectReference: {fileID: 2714642860689182334, guid: f9148801a9180684a93d2cb00d1b16f2,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84b4ebb3d61bff447abdf754933ee0bf, type: 3}
 --- !u!1001 &4079619459409683501
