@@ -2079,6 +2079,26 @@ PrefabInstance:
       propertyPath: bombButtonSprite
       value: 
       objectReference: {fileID: 496292749}
+    - target: {fileID: 8373300676619110862, guid: c64e8a83ed992094a9bf1048877266a9,
+        type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373300676619110862, guid: c64e8a83ed992094a9bf1048877266a9,
+        type: 3}
+      propertyPath: m_ScreenMatchMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373300676619110862, guid: c64e8a83ed992094a9bf1048877266a9,
+        type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1080
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373300676619110862, guid: c64e8a83ed992094a9bf1048877266a9,
+        type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1920
+      objectReference: {fileID: 0}
     - target: {fileID: 8564501609746609560, guid: c64e8a83ed992094a9bf1048877266a9,
         type: 3}
       propertyPath: endingCam
@@ -2179,5 +2199,15 @@ PrefabInstance:
       propertyPath: fpsText
       value: 
       objectReference: {fileID: 395644242}
+    - target: {fileID: 8750320919053131266, guid: c64e8a83ed992094a9bf1048877266a9,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1401.9124
+      objectReference: {fileID: 0}
+    - target: {fileID: 8750320919053131266, guid: c64e8a83ed992094a9bf1048877266a9,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 5.8673
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c64e8a83ed992094a9bf1048877266a9, type: 3}

@@ -160,7 +160,7 @@ GameObject:
   - component: {fileID: 3209247121411945169}
   - component: {fileID: 3209247121411945168}
   m_Layer: 0
-  m_Name: RavitaillementVan
+  m_Name: AlternativeVan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -375,7 +375,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: a2aaf14bd79fc1445a957aa6082700a1, type: 2}
+      objectReference: {fileID: 2100000, guid: 79bd720c7eafa2444a0470f787f85cf3, type: 2}
     - target: {fileID: 2724103288454669515, guid: 4c38230ce031f9a4b8c05f49bb2f4428,
         type: 3}
       propertyPath: m_Name
@@ -485,7 +485,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: a2aaf14bd79fc1445a957aa6082700a1, type: 2}
+      objectReference: {fileID: 2100000, guid: 79bd720c7eafa2444a0470f787f85cf3, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c38230ce031f9a4b8c05f49bb2f4428, type: 3}
 --- !u!1 &667795819741060373 stripped
