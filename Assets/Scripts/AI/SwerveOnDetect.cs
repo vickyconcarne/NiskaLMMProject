@@ -157,7 +157,7 @@ public class SwerveOnDetect : AOnSideDetection
 
     private IEnumerator SwitchXLanes(float speed,float duration)
     {
-        if (activateWarningOnDetect) warningObject.SetActive(false); //Deactivate warning
+        if (activateWarningOnDetect && npcController.canMove) warningObject.SetActive(false); //Deactivate warning
         float elapsedTime = 0f;
         float startingX = transform.position.x;
         float endX = startingX + movementDirection * lanePositionalDifferential;
@@ -239,7 +239,7 @@ public class SwerveOnDetect : AOnSideDetection
             swerveDirection = -1f;
             SetSpeed(speedToMatchPlayer);
             finishedAllActions = false;
-            if (activateWarningOnDetect) warningObject.SetActive(true);
+            if (activateWarningOnDetect && npcController.canMove) warningObject.SetActive(true);
         }
         
     }
@@ -251,7 +251,7 @@ public class SwerveOnDetect : AOnSideDetection
             swerveDirection = 1f;
             SetSpeed(speedToMatchPlayer);
             finishedAllActions = false;
-            if (activateWarningOnDetect) warningObject.SetActive(true);
+            if (activateWarningOnDetect && npcController.canMove) warningObject.SetActive(true);
         }
         
     }
@@ -259,7 +259,7 @@ public class SwerveOnDetect : AOnSideDetection
     private void StartBrake()
     {
         StopAllCoroutines();
-        if (activateWarningOnDetect) warningObject.SetActive(false); //Deactivate warning
+        if (activateWarningOnDetect && npcController.canMove) warningObject.SetActive(false); //Deactivate warning
         this.enabled = false;
     }
 
