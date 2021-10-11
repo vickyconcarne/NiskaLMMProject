@@ -151,9 +151,11 @@ namespace LMM_Movement
             float elapsedTime = 0f;
             var startingPos = carChild.localPosition;
             m_collisionManager.currentState = actorState.AggressiveSwerving;
+            
             while (elapsedTime < timeToChangeLane)
             {
                 carChild.localPosition = Vector3.Slerp(startingPos, newLanePosition, (elapsedTime / timeToChangeLane));
+                Debug.Log(carChild.localPosition.ToString());
                 elapsedTime += Time.deltaTime;
                 yield return null;
             }
