@@ -68,10 +68,12 @@ public class RandomTileManager : MonoBehaviour
     public Animator trackAnimator;
     public TextMeshProUGUI trackTitle;
     public AudioSource audiosource;
+    public AudioSource uxAudioSource;
+    [SerializeField] private AudioClip mugshotSound;
     //Snapshot
     public Animator snapShotAnimator;
     public Image snapshotImage;
-
+    
     [Header("Gimmick de voix")]
     public List<GimmickVoix> gimmickList;
     [SerializeField] private TextMeshProUGUI gimmickText;
@@ -433,6 +435,7 @@ public class RandomTileManager : MonoBehaviour
             {
                 snapshotImage.sprite = currentLevel.imageDeFeaturing;
                 snapShotAnimator.SetTrigger("Show");
+                uxAudioSource.PlayOneShot(mugshotSound,0.75f);
             }
         }
         else

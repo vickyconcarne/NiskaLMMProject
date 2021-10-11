@@ -17,6 +17,9 @@ public class projectileActorExplosion1 : MonoBehaviour {
     public Image bombButtonSprite;
     public Color onColor;
     public Color offColor;
+    [Header("Audio")]
+    [SerializeField] private AudioClip pickupSound;
+    public AudioSource audioPlayer;
     [Header("Debug")]
     public TextMeshProUGUI bombText;
     public bool debug;
@@ -61,6 +64,7 @@ public class projectileActorExplosion1 : MonoBehaviour {
         {
             bombText.text = currentBombs.ToString();
         }
+        //pickupSound = Resources.Load("Sounds/MINE_PICKUP") as AudioClip;
     }
 
     public void AddBomb()
@@ -74,6 +78,7 @@ public class projectileActorExplosion1 : MonoBehaviour {
         {
             bombText.text = currentBombs.ToString();
         }
+        audioPlayer.PlayOneShot(pickupSound, 0.5f);
     }
 
     public void ActivateBombButton()
