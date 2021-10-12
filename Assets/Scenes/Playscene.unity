@@ -1239,10 +1239,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3502835534698930223, guid: 831cecc0a3e9d154a91e217efc634762,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.10498047
+      objectReference: {fileID: 0}
     - target: {fileID: 3502835535073486769, guid: 831cecc0a3e9d154a91e217efc634762,
         type: 3}
       propertyPath: m_Name
       value: FormulaPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 3502835535073486769, guid: 831cecc0a3e9d154a91e217efc634762,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3502835535073486781, guid: 831cecc0a3e9d154a91e217efc634762,
         type: 3}
@@ -2051,6 +2061,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EndPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 7767324888902353731, guid: 6ccbf52a0915dee42b2d4c3d81273d03,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7767324888902353735, guid: 6ccbf52a0915dee42b2d4c3d81273d03,
         type: 3}
