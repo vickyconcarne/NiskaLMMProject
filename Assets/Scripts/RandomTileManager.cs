@@ -163,18 +163,18 @@ public class RandomTileManager : MonoBehaviour
             if (currentGimmickTimeFrame > 0)
             {
                 currentScoreMultiplier += 1;
-                scoreMultiplierText.text = "x " + (currentScoreMultiplier);
+                //scoreMultiplierText.text = "x " + (currentScoreMultiplier);
                 if (currentScoreMultiplier > 1 && timeBeforeNextGimmick > currentMaxTimeBeforeNextGimmick) CheckForGimmick(scoreAdd);
             }
         }
         Vector2 initialPosition = cam.WorldToScreenPoint(position);
         currentScoreOriginPoint = initialPosition;
         scoreElement.transform.position = initialPosition;
-        if(currentGimmickTimeFrame > 0 && currentScoreMultiplier > 1) scoreElement.GetComponent<TextMeshProUGUI>().text = (scoreAdd * currentScoreMultiplier).ToString();
-        else scoreElement.GetComponent<TextMeshProUGUI>().text = (scoreAdd).ToString();
+        //if(currentGimmickTimeFrame > 0 && currentScoreMultiplier > 1) scoreElement.GetComponent<TextMeshProUGUI>().text = (scoreAdd * currentScoreMultiplier).ToString();
+        /*else*/ scoreElement.GetComponent<TextMeshProUGUI>().text = (scoreAdd).ToString();
         scoreElement.gameObject.SetActive(true);
-        if(currentGimmickTimeFrame > 0 && currentScoreMultiplier > 1) currentHighScore += scoreAdd * currentScoreMultiplier;
-        else currentHighScore += scoreAdd;
+        //if(currentGimmickTimeFrame > 0 && currentScoreMultiplier > 1) currentHighScore += scoreAdd * currentScoreMultiplier;
+        /*else*/ currentHighScore += scoreAdd;
         currentScoreUITime = 0f;
     }
 

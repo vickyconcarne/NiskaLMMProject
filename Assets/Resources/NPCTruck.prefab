@@ -76,8 +76,8 @@ MonoBehaviour:
   generalExplodeTrigger: Explode
   trailRenderers: {fileID: 0}
   brakesOnPlayerDeath: 0
-  movementState: 2
-  m_forwardMomentum: 10
+  movementState: 1
+  m_forwardMomentum: 12
   lanePositionalDifferential: 5
   timeToChangeLane: 1
   possibleDetector: {fileID: 0}
