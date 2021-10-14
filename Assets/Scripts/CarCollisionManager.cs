@@ -48,7 +48,7 @@ public class CarCollisionManager : MonoBehaviour
     private IEnumerator Start()
     {
         currentCollider = GetComponent<Collider>();
-        yield return new WaitForSeconds(6f);
+        yield return new WaitForSeconds(9f);
         StartCoroutine("GiveControl");
     }
 
@@ -85,7 +85,7 @@ public class CarCollisionManager : MonoBehaviour
                 break;
             case "BombPickup":
                 bombThrower.AddBomb();
-                Destroy(other.gameObject);
+                Destroy(other.gameObject,1f);
                 break;
             case "Bullet":
                 StopPlayer(other);
@@ -198,12 +198,13 @@ public class CarCollisionManager : MonoBehaviour
     /// </summary>
     public IEnumerator GiveControl()
     {
-        
+        smokeTrails.SetActive(false);
         cinemachineCam.enabled = true;
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(0.1f); //used to be 2
         playerController.GiveControl();
         bombCanvas.SetActive(true);
         cinematicCam.enabled = false;
+        Destroy(cinematicCam.transform.parent.gameObject);
     }
 
     public IEnumerator FinishGame()
