@@ -230,8 +230,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_NoiseProfile: {fileID: 11400000, guid: 8608ec81ee27a15488d33f9dad239e91, type: 2}
   m_PivotOffset: {x: 0, y: 0, z: 0}
-  m_AmplitudeGain: 0.1
-  m_FrequencyGain: 0.25
+  m_AmplitudeGain: 0
+  m_FrequencyGain: 1.5
   mNoiseOffsets: {x: 0, y: 0, z: 0}
 --- !u!1 &179251524
 GameObject:
@@ -6621,9 +6621,116 @@ PrefabInstance:
       objectReference: {fileID: 727981553}
     - target: {fileID: 3944976956748813567, guid: 84b4ebb3d61bff447abdf754933ee0bf,
         type: 3}
+      propertyPath: gimmickList.Array.size
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 3944976956748813567, guid: 84b4ebb3d61bff447abdf754933ee0bf,
+        type: 3}
       propertyPath: playerCollisionManager
       value: 
       objectReference: {fileID: 1131789}
+    - target: {fileID: 3944976956748813567, guid: 84b4ebb3d61bff447abdf754933ee0bf,
+        type: 3}
+      propertyPath: gimmickList.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 37439bfbcf252b44da3b69d5268978f8,
+        type: 2}
+    - target: {fileID: 3944976956748813567, guid: 84b4ebb3d61bff447abdf754933ee0bf,
+        type: 3}
+      propertyPath: gimmickList.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: b3ea6ea2153ce634497873c8b9ed5474,
+        type: 2}
+    - target: {fileID: 3944976956748813567, guid: 84b4ebb3d61bff447abdf754933ee0bf,
+        type: 3}
+      propertyPath: gimmickList.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: 4894e88ffc2258b44a9bb700ec40735f,
+        type: 2}
+    - target: {fileID: 3944976956748813567, guid: 84b4ebb3d61bff447abdf754933ee0bf,
+        type: 3}
+      propertyPath: gimmickList.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: 17268da5afd161b429f46407f5b48cfc,
+        type: 2}
+    - target: {fileID: 3944976956748813567, guid: 84b4ebb3d61bff447abdf754933ee0bf,
+        type: 3}
+      propertyPath: gimmickList.Array.data[5]
+      value: 
+      objectReference: {fileID: 11400000, guid: 60a4f3938f37fb14e9191f9aba26dfa4,
+        type: 2}
+    - target: {fileID: 3944976956748813567, guid: 84b4ebb3d61bff447abdf754933ee0bf,
+        type: 3}
+      propertyPath: gimmickList.Array.data[6]
+      value: 
+      objectReference: {fileID: 11400000, guid: 11f44d840c47c2643bc8041159ebf02b,
+        type: 2}
+    - target: {fileID: 3944976956748813567, guid: 84b4ebb3d61bff447abdf754933ee0bf,
+        type: 3}
+      propertyPath: gimmickList.Array.data[7]
+      value: 
+      objectReference: {fileID: 11400000, guid: 1fb38b41c99bcb54a9c97ea9201adb89,
+        type: 2}
+    - target: {fileID: 3944976956748813567, guid: 84b4ebb3d61bff447abdf754933ee0bf,
+        type: 3}
+      propertyPath: gimmickList.Array.data[8]
+      value: 
+      objectReference: {fileID: 11400000, guid: 129a8eea2fd244a48bd64f86d92701bf,
+        type: 2}
+    - target: {fileID: 3944976956748813567, guid: 84b4ebb3d61bff447abdf754933ee0bf,
+        type: 3}
+      propertyPath: gimmickList.Array.data[9]
+      value: 
+      objectReference: {fileID: 11400000, guid: fd211c8b1c69fbc4e9dc8cb8e7b41a65,
+        type: 2}
+    - target: {fileID: 3944976956748813567, guid: 84b4ebb3d61bff447abdf754933ee0bf,
+        type: 3}
+      propertyPath: gimmickList.Array.data[10]
+      value: 
+      objectReference: {fileID: 11400000, guid: d6512d25db85b654db5b844549942ba0,
+        type: 2}
+    - target: {fileID: 3944976956748813567, guid: 84b4ebb3d61bff447abdf754933ee0bf,
+        type: 3}
+      propertyPath: gimmickList.Array.data[11]
+      value: 
+      objectReference: {fileID: 11400000, guid: f2a595450471fb64a9849db285516514,
+        type: 2}
+    - target: {fileID: 3944976956748813567, guid: 84b4ebb3d61bff447abdf754933ee0bf,
+        type: 3}
+      propertyPath: gimmickList.Array.data[12]
+      value: 
+      objectReference: {fileID: 11400000, guid: 70475cbbff5dbbd49988a2f5d963c2bc,
+        type: 2}
+    - target: {fileID: 3944976956748813567, guid: 84b4ebb3d61bff447abdf754933ee0bf,
+        type: 3}
+      propertyPath: gimmickList.Array.data[13]
+      value: 
+      objectReference: {fileID: 11400000, guid: c825a653a06649842967858249a2b2cb,
+        type: 2}
+    - target: {fileID: 3944976956748813567, guid: 84b4ebb3d61bff447abdf754933ee0bf,
+        type: 3}
+      propertyPath: gimmickList.Array.data[14]
+      value: 
+      objectReference: {fileID: 11400000, guid: 4c0bb769a1387654082dc276e98aec7b,
+        type: 2}
+    - target: {fileID: 3944976956748813567, guid: 84b4ebb3d61bff447abdf754933ee0bf,
+        type: 3}
+      propertyPath: gimmickList.Array.data[15]
+      value: 
+      objectReference: {fileID: 11400000, guid: d06cf39e5e5287d4d8c437cf9975185c,
+        type: 2}
+    - target: {fileID: 3944976956748813567, guid: 84b4ebb3d61bff447abdf754933ee0bf,
+        type: 3}
+      propertyPath: gimmickList.Array.data[16]
+      value: 
+      objectReference: {fileID: 11400000, guid: 7e302768a58845543adb9910847cc119,
+        type: 2}
+    - target: {fileID: 3944976956748813567, guid: 84b4ebb3d61bff447abdf754933ee0bf,
+        type: 3}
+      propertyPath: gimmickList.Array.data[17]
+      value: 
+      objectReference: {fileID: 11400000, guid: 358482171e2ef7046b92a8697c876426,
+        type: 2}
     - target: {fileID: 3944976956748813567, guid: 84b4ebb3d61bff447abdf754933ee0bf,
         type: 3}
       propertyPath: onCarKillSounds.Array.size
@@ -7426,7 +7533,7 @@ PrefabInstance:
     - target: {fileID: 8564501610050249418, guid: c64e8a83ed992094a9bf1048877266a9,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8564501610050249461, guid: c64e8a83ed992094a9bf1048877266a9,
         type: 3}

@@ -48,7 +48,7 @@ public class CarCollisionManager : MonoBehaviour
     private IEnumerator Start()
     {
         currentCollider = GetComponent<Collider>();
-        yield return new WaitForSeconds(9f);
+        yield return new WaitForSeconds(5f);
         StartCoroutine("GiveControl");
     }
 
@@ -198,9 +198,10 @@ public class CarCollisionManager : MonoBehaviour
     /// </summary>
     public IEnumerator GiveControl()
     {
+        cinematicCam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = 0.5f;
+        yield return new WaitForSeconds(3.5f); //used to be 2
         smokeTrails.SetActive(false);
         cinemachineCam.enabled = true;
-        yield return new WaitForSeconds(0.1f); //used to be 2
         playerController.GiveControl();
         bombCanvas.SetActive(true);
         cinematicCam.enabled = false;

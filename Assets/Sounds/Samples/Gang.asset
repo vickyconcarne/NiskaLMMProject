@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d3acadeded6d7bc419b07294bb0059a3, type: 3}
-  m_Name: Liquide
+  m_Name: Gang
   m_EditorClassIdentifier: 
-  affichage: on connait que le liquide!
-  clip: {fileID: 8300000, guid: 2bda8af4873a248d28dace6c7a1513fc, type: 3}
-  volume: 1
+  affichage: gang!
+  clip: {fileID: 8300000, guid: c7990837b107b48caa154408d2319bc2, type: 3}
+  volume: 1.5

@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d3acadeded6d7bc419b07294bb0059a3, type: 3}
-  m_Name: PouletRoti
+  m_Name: HaOuiOui
   m_EditorClassIdentifier: 
-  affichage: "poulet r\xF4ti!"
-  clip: {fileID: 8300000, guid: 2bda8af4873a248d28dace6c7a1513fc, type: 3}
-  volume: 1
+  affichage: ha oui oui!
+  clip: {fileID: 8300000, guid: 53c8bddac377c4c208aa5e13fa41f521, type: 3}
+  volume: 1.5

@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d3acadeded6d7bc419b07294bb0059a3, type: 3}
-  m_Name: Bouyave
+  m_Name: BaBaBye
   m_EditorClassIdentifier: 
-  affichage: j'la bouyave direct!
-  clip: {fileID: 8300000, guid: 2bda8af4873a248d28dace6c7a1513fc, type: 3}
-  volume: 1
+  affichage: ba ba bye!
+  clip: {fileID: 8300000, guid: 93f683ace4c36427daea66ff1f8efeb5, type: 3}
+  volume: 1.5
