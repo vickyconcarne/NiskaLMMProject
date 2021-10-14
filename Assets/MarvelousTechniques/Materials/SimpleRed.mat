@@ -123,7 +123,7 @@ Material:
     - _MainColorBottom: {r: 1, g: 0.73, b: 0.117, a: 0}
     - _RightColor: {r: 0.9, g: 0.9, b: 0.9, a: 0}
     - _RightColorBottom: {r: 0.9, g: 0.9, b: 0.9, a: 0}
-    - _RimColor: {r: 0, g: 0, b: 0, a: 0}
+    - _RimColor: {r: 0.454902, g: 0.454902, b: 0.454902, a: 0}
     - _RimColorBottom: {r: 0, g: 0, b: 0, a: 0}
     - _SpecColorc: {r: 1, g: 1, b: 1, a: 0}
     - _TopColor: {r: 1, g: 1, b: 1, a: 0}
