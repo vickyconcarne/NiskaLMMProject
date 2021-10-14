@@ -5535,22 +5535,6 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
---- !u!111 &1176231700
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3293094982556348214}
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 02ef2cb7f664e8148a0a0f8f5861fc63, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: 02ef2cb7f664e8148a0a0f8f5861fc63, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!4 &1218728877 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8564501610050249416, guid: c64e8a83ed992094a9bf1048877266a9,
@@ -6316,7 +6300,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3293094982556348215}
-  - component: {fileID: 1176231700}
   m_Layer: 0
   m_Name: BeginningCinematicCameraAlternative
   m_TagString: Untagged

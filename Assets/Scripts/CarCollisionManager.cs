@@ -85,6 +85,7 @@ public class CarCollisionManager : MonoBehaviour
                 break;
             case "BombPickup":
                 bombThrower.AddBomb();
+                other.gameObject.GetComponentInChildren<Animator>().SetTrigger("Pickup");
                 Destroy(other.gameObject,1f);
                 break;
             case "Bullet":

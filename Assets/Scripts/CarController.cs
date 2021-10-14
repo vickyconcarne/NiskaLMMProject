@@ -155,7 +155,6 @@ namespace LMM_Movement
             while (elapsedTime < timeToChangeLane)
             {
                 carChild.localPosition = Vector3.Slerp(startingPos, newLanePosition, (elapsedTime / timeToChangeLane));
-                Debug.Log(carChild.localPosition.ToString());
                 elapsedTime += Time.deltaTime;
                 yield return null;
             }
