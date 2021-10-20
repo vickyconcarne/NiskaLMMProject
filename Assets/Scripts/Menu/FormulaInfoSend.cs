@@ -40,7 +40,7 @@ public class FormulaInfoSend : MonoBehaviour
         form.AddField("entry.1800075712", score);
         byte[] rawData = form.data;
         WWW www = new WWW(BASE_URL, rawData);
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3.5f);
         if(www.error != null)
         {
             formulaAnimator.SetTrigger("Fail");

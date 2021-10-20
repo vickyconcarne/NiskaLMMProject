@@ -6,34 +6,34 @@ EditorUserSettings:
   serializedVersion: 4
   m_ConfigSettings:
     RecentlyUsedScenePath-0:
-      value: 224247031146467e0b080921040050021358082b2f23357f1e3d043febfa313cc7ff26e5e82936333732ee3f0f6f4e2cf10f070ee544391f0802f41414fb350b01c917d613c7112cca1a179ff229d9f1dac1f6e5d5e9f4e7d3d0a2fbf8f5a0edfbf8b1e2
-      flags: 0
-    RecentlyUsedScenePath-1:
       value: 224247031146466804031c2e190056040f283b25223b3222382a093aedee0b01e3f532a6c33f32337606ea310b01123cf7040c34a74b42381803ed0218dc190708fa3bca14db0b0ede1a08c7c213eedad4c4d0a3e7bbb696cbd1a9e6ed
       flags: 0
-    RecentlyUsedScenePath-2:
+    RecentlyUsedScenePath-1:
       value: 224247031146466804031c2e190056040f283b25223b3222382a093aedee0b01e3f532a6c33f32337606ea310b01123cf7040c34a74b42381803ed0218dc190708fa3bca14db0b0ede1a08c7c213eedad4c4d0a3e7bbb596cbd1a9e6ed
       flags: 0
-    RecentlyUsedScenePath-3:
+    RecentlyUsedScenePath-2:
       value: 22424703114646680e0b0227036c6c111b07142f1f2b233e2867083debf42d
       flags: 0
-    RecentlyUsedScenePath-4:
+    RecentlyUsedScenePath-3:
       value: 224247031146466804031c2e1505675f29331d272367023520265326ece92021
       flags: 0
-    RecentlyUsedScenePath-5:
+    RecentlyUsedScenePath-4:
       value: 22424703114646680e0b0227036c731f171311242b05233e381d1214e3ed3176f7e93ffdfe
       flags: 0
-    RecentlyUsedScenePath-6:
+    RecentlyUsedScenePath-5:
       value: 22424703114646680e0b0227036c6f1c170e0b292926237e38271427fb
       flags: 0
-    RecentlyUsedScenePath-7:
+    RecentlyUsedScenePath-6:
       value: 22424703114646680e0b0227036c7a1e121e162d182d3524633c133af6f9
       flags: 0
-    RecentlyUsedScenePath-8:
+    RecentlyUsedScenePath-7:
       value: 22424703114646680e0b0227036c6b150503563f22213229
       flags: 0
-    RecentlyUsedScenePath-9:
+    RecentlyUsedScenePath-8:
       value: 22424703114646680e0b0227036c721518022b292926237e38271427fb
+      flags: 0
+    RecentlyUsedScenePath-9:
+      value: 22424703114646680e0b0227036c6b1505032b292926237e38271427fb
       flags: 0
     UnityRemoteDevice:
       value: 2d5e5a03
