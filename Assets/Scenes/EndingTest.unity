@@ -1389,6 +1389,11 @@ PrefabInstance:
       objectReference: {fileID: 727981553}
     - target: {fileID: 3944976956748813567, guid: 84b4ebb3d61bff447abdf754933ee0bf,
         type: 3}
+      propertyPath: allLevels.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3944976956748813567, guid: 84b4ebb3d61bff447abdf754933ee0bf,
+        type: 3}
       propertyPath: gimmickList.Array.size
       value: 19
       objectReference: {fileID: 0}
@@ -1548,7 +1553,7 @@ PrefabInstance:
     - target: {fileID: 3944976956748813567, guid: 84b4ebb3d61bff447abdf754933ee0bf,
         type: 3}
       propertyPath: onCarKillSounds.Array.data[2].volume
-      value: 0.2
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 3944976956748813567, guid: 84b4ebb3d61bff447abdf754933ee0bf,
         type: 3}
@@ -1558,7 +1563,7 @@ PrefabInstance:
     - target: {fileID: 3944976956748813567, guid: 84b4ebb3d61bff447abdf754933ee0bf,
         type: 3}
       propertyPath: onCarKillSounds.Array.data[4].volume
-      value: 0.2
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 3944976956748813567, guid: 84b4ebb3d61bff447abdf754933ee0bf,
         type: 3}
@@ -2392,16 +2397,6 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8564501610050249460, guid: c64e8a83ed992094a9bf1048877266a9,
-        type: 3}
-      propertyPath: m_Volume
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8564501610050249460, guid: c64e8a83ed992094a9bf1048877266a9,
-        type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: a1c592bc2a87f457eaeb8e93a1336ae0, type: 3}
     - target: {fileID: 8564501610050249461, guid: c64e8a83ed992094a9bf1048877266a9,
         type: 3}
       propertyPath: m_BackGroundColor.b

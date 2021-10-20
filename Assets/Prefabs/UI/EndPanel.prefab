@@ -276,8 +276,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: Tracklist
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a399f77e0a61e174a90c4e595baf5bd6, type: 2}
+  m_sharedMaterial: {fileID: 1741691670063534760, guid: a399f77e0a61e174a90c4e595baf5bd6,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -410,8 +411,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: REJOUER
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a399f77e0a61e174a90c4e595baf5bd6, type: 2}
+  m_sharedMaterial: {fileID: 1741691670063534760, guid: a399f77e0a61e174a90c4e595baf5bd6,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
