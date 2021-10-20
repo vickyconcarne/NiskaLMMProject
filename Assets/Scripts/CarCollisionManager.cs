@@ -214,10 +214,12 @@ public class CarCollisionManager : MonoBehaviour
         endingCinematicPrefab.SetActive(true);
         endingCam.enabled = true;
         playerController.GiveControl(false);
-        yield return new WaitForSeconds(0.5f);
         smokeTrails.SetActive(true);
         yield return new WaitForSeconds(1f);
+        
         cinemachineCam.enabled = false;
+        yield return new WaitForSeconds(2.5f);
+        niskaAnimator.SetTrigger("Cheer");
     }
 
 }
