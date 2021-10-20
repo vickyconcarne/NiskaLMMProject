@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class FormulaInfoSend : MonoBehaviour
@@ -14,6 +15,10 @@ public class FormulaInfoSend : MonoBehaviour
     [SerializeField] private TMP_InputField playerIDInput;
 
     [SerializeField] private TextMeshProUGUI scoreText;
+
+    public Button twitterButton;
+    public Button instagramButton;
+    public Button snapchatButton;
     public Animator formulaAnimator;
     public TextMeshProUGUI loadingText;
 
@@ -72,5 +77,21 @@ public class FormulaInfoSend : MonoBehaviour
     public void SetSocialMedia(string socialmedia)
     {
         chosenReseau = socialmedia;
+    }
+
+    public void ReselectSocialMedia()
+    {
+        switch (chosenReseau)
+        {
+            case "Twitter":
+                twitterButton.Select();
+                break;
+            case "Snapchat":
+                snapchatButton.Select();
+                break;
+            case "Instagram":
+                instagramButton.Select();
+                break;
+        }
     }
 }
