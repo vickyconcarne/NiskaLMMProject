@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d3acadeded6d7bc419b07294bb0059a3, type: 3}
-  m_Name: OuaisOuais
+  m_Name: KelBaye
   m_EditorClassIdentifier: 
-  affichage: we we!
-  clip: {fileID: 8300000, guid: 23e364721f4b849e9b3dc800224d944b, type: 3}
+  affichage: kel baye!
+  clip: {fileID: 8300000, guid: d4d3c76e8fd8741048aae93e761a5568, type: 3}
   volume: 1.5

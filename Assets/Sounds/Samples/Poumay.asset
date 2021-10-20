@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3acadeded6d7bc419b07294bb0059a3, type: 3}
   m_Name: Poumay
   m_EditorClassIdentifier: 
-  affichage: poumaay!
+  affichage: boomin!
   clip: {fileID: 8300000, guid: af70d3eae086b4a97863b8de5e1c486f, type: 3}
   volume: 1.5

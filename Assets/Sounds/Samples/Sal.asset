@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d3acadeded6d7bc419b07294bb0059a3, type: 3}
-  m_Name: BaBaBye
+  m_Name: Sal
   m_EditorClassIdentifier: 
-  affichage: ba ba bye!
-  clip: {fileID: 8300000, guid: 93f683ace4c36427daea66ff1f8efeb5, type: 3}
+  affichage: sal!
+  clip: {fileID: 8300000, guid: 416a84efb51c646f5b17c9c348fa4081, type: 3}
   volume: 1.5

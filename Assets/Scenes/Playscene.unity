@@ -1390,7 +1390,7 @@ PrefabInstance:
     - target: {fileID: 3944976956748813567, guid: 84b4ebb3d61bff447abdf754933ee0bf,
         type: 3}
       propertyPath: gimmickList.Array.size
-      value: 18
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 3944976956748813567, guid: 84b4ebb3d61bff447abdf754933ee0bf,
         type: 3}
@@ -1498,6 +1498,12 @@ PrefabInstance:
       propertyPath: gimmickList.Array.data[17]
       value: 
       objectReference: {fileID: 11400000, guid: 358482171e2ef7046b92a8697c876426,
+        type: 2}
+    - target: {fileID: 3944976956748813567, guid: 84b4ebb3d61bff447abdf754933ee0bf,
+        type: 3}
+      propertyPath: gimmickList.Array.data[18]
+      value: 
+      objectReference: {fileID: 11400000, guid: bd0432abb6b02c8449db4048a9ff4695,
         type: 2}
     - target: {fileID: 3944976956748813567, guid: 84b4ebb3d61bff447abdf754933ee0bf,
         type: 3}
@@ -1666,6 +1672,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1837358709, guid: af5c223923b64f24bac285c2a37f230d, type: 3}
+      propertyPath: m_Volume
+      value: 0.035
+      objectReference: {fileID: 0}
     - target: {fileID: 1937971016082046932, guid: af5c223923b64f24bac285c2a37f230d,
         type: 3}
       propertyPath: m_RootOrder
