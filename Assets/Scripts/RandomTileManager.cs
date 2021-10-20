@@ -441,7 +441,6 @@ public class RandomTileManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("current level was " + currentLevelIndex + " for " + allLevels.Count);
             if (!triggeredEnding)
             {
                 while (WhatTypeStandingOn() != ChallengeType.cars) yield return null; //Wait till we're in the clear
