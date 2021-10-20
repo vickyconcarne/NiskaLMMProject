@@ -422,6 +422,7 @@ public class RandomTileManager : MonoBehaviour
             trackTitle.text = number + " - " + currentLevel.nomDeLaTrack;
             if (currentRavitaillement)
             {
+                currentRavitaillement.canGiveMoney = false;
                 HideMoneyFill();
                 currentRavitaillement.ExitLevel();
             }
