@@ -1638,9 +1638,27 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 3944976956748813567, guid: 84b4ebb3d61bff447abdf754933ee0bf,
         type: 3}
+      propertyPath: allLevels.Array.data[1].emptyTilePrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 6743519024202991439, guid: 2be28a5296ccda3459ed9551f04f4155,
+        type: 3}
+    - target: {fileID: 3944976956748813567, guid: 84b4ebb3d61bff447abdf754933ee0bf,
+        type: 3}
+      propertyPath: allLevels.Array.data[1].emptyTilePrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 6743519024202991439, guid: 2be28a5296ccda3459ed9551f04f4155,
+        type: 3}
+    - target: {fileID: 3944976956748813567, guid: 84b4ebb3d61bff447abdf754933ee0bf,
+        type: 3}
       propertyPath: allLevels.Array.data[1].emptyTilePrefabs.Array.data[2]
       value: 
-      objectReference: {fileID: 6743519024202991439, guid: 8321807477e57f64ca39b4c8da53da6f,
+      objectReference: {fileID: 6743519024202991439, guid: 2be28a5296ccda3459ed9551f04f4155,
+        type: 3}
+    - target: {fileID: 3944976956748813567, guid: 84b4ebb3d61bff447abdf754933ee0bf,
+        type: 3}
+      propertyPath: allLevels.Array.data[1].emptyTilePrefabs.Array.data[3]
+      value: 
+      objectReference: {fileID: 6743519024202991439, guid: 2be28a5296ccda3459ed9551f04f4155,
         type: 3}
     - target: {fileID: 3944976956748813567, guid: 84b4ebb3d61bff447abdf754933ee0bf,
         type: 3}
@@ -2395,7 +2413,7 @@ PrefabInstance:
     - target: {fileID: 8564501610050249418, guid: c64e8a83ed992094a9bf1048877266a9,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8564501610050249461, guid: c64e8a83ed992094a9bf1048877266a9,
         type: 3}

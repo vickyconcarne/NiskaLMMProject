@@ -443,6 +443,7 @@ public class RandomTileManager : MonoBehaviour
         {
             if (!triggeredEnding)
             {
+                while (WhatTypeStandingOn() != ChallengeType.cars) yield return null; //Wait till we're in the clear
                 triggeredEnding = true;
                 if (currentRavitaillement)
                 {
