@@ -3075,7 +3075,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 27d0855a14d644a448f2b29f6c41d4ce, type: 3}
+      objectReference: {fileID: 8300000, guid: 4f407f1caa8c5448a940fb381d7741d8, type: 3}
     - target: {fileID: 8564501610050249461, guid: c64e8a83ed992094a9bf1048877266a9,
         type: 3}
       propertyPath: m_BackGroundColor.b
