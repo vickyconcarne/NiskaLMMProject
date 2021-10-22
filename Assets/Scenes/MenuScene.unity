@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028305, g: 0.22571313, b: 0.3069213, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6521,7 +6521,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d08aefc82794a444c8b156c1fefa891e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  givenURL: https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiQqqnrzdnzAhXOA2MBHZU0B5sQ6F56BAgCEAI&url=https%3A%2F%2Ftwitter.com%2FNiska_Officiel%3Fref_src%3Dtwsrc%255Egoogle%257Ctwcamp%255Eserp%257Ctwgr%255Eauthor&usg=AOvVaw2ZeD3o0ekMyY5mRvwbpVfD
+  givenURL: https://niska.store/
 --- !u!1 &549712770
 GameObject:
   m_ObjectHideFlags: 0
@@ -6557,7 +6557,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 755.98987, y: -502.01013}
+  m_SizeDelta: {x: 755.9899, y: -213.3708}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &549712772
 MonoBehaviour:

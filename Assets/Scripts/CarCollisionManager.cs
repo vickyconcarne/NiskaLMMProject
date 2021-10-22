@@ -216,10 +216,11 @@ public class CarCollisionManager : MonoBehaviour
         playerController.GiveControl(false);
         smokeTrails.SetActive(true);
         yield return new WaitForSeconds(1f);
-        
+        niskaAnimator.SetTrigger("Cheer");
         cinemachineCam.enabled = false;
         yield return new WaitForSeconds(2.5f);
-        niskaAnimator.SetTrigger("Cheer");
+        niskaAnimator.SetTrigger("Dance");
+
     }
 
 }

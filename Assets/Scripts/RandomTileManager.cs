@@ -29,9 +29,9 @@ public class RandomTileManager : MonoBehaviour
     public TextMeshProUGUI highScoreText;
     public TextMeshProUGUI scoreMultiplierText;
     public RectTransform scoreElement;
+    public TextMeshProUGUI formulaScoreText;
     const float timeToGoToScore = 0.5f;
     private Vector3 currentScoreOriginPoint;
-    public RectTransform scoreParent;
     private float scaleFactor;
     private float currentScoreUITime;
     private int currentHighScore;
@@ -324,7 +324,7 @@ public class RandomTileManager : MonoBehaviour
         scoreFillCircle.transform.position = initialPosition;
         scoreFillCircle.GetComponent<Image>().fillAmount = currentFill;
         scoreFillCircle.SetTrigger("Badump");
-        if (audiosource) audiosource.PlayOneShot(Resources.Load("Sounds/CashRegisterSound") as AudioClip);
+        if (audiosource) audiosource.PlayOneShot(Resources.Load("Sounds/CashRegisterSound") as AudioClip, 0.6f);
         return true;
     }
 
@@ -418,7 +418,7 @@ public class RandomTileManager : MonoBehaviour
             }
             yield return new WaitForSeconds(5f);
             trackAnimator.SetTrigger("TrackAppear");
-            string number = currentLevelIndex < 10 ? "0" + (currentLevelIndex+1).ToString() : (currentLevelIndex+1).ToString();
+            string number = currentLevelIndex < 9 ? "0" + (currentLevelIndex+1).ToString() : (currentLevelIndex+1).ToString();
             trackTitle.text = number + " - " + currentLevel.nomDeLaTrack;
             if (currentRavitaillement)
             {
@@ -445,6 +445,8 @@ public class RandomTileManager : MonoBehaviour
             {
                 while (WhatTypeStandingOn() != ChallengeType.cars) yield return null; //Wait till we're in the clear
                 triggeredEnding = true;
+                highScoreText.gameObject.SetActive(false);
+                formulaScoreText.text = currentHighScore.ToString();
                 if (currentRavitaillement)
                 {
                     currentRavitaillement.ExitLevel(); //Tell ravitaillement to beat it
