@@ -91,7 +91,7 @@ public class RandomTileManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (!instance) instance = this;
+        instance = this;
         currentSeed = (int)(System.DateTime.Now.DayOfYear + System.DateTime.Now.Second); //Get the day for seed, so we can have a modicum of randomness
         UnityEngine.Random.InitState(currentSeed);
         currentChallenge = ChallengeType.cars;

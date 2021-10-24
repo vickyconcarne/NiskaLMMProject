@@ -49,7 +49,7 @@ public class CarCollisionManager : MonoBehaviour
     // Start is called before the first frame update
     private IEnumerator Start()
     {
-        tileMgr = RandomTileManager.instance;
+        
         currentCollider = GetComponent<Collider>();
         yield return new WaitForSeconds(5f);
         StartCoroutine("GiveControl");
@@ -202,6 +202,7 @@ public class CarCollisionManager : MonoBehaviour
     /// </summary>
     public IEnumerator GiveControl()
     {
+        tileMgr = RandomTileManager.instance; //So we're sure its instantiated
         yield return new WaitForSeconds(3.5f); //used to be 2
         smokeTrails.SetActive(false);
         cinemachineCam.enabled = true;
