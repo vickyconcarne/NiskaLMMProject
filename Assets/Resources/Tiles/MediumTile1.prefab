@@ -190,6 +190,7 @@ Transform:
   - {fileID: 1744659368895468651}
   - {fileID: 4487277139649137544}
   - {fileID: 1694859956762009421}
+  - {fileID: 4304393785288630559}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1543,6 +1544,61 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8945866670930364672, guid: 3a62073654284fa408be264fa1e3a0a3,
     type: 3}
   m_PrefabInstance: {fileID: 4782849878219489928}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5159538580259383327
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6743519024202991436}
+    m_Modifications:
+    - target: {fileID: 8945866670930364672, guid: 3a62073654284fa408be264fa1e3a0a3,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 8945866670930364672, guid: 3a62073654284fa408be264fa1e3a0a3,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8945866670930364672, guid: 3a62073654284fa408be264fa1e3a0a3,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 8945866670930364672, guid: 3a62073654284fa408be264fa1e3a0a3,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8945866670930364672, guid: 3a62073654284fa408be264fa1e3a0a3,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8945866670930364672, guid: 3a62073654284fa408be264fa1e3a0a3,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8945866670930364672, guid: 3a62073654284fa408be264fa1e3a0a3,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8945866670930364673, guid: 3a62073654284fa408be264fa1e3a0a3,
+        type: 3}
+      propertyPath: m_Name
+      value: EasyBrick2 (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3a62073654284fa408be264fa1e3a0a3, type: 3}
+--- !u!4 &4304393785288630559 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8945866670930364672, guid: 3a62073654284fa408be264fa1e3a0a3,
+    type: 3}
+  m_PrefabInstance: {fileID: 5159538580259383327}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5352134529302731339
 PrefabInstance:

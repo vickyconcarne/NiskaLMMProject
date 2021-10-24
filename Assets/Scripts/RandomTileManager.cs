@@ -73,8 +73,9 @@ public class RandomTileManager : MonoBehaviour
     //Snapshot
     public Animator snapShotAnimator;
     public Image snapshotImage;
-    
+
     [Header("Gimmick de voix")]
+    public AudioClip cashRegisterSound;
     public List<GimmickVoix> gimmickList;
     [SerializeField] private TextMeshProUGUI gimmickText;
     [SerializeField] private Animator gimmickAnimator;
@@ -324,7 +325,7 @@ public class RandomTileManager : MonoBehaviour
         scoreFillCircle.transform.position = initialPosition;
         scoreFillCircle.GetComponent<Image>().fillAmount = currentFill;
         scoreFillCircle.SetTrigger("Badump");
-        if (audiosource) audiosource.PlayOneShot(Resources.Load("Sounds/CashRegisterSound") as AudioClip, 0.6f);
+        if (audiosource) audiosource.PlayOneShot(cashRegisterSound, 0.6f);
         return true;
     }
 
