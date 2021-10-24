@@ -44,9 +44,12 @@ public class CarCollisionManager : MonoBehaviour
     [SerializeField] private GameObject submitPanel;
     [SerializeField] private GameObject trackGrid;
 
+    private RandomTileManager tileMgr;
+
     // Start is called before the first frame update
     private IEnumerator Start()
     {
+        tileMgr = RandomTileManager.instance;
         currentCollider = GetComponent<Collider>();
         yield return new WaitForSeconds(5f);
         StartCoroutine("GiveControl");
@@ -102,7 +105,7 @@ public class CarCollisionManager : MonoBehaviour
     {
         EventManager.TriggerEvent("PlayerDeath");
         bombCanvas.SetActive(false);
-        RandomTileManager.instance.HideMoneyFill();
+        tileMgr.HideMoneyFill();
         niskaAnimator.gameObject.SetActive(false);
         //Cam
         //cinemachineCam.enabled = false;
@@ -131,7 +134,7 @@ public class CarCollisionManager : MonoBehaviour
         EventManager.TriggerEvent("PlayerDeath");
         StartCoroutine("FinishGame");
         bombCanvas.SetActive(false);
-        RandomTileManager.instance.HideMoneyFill();
+        tileMgr.HideMoneyFill();
         //Boom
         cashFlow.SetActive(false);
         currentCollider.enabled = false;
@@ -141,8 +144,8 @@ public class CarCollisionManager : MonoBehaviour
 
     public void ActivateSubmitPanel()
     {
-        int maxLevel = RandomTileManager.instance.GetMaxLevels();
-        int reachedLevel = RandomTileManager.instance.GetCurrentLevelIndex();
+        int maxLevel = tileMgr.GetMaxLevels();
+        int reachedLevel = tileMgr.GetCurrentLevelIndex();
         if (reachedLevel >= (maxLevel - 1))
         {
             submitPanel.SetActive(true);
@@ -152,13 +155,13 @@ public class CarCollisionManager : MonoBehaviour
     public IEnumerator ReloadScreenAfterWait(float val)
     {
         
-        int reachedLevel = RandomTileManager.instance.GetCurrentLevelIndex();
+        int reachedLevel = tileMgr.GetCurrentLevelIndex();
         
         GameObject trackInstancePrefab = Resources.Load("UI/TrackInstance") as GameObject;
         
-        for (int i = 0;  i < RandomTileManager.instance.GetMaxLevels(); i++)
+        for (int i = 0;  i < tileMgr.GetMaxLevels(); i++)
         {
-            Level currentLevel = RandomTileManager.instance.GetLevel(i);
+            Level currentLevel = tileMgr.GetLevel(i);
             string number = i+1<10 ? "0"+(i+1).ToString() : (i+1).ToString();
             string result ="";
             if (i > reachedLevel)
@@ -204,6 +207,7 @@ public class CarCollisionManager : MonoBehaviour
         cinemachineCam.enabled = true;
         playerController.GiveControl();
         bombCanvas.SetActive(true);
+        tileMgr.scoreBox.gameObject.SetActive(true);
         cinematicCam.enabled = false;
         Destroy(cinematicCam.transform.parent.gameObject);
     }

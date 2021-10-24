@@ -92,7 +92,7 @@ public class RandomTileManager : MonoBehaviour
     void Start()
     {
         if (!instance) instance = this;
-        currentSeed = (int)System.DateTime.Now.DayOfYear; //Get the day for seed, so we can have a modicum of randomness
+        currentSeed = (int)(System.DateTime.Now.DayOfYear + System.DateTime.Now.Second); //Get the day for seed, so we can have a modicum of randomness
         UnityEngine.Random.InitState(currentSeed);
         currentChallenge = ChallengeType.cars;
         UnityEngine.Random.InitState(currentSeed);
@@ -446,7 +446,7 @@ public class RandomTileManager : MonoBehaviour
             {
                 while (WhatTypeStandingOn() != ChallengeType.cars) yield return null; //Wait till we're in the clear
                 triggeredEnding = true;
-                highScoreText.gameObject.SetActive(false);
+                scoreBox.gameObject.SetActive(false);
                 formulaScoreText.text = currentHighScore.ToString();
                 if (currentRavitaillement)
                 {
