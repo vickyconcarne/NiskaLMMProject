@@ -45,8 +45,8 @@ namespace LMM_Movement
         public Vector3 rightLaneLocalPos;
 
         //Events
-
         private UnityAction playerDeathListener;
+        public Renderer baseRenderer;
 
         void Awake()
         {
@@ -88,8 +88,8 @@ namespace LMM_Movement
         public void Kill(lane attackingLane, bool silent = false)
         {
             RandomTileManager.instance.currentCountedCars += 1;
-            if(!silent)RandomTileManager.instance.PlayRandomCarDeathSound();
             RandomTileManager.instance.CheckState();
+            
             currentCollider.enabled = false;
             if (secondaryCollider) secondaryCollider.enabled = false;
             m_CharacterController.detectCollisions = false;
@@ -103,6 +103,7 @@ namespace LMM_Movement
             }
             if (!silent)
             {
+                RandomTileManager.instance.PlayRandomCarDeathSound();
                 RandomTileManager.instance.AddToScore(scoreToAddOnDeath, transform.position);
                 if (carAnimator)
                 {
@@ -153,13 +154,21 @@ namespace LMM_Movement
                 switch (currentTag)
                 {
                     case "Obstacle":
-                        Kill(lane.nolane);
+                        if (baseRenderer.isVisible) Kill(lane.nolane);
+                        else Kill(lane.nolane, true);
+
                         break;
                     case "OtherCar":
-                        if(movementState != actorState.AggressiveSwerving)
+
+                        if (movementState != actorState.AggressiveSwerving)
                         {
                             var carComp = col.GetComponent<NPCCarController>();
-                            if (carComp) Kill(carComp.chosenLane);
+                            if (carComp)
+                            {
+                                if (baseRenderer.isVisible) Kill(carComp.chosenLane);
+                                else Kill(carComp.chosenLane, true);
+
+                            }
                         }
                         break;
                     default:

@@ -86,6 +86,7 @@ MonoBehaviour:
   leftLaneLocalPos: {x: 0, y: 0, z: 0}
   middleLaneLocalPos: {x: 0, y: 0, z: 0}
   rightLaneLocalPos: {x: 0, y: 0, z: 0}
+  baseRenderer: {fileID: 1346425791868385722}
 --- !u!65 &6039523837792194791
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -77201,6 +77202,12 @@ PrefabInstance:
 --- !u!4 &1346425791865961306 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1446322213906986121, guid: 1d8248885b133284088cb8fbf86bdb85,
+    type: 3}
+  m_PrefabInstance: {fileID: 485589948422328275}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &1346425791868385722 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 1446322213904692841, guid: 1d8248885b133284088cb8fbf86bdb85,
     type: 3}
   m_PrefabInstance: {fileID: 485589948422328275}
   m_PrefabAsset: {fileID: 0}

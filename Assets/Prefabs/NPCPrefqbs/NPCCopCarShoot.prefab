@@ -507,6 +507,7 @@ MonoBehaviour:
   leftLaneLocalPos: {x: 0, y: 0, z: 0}
   middleLaneLocalPos: {x: 0, y: 0, z: 0}
   rightLaneLocalPos: {x: 0, y: 0, z: 0}
+  baseRenderer: {fileID: 9108422722592801782}
 --- !u!65 &6039523837792194791
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -77670,6 +77671,12 @@ GameObject:
 --- !u!4 &9108422722590376212 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400010, guid: 2bce4e452d1732441a288976cac6660c,
+    type: 3}
+  m_PrefabInstance: {fileID: 9108422722590776222}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &9108422722592801782 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2300008, guid: 2bce4e452d1732441a288976cac6660c,
     type: 3}
   m_PrefabInstance: {fileID: 9108422722590776222}
   m_PrefabAsset: {fileID: 0}
