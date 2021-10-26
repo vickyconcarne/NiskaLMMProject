@@ -474,7 +474,7 @@ PrefabInstance:
     - target: {fileID: 4548782532097706149, guid: fd6c5d8d2f5ae524d848c3570516bbdf,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4548782532097706149, guid: fd6c5d8d2f5ae524d848c3570516bbdf,
         type: 3}
@@ -504,7 +504,7 @@ PrefabInstance:
     - target: {fileID: 4548782532097706151, guid: fd6c5d8d2f5ae524d848c3570516bbdf,
         type: 3}
       propertyPath: chosenLane
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4548782532097706151, guid: fd6c5d8d2f5ae524d848c3570516bbdf,
         type: 3}
