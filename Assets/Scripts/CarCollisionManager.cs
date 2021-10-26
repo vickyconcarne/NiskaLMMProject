@@ -24,7 +24,7 @@ public class CarCollisionManager : MonoBehaviour
     public CinemachineBrain cinemachineBrain;
     public GameObject explosionEffect;
     public GameObject cashFlow;
-
+    public SimpleRotator rotatingDolly;
     public CinemachineVirtualCamera cinematicCam;
     //Ending cinematic
     public GameObject endingCinematicPrefab;
@@ -111,8 +111,9 @@ public class CarCollisionManager : MonoBehaviour
         //cinemachineCam.enabled = false;
         //Destroy(cinemachineCam);
         //cinemachineBrain.enabled = false;
+        rotatingDolly.enabled = true;
         cinemachineCam.LookAt = deathTarget;
-        cinemachineCam.Follow = deathTarget;
+        //cinemachineCam.Follow = this.transform;
         cinemachineCam.GetCinemachineComponent<CinemachineTrackedDolly>().m_Path = circularPath;
         //Boom
         cashFlow.SetActive(false);

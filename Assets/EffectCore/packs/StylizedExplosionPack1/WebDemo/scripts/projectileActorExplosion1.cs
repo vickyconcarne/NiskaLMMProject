@@ -118,6 +118,7 @@ public class projectileActorExplosion1 : MonoBehaviour {
         bombType += value;
         if (bombType <= 0)
         {
+
             bombType = bombList.Length + -1;
         }
         if (bombType >= bombList.Length)
