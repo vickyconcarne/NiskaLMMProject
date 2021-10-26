@@ -68,7 +68,7 @@ MonoBehaviour:
   secondaryCollider: {fileID: 0}
   canMove: 1
   carChild: {fileID: 6039523839720198821}
-  scoreToAddOnDeath: 0
+  scoreToAddOnDeath: 10
   optionalWiggler: {fileID: 0}
   carAnimator: {fileID: 6039523839720198842}
   explodeLeftTrigger: Explode

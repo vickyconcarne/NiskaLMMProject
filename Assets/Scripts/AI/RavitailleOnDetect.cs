@@ -13,6 +13,7 @@ public class RavitailleOnDetect : AOnSideDetection
     public Vector3 moveVector;
     public CharacterController charController;
     public Animator transitionAnimator;
+    public Animator zoneAnimator;
     public bool canGiveMoney = true;
     private bool canPlaceFill = false;
     private bool exiting = false;
@@ -112,6 +113,7 @@ public class RavitailleOnDetect : AOnSideDetection
         else
         {
             currentMoney += moneyToAddPerTick;
+            zoneAnimator.SetTrigger("Pop");
         }
     }
 

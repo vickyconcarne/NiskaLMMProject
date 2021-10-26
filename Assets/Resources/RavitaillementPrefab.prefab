@@ -117,6 +117,7 @@ MonoBehaviour:
   moveVector: {x: 0, y: 0, z: 20}
   charController: {fileID: 8933549683255507168}
   transitionAnimator: {fileID: 8933549683255507171}
+  zoneAnimator: {fileID: 6274931289189594804}
   canGiveMoney: 1
 --- !u!1 &8933549683255507199
 GameObject:
@@ -734,6 +735,12 @@ PrefabInstance:
 --- !u!4 &6117381089260977691 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3696183124215268049, guid: c2ec17496d4b0b348948a0c5d488ea8a,
+    type: 3}
+  m_PrefabInstance: {fileID: 7470969612666059978}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &6274931289189594804 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3511470176280480382, guid: c2ec17496d4b0b348948a0c5d488ea8a,
     type: 3}
   m_PrefabInstance: {fileID: 7470969612666059978}
   m_PrefabAsset: {fileID: 0}
