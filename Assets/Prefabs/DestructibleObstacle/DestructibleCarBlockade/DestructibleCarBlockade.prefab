@@ -77011,6 +77011,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: glow_fakelight
       objectReference: {fileID: 0}
+    - target: {fileID: 4248881996689708182, guid: dbcc11963d83040338af86cb4670f851,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4566894696937816068, guid: dbcc11963d83040338af86cb4670f851,
         type: 3}
       propertyPath: m_RootOrder
