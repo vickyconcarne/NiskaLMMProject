@@ -74,10 +74,10 @@ Material:
     - _FogAnimationHeight: 0
     - _FogDensity: 0.6
     - _FogEnd: 5.6
-    - _FogHeight: 34.6
+    - _FogHeight: 78.82
     - _FogStart: 0
-    - _FogYStartPos: -7.9
-    - _FrontLight: -0.45
+    - _FogYStartPos: -29.09
+    - _FrontLight: -0.25
     - _GlossMapScale: 0.208
     - _Glossiness: 0.35
     - _GlossyReflections: 1
