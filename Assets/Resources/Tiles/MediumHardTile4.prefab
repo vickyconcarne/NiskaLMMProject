@@ -31,7 +31,7 @@ Transform:
   m_LocalScale: {x: 1.5, y: 1, z: 10}
   m_Children: []
   m_Father: {fileID: 6743519024202991436}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6743519024144138798
 MeshFilter:
@@ -124,11 +124,11 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 628074564064145737}
+  - {fileID: 8337200744201778164}
   - {fileID: 6743519024144138795}
   - {fileID: 6743519024539021037}
   - {fileID: 8622519167039361564}
-  - {fileID: 628074564064145737}
-  - {fileID: 8337200744201778164}
   - {fileID: 5164618254526309284}
   - {fileID: 6732955746440888039}
   - {fileID: 450198430668996420}
@@ -210,7 +210,7 @@ Transform:
   m_LocalScale: {x: 30.862, y: 1, z: 10}
   m_Children: []
   m_Father: {fileID: 6743519024202991436}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6743519024539021024
 MeshFilter:
@@ -286,6 +286,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: scp_md_desert_grass_01 (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 22e55f4dd9bb740409746d7b2ce39748, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 22e55f4dd9bb740409746d7b2ce39748, type: 3}
       propertyPath: m_RootOrder
       value: 35
@@ -349,6 +353,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6743519024202991436}
     m_Modifications:
+    - target: {fileID: 287090847269358990, guid: 0dc9c523926311e45a744414ee61c58e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1775605646395908698, guid: 0dc9c523926311e45a744414ee61c58e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 3227679108648218858, guid: 0dc9c523926311e45a744414ee61c58e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 4355452602507307648, guid: 0dc9c523926311e45a744414ee61c58e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4711893669482836482, guid: 0dc9c523926311e45a744414ee61c58e,
         type: 3}
       propertyPath: m_RootOrder
@@ -409,6 +433,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle
       objectReference: {fileID: 0}
+    - target: {fileID: 8707529153603926269, guid: 0dc9c523926311e45a744414ee61c58e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8833621429775770467, guid: 0dc9c523926311e45a744414ee61c58e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0dc9c523926311e45a744414ee61c58e, type: 3}
 --- !u!4 &5164618254526309284 stripped
@@ -427,6 +461,42 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 40673fa1c5f6e364494fe26b62906a69, type: 3}
       propertyPath: m_Name
       value: scp_cy_truck_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 40673fa1c5f6e364494fe26b62906a69, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 40673fa1c5f6e364494fe26b62906a69, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 40673fa1c5f6e364494fe26b62906a69, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 40673fa1c5f6e364494fe26b62906a69, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: 40673fa1c5f6e364494fe26b62906a69, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 40673fa1c5f6e364494fe26b62906a69, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100012, guid: 40673fa1c5f6e364494fe26b62906a69, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100014, guid: 40673fa1c5f6e364494fe26b62906a69, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100016, guid: 40673fa1c5f6e364494fe26b62906a69, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 40673fa1c5f6e364494fe26b62906a69, type: 3}
       propertyPath: m_RootOrder
@@ -599,6 +669,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: scp_md_desert_grass_01 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 22e55f4dd9bb740409746d7b2ce39748, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 22e55f4dd9bb740409746d7b2ce39748, type: 3}
       propertyPath: m_RootOrder
       value: 25
@@ -662,10 +736,60 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6743519024202991436}
     m_Modifications:
+    - target: {fileID: 356138371925397845, guid: 9647704567c8dda4c89533bcd1538886,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 356138372071372163, guid: 9647704567c8dda4c89533bcd1538886,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 482247674088156701, guid: 9647704567c8dda4c89533bcd1538886,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 482247674167593675, guid: 9647704567c8dda4c89533bcd1538886,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 4636375860355000318, guid: 9647704567c8dda4c89533bcd1538886,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 4636375861047264040, guid: 9647704567c8dda4c89533bcd1538886,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 5831351569529273748, guid: 9647704567c8dda4c89533bcd1538886,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 5831351570188048706, guid: 9647704567c8dda4c89533bcd1538886,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7242401430190124836, guid: 9647704567c8dda4c89533bcd1538886,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7242401430539045874, guid: 9647704567c8dda4c89533bcd1538886,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 8945866670930364672, guid: 9647704567c8dda4c89533bcd1538886,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8945866670930364672, guid: 9647704567c8dda4c89533bcd1538886,
         type: 3}
@@ -722,6 +846,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: LeftMiddleInTheBackAndRightInFront
       objectReference: {fileID: 0}
+    - target: {fileID: 8945866670930364673, guid: 9647704567c8dda4c89533bcd1538886,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 9213777482838819056, guid: 9647704567c8dda4c89533bcd1538886,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 9213777483295695910, guid: 9647704567c8dda4c89533bcd1538886,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9647704567c8dda4c89533bcd1538886, type: 3}
 --- !u!4 &8622519167039361564 stripped
@@ -740,7 +879,7 @@ PrefabInstance:
     - target: {fileID: 8945866670930364672, guid: 25bffd17863b23d4a9a2b9101ecc02c4,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8945866670930364672, guid: 25bffd17863b23d4a9a2b9101ecc02c4,
         type: 3}
@@ -994,6 +1133,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6743519024202991436}
     m_Modifications:
+    - target: {fileID: 287090847269358990, guid: 0dc9c523926311e45a744414ee61c58e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1775605646395908698, guid: 0dc9c523926311e45a744414ee61c58e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 3227679108648218858, guid: 0dc9c523926311e45a744414ee61c58e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 4355452602507307648, guid: 0dc9c523926311e45a744414ee61c58e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4711893669482836482, guid: 0dc9c523926311e45a744414ee61c58e,
         type: 3}
       propertyPath: m_RootOrder
@@ -1054,6 +1213,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8707529153603926269, guid: 0dc9c523926311e45a744414ee61c58e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8833621429775770467, guid: 0dc9c523926311e45a744414ee61c58e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0dc9c523926311e45a744414ee61c58e, type: 3}
 --- !u!4 &5958216750855209971 stripped
@@ -1072,6 +1241,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 22e55f4dd9bb740409746d7b2ce39748, type: 3}
       propertyPath: m_Name
       value: scp_md_desert_grass_01 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 22e55f4dd9bb740409746d7b2ce39748, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 22e55f4dd9bb740409746d7b2ce39748, type: 3}
       propertyPath: m_RootOrder
@@ -1140,6 +1313,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: scp_md_desert_grass_01 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 22e55f4dd9bb740409746d7b2ce39748, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 22e55f4dd9bb740409746d7b2ce39748, type: 3}
       propertyPath: m_RootOrder
       value: 28
@@ -1203,6 +1380,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6743519024202991436}
     m_Modifications:
+    - target: {fileID: 287090847269358990, guid: 0dc9c523926311e45a744414ee61c58e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1775605646395908698, guid: 0dc9c523926311e45a744414ee61c58e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 3227679108648218858, guid: 0dc9c523926311e45a744414ee61c58e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 4355452602507307648, guid: 0dc9c523926311e45a744414ee61c58e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4711893669482836482, guid: 0dc9c523926311e45a744414ee61c58e,
         type: 3}
       propertyPath: m_RootOrder
@@ -1263,6 +1460,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8707529153603926269, guid: 0dc9c523926311e45a744414ee61c58e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8833621429775770467, guid: 0dc9c523926311e45a744414ee61c58e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0dc9c523926311e45a744414ee61c58e, type: 3}
 --- !u!4 &6401056734878258505 stripped
@@ -1278,6 +1485,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6743519024202991436}
     m_Modifications:
+    - target: {fileID: 287090847269358990, guid: 0dc9c523926311e45a744414ee61c58e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1775605646395908698, guid: 0dc9c523926311e45a744414ee61c58e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 3227679108648218858, guid: 0dc9c523926311e45a744414ee61c58e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 4355452602507307648, guid: 0dc9c523926311e45a744414ee61c58e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4711893669482836482, guid: 0dc9c523926311e45a744414ee61c58e,
         type: 3}
       propertyPath: m_RootOrder
@@ -1337,6 +1564,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8707529153603926269, guid: 0dc9c523926311e45a744414ee61c58e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8833621429775770467, guid: 0dc9c523926311e45a744414ee61c58e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0dc9c523926311e45a744414ee61c58e, type: 3}
@@ -1436,6 +1673,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: scp_md_desert_grass_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 22e55f4dd9bb740409746d7b2ce39748, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 22e55f4dd9bb740409746d7b2ce39748, type: 3}
       propertyPath: m_RootOrder
       value: 21
@@ -1502,6 +1743,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 22e55f4dd9bb740409746d7b2ce39748, type: 3}
       propertyPath: m_Name
       value: scp_md_desert_grass_01 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 22e55f4dd9bb740409746d7b2ce39748, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 22e55f4dd9bb740409746d7b2ce39748, type: 3}
       propertyPath: m_RootOrder
@@ -1661,6 +1906,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: scp_md_desert_grass_01 (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 22e55f4dd9bb740409746d7b2ce39748, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 22e55f4dd9bb740409746d7b2ce39748, type: 3}
       propertyPath: m_RootOrder
       value: 31
@@ -1727,6 +1976,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: f6d5c7900ca0aec4787c209a1a6b6f69, type: 3}
       propertyPath: m_Name
       value: scp_md_cactus_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f6d5c7900ca0aec4787c209a1a6b6f69, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f6d5c7900ca0aec4787c209a1a6b6f69, type: 3}
       propertyPath: m_RootOrder
@@ -1795,6 +2048,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: scp_md_desert_grass_01 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 22e55f4dd9bb740409746d7b2ce39748, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 22e55f4dd9bb740409746d7b2ce39748, type: 3}
       propertyPath: m_RootOrder
       value: 24
@@ -1858,6 +2115,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6743519024202991436}
     m_Modifications:
+    - target: {fileID: 287090847269358990, guid: 0dc9c523926311e45a744414ee61c58e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1775605646395908698, guid: 0dc9c523926311e45a744414ee61c58e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 3227679108648218858, guid: 0dc9c523926311e45a744414ee61c58e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 4355452602507307648, guid: 0dc9c523926311e45a744414ee61c58e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4711893669482836482, guid: 0dc9c523926311e45a744414ee61c58e,
         type: 3}
       propertyPath: m_RootOrder
@@ -1918,6 +2195,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8707529153603926269, guid: 0dc9c523926311e45a744414ee61c58e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8833621429775770467, guid: 0dc9c523926311e45a744414ee61c58e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0dc9c523926311e45a744414ee61c58e, type: 3}
 --- !u!4 &8758038926624000476 stripped
@@ -1936,6 +2223,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 22e55f4dd9bb740409746d7b2ce39748, type: 3}
       propertyPath: m_Name
       value: scp_md_desert_grass_01 (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 22e55f4dd9bb740409746d7b2ce39748, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 22e55f4dd9bb740409746d7b2ce39748, type: 3}
       propertyPath: m_RootOrder
@@ -2003,6 +2294,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 22e55f4dd9bb740409746d7b2ce39748, type: 3}
       propertyPath: m_Name
       value: scp_md_desert_grass_01 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 22e55f4dd9bb740409746d7b2ce39748, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 22e55f4dd9bb740409746d7b2ce39748, type: 3}
       propertyPath: m_RootOrder
@@ -2072,6 +2367,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 1884693240122257041, guid: 7dbea41733d674848a649faf6a451793,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 2027447158849607594, guid: 7dbea41733d674848a649faf6a451793,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -2088,6 +2388,11 @@ PrefabInstance:
       value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 3143002809902105842, guid: 7dbea41733d674848a649faf6a451793,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 3509400463277292273, guid: 7dbea41733d674848a649faf6a451793,
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
@@ -2167,6 +2472,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 6972372351899704944, guid: 7dbea41733d674848a649faf6a451793,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 7344264914893246271, guid: 7dbea41733d674848a649faf6a451793,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -2195,6 +2505,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 22e55f4dd9bb740409746d7b2ce39748, type: 3}
       propertyPath: m_Name
       value: scp_md_desert_grass_01 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 22e55f4dd9bb740409746d7b2ce39748, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 22e55f4dd9bb740409746d7b2ce39748, type: 3}
       propertyPath: m_RootOrder
@@ -2263,6 +2577,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: scp_md_desert_grass_01
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 22e55f4dd9bb740409746d7b2ce39748, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 22e55f4dd9bb740409746d7b2ce39748, type: 3}
       propertyPath: m_RootOrder
       value: 18
@@ -2329,6 +2647,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 22e55f4dd9bb740409746d7b2ce39748, type: 3}
       propertyPath: m_Name
       value: scp_md_desert_grass_01 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 22e55f4dd9bb740409746d7b2ce39748, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 22e55f4dd9bb740409746d7b2ce39748, type: 3}
       propertyPath: m_RootOrder
@@ -2397,6 +2719,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: scp_md_cactus_02
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fd94021f599a6f848af9f6f3d96ee659, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fd94021f599a6f848af9f6f3d96ee659, type: 3}
       propertyPath: m_RootOrder
       value: 20
@@ -2463,6 +2789,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 22e55f4dd9bb740409746d7b2ce39748, type: 3}
       propertyPath: m_Name
       value: scp_md_desert_grass_01 (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 22e55f4dd9bb740409746d7b2ce39748, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 22e55f4dd9bb740409746d7b2ce39748, type: 3}
       propertyPath: m_RootOrder
@@ -2531,6 +2861,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: scp_md_desert_grass_01 (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 22e55f4dd9bb740409746d7b2ce39748, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 22e55f4dd9bb740409746d7b2ce39748, type: 3}
       propertyPath: m_RootOrder
       value: 34
@@ -2594,6 +2928,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6743519024202991436}
     m_Modifications:
+    - target: {fileID: 287090847269358990, guid: 0dc9c523926311e45a744414ee61c58e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1775605646395908698, guid: 0dc9c523926311e45a744414ee61c58e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 3227679108648218858, guid: 0dc9c523926311e45a744414ee61c58e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 4355452602507307648, guid: 0dc9c523926311e45a744414ee61c58e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4711893669482836482, guid: 0dc9c523926311e45a744414ee61c58e,
         type: 3}
       propertyPath: m_RootOrder
@@ -2654,6 +3008,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 8707529153603926269, guid: 0dc9c523926311e45a744414ee61c58e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8833621429775770467, guid: 0dc9c523926311e45a744414ee61c58e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0dc9c523926311e45a744414ee61c58e, type: 3}
 --- !u!4 &2939976974266540575 stripped
@@ -2672,6 +3036,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 22e55f4dd9bb740409746d7b2ce39748, type: 3}
       propertyPath: m_Name
       value: scp_md_desert_grass_01 (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 22e55f4dd9bb740409746d7b2ce39748, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 22e55f4dd9bb740409746d7b2ce39748, type: 3}
       propertyPath: m_RootOrder
@@ -2823,6 +3191,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: scp_cy_gravel_pile
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 116eeab26a09a0e4bb8e03cdb833cdfc, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 116eeab26a09a0e4bb8e03cdb833cdfc, type: 3}
       propertyPath: m_RootOrder
       value: 17
@@ -2901,7 +3273,7 @@ PrefabInstance:
     - target: {fileID: 8945866670930364672, guid: dfb1113121b6e7244bd704cb57d08e74,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8945866670930364672, guid: dfb1113121b6e7244bd704cb57d08e74,
         type: 3}
@@ -2977,6 +3349,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: scp_md_desert_grass_01 (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 22e55f4dd9bb740409746d7b2ce39748, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 22e55f4dd9bb740409746d7b2ce39748, type: 3}
       propertyPath: m_RootOrder
       value: 33
@@ -3043,6 +3419,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 15661a12a19acc340a88875f5de2efd0, type: 3}
       propertyPath: m_Name
       value: scp_cy_pipes_stack_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 15661a12a19acc340a88875f5de2efd0, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 15661a12a19acc340a88875f5de2efd0, type: 3}
       propertyPath: m_RootOrder
