@@ -36,7 +36,7 @@ public class projectileActorExplosion1 : MonoBehaviour {
 
     public int bombType = 0;
 
-    public ParticleSystem muzzleflare;
+
 
     public float min, max;
 
@@ -141,7 +141,6 @@ public class projectileActorExplosion1 : MonoBehaviour {
             bombUIAnimator.SetTrigger("Pop");
             niskaAnimator.SetTrigger("Throw");
         }
-        muzzleflare.Play();
 
         Rigidbody rocketInstance;
         rocketInstance = Instantiate(bombList[bombType].bombPrefab, spawnLocator.position, Quaternion.identity) as Rigidbody;
