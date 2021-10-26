@@ -1374,6 +1374,17 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1122751029831047218, guid: c7ded406df3b01a4bb4ecc81f6f1aca6,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4102218707731704632, guid: c7ded406df3b01a4bb4ecc81f6f1aca6,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2b9f21e9e71b24084b4594a8c3b6eab0,
+        type: 3}
     - target: {fileID: 6446208588201594350, guid: c7ded406df3b01a4bb4ecc81f6f1aca6,
         type: 3}
       propertyPath: m_Color.a
@@ -1382,6 +1393,21 @@ PrefabInstance:
     - target: {fileID: 6446208588201594350, guid: c7ded406df3b01a4bb4ecc81f6f1aca6,
         type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446208589047738301, guid: c7ded406df3b01a4bb4ecc81f6f1aca6,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446208589047738301, guid: c7ded406df3b01a4bb4ecc81f6f1aca6,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446208589091663545, guid: c7ded406df3b01a4bb4ecc81f6f1aca6,
+        type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1770,7 +1796,7 @@ PrefabInstance:
         type: 3}
       propertyPath: mugshotSound
       value: 
-      objectReference: {fileID: 8300000, guid: 5f10c3cac5d6a264e8e9eae16a6b6533, type: 3}
+      objectReference: {fileID: 8300000, guid: ef3029dfdf1674c939358d62cddf5698, type: 3}
     - target: {fileID: 3944976956748813567, guid: 84b4ebb3d61bff447abdf754933ee0bf,
         type: 3}
       propertyPath: scoreElement
@@ -1825,7 +1851,7 @@ PrefabInstance:
         type: 3}
       propertyPath: cashRegisterSound
       value: 
-      objectReference: {fileID: 8300000, guid: ae9b2070cc7d6ed41ad10f72714d3e21, type: 3}
+      objectReference: {fileID: 8300000, guid: 27e5d4b40fb4f4eb699197c4c6421899, type: 3}
     - target: {fileID: 3944976956748813567, guid: 84b4ebb3d61bff447abdf754933ee0bf,
         type: 3}
       propertyPath: scoreMultiplierText
