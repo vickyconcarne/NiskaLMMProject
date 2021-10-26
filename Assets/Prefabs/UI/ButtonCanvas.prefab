@@ -1583,6 +1583,102 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   givenURL: https://niska.store/
+--- !u!82 &2605361991821124643
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5462256578450693906}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 69b17807bdb214eb8b3c4023700a6d86, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.78
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &6344204435992089066
 GameObject:
   m_ObjectHideFlags: 0
@@ -3408,6 +3504,12 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 9101712207469759130}
   m_PrefabAsset: {fileID: 0}
+--- !u!224 &5462256577423087207 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 3855664491002486013, guid: fe0ea50cd44331c4ead4be739e604afb,
+    type: 3}
+  m_PrefabInstance: {fileID: 9101712207469759130}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &5462256577423087201 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3855664491002486011, guid: fe0ea50cd44331c4ead4be739e604afb,
@@ -3420,12 +3522,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!224 &5462256577423087207 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 3855664491002486013, guid: fe0ea50cd44331c4ead4be739e604afb,
-    type: 3}
-  m_PrefabInstance: {fileID: 9101712207469759130}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &9101712208293750319
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3904,7 +4000,42 @@ PrefabInstance:
     - target: {fileID: 3855664491002486012, guid: fe0ea50cd44331c4ead4be739e604afb,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3855664491002486012, guid: fe0ea50cd44331c4ead4be739e604afb,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3855664491002486012, guid: fe0ea50cd44331c4ead4be739e604afb,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 2605361991821124643}
+    - target: {fileID: 3855664491002486012, guid: fe0ea50cd44331c4ead4be739e604afb,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 3855664491002486012, guid: fe0ea50cd44331c4ead4be739e604afb,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3855664491002486012, guid: fe0ea50cd44331c4ead4be739e604afb,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3855664491002486012, guid: fe0ea50cd44331c4ead4be739e604afb,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3855664491002486012, guid: fe0ea50cd44331c4ead4be739e604afb,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 3855664491050792325, guid: fe0ea50cd44331c4ead4be739e604afb,
         type: 3}
@@ -4019,6 +4150,12 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 198272561, guid: fe0ea50cd44331c4ead4be739e604afb, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: fe0ea50cd44331c4ead4be739e604afb, type: 3}
+--- !u!1 &5462256578450693906 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3855664491002486014, guid: fe0ea50cd44331c4ead4be739e604afb,
+    type: 3}
+  m_PrefabInstance: {fileID: 9101712208337978348}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &5462256578540942953 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3855664491050792325, guid: fe0ea50cd44331c4ead4be739e604afb,
