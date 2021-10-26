@@ -399,6 +399,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_obstacleAnimator: {fileID: 2129414826873566266}
   nameOfAnimationTrigger: PassBy
+  canBeTriggeredByNPC: 0
+  addExplosionSound: 0
 --- !u!65 &3759180595097476601
 BoxCollider:
   m_ObjectHideFlags: 0
