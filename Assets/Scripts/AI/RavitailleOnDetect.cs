@@ -108,7 +108,7 @@ public class RavitailleOnDetect : AOnSideDetection
         if(currentMoney >= maxMoney)
         {
             canGiveMoney = false;
-            StartCoroutine(ExitLevel());
+            if(!exiting) StartCoroutine(ExitLevel());
         }
         else
         {
@@ -121,8 +121,7 @@ public class RavitailleOnDetect : AOnSideDetection
     {
         if (!exiting)
         {
-            
-            
+            exiting = true;
             transitionAnimator.SetTrigger("Exit");
             Destroy(transform.parent.gameObject, 8f);
             currentTime = 1f;
@@ -133,7 +132,7 @@ public class RavitailleOnDetect : AOnSideDetection
                 yield return null;
             }
             RandomTileManager.instance.HideMoneyFill();
-            exiting = true;
+            
         }
         
     }
