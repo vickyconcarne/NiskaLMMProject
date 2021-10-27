@@ -260,7 +260,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   moneyToAddPerTick: 10
-  maxMoney: 180
+  maxMoney: 60
   moveVector: {x: 0, y: 0, z: 20}
   charController: {fileID: 1958341228}
   transitionAnimator: {fileID: 1958341226}
@@ -682,15 +682,15 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3781755025858920754}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &4112525514520063448 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 966547696719260906, guid: 81498a6d81930db46a3a7a1514373634,
-    type: 3}
-  m_PrefabInstance: {fileID: 3781755025858920754}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3628054695853078370 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 441931857208817232, guid: 81498a6d81930db46a3a7a1514373634,
+    type: 3}
+  m_PrefabInstance: {fileID: 3781755025858920754}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4112525514520063448 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 966547696719260906, guid: 81498a6d81930db46a3a7a1514373634,
     type: 3}
   m_PrefabInstance: {fileID: 3781755025858920754}
   m_PrefabAsset: {fileID: 0}
@@ -824,15 +824,15 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 4510382891494280398}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1069058223146708231 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3480745529147302345, guid: 952430bf4054a124e8a1c767233cc10e,
-    type: 3}
-  m_PrefabInstance: {fileID: 4510382891494280398}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3330331946493471946 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8021001004253913084, guid: 952430bf4054a124e8a1c767233cc10e,
+    type: 3}
+  m_PrefabInstance: {fileID: 4510382891494280398}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1069058223146708231 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3480745529147302345, guid: 952430bf4054a124e8a1c767233cc10e,
     type: 3}
   m_PrefabInstance: {fileID: 4510382891494280398}
   m_PrefabAsset: {fileID: 0}

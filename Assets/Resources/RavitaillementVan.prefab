@@ -142,7 +142,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   moneyToAddPerTick: 10
-  maxMoney: 150
+  maxMoney: 60
   moveVector: {x: 0, y: 0, z: 20}
   charController: {fileID: 3209247121411945169}
   transitionAnimator: {fileID: 3209247121411945168}
