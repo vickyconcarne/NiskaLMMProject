@@ -93,6 +93,7 @@ namespace LMM_Movement
             currentCollider.enabled = false;
             if (secondaryCollider) secondaryCollider.enabled = false;
             m_CharacterController.detectCollisions = false;
+            if(GetComponent<Rigidbody>())Destroy(this.GetComponent<Rigidbody>());
             m_CharacterController.enabled = false;
             canMove = false;
             if (possibleDetector)

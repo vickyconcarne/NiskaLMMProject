@@ -22,7 +22,8 @@ public class FormulaInfoSend : MonoBehaviour
     public Animator formulaAnimator;
     public TextMeshProUGUI loadingText;
 
-    private string BASE_URL = "https://docs.google.com/forms/u/5/d/e/1FAIpQLSce8xb_tjOwDYTPjJi0brAiGx1d08a_fJ2juMjPu2_oRC1USw/formResponse";
+    //private string BASE_URL = "https://docs.google.com/forms/u/5/d/e/1FAIpQLSce8xb_tjOwDYTPjJi0brAiGx1d08a_fJ2juMjPu2_oRC1USw/formResponse";
+    private string BASE_URL = "https://docs.google.com/forms/d/e/1FAIpQLSe3DQetXV9wG5DC6Fd8YggtaibHiGu__MLzPME39SoTbrmx5Q/viewform?usp=pp_url";
     void Start()
     {
         highscore = RandomTileManager.instance.GetScore().ToString();
