@@ -325,7 +325,7 @@ public class RandomTileManager : MonoBehaviour
         scoreFillCircle.transform.position = initialPosition;
         scoreFillCircle.GetComponent<Image>().fillAmount = currentFill;
         scoreFillCircle.SetTrigger("Badump");
-        if (audiosource) audiosource.PlayOneShot(cashRegisterSound, 0.6f);
+        if (audiosource) audiosource.PlayOneShot(cashRegisterSound, 0.48f);
         return true;
     }
 
@@ -425,7 +425,7 @@ public class RandomTileManager : MonoBehaviour
             {
                 currentRavitaillement.canGiveMoney = false;
                 HideMoneyFill();
-                currentRavitaillement.ExitLevel();
+                currentRavitaillement.ExitLevelImmediately();
             }
             if (currentLevel.ravitaillementPrefab)
             {
@@ -450,7 +450,7 @@ public class RandomTileManager : MonoBehaviour
                 formulaScoreText.text = currentHighScore.ToString();
                 if (currentRavitaillement)
                 {
-                    currentRavitaillement.ExitLevel(); //Tell ravitaillement to beat it
+                    currentRavitaillement.ExitLevelImmediately(); //Tell ravitaillement to beat it
                 }
                 currentChallenge = ChallengeType.cars; //so that we only spawn non obstacle tiles
                 playerCollisionManager.EndlessPlayer();

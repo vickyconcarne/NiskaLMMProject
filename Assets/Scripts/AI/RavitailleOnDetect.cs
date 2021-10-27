@@ -78,8 +78,8 @@ public class RavitailleOnDetect : AOnSideDetection
     {
         if(currentTime >= timeOfTick)
         {
-            RandomTileManager.instance.AddMoneyToLevel(moneyToAddPerTick, transform.position + Vector3.up * 1f, ((float)currentMoney / (float)maxMoney));
             AddMoney();
+            RandomTileManager.instance.AddMoneyToLevel(moneyToAddPerTick, transform.position + Vector3.up * 1f, ((float)currentMoney / (float)maxMoney));
             currentTime = 0f;
         }
         else
@@ -93,8 +93,8 @@ public class RavitailleOnDetect : AOnSideDetection
     {
         if (currentTime >= timeOfTick)
         {
-            RandomTileManager.instance.AddMoneyToLevel(moneyToAddPerTick, transform.position + Vector3.up * 1f, ((float)currentMoney / (float)maxMoney));
             AddMoney();
+            RandomTileManager.instance.AddMoneyToLevel(moneyToAddPerTick, transform.position + Vector3.up * 1f, ((float)currentMoney / (float)maxMoney));
             currentTime = 0f;
         }
         else
@@ -108,7 +108,7 @@ public class RavitailleOnDetect : AOnSideDetection
         if(currentMoney >= maxMoney)
         {
             canGiveMoney = false;
-            ExitLevel();
+            StartCoroutine(ExitLevel());
         }
         else
         {
@@ -117,7 +117,28 @@ public class RavitailleOnDetect : AOnSideDetection
         }
     }
 
-    public void ExitLevel()
+    public IEnumerator ExitLevel()
+    {
+        if (!exiting)
+        {
+            
+            
+            transitionAnimator.SetTrigger("Exit");
+            Destroy(transform.parent.gameObject, 8f);
+            currentTime = 1f;
+            while(currentTime > 0)
+            {
+                RandomTileManager.instance.PlaceMoneyFillOnPosition(transform.position + Vector3.up * 2f + transform.forward * 4f);
+                currentTime -= Time.fixedDeltaTime;
+                yield return null;
+            }
+            RandomTileManager.instance.HideMoneyFill();
+            exiting = true;
+        }
+        
+    }
+
+    public void ExitLevelImmediately()
     {
         if (exiting) return;
         exiting = true;
