@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1201072589188917953}
   m_Layer: 0
-  m_Name: 6CopCarsFromBackWave
+  m_Name: 5CopCarsFromBackWave
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,6 +43,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1201072589188917953}
     m_Modifications:
+    - target: {fileID: 1541695055307928593, guid: 73bdcc2d292060344bfb25af0dad7d1a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 4094369816097973729, guid: 73bdcc2d292060344bfb25af0dad7d1a,
         type: 3}
       propertyPath: m_RootOrder
@@ -61,7 +66,7 @@ PrefabInstance:
     - target: {fileID: 4094369816097973729, guid: 73bdcc2d292060344bfb25af0dad7d1a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -56.300003
+      value: -56.6
       objectReference: {fileID: 0}
     - target: {fileID: 4094369816097973729, guid: 73bdcc2d292060344bfb25af0dad7d1a,
         type: 3}
@@ -146,7 +151,7 @@ PrefabInstance:
     - target: {fileID: 4548782532097706149, guid: fd6c5d8d2f5ae524d848c3570516bbdf,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -63.9
+      value: -75.7
       objectReference: {fileID: 0}
     - target: {fileID: 4548782532097706149, guid: fd6c5d8d2f5ae524d848c3570516bbdf,
         type: 3}
@@ -221,12 +226,12 @@ PrefabInstance:
     - target: {fileID: 4548782532097706149, guid: fd6c5d8d2f5ae524d848c3570516bbdf,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.04
+      value: -0.24
       objectReference: {fileID: 0}
     - target: {fileID: 4548782532097706149, guid: fd6c5d8d2f5ae524d848c3570516bbdf,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -63.9
+      value: -85
       objectReference: {fileID: 0}
     - target: {fileID: 4548782532097706149, guid: fd6c5d8d2f5ae524d848c3570516bbdf,
         type: 3}
@@ -306,7 +311,7 @@ PrefabInstance:
     - target: {fileID: 4548782532097706149, guid: fd6c5d8d2f5ae524d848c3570516bbdf,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -48.91
+      value: -47.1
       objectReference: {fileID: 0}
     - target: {fileID: 4548782532097706149, guid: fd6c5d8d2f5ae524d848c3570516bbdf,
         type: 3}
@@ -376,12 +381,12 @@ PrefabInstance:
     - target: {fileID: 4094369816097973729, guid: 73bdcc2d292060344bfb25af0dad7d1a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.04
+      value: -0.24
       objectReference: {fileID: 0}
     - target: {fileID: 4094369816097973729, guid: 73bdcc2d292060344bfb25af0dad7d1a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -48.62
+      value: -65.5
       objectReference: {fileID: 0}
     - target: {fileID: 4094369816097973729, guid: 73bdcc2d292060344bfb25af0dad7d1a,
         type: 3}
@@ -447,6 +452,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CopCarBump Variant (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4548782532097706146, guid: fd6c5d8d2f5ae524d848c3570516bbdf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4548782532097706149, guid: fd6c5d8d2f5ae524d848c3570516bbdf,
         type: 3}

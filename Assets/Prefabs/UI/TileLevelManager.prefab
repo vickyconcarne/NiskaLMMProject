@@ -63,7 +63,7 @@ MonoBehaviour:
     - {fileID: 6743519024202991439, guid: a865ab0e535884ae195dc7135e987ca1, type: 3}
     - {fileID: 6743519024202991439, guid: c7849156a8645e549ba86ed121e52278, type: 3}
     possibleWavePrefabs:
-    - numberOfCars: 6
+    - numberOfCars: 5
       prefab: {fileID: 1201072589188917958, guid: eb293d7522a5b9649ae70ed80f969ba4,
         type: 3}
     - numberOfCars: 3
@@ -97,7 +97,7 @@ MonoBehaviour:
     - {fileID: 6743519024202991439, guid: c7849156a8645e549ba86ed121e52278, type: 3}
     - {fileID: 6743519024202991439, guid: 4eaa908fef218884c91ae58b4c518f11, type: 3}
     possibleWavePrefabs:
-    - numberOfCars: 6
+    - numberOfCars: 5
       prefab: {fileID: 1201072589188917958, guid: eb293d7522a5b9649ae70ed80f969ba4,
         type: 3}
     - numberOfCars: 5
@@ -154,7 +154,7 @@ MonoBehaviour:
     - {fileID: 6743519024202991439, guid: a865ab0e535884ae195dc7135e987ca1, type: 3}
     - {fileID: 6743519024202991439, guid: c7849156a8645e549ba86ed121e52278, type: 3}
     possibleWavePrefabs:
-    - numberOfCars: 6
+    - numberOfCars: 5
       prefab: {fileID: 1201072589188917958, guid: eb293d7522a5b9649ae70ed80f969ba4,
         type: 3}
     - numberOfCars: 3
@@ -248,7 +248,7 @@ MonoBehaviour:
     - {fileID: 6743519024202991439, guid: c7849156a8645e549ba86ed121e52278, type: 3}
     - {fileID: 6743519024202991439, guid: de930ca84f4963746827b240d673009b, type: 3}
     possibleWavePrefabs:
-    - numberOfCars: 6
+    - numberOfCars: 5
       prefab: {fileID: 1201072589188917958, guid: eb293d7522a5b9649ae70ed80f969ba4,
         type: 3}
     - numberOfCars: 3
@@ -260,7 +260,7 @@ MonoBehaviour:
     - numberOfCars: 6
       prefab: {fileID: 1201072589188917958, guid: d9a8aaafa41517e48b53d8a9fb5cbe3a,
         type: 3}
-    - numberOfCars: 6
+    - numberOfCars: 5
       prefab: {fileID: 1201072589188917958, guid: eb293d7522a5b9649ae70ed80f969ba4,
         type: 3}
   - nomDeLaTrack: n.i. ft. ninho
@@ -282,7 +282,7 @@ MonoBehaviour:
     - {fileID: 6743519024202991439, guid: c7849156a8645e549ba86ed121e52278, type: 3}
     - {fileID: 6743519024202991439, guid: 67a4caf41f291fa4da2107167eae6aa2, type: 3}
     possibleWavePrefabs:
-    - numberOfCars: 6
+    - numberOfCars: 5
       prefab: {fileID: 1201072589188917958, guid: eb293d7522a5b9649ae70ed80f969ba4,
         type: 3}
     - numberOfCars: 3
@@ -374,7 +374,7 @@ MonoBehaviour:
     - {fileID: 6743519024202991439, guid: a865ab0e535884ae195dc7135e987ca1, type: 3}
     - {fileID: 6743519024202991439, guid: c7849156a8645e549ba86ed121e52278, type: 3}
     possibleWavePrefabs:
-    - numberOfCars: 6
+    - numberOfCars: 5
       prefab: {fileID: 1201072589188917958, guid: eb293d7522a5b9649ae70ed80f969ba4,
         type: 3}
     - numberOfCars: 6
