@@ -51,7 +51,7 @@ public class RandomTileManager : MonoBehaviour
     [Header("Placement options")]
     public float zSpawn = 0;
     public float tileLength = 10;
-    public int numberOfTilesToSpawnPerIteration = 4;
+    public int numberOfTilesToSpawnPerIteration = 3;
     public ChallengeType currentChallenge;
     private bool triggeredEnding;
     [Header("NPC Placement")]
