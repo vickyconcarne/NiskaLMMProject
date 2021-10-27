@@ -4110,6 +4110,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6743519024202991436}
     m_Modifications:
+    - target: {fileID: 1340013530618325960, guid: f36954ad5ec540b4b8f9f857eb3c384e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1517914956722653709, guid: f36954ad5ec540b4b8f9f857eb3c384e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1584126594313747695, guid: f36954ad5ec540b4b8f9f857eb3c384e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1831583081837421473, guid: f36954ad5ec540b4b8f9f857eb3c384e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2129414827761581606, guid: f36954ad5ec540b4b8f9f857eb3c384e,
         type: 3}
       propertyPath: m_RootOrder
@@ -4170,6 +4190,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrainComingIn
       objectReference: {fileID: 0}
+    - target: {fileID: 2129848588527442199, guid: f36954ad5ec540b4b8f9f857eb3c384e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5002948279842735480, guid: f36954ad5ec540b4b8f9f857eb3c384e,
         type: 3}
       propertyPath: m_IsActive
@@ -4181,6 +4206,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5002948281165346508, guid: f36954ad5ec540b4b8f9f857eb3c384e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7479174026072908724, guid: f36954ad5ec540b4b8f9f857eb3c384e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8107830937332201083, guid: f36954ad5ec540b4b8f9f857eb3c384e,
         type: 3}
       propertyPath: m_IsActive
       value: 0
