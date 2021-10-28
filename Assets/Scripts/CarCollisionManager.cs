@@ -29,7 +29,7 @@ public class CarCollisionManager : MonoBehaviour
     //Ending cinematic
     public GameObject endingCinematicPrefab;
     public CinemachineVirtualCamera endingCam;
-
+    public GameObject copSirenBgSource;
     [Header("Niska model")]
     public Animator niskaAnimator;
     public GameObject smokeTrails;
@@ -218,6 +218,7 @@ public class CarCollisionManager : MonoBehaviour
     public IEnumerator FinishGame()
     {
         endingCinematicPrefab.transform.position = transform.position;
+        copSirenBgSource.SetActive(false);
         endingCinematicPrefab.SetActive(true);
         endingCam.enabled = true;
         playerController.GiveControl(false);

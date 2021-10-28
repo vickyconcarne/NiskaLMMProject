@@ -17,9 +17,15 @@ public class FormulaInfoSend : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI scoreText;
 
-    public Button twitterButton;
-    public Button instagramButton;
-    public Button snapchatButton;
+    public Image twitterButton;
+    public Sprite selectedTwitter;
+    public Sprite unselectedTwitter;
+    public Image instagramButton;
+    public Sprite selectedInsta;
+    public Sprite unselectedInsta;
+    public Image snapchatButton;
+    public Sprite selectedSnap;
+    public Sprite unselectedSnap;
     public Animator formulaAnimator;
     public TextMeshProUGUI loadingText;
 
@@ -85,16 +91,20 @@ public class FormulaInfoSend : MonoBehaviour
 
     public void ReselectSocialMedia()
     {
+        
+        twitterButton.sprite = unselectedTwitter;
+        instagramButton.sprite = unselectedInsta;
+        snapchatButton.sprite = unselectedSnap;
         switch (chosenReseau)
         {
             case "Twitter":
-                twitterButton.Select();
-                break;
-            case "Snapchat":
-                snapchatButton.Select();
+                twitterButton.sprite = selectedTwitter;
                 break;
             case "Instagram":
-                instagramButton.Select();
+                instagramButton.sprite = selectedInsta;
+                break;
+            case "Snapchat":
+                snapchatButton.sprite = selectedSnap;
                 break;
         }
     }
