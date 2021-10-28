@@ -1030,6 +1030,12 @@ Animator:
     type: 3}
   m_PrefabInstance: {fileID: 5843477764392746572}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2074281124 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1122751029513074717, guid: c7ded406df3b01a4bb4ecc81f6f1aca6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1122751028507653605}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1122751028507653605
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1146,6 +1152,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: NewsOverlayCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 1122751029513074717, guid: c7ded406df3b01a4bb4ecc81f6f1aca6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7ded406df3b01a4bb4ecc81f6f1aca6, type: 3}
@@ -1554,6 +1565,11 @@ PrefabInstance:
       objectReference: {fileID: 41446811}
     - target: {fileID: 3944976956748813567, guid: 84b4ebb3d61bff447abdf754933ee0bf,
         type: 3}
+      propertyPath: niveauTexte
+      value: 
+      objectReference: {fileID: 5843477764392746573}
+    - target: {fileID: 3944976956748813567, guid: 84b4ebb3d61bff447abdf754933ee0bf,
+        type: 3}
       propertyPath: scoreElement
       value: 
       objectReference: {fileID: 1382862825}
@@ -1898,6 +1914,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2086904182941988255, guid: 8d8b6152639caba418d7b9e2f886e160,
+        type: 3}
+      propertyPath: m_Name
+      value: NiveauText
+      objectReference: {fileID: 0}
     - target: {fileID: 5843477764482767313, guid: 8d8b6152639caba418d7b9e2f886e160,
         type: 3}
       propertyPath: m_Name
@@ -2013,8 +2034,35 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6427044977224078248, guid: 8d8b6152639caba418d7b9e2f886e160,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6427044977224078248, guid: 8d8b6152639caba418d7b9e2f886e160,
+        type: 3}
+      propertyPath: m_fontStyle
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 6427044977224078248, guid: 8d8b6152639caba418d7b9e2f886e160,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d8b6152639caba418d7b9e2f886e160, type: 3}
+--- !u!114 &5843477764392746573 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6427044977224078248, guid: 8d8b6152639caba418d7b9e2f886e160,
+    type: 3}
+  m_PrefabInstance: {fileID: 5843477764392746572}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7767324889108450027
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2026,6 +2074,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EndPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 7767324888902353731, guid: 6ccbf52a0915dee42b2d4c3d81273d03,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7767324888902353735, guid: 6ccbf52a0915dee42b2d4c3d81273d03,
         type: 3}
@@ -2152,6 +2205,16 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -102.08002
       objectReference: {fileID: 0}
+    - target: {fileID: 8592622187741710305, guid: 6ccbf52a0915dee42b2d4c3d81273d03,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.0007324219
+      objectReference: {fileID: 0}
+    - target: {fileID: 8899448985246669028, guid: 6ccbf52a0915dee42b2d4c3d81273d03,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.14489746
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ccbf52a0915dee42b2d4c3d81273d03, type: 3}
 --- !u!1001 &8564501609745510549
@@ -2246,6 +2309,11 @@ PrefabInstance:
       propertyPath: bombCanvas
       value: 
       objectReference: {fileID: 839267744}
+    - target: {fileID: 8564501609746609560, guid: c64e8a83ed992094a9bf1048877266a9,
+        type: 3}
+      propertyPath: newsScreen
+      value: 
+      objectReference: {fileID: 2074281124}
     - target: {fileID: 8564501609746609560, guid: c64e8a83ed992094a9bf1048877266a9,
         type: 3}
       propertyPath: retryScreen

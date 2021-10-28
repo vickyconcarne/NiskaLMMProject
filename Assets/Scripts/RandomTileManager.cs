@@ -20,6 +20,7 @@ public class RandomTileManager : MonoBehaviour
     private int maxNumberOfIterations;
     private RavitailleOnDetect currentRavitaillement;
     [SerializeField] private int currentSeed;
+    public TextMeshProUGUI niveauTexte;
     [Header("Camera")]
     public Camera cam;
     [Header("Score")]
@@ -421,6 +422,7 @@ public class RandomTileManager : MonoBehaviour
             trackAnimator.SetTrigger("TrackAppear");
             string number = currentLevelIndex < 9 ? "0" + (currentLevelIndex+1).ToString() : (currentLevelIndex+1).ToString();
             trackTitle.text = number + " - " + currentLevel.nomDeLaTrack;
+            niveauTexte.text = "Niveau: " + number + " / " + allLevels.Count;
             if (currentRavitaillement)
             {
                 currentRavitaillement.canGiveMoney = false;

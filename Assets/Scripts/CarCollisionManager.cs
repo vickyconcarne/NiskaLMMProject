@@ -40,6 +40,7 @@ public class CarCollisionManager : MonoBehaviour
     [Header("End screen")]
     [SerializeField] private GameObject bombCanvas;
 
+
     [SerializeField] private GameObject retryScreen;
     [SerializeField] private GameObject submitPanel;
     [SerializeField] private GameObject trackGrid;
@@ -226,7 +227,7 @@ public class CarCollisionManager : MonoBehaviour
         cinemachineCam.enabled = false;
         yield return new WaitForSeconds(2.5f);
         niskaAnimator.SetTrigger("Dance");
-
+        
     }
 
 }
