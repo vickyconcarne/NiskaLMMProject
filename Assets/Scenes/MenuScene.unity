@@ -10694,6 +10694,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7856868334090796219, guid: 883d74b1b7a69404eae2d2cb28b01132,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7856868334618340496, guid: 883d74b1b7a69404eae2d2cb28b01132,
         type: 3}
       propertyPath: m_AspectMode
@@ -11681,6 +11686,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 2160
+      objectReference: {fileID: 0}
+    - target: {fileID: 9101712208293750482, guid: 38dc21b3a51c0ce469debba8ef44c25c,
+        type: 3}
+      propertyPath: givenURL
+      value: https://niska.lnk.to/Lemondeestmechant
       objectReference: {fileID: 0}
     - target: {fileID: 9101712208375044840, guid: 38dc21b3a51c0ce469debba8ef44c25c,
         type: 3}
